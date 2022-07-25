@@ -7,6 +7,7 @@
 #include <SFML/System.hpp>
 
 #include <Screen.hpp>
+
 /**
  * @brief A simple C++ game that shamelessly rips off Pong.
  *
