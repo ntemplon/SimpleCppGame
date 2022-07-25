@@ -11,19 +11,19 @@
 
 Game::Game()
 {
-    _gameState = Uninitialized;
+    _gameState = Game::GameState::Uninitialized;
     // _mainWindow initializes just from being declared
 }
 
 void Game::start()
 {
-    if (_gameState != Game::Uninitialized)
+    if (_gameState != Game::GameState::Uninitialized)
     {
         return;
     }
 
     _mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
-    _gameState = Game::Playing;
+    _gameState = Game::GameState::Playing;
     _currentScreen.reset(new SplashScreen(_mainWindow, "../res/splash.png"));
 
     while (!isExiting())
@@ -36,7 +36,7 @@ void Game::start()
 
 bool Game::isExiting()
 {
-    if (_gameState == Game::Exiting)
+    if (_gameState == Game::GameState::Exiting)
         return true;
     else
         return false;
@@ -50,7 +50,7 @@ void Game::gameLoop()
 
         switch (_gameState)
         {
-        case Game::Playing:
+        case Game::GameState::Playing:
         {
             _mainWindow.clear(sf::Color(255, 0, 0));
             _currentScreen->render();
@@ -58,7 +58,7 @@ void Game::gameLoop()
 
             if (currentEvent.type == sf::Event::Closed)
             {
-                _gameState = Game::Exiting;
+                _gameState = Game::GameState::Exiting;
             }
             break;
         }
