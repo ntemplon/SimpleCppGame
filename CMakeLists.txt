@@ -12,5 +12,7 @@ find_package(SFML 2.5 MODULE COMPONENTS system window graphics network audio REQ
 add_executable(RunMe 
     src/main.cpp
     src/game.cpp
+    src/screen.cpp
     )
+set_property(TARGET RunMe PROPERTY C_STANDARD 11)
 target_link_libraries(RunMe PUBLIC ${SFML_LIBRARIES})

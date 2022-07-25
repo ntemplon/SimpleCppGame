@@ -5,7 +5,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 
-#include <Game.h>
+#include <Game.hpp>
 
 #include <iostream>
 
@@ -24,6 +24,7 @@ void Game::start()
 
     _mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
     _gameState = Game::Playing;
+    _currentScreen.reset(new SplashScreen(_mainWindow, "../res/splash.png"));
 
     while (!isExiting())
     {
@@ -52,6 +53,7 @@ void Game::gameLoop()
         case Game::Playing:
         {
             _mainWindow.clear(sf::Color(255, 0, 0));
+            _currentScreen->render();
             _mainWindow.display();
 
             if (currentEvent.type == sf::Event::Closed)

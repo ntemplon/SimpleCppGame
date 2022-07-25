@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-#include <Game.h>
+#include <Game.hpp>
 
 using namespace std;
 
