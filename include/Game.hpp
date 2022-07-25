@@ -7,18 +7,29 @@
 #include <SFML/System.hpp>
 
 #include <Screen.hpp>
-
+/**
+ * @brief A simple C++ game that shamelessly rips off Pong.
+ *
+ */
 class Game
 {
 public:
+    /**
+     * @brief Construct a new Game object
+     *
+     */
     Game();
+    /**
+     * @brief Starts the game.
+     *
+     */
     void start();
 
 private:
     bool isExiting();
     void gameLoop();
 
-    enum GameState
+    enum class GameState
     {
         Uninitialized,
         ShowingSplash,
