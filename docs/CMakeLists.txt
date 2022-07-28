@@ -64,8 +64,4 @@ add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
 
 # Nice named target so we can run the job easily
 add_custom_target(Sphinx ALL DEPENDS ${SPHINX_INDEX_FILE})
-add_dependencies(Sphinx docenv)
-
-# Add an install target to install the docs
-#include(GNUInstallDirs)
-#install(DIRECTORY ${SPHINX_BUILD} DESTINATION ${CMAKE_INSTALL_DOCDIR})
+add_dependencies(Sphinx docenv) # ensure environment is built before calling it
