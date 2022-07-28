@@ -6,6 +6,7 @@
 #include <SFML/System.hpp>
 
 #include <Game.hpp>
+#include <SplashScreen.hpp>
 
 #include <iostream>
 
