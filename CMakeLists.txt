@@ -5,12 +5,10 @@ cmake_minimum_required(VERSION 3.12.0)
 # Set Project Name and Version
 project(SimpleCppGame VERSION 0.1.0)
 
+file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+
 # This defines a build target called "Application" that makes an executable out of these source files
-add_executable(RunMe 
-    src/main.cpp
-    src/game.cpp
-    src/screen.cpp
-    )
+add_executable(RunMe ${SRC_FILES})
 # Specify that the RunMe target will use C++11
 set_property(TARGET RunMe
              PROPERTY C_STANDARD 11
