@@ -30,7 +30,7 @@ public:
      * Renders the splash screen to the window provided during construction.
      *
      */
-    void render() const;
+    virtual void render() const;
 
 private:
     sf::Texture _texture;
