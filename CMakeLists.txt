@@ -12,7 +12,9 @@ add_executable(RunMe
     src/screen.cpp
     )
 # Specify that the RunMe target will use C++11
-set_property(TARGET RunMe PROPERTY C_STANDARD 11)
+set_property(TARGET RunMe
+             PROPERTY C_STANDARD 11
+)
 
 # Put the Find*.cmake files at ./cmake onto the module path
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
@@ -32,3 +34,5 @@ target_link_libraries(RunMe PUBLIC ${SFML_LIBRARIES})
 #  break, hilarity will ensue, and you will forget to do your laundry while trying to fix them.
 add_subdirectory(src)
 add_subdirectory (docs)
+
+install(TARGETS RunMe DESTINATION ${CMAKE_CURRENT_SOURCE_DIR})
