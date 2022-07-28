@@ -1,6 +1,5 @@
 build/
 .vscode/
-.venv/
 out/
 
 RunMe

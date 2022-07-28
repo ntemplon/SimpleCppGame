@@ -1,12 +1,26 @@
+# Required for Python virtual environment hint
+cmake_minimum_required(VERSION 3.15.0)
+
+include(${CMAKE_SOURCE_DIR}/cmake/CreatePythonVenv.cmake)
+
+create_python_venv(
+    docenv
+    PYTHON_VERSION 3.9
+    REQUIREMENTS_TXT ${CMAKE_CURRENT_SOURCE_DIR}/venv_reqs.txt
+    OUT_PYTHON_EXE PYTHON_EXE
+    OUT_BINARY_DIR VENV_BIN_DIR
+    ENV_NAME .docenv
+)
+
 # Get our dependencies available
 find_package(Doxygen REQUIRED) # Included with the Ubuntu 22.04 repo installation
-find_package(Sphinx REQUIRED) # ./cmake/FindSphinx.cmake
+set(SPHINX_EXECUTABLE ${VENV_BIN_DIR}/sphinx-build) # This will be installed off of pip, so we can assume a location
 
 # Get a list of all public header files so that we can generate documentation for them
 get_target_property(RUN_ME_PUBLIC_HEADER_DIR RunMe INTERFACE_INCLUDE_DIRECTORIES)
-file(GLOB_RECURSE RUN_ME_PUBLIC_HEADERS ${RUN_ME_PUBLIC_HEADER_DIR}/*.hpp ${RUN_ME_PUBLIC_HEADER_DIR}/*.h)
+file(GLOB_RECURSE RUN_ME_PUBLIC_HEADERS ${RUN_ME_PUPBLIC_HEADER_DIR}/*.hpp ${RUN_ME_PUBLIC_HEADER_DIR}/*.h)
 
-set(DOXYGEN_INPUT_DIR ${RUN_ME_PUBLIC_HEADER_DIR}) # PROJECT_SOURCE_DIR
+set(DOXYGEN_INPUT_DIR ${RUN_ME_PUBLIC_HEADER_DIR})
 set(DOXYGEN_OUTPUT_DIR ${PROJECT_SOURCE_DIR}/out/doxygen)
 set(DOXYGEN_INDEX_FILE ${DOXYGEN_OUTPUT_DIR}/html/index.html)
 set(DOXYFILE_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
@@ -22,9 +36,7 @@ add_custom_command(OUTPUT ${DOXYGEN_INDEX_FILE}
                    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
                    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
                    MAIN_DEPENDENCY ${DOXYFILE_IN}
-                   COMMENT "Generating docs")
-
-message(STATUS "CMAKE_CURRENT_BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}")
+                   COMMENT "Generating Doxygen files")
 
 add_custom_target(Doxygen ALL DEPENDS ${DOXYGEN_INDEX_FILE})
 
@@ -40,7 +52,7 @@ set(SPHINX_INDEX_FILE ${SPHINX_BUILD}/index.html)
 add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
                    COMMAND ${SPHINX_EXECUTABLE} -b html
                    # Tell Breathe where to find the Doxygen output
-                   -Dbreathe_projects.CatCutifier=${DOXYGEN_OUTPUT_DIR}/xml
+                   -Dbreathe_projects.RunMe=${DOXYGEN_OUTPUT_DIR}/xml
                    ${SPHINX_SOURCE} ${SPHINX_BUILD}
                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
                    DEPENDS
@@ -52,6 +64,7 @@ add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
 
 # Nice named target so we can run the job easily
 add_custom_target(Sphinx ALL DEPENDS ${SPHINX_INDEX_FILE})
+add_dependencies(Sphinx docenv)
 
 # Add an install target to install the docs
 #include(GNUInstallDirs)

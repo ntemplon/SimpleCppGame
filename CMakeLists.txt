@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.0.0)
+# Experimenting with PackageName_ROOT to help direct to a sphinx installation in the virtual environment,
+#  which requires 3.12
+cmake_minimum_required(VERSION 3.12.0)
 
 # Set Project Name and Version
 project(SimpleCppGame VERSION 0.1.0)
