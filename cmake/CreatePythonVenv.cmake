@@ -91,10 +91,6 @@ function(create_python_venv TARGET)
         set(PYTHON ${BIN_DIR}/python)
     endif ()
 
-    # Is this unnecesssary?
-    #   I think so - it's overwritten in the if (REQUIREMENTS) block in both branches before it's used again
-    #set(INSTALL_CMD ${BIN_DIR}/pip install --disable-pip-version-check)
-
     # If a requirements.txt file is specified, build the environment with it
     if (ARG_REQUIREMENTS_TXT)
         if (IS_ABSOLUTE ${ARG_REQUIREMENTS_TXT})
