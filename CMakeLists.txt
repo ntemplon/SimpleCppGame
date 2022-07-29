@@ -5,8 +5,19 @@ cmake_minimum_required(VERSION 3.12.0)
 # Set Project Name and Version
 project(SimpleCppGame VERSION 0.1.0)
 
-file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+# Find all resource files in res so that we can copy them to build next to the executable
+set(SOURCE_RESOURCE_DIR ${CMAKE_SOURCE_DIR}/res/)
+file(GLOB_RECURSE RESOURCE_FILES ${SOURCE_RESOURCE_DIR}/*.*)
 
+# Make a dependency between each file in build and it's origin in ./res
+set(TARGET_RESOURCE_DIR ${CMAKE_BINARY_DIR}/res/)
+foreach(RESOURCE_FILE ${RESOURCE_FILES})
+    file(RELATIVE_PATH REL_PATH ${SOURCE_RESOURCE_DIR} ${RESOURCE_FILE})
+    set(TARGET_FILE ${TARGET_RESOURCE_DIR}${REL_PATH})
+    configure_file(${RESOURCE_FILE} ${TARGET_FILE} COPYONLY)
+endforeach()
+
+file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 # This defines a build target called "Application" that makes an executable out of these source files
 add_executable(RunMe ${SRC_FILES})
 # Specify that the RunMe target will use C++11
@@ -32,5 +43,3 @@ target_link_libraries(RunMe PUBLIC ${SFML_LIBRARIES})
 #  break, hilarity will ensue, and you will forget to do your laundry while trying to fix them.
 add_subdirectory(src)
 add_subdirectory (docs)
-
-install(TARGETS RunMe DESTINATION ${CMAKE_CURRENT_SOURCE_DIR})
