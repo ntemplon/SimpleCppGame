@@ -32,6 +32,8 @@ public:
      */
     virtual void render() const;
 
+    virtual void handleClick(int x, int y);
+
 private:
     sf::Texture _texture;
     sf::Sprite _sprite;
