@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to the Simple CPP Game Documentation!
-=========================================
+=============================================
 
 .. toctree::
    :maxdepth: 2
