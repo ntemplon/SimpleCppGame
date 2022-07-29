@@ -5,8 +5,10 @@
 class Event
 {
 public:
-    std::string getId() const;
+    Event(std::string type);
+    virtual ~Event(){};
+    std::string getType() const;
 
 private:
-    std::string _id;
+    std::string _type;
 };

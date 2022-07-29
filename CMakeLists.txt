@@ -10,6 +10,8 @@ add_executable(RunMe
     src/main.cpp
     src/game.cpp
     src/screen.cpp
+    src/event.cpp
+    src/dispatcher.cpp
     )
 # Specify that the RunMe target will use C++11
 set_property(TARGET RunMe

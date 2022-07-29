@@ -1,6 +1,8 @@
 #include <Event.hpp>
 
-std::string Event::getId() const
+Event::Event(std::string type) : _type(type) {}
+
+std::string Event::getType() const
 {
-    return this->_id;
+    return this->_type;
 }
