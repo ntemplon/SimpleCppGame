@@ -12,12 +12,16 @@
 class SplashScreen : public Screen
 {
 public:
+    /**
+     * @brief A std::string for the event type of events that represent the user choosing to continue from the splash screen to the main game.
+     */
     const static std::string SPLASH_SCREEN_CLOSE;
 
     /**
      * @brief Construct a new Splash Screen object
      *
      * @param window The window on which to render the splash screen.
+     * @param dispatcher The Dispatcher on which the event to progress past the splash screen will be dispatched.
      * @param imagePath The path to the image to render as part of the splash screen.
      */
     SplashScreen(sf::RenderWindow &window, Dispatcher &dispatcher, std::string imagePath);
