@@ -38,9 +38,6 @@ public:
     Dispatcher *getDispatcher();
 
 private:
-    bool isExiting();
-    void gameLoop();
-
     enum class GameState
     {
         Uninitialized,
@@ -51,6 +48,11 @@ private:
         Playing,
         Exiting
     };
+
+    bool isExiting();
+    void gameLoop();
+    void handleInput();
+    bool shouldRenderInState(Game::GameState state);
 
     GameState _gameState;
     sf::RenderWindow _mainWindow;
