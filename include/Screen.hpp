@@ -30,6 +30,8 @@ public:
      */
     virtual void render() const = 0;
 
+    virtual void handleClick(int x, int y) = 0;
+
 protected:
     /**
      * @brief Get the window to render to as a subclass

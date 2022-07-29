@@ -53,14 +53,18 @@ void Game::gameLoop()
         {
         case Game::GameState::Playing:
         {
-            _mainWindow.clear(sf::Color(255, 0, 0));
-            _currentScreen->render();
-            _mainWindow.display();
-
             if (currentEvent.type == sf::Event::Closed)
             {
                 _gameState = Game::GameState::Exiting;
             }
+            else if (currentEvent.type == sf::Event::MouseButtonPressed)
+            {
+                _currentScreen->handleClick(currentEvent.mouseButton.x, currentEvent.mouseButton.y);
+            }
+
+            _mainWindow.clear(sf::Color(0, 0, 0));
+            _currentScreen->render();
+
             break;
         }
         }
