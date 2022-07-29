@@ -26,9 +26,6 @@
 #                                       such as python[.exe], pip[.exe], activate, etc.
 #   OUT_VENV_DIR:       (out string)    Stores the root path of the virtual environment.
 #
-# Usage:
-#
-#
 
 function(create_python_venv TARGET)
     # Declare keyword arguments
