@@ -15,7 +15,7 @@ MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, Dispatcher &dispatcher,
     playItem.action = [&]()
     {
         Event event(MainMenuScreen::MAIN_MENU_PLAY);
-        this->getDispatcher().post(event);
+        this->getDispatcher().dispatch(event);
     };
 
     MenuItem exitItem;
@@ -26,7 +26,7 @@ MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, Dispatcher &dispatcher,
     exitItem.action = [&]()
     {
         Event event(MainMenuScreen::MAIN_MENU_EXIT);
-        this->getDispatcher().post(event);
+        this->getDispatcher().dispatch(event);
     };
 
     _menuItems.push_back(playItem);

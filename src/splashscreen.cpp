@@ -23,5 +23,5 @@ void SplashScreen::render() const
 void SplashScreen::handleClick(int x, int y)
 {
     Event event(SPLASH_SCREEN_CLOSE); // Why is this separate declaration needed?
-    this->getDispatcher().post(event);
+    this->getDispatcher().dispatch(event);
 }
