@@ -10,6 +10,9 @@ Welcome to the Simple CPP Game Documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   self
+   usage/installation
+
 
 
 Indices and tables
