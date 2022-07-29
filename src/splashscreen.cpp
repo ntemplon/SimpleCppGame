@@ -3,7 +3,9 @@
 #include <SplashScreen.hpp>
 #include <iostream>
 
-SplashScreen::SplashScreen(sf::RenderWindow &window, std::string imagePath) : Screen(window)
+const std::string SplashScreen::SPLASH_SCREEN_CLOSE = "SPLASH_SCREEN_CLOSE";
+
+SplashScreen::SplashScreen(sf::RenderWindow &window, Dispatcher &dispatcher, std::string imagePath) : Screen(window, dispatcher)
 {
     if (true == _texture.loadFromFile(imagePath))
     {
@@ -20,5 +22,6 @@ void SplashScreen::render() const
 
 void SplashScreen::handleClick(int x, int y)
 {
-    // Intentional no-op
+    Event event(SPLASH_SCREEN_CLOSE); // Why is this separate declaration needed?
+    this->getDispatcher().post(event);
 }

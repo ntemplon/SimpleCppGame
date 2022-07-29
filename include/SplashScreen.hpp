@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 #include <Screen.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -10,13 +12,15 @@
 class SplashScreen : public Screen
 {
 public:
+    const static std::string SPLASH_SCREEN_CLOSE;
+
     /**
      * @brief Construct a new Splash Screen object
      *
      * @param window The window on which to render the splash screen.
      * @param imagePath The path to the image to render as part of the splash screen.
      */
-    SplashScreen(sf::RenderWindow &window, std::string imagePath);
+    SplashScreen(sf::RenderWindow &window, Dispatcher &dispatcher, std::string imagePath);
 
     /**
      * @brief Destroy the Splash Screen object

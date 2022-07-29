@@ -2,6 +2,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <Dispatcher.hpp>
+
 /**
  * @brief A game screen
  *
@@ -14,7 +16,7 @@ public:
      *
      * @param window The window to which the screen will render.
      */
-    Screen(sf::RenderWindow &window);
+    Screen(sf::RenderWindow &window, Dispatcher &dispatcher);
 
     /**
      * @brief Destroy the Screen object
@@ -43,7 +45,9 @@ protected:
      * @brief Get the window to render to as a subclass
      */
     sf::RenderWindow &getWindow() const;
+    Dispatcher &getDispatcher() const;
 
 private:
     sf::RenderWindow &_window;
+    Dispatcher &_dispatcher;
 };

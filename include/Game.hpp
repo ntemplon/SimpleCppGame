@@ -7,6 +7,7 @@
 #include <SFML/System.hpp>
 
 #include <Screen.hpp>
+#include <Dispatcher.hpp>
 
 /**
  * @brief A simple C++ game that shamelessly rips off Pong.
@@ -26,6 +27,16 @@ public:
      */
     void start();
 
+    /**
+     * @brief Get the Dispatcher object that controls event dispatch for the game.
+     *
+     * Get the Dispatcher object that controls event dispatch for the game. The object is owned by the game and its
+     * lifetime will be exactly the same as the game's.
+     *
+     * @return A pointer to the game's event dispatcher bus
+     */
+    Dispatcher *getDispatcher();
+
 private:
     bool isExiting();
     void gameLoop();
@@ -34,6 +45,7 @@ private:
     {
         Uninitialized,
         ShowingSplash,
+        ClosingSplash,
         Paused,
         ShowingMenu,
         Playing,
@@ -43,4 +55,5 @@ private:
     GameState _gameState;
     sf::RenderWindow _mainWindow;
     std::unique_ptr<Screen> _currentScreen;
+    std::unique_ptr<Dispatcher> _dispatcher;
 };

@@ -14,6 +14,7 @@
 Game::Game()
 {
     _gameState = Game::GameState::Uninitialized;
+    _dispatcher.reset(new Dispatcher());
     // _mainWindow initializes just from being declared
 }
 
@@ -24,10 +25,14 @@ void Game::start()
         return;
     }
 
+    // Block - assign event listeners
+    _dispatcher->subscribe(SplashScreen::SPLASH_SCREEN_CLOSE, [&](Event event)
+                           { _gameState = Game::GameState::ClosingSplash; });
+
     _mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
-    _gameState = Game::GameState::Playing;
-    //_currentScreen.reset(new SplashScreen(_mainWindow, "../res/splash.png"));
-    _currentScreen.reset(new MainMenuScreen(_mainWindow, "../res/mainmenu.png"));
+    _gameState = Game::GameState::ShowingSplash;
+    _currentScreen.reset(new SplashScreen(_mainWindow, *_dispatcher, "../res/splash.png"));
+    //_currentScreen.reset(new MainMenuScreen(_mainWindow, *_dispatcher, "../res/mainmenu.png"));
 
     while (!isExiting())
     {
@@ -35,6 +40,11 @@ void Game::start()
     }
 
     _mainWindow.close();
+}
+
+Dispatcher *Game::getDispatcher()
+{
+    return this->_dispatcher.get();
 }
 
 bool Game::isExiting()
@@ -53,6 +63,10 @@ void Game::gameLoop()
 
         switch (_gameState)
         {
+        case Game::GameState::ClosingSplash:
+            _gameState = Game::GameState::Playing;
+            _currentScreen.reset(new MainMenuScreen(_mainWindow, *_dispatcher, "../res/mainmenu.png"));
+        case Game::GameState::ShowingSplash:
         case Game::GameState::Playing:
         {
             if (currentEvent.type == sf::Event::Closed)

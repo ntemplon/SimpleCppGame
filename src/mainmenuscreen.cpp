@@ -2,7 +2,7 @@
 
 #include <MainMenuScreen.hpp>
 
-MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, std::string backgroundImage) : Screen(window)
+MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, Dispatcher &dispatcher, std::string backgroundImage) : Screen(window, dispatcher)
 {
     this->_currentResult = MainMenuScreen::MenuResult::Nothing;
 

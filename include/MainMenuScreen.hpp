@@ -21,7 +21,7 @@ public:
         MenuResult action;
     };
 
-    MainMenuScreen(sf::RenderWindow &window, std::string backgroundImage);
+    MainMenuScreen(sf::RenderWindow &window, Dispatcher &dispatcher, std::string backgroundImage);
     virtual ~MainMenuScreen(){};
     virtual void render() const;
     virtual MenuResult getCurrentResult();
