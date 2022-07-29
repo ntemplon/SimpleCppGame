@@ -32,6 +32,12 @@ public:
      */
     virtual void render() const;
 
+    /**
+     * @brief Handles a click on the splash screen, moving the game forward to the main menu.
+     *
+     * @param x The screen x position of the click.
+     * @param y The screen y position of the click.
+     */
     virtual void handleClick(int x, int y);
 
 private:

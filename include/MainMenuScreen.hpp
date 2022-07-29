@@ -21,16 +21,17 @@ public:
         MenuResult action;
     };
 
-    MainMenuScreen(sf::RenderWindow &window);
+    MainMenuScreen(sf::RenderWindow &window, std::string backgroundImage);
     virtual ~MainMenuScreen(){};
     virtual void render() const;
-    virtual MenuResult getCurrentResult() = 0;
-    virtual void handleClick(int x, int y) = 0;
+    virtual MenuResult getCurrentResult();
+    virtual void handleClick(int x, int y);
 
 private:
     MenuResult _currentResult;
     void setCurrentResult(MenuResult result);
 
     std::list<MenuItem> _menuItems;
+    sf::Texture _texture;
     sf::Sprite _sprite;
 };

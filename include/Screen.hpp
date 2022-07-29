@@ -30,6 +30,12 @@ public:
      */
     virtual void render() const = 0;
 
+    /**
+     * @brief Handle a click event at the specified screen coordinates.
+     *
+     * @param x The screen x coordinate of the click.
+     * @param y The screen y coordinate of the click
+     */
     virtual void handleClick(int x, int y) = 0;
 
 protected:

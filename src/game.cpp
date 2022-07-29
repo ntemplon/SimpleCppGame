@@ -7,6 +7,7 @@
 
 #include <Game.hpp>
 #include <SplashScreen.hpp>
+#include <MainMenuScreen.hpp>
 
 #include <iostream>
 
@@ -25,7 +26,8 @@ void Game::start()
 
     _mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
     _gameState = Game::GameState::Playing;
-    _currentScreen.reset(new SplashScreen(_mainWindow, "../res/splash.png"));
+    //_currentScreen.reset(new SplashScreen(_mainWindow, "../res/splash.png"));
+    _currentScreen.reset(new MainMenuScreen(_mainWindow, "../res/mainmenu.png"));
 
     while (!isExiting())
     {

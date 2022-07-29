@@ -2,7 +2,7 @@
 
 #include <MainMenuScreen.hpp>
 
-MainMenuScreen::MainMenuScreen(sf::RenderWindow &window) : Screen(window)
+MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, std::string backgroundImage) : Screen(window)
 {
     this->_currentResult = MainMenuScreen::MenuResult::Nothing;
 
@@ -22,6 +22,11 @@ MainMenuScreen::MainMenuScreen(sf::RenderWindow &window) : Screen(window)
 
     _menuItems.push_back(playItem);
     _menuItems.push_back(exitItem);
+
+    if (true == _texture.loadFromFile(backgroundImage))
+    {
+        _sprite = sf::Sprite(_texture);
+    }
 }
 
 void MainMenuScreen::render() const
