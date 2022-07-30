@@ -46,9 +46,11 @@ void MainMenuScreen::render() const
 
 void MainMenuScreen::handleClick(int x, int y)
 {
+    sf::Vector2f worldPos = this->getWindow().mapPixelToCoords(sf::Vector2i(x, y));
+
     for (const MenuItem &item : _menuItems)
     {
-        if (item.rect.top < y && item.rect.top + item.rect.height > y && item.rect.left < x && item.rect.left + item.rect.width > x)
+        if (item.rect.top < worldPos.y && item.rect.top + item.rect.height > worldPos.y && item.rect.left < worldPos.x && item.rect.left + item.rect.width > worldPos.x)
         {
             // The point is inside the rectangle
             item.action();
