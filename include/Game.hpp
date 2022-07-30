@@ -17,6 +17,11 @@ class Game
 {
 public:
     /**
+     * @brief The amount of time the game should spend on each frame. This is equal to 1 / framerate.
+     */
+    const static sf::Time TIME_PER_FRAME;
+
+    /**
      * @brief Construct a new Game object
      *
      */
@@ -50,12 +55,15 @@ private:
     };
 
     bool isExiting();
-    void gameLoop();
+    void gameLoop(sf::Time deltaTime);
     void handleInput();
+    void update(sf::Time detlaTime);
     bool shouldRenderInState(Game::GameState state);
+    void modifyView(std::function<sf::View(sf::View)> op);
 
     GameState _gameState;
     sf::RenderWindow _mainWindow;
+    sf::View _view;
     std::unique_ptr<Screen> _currentScreen;
     std::unique_ptr<Dispatcher> _dispatcher;
 };

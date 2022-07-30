@@ -11,6 +11,8 @@
 
 #include <iostream>
 
+const sf::Time Game::TIME_PER_FRAME = sf::seconds(1.0f / 60.0f);
+
 Game::Game() : _gameState(Game::GameState::Uninitialized)
 {
     _dispatcher = std::make_unique<Dispatcher>();
@@ -34,18 +36,27 @@ void Game::start()
                            { _gameState = Game::GameState::Exiting; });
     // =========================================================================
 
-    // For simplicity and learning's sake, make a 1024x768 game with 32-bit color
-    _mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
+    // For simplicity and learning's sake, make a 1024x768 game
+    _mainWindow.create(sf::VideoMode(1024, 768), "Pang!");
+    _view = _mainWindow.getDefaultView();
 
     // Initialize the game - we are showing the splash screen at the start
     _gameState = Game::GameState::ShowingSplash;
     _currentScreen.reset(new SplashScreen(_mainWindow, *_dispatcher, "./res/splash.png"));
 
+    sf::Clock clock;
+    sf::Time timeSinceLastUpdate = sf::Time::Zero;
+
     // Loop until we exit.
     // TODO - control to constrain this loop to 60fps
     while (!isExiting())
     {
-        gameLoop();
+        timeSinceLastUpdate += clock.restart();
+        while (timeSinceLastUpdate > TIME_PER_FRAME)
+        {
+            timeSinceLastUpdate -= TIME_PER_FRAME;
+            gameLoop(TIME_PER_FRAME);
+        }
     }
 
     // When we're done with the game, close our window and let it all go out of scope
@@ -62,7 +73,7 @@ bool Game::isExiting()
     return Game::GameState::Exiting == _gameState;
 }
 
-void Game::gameLoop()
+void Game::gameLoop(sf::Time deltaTime)
 {
     // Do anything specific to the current state. Right now, this is basic, but more will happen later
     switch (_gameState)
@@ -92,17 +103,31 @@ void Game::handleInput()
     // Poll through all events that have happened this frame
     while (_mainWindow.pollEvent(currentEvent))
     {
-        if (currentEvent.type == sf::Event::Closed)
+        switch (currentEvent.type)
         {
+        case sf::Event::Resized:
+            this->modifyView([&](sf::View view)
+                             {
+                                view.setSize(currentEvent.size.width, currentEvent.size.height); 
+                                return view; });
+            break;
+        case sf::Event::Closed:
             // If the window is closed, exit the game
             _gameState = Game::GameState::Exiting;
-        }
-        else if (currentEvent.type == sf::Event::MouseButtonPressed && _currentScreen)
-        {
-            // Pass mouse button events on to the current screen
-            _currentScreen->handleClick(currentEvent.mouseButton.x, currentEvent.mouseButton.y);
+            break;
+        case sf::Event::MouseButtonPressed:
+            if (_currentScreen)
+            {
+                // Pass mouse button events on to the current screen
+                _currentScreen->handleClick(currentEvent.mouseButton.x, currentEvent.mouseButton.y);
+            }
+            break;
         }
     }
+}
+
+void Game::update(sf::Time deltaTime)
+{
 }
 
 bool Game::shouldRenderInState(Game::GameState state)
@@ -114,4 +139,10 @@ bool Game::shouldRenderInState(Game::GameState state)
            Game::GameState::Paused == state ||
            Game::GameState::ShowingMenu == state ||
            Game::GameState::Playing == state;
+}
+
+void Game::modifyView(std::function<sf::View(sf::View)> op)
+{
+    this->_view = op(this->_view);
+    this->_mainWindow.setView(this->_view);
 }
