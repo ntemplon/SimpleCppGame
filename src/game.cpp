@@ -37,7 +37,7 @@ void Game::start()
     // =========================================================================
 
     // For simplicity and learning's sake, make a 1024x768 game
-    _mainWindow.create(sf::VideoMode(1024, 768), "Pang!");
+    _mainWindow.create(sf::VideoMode(1024, 768), "Simple Cpp Game");
     _view = _mainWindow.getDefaultView();
 
     // Initialize the game - we are showing the splash screen at the start
