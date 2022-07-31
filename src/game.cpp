@@ -227,7 +227,7 @@ std::shared_ptr<Entity> Game::createBall()
     auto ball = std::make_shared<Entity>();
 
     auto render = std::make_shared<RenderComponent>();
-    render->texture->loadFromFile("./res/paddle.png");
+    render->texture->loadFromFile("./res/ball.png");
     render->sprite = sf::Sprite(*(render->texture));
 
     auto location = std::make_shared<LocationComponent>();
@@ -236,7 +236,7 @@ std::shared_ptr<Entity> Game::createBall()
     location->location.left = (Game::WORLD_WIDTH - location->location.width) / 2.f;
     location->location.top = (Game::WORLD_HEIGHT - location->location.height) / 2.f;
 
-    float ballSpeed = 300.f;
+    float ballSpeed = 500.f;
     float angleRad = (rand() / static_cast<float>(RAND_MAX)) * 6.283185;
     auto velocity = std::make_shared<VelocityComponent>();
     velocity->velocity.x = ballSpeed * cos(angleRad);
