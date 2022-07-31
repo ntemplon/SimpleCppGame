@@ -8,6 +8,10 @@
 
 #include <Screen.hpp>
 #include <Dispatcher.hpp>
+#include <EntityEngine.hpp>
+#include <RenderSystem.hpp>
+#include <VelocitySystem.hpp>
+#include <PlayerInputSystem.hpp>
 
 /**
  * @brief A simple C++ game that shamelessly rips off Pong.
@@ -20,6 +24,10 @@ public:
      * @brief The amount of time the game should spend on each frame. This is equal to 1 / framerate.
      */
     const static sf::Time TIME_PER_FRAME;
+
+    const static int WORLD_WIDTH;
+    const static int WORLD_HEIGHT;
+    const static int WORLD_BORDER;
 
     /**
      * @brief Construct a new Game object
@@ -50,6 +58,7 @@ private:
         ClosingSplash,
         Paused,
         ShowingMenu,
+        PlayRequested,
         Playing,
         Exiting
     };
@@ -61,9 +70,15 @@ private:
     bool shouldRenderInState(const Game::GameState state) const;
     void modifyView(const std::function<sf::View(sf::View)> op);
 
+    std::shared_ptr<Entity> createPlayer();
+
     GameState _gameState;
     sf::RenderWindow _mainWindow;
     sf::View _view;
     std::unique_ptr<Screen> _currentScreen;
     std::unique_ptr<Dispatcher> _dispatcher;
+    std::unique_ptr<EntityEngine> _engine;
+    std::shared_ptr<RenderSystem> _render;
+    std::shared_ptr<VelocitySystem> _velocity;
+    std::shared_ptr<PlayerInputSystem> _input;
 };

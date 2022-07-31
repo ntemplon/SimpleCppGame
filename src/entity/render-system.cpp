@@ -13,7 +13,11 @@ void RenderSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
     RenderComponent *renderComp = dynamic_cast<RenderComponent *>(entity->getComponent(RenderComponent::RENDER_COMP_ID).get());
     LocationComponent *locComp = dynamic_cast<LocationComponent *>(entity->getComponent(LocationComponent::LOC_COMP_ID).get());
 
-    renderComp->sprite.setPosition(sf::Vector2f(locComp->location.left, locComp->location.top));
+    auto &sprite = renderComp->sprite;
+    sprite.setPosition(sf::Vector2f(locComp->location.left, locComp->location.top));
+    sprite.setScale(sf::Vector2f(
+        locComp->location.width / sprite.getTextureRect().width,
+        locComp->location.height / sprite.getTextureRect().height));
 }
 
 void RenderSystem::render(sf::RenderTarget &target) const

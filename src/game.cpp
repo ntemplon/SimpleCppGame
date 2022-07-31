@@ -8,12 +8,16 @@
 #include <Game.hpp>
 #include <SplashScreen.hpp>
 #include <MainMenuScreen.hpp>
+#include <GameScreen.hpp>
 #include <EntityEngine.hpp>
-#include <RenderSystem.hpp>
+#include <Components.hpp>
 
 #include <iostream>
 
 const sf::Time Game::TIME_PER_FRAME = sf::seconds(1.0f / 60.0f);
+const int Game::WORLD_WIDTH = 1024;
+const int Game::WORLD_HEIGHT = 768;
+const int Game::WORLD_BORDER = 20;
 
 Game::Game() : _gameState(Game::GameState::Uninitialized)
 {
@@ -33,23 +37,38 @@ void Game::start()
     _dispatcher->subscribe(SplashScreen::SPLASH_SCREEN_CLOSE, [&](Event event)
                            { _gameState = Game::GameState::ClosingSplash; });
 
+    // Play the game if "Play" on the main menu screen is selected
+    _dispatcher->subscribe(MainMenuScreen::MAIN_MENU_PLAY, [&](Event event)
+                           { _gameState = Game::GameState::PlayRequested; });
+
     // Close the game if "Exit" on the main menu screen is selected
     _dispatcher->subscribe(MainMenuScreen::MAIN_MENU_EXIT, [&](Event event)
                            { _gameState = Game::GameState::Exiting; });
     // =========================================================================
 
     // ================ Block - Component Entity System ========================
-    auto engine = std::make_unique<EntityEngine>();
-    auto renderSystem = std::make_shared<RenderSystem>();
+    _engine = std::make_unique<EntityEngine>();
+
+    _input = std::make_shared<PlayerInputSystem>();
+    _engine->add(this->_input);
+
+    _velocity = std::make_shared<VelocitySystem>();
+    _engine->add(this->_velocity);
+
+    _render = std::make_shared<RenderSystem>();
+    _engine->add(this->_render);
+
+    auto player = createPlayer();
+    _engine->add(player);
     // =========================================================================
 
-    // For simplicity and learning's sake, make a 1024x768 game
-    _mainWindow.create(sf::VideoMode(1024, 768), "Simple Cpp Game");
+    // For simplicity and learning's sake, make a fixed-size game
+    _mainWindow.create(sf::VideoMode(WORLD_WIDTH, WORLD_HEIGHT), "Simple Cpp Game");
     _view = _mainWindow.getDefaultView();
 
     // Initialize the game - we are showing the splash screen at the start
     _gameState = Game::GameState::ShowingSplash;
-    _currentScreen.reset(new SplashScreen(_mainWindow, *_dispatcher, "./res/splash.png"));
+    _currentScreen = std::make_unique<SplashScreen>(_mainWindow, *_dispatcher, "./res/splash.png");
 
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
@@ -86,8 +105,14 @@ void Game::gameLoop(const sf::Time deltaTime)
     {
     case Game::GameState::ClosingSplash:
     {
+        _gameState = Game::GameState::ShowingMenu;
+        _currentScreen = std::make_unique<MainMenuScreen>(_mainWindow, *_dispatcher, "./res/mainmenu.png");
+        break;
+    }
+    case Game::GameState::PlayRequested:
+    {
         _gameState = Game::GameState::Playing;
-        _currentScreen.reset(new MainMenuScreen(_mainWindow, *_dispatcher, "./res/mainmenu.png"));
+        _currentScreen = std::make_unique<GameScreen>(_mainWindow, *_dispatcher, *_render);
         break;
     }
     }
@@ -98,7 +123,6 @@ void Game::gameLoop(const sf::Time deltaTime)
     // Lastly, render if we have a valid screen
     if (_currentScreen)
     {
-        _mainWindow.clear(sf::Color(0, 0, 0));
         _currentScreen->render();
     }
 }
@@ -135,6 +159,12 @@ void Game::handleInput()
 
 void Game::update(const sf::Time deltaTime)
 {
+    switch (_gameState)
+    {
+    case Game::GameState::Playing:
+        this->_engine->update(deltaTime);
+        break;
+    }
 }
 
 bool Game::shouldRenderInState(const Game::GameState state) const
@@ -145,6 +175,7 @@ bool Game::shouldRenderInState(const Game::GameState state) const
            Game::GameState::ClosingSplash == state ||
            Game::GameState::Paused == state ||
            Game::GameState::ShowingMenu == state ||
+           Game::GameState::PlayRequested == state ||
            Game::GameState::Playing == state;
 }
 
@@ -152,4 +183,30 @@ void Game::modifyView(const std::function<sf::View(sf::View)> op)
 {
     this->_view = op(this->_view);
     this->_mainWindow.setView(this->_view);
+}
+
+std::shared_ptr<Entity> Game::createPlayer()
+{
+    auto player = std::make_shared<Entity>();
+
+    auto render = std::make_shared<RenderComponent>();
+    render->texture->loadFromFile("./res/paddle.png");
+    render->sprite = sf::Sprite(*(render->texture));
+
+    auto location = std::make_shared<LocationComponent>();
+    location->location.left = WORLD_BORDER;
+    location->location.top = 309; // World middle
+    location->location.height = 150;
+    location->location.width = 15;
+
+    auto velocity = std::make_shared<VelocityComponent>();
+
+    auto playerMarker = std::make_shared<PlayerComponent>();
+
+    player->add(std::move(render));
+    player->add(std::move(location));
+    player->add(std::move(velocity));
+    player->add(std::move(playerMarker));
+
+    return std::move(player);
 }
