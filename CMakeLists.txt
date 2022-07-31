@@ -30,7 +30,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 # Add the ./include and ./res directories to the build path so header files and images are available
 target_include_directories(RunMe PUBLIC ${PROJECT_SOURCE_DIR}/include)
-target_include_directories(RunMe PRIVATE ${PROJECT_SOURCE_DIR}/res)
+target_include_directories(RunMe PUBLIC ${PROJECT_SOURCE_DIR}/include/entity)
 
 # Load SFML. MODULE is used to force usage of the FindSFML.cmake file over the .config file that comes
 #  with the SFML installation from the Ubuntu 22.04 repositories.

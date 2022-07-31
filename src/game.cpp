@@ -8,6 +8,8 @@
 #include <Game.hpp>
 #include <SplashScreen.hpp>
 #include <MainMenuScreen.hpp>
+#include <EntityEngine.hpp>
+#include <RenderSystem.hpp>
 
 #include <iostream>
 
@@ -36,6 +38,11 @@ void Game::start()
                            { _gameState = Game::GameState::Exiting; });
     // =========================================================================
 
+    // ================ Block - Component Entity System ========================
+    auto engine = std::make_unique<EntityEngine>();
+    auto renderSystem = std::make_shared<RenderSystem>();
+    // =========================================================================
+
     // For simplicity and learning's sake, make a 1024x768 game
     _mainWindow.create(sf::VideoMode(1024, 768), "Simple Cpp Game");
     _view = _mainWindow.getDefaultView();
@@ -48,7 +55,6 @@ void Game::start()
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
 
     // Loop until we exit.
-    // TODO - control to constrain this loop to 60fps
     while (!isExiting())
     {
         timeSinceLastUpdate += clock.restart();
@@ -68,12 +74,12 @@ Dispatcher *Game::getDispatcher()
     return this->_dispatcher.get();
 }
 
-bool Game::isExiting()
+bool Game::isExiting() const
 {
     return Game::GameState::Exiting == _gameState;
 }
 
-void Game::gameLoop(sf::Time deltaTime)
+void Game::gameLoop(const sf::Time deltaTime)
 {
     // Do anything specific to the current state. Right now, this is basic, but more will happen later
     switch (_gameState)
@@ -87,6 +93,7 @@ void Game::gameLoop(sf::Time deltaTime)
     }
 
     this->handleInput();
+    this->update(deltaTime);
 
     // Lastly, render if we have a valid screen
     if (_currentScreen)
@@ -126,11 +133,11 @@ void Game::handleInput()
     }
 }
 
-void Game::update(sf::Time deltaTime)
+void Game::update(const sf::Time deltaTime)
 {
 }
 
-bool Game::shouldRenderInState(Game::GameState state)
+bool Game::shouldRenderInState(const Game::GameState state) const
 {
     // I'd prefer this to be a property of the GameState type itself, but given enumerations can't have methods in C++, this is what I'm doing until
     // I figure out how to idiomatically do this.
@@ -141,7 +148,7 @@ bool Game::shouldRenderInState(Game::GameState state)
            Game::GameState::Playing == state;
 }
 
-void Game::modifyView(std::function<sf::View(sf::View)> op)
+void Game::modifyView(const std::function<sf::View(sf::View)> op)
 {
     this->_view = op(this->_view);
     this->_mainWindow.setView(this->_view);

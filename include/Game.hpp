@@ -54,12 +54,12 @@ private:
         Exiting
     };
 
-    bool isExiting();
-    void gameLoop(sf::Time deltaTime);
+    bool isExiting() const;
+    void gameLoop(const sf::Time deltaTime);
     void handleInput();
-    void update(sf::Time detlaTime);
-    bool shouldRenderInState(Game::GameState state);
-    void modifyView(std::function<sf::View(sf::View)> op);
+    void update(const sf::Time detlaTime);
+    bool shouldRenderInState(const Game::GameState state) const;
+    void modifyView(const std::function<sf::View(sf::View)> op);
 
     GameState _gameState;
     sf::RenderWindow _mainWindow;

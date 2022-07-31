@@ -1,7 +1,5 @@
-#include <SFML/Graphics.hpp>
 
 #include <SplashScreen.hpp>
-#include <iostream>
 
 const std::string SplashScreen::SPLASH_SCREEN_CLOSE = "SPLASH_SCREEN_CLOSE";
 

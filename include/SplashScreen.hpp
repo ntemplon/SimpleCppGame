@@ -1,9 +1,6 @@
 #pragma once
 
-#include <string>
-
 #include <Screen.hpp>
-#include <SFML/Graphics.hpp>
 
 /**
  * @brief A screen that displays an image.
