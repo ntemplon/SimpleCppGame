@@ -13,6 +13,9 @@
 #include <Components.hpp>
 
 #include <iostream>
+#include <random>
+#include <ctime>
+#include <math.h>
 
 const sf::Time Game::TIME_PER_FRAME = sf::seconds(1.0f / 60.0f);
 const int Game::WORLD_WIDTH = 1024;
@@ -32,6 +35,8 @@ void Game::start()
         return;
     }
 
+    srand(time(NULL));
+
     // ============== Block - assign event listeners ==========================
     // Close the splash screen when it's clicked
     _dispatcher->subscribe(SplashScreen::SPLASH_SCREEN_CLOSE, [&](Event event)
@@ -49,8 +54,14 @@ void Game::start()
     // ================ Block - Component Entity System ========================
     _engine = std::make_unique<EntityEngine>();
 
+    auto player = createPlayer();
+    auto ball = createBall();
+
     _input = std::make_shared<PlayerInputSystem>();
     _engine->add(this->_input);
+
+    _ballSystem = std::make_shared<BallSystem>(*_dispatcher, *player);
+    _engine->add(this->_ballSystem);
 
     _velocity = std::make_shared<VelocitySystem>();
     _engine->add(this->_velocity);
@@ -58,8 +69,8 @@ void Game::start()
     _render = std::make_shared<RenderSystem>();
     _engine->add(this->_render);
 
-    auto player = createPlayer();
     _engine->add(player);
+    _engine->add(ball);
     // =========================================================================
 
     // For simplicity and learning's sake, make a fixed-size game
@@ -209,4 +220,34 @@ std::shared_ptr<Entity> Game::createPlayer()
     player->add(std::move(playerMarker));
 
     return std::move(player);
+}
+
+std::shared_ptr<Entity> Game::createBall()
+{
+    auto ball = std::make_shared<Entity>();
+
+    auto render = std::make_shared<RenderComponent>();
+    render->texture->loadFromFile("./res/paddle.png");
+    render->sprite = sf::Sprite(*(render->texture));
+
+    auto location = std::make_shared<LocationComponent>();
+    location->location.height = 10.f;
+    location->location.width = 10.f;
+    location->location.left = (Game::WORLD_WIDTH - location->location.width) / 2.f;
+    location->location.top = (Game::WORLD_HEIGHT - location->location.height) / 2.f;
+
+    float ballSpeed = 300.f;
+    float angleRad = (rand() / static_cast<float>(RAND_MAX)) * 6.283185;
+    auto velocity = std::make_shared<VelocityComponent>();
+    velocity->velocity.x = ballSpeed * cos(angleRad);
+    velocity->velocity.y = ballSpeed * sin(angleRad);
+
+    auto ballMarker = std::make_shared<BallComponent>();
+
+    ball->add(std::move(render));
+    ball->add(std::move(location));
+    ball->add(std::move(velocity));
+    ball->add(std::move(ballMarker));
+
+    return std::move(ball);
 }

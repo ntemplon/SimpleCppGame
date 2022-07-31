@@ -19,8 +19,8 @@ void VelocitySystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime
     VelocityComponent *velocity = dynamic_cast<VelocityComponent *>(entity->getComponent(VelocityComponent::VEL_COMP_ID).get());
 
     float elapsedTime = deltaTime.asSeconds();
-    location->location.left = std::min(Game::WORLD_WIDTH - location->location.width - Game::WORLD_BORDER,
-                                       std::max((float)Game::WORLD_BORDER, location->location.left + (velocity->velocity.x * elapsedTime)));
-    location->location.top = std::min(Game::WORLD_HEIGHT - location->location.height - Game::WORLD_BORDER,
-                                      std::max((float)Game::WORLD_BORDER, location->location.top + (velocity->velocity.y * elapsedTime)));
+    location->location.left = std::min(Game::WORLD_WIDTH - location->location.width - Game::WORLD_BORDER + 2.f,
+                                       std::max((float)Game::WORLD_BORDER - 2.f, location->location.left + (velocity->velocity.x * elapsedTime)));
+    location->location.top = std::min(Game::WORLD_HEIGHT - location->location.height - Game::WORLD_BORDER + 2.f,
+                                      std::max((float)Game::WORLD_BORDER - 2.f, location->location.top + (velocity->velocity.y * elapsedTime)));
 }

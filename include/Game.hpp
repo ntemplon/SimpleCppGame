@@ -12,6 +12,7 @@
 #include <RenderSystem.hpp>
 #include <VelocitySystem.hpp>
 #include <PlayerInputSystem.hpp>
+#include <BallSystem.hpp>
 
 /**
  * @brief A simple C++ game that shamelessly rips off Pong.
@@ -71,14 +72,17 @@ private:
     void modifyView(const std::function<sf::View(sf::View)> op);
 
     std::shared_ptr<Entity> createPlayer();
+    std::shared_ptr<Entity> createBall();
 
     GameState _gameState;
     sf::RenderWindow _mainWindow;
     sf::View _view;
+
     std::unique_ptr<Screen> _currentScreen;
     std::unique_ptr<Dispatcher> _dispatcher;
     std::unique_ptr<EntityEngine> _engine;
     std::shared_ptr<RenderSystem> _render;
     std::shared_ptr<VelocitySystem> _velocity;
     std::shared_ptr<PlayerInputSystem> _input;
+    std::shared_ptr<BallSystem> _ballSystem;
 };
