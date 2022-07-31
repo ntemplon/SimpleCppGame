@@ -5,7 +5,6 @@
 class PlayerInputSystem : public IteratingSystem
 {
 public:
-    static const float PLAYER_PADDLE_SPEED;
     PlayerInputSystem();
 
 protected:

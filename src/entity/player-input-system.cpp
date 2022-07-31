@@ -3,6 +3,7 @@
 #include <PlayerInputSystem.hpp>
 #include <ComponentFamily.hpp>
 #include <Components.hpp>
+#include <Game.hpp>
 
 PlayerInputSystem::PlayerInputSystem() : IteratingSystem(
                                              std::make_shared<ComponentFamily>(
@@ -10,7 +11,6 @@ PlayerInputSystem::PlayerInputSystem() : IteratingSystem(
 {
 }
 
-const float PlayerInputSystem::PLAYER_PADDLE_SPEED = 225.f;
 void PlayerInputSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
 {
     bool upPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W);
@@ -20,11 +20,11 @@ void PlayerInputSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaT
 
     if (upPressed && !downPressed)
     {
-        velocity->velocity.y = -1 * PLAYER_PADDLE_SPEED;
+        velocity->velocity.y = -1 * Game::PADDLE_SPEED;
     }
     else if (downPressed && !upPressed)
     {
-        velocity->velocity.y = PLAYER_PADDLE_SPEED;
+        velocity->velocity.y = Game::PADDLE_SPEED;
     }
     else
     {
