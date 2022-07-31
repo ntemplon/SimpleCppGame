@@ -18,24 +18,24 @@ set(SPHINX_EXECUTABLE ${VENV_BIN_DIR}/sphinx-build) # This will be installed off
 
 # Get a list of all public header files so that we can generate documentation for them
 get_target_property(RUN_ME_PUBLIC_HEADER_DIR RunMe INTERFACE_INCLUDE_DIRECTORIES)
-file(GLOB_RECURSE RUN_ME_PUBLIC_HEADERS ${RUN_ME_PUPBLIC_HEADER_DIR}/*.hpp ${RUN_ME_PUBLIC_HEADER_DIR}/*.h)
+file(GLOB_RECURSE RUN_ME_PUBLIC_HEADERS ${INTERFACE_INCLUDE_DIRECTORIES}/*.hpp) # ${PROJECT_SOURCE_DIR}/include/*.h
 
-set(DOXYGEN_INPUT_DIR ${RUN_ME_PUBLIC_HEADER_DIR})
+set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/include/) # Root directory with RECURSIVE = TRUE in the Doxyfile
 set(DOXYGEN_OUTPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/out/doxygen)
 set(DOXYGEN_INDEX_FILE ${DOXYGEN_OUTPUT_DIR}/html/index.html)
 set(DOXYFILE_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
 set(DOXYFILE_OUT ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
 
+file(MAKE_DIRECTORY ${DOXYGEN_OUTPUT_DIR}) #Doxygen won't create this for us
+
 #Replace variables inside @@ with the current values
 configure_file(${DOXYFILE_IN} ${DOXYFILE_OUT} @ONLY)
 
-file(MAKE_DIRECTORY ${DOXYGEN_OUTPUT_DIR}) #Doxygen won't create this for us
-
 add_custom_command(OUTPUT ${DOXYGEN_INDEX_FILE}
                    DEPENDS ${RUN_ME_PUBLIC_HEADERS}
+                   DEPENDS ${DOXYFILE_IN}
                    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
                    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-                   MAIN_DEPENDENCY ${DOXYFILE_IN}
                    COMMENT "Generating Doxygen files")
 
 add_custom_target(Doxygen ALL DEPENDS ${DOXYGEN_INDEX_FILE})
