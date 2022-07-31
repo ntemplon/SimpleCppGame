@@ -40,6 +40,7 @@ MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, Dispatcher &dispatcher,
 
 void MainMenuScreen::render() const
 {
+    this->getWindow().clear(sf::Color(0, 0, 0));
     this->getWindow().draw(_sprite);
     this->getWindow().display();
 }

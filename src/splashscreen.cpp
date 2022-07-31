@@ -14,6 +14,7 @@ SplashScreen::SplashScreen(sf::RenderWindow &window, Dispatcher &dispatcher, std
 
 void SplashScreen::render() const
 {
+    this->getWindow().clear(sf::Color(0, 0, 0));
     this->getWindow().draw(_sprite);
     this->getWindow().display();
 }
