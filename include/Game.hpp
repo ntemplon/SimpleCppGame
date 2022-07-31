@@ -57,10 +57,12 @@ private:
         Uninitialized,
         ShowingSplash,
         ClosingSplash,
-        Paused,
         ShowingMenu,
         PlayRequested,
         Playing,
+        Won,
+        Lost,
+        ExitOnAck,
         Exiting
     };
 

@@ -11,6 +11,7 @@
 #include <GameScreen.hpp>
 #include <EntityEngine.hpp>
 #include <Components.hpp>
+#include <GameOverScreen.hpp>
 
 #include <iostream>
 #include <random>
@@ -48,6 +49,14 @@ void Game::start()
 
     // Close the game if "Exit" on the main menu screen is selected
     _dispatcher->subscribe(MainMenuScreen::MAIN_MENU_EXIT, [&](Event event)
+                           { _gameState = Game::GameState::Exiting; });
+
+    // If the AI scores, we lose
+    _dispatcher->subscribe(BallSystem::ENEMY_SCORE_EVENT, [&](Event event)
+                           { _gameState = Game::GameState::Lost; });
+
+    // If we accept our defeat, exit gracefully
+    _dispatcher->subscribe(GameOverScreen::GAME_OVER_ACK, [&](Event event)
                            { _gameState = Game::GameState::Exiting; });
     // =========================================================================
 
@@ -126,6 +135,10 @@ void Game::gameLoop(const sf::Time deltaTime)
         _currentScreen = std::make_unique<GameScreen>(_mainWindow, *_dispatcher, *_render);
         break;
     }
+    case Game::GameState::Lost:
+        _gameState = Game::GameState::ExitOnAck;
+        _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/game-over.png");
+        break;
     }
 
     this->handleInput();
@@ -182,12 +195,7 @@ bool Game::shouldRenderInState(const Game::GameState state) const
 {
     // I'd prefer this to be a property of the GameState type itself, but given enumerations can't have methods in C++, this is what I'm doing until
     // I figure out how to idiomatically do this.
-    return Game::GameState::ShowingSplash == state ||
-           Game::GameState::ClosingSplash == state ||
-           Game::GameState::Paused == state ||
-           Game::GameState::ShowingMenu == state ||
-           Game::GameState::PlayRequested == state ||
-           Game::GameState::Playing == state;
+    return Game::GameState::Uninitialized != state && Game::GameState::Exiting != state;
 }
 
 void Game::modifyView(const std::function<sf::View(sf::View)> op)
