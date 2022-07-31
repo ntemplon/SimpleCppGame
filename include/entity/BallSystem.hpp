@@ -10,13 +10,14 @@ class BallSystem : public IteratingSystem
 public:
     static const std::string PLAYER_SCORE_EVENT;
     static const std::string ENEMY_SCORE_EVENT;
-    BallSystem(Dispatcher &dispatcher, Entity &player);
+    BallSystem(Dispatcher &dispatcher, Entity &player, Entity &enemy);
 
 protected:
     void process(std::shared_ptr<Entity> &entity, sf::Time deltaTime);
 
 private:
     Entity &_player;
+    Entity &_enemy;
 
     sf::FloatRect _top;
     sf::FloatRect _bottom;

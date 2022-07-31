@@ -6,12 +6,12 @@
 const std::string BallSystem::PLAYER_SCORE_EVENT = "PLAYER_SCORE_EVENT";
 const std::string BallSystem::ENEMY_SCORE_EVENT = "ENEMY_SCORE_EVENT";
 
-BallSystem::BallSystem(Dispatcher &dispatcher, Entity &player) : IteratingSystem(
-                                                                     std::make_shared<ComponentFamily>(
-                                                                         std::unordered_set<std::string>{BallComponent::BALL_ID,
-                                                                                                         LocationComponent::LOC_COMP_ID,
-                                                                                                         VelocityComponent::VEL_COMP_ID})),
-                                                                 _dispatcher(dispatcher), _player(player)
+BallSystem::BallSystem(Dispatcher &dispatcher, Entity &player, Entity &enemy) : IteratingSystem(
+                                                                                    std::make_shared<ComponentFamily>(
+                                                                                        std::unordered_set<std::string>{BallComponent::BALL_ID,
+                                                                                                                        LocationComponent::LOC_COMP_ID,
+                                                                                                                        VelocityComponent::VEL_COMP_ID})),
+                                                                                _dispatcher(dispatcher), _player(player), _enemy(enemy)
 {
     this->_top = sf::FloatRect(0.f, 0.f, (float)Game::WORLD_WIDTH, (float)Game::WORLD_BORDER);
     this->_bottom = sf::FloatRect(0.f, (float)(Game::WORLD_HEIGHT - Game::WORLD_BORDER), (float)Game::WORLD_WIDTH, (float)Game::WORLD_BORDER);
@@ -51,9 +51,9 @@ void BallSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
     }
     else if (_right.intersects(location) && velCmp->velocity.x > 0)
     {
-        // Bounce off the right wall
-        // TODO - change to scoring!
-        velCmp->velocity.x = velCmp->velocity.x * -1.f;
+        // Player scores
+        Event score(PLAYER_SCORE_EVENT);
+        this->_dispatcher.dispatch(score);
     }
     else
     {
@@ -63,6 +63,16 @@ void BallSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
         {
             // Bounce off the player's paddle
             velCmp->velocity.x = velCmp->velocity.x * -1.f;
+        }
+        else
+        {
+            LocationComponent *enemyLocCmp = dynamic_cast<LocationComponent *>(this->_enemy.getComponent(LocationComponent::LOC_COMP_ID).get());
+            auto enemyLocation = enemyLocCmp->location;
+            if (enemyLocation.intersects(location) && velCmp->velocity.x > 0)
+            {
+                // Bounce off the enemy's paddle
+                velCmp->velocity.x = velCmp->velocity.x * -1.f;
+            }
         }
     }
 }

@@ -29,6 +29,7 @@ public:
     const static int WORLD_WIDTH;
     const static int WORLD_HEIGHT;
     const static int WORLD_BORDER;
+    const static float PADDLE_SPEED;
 
     /**
      * @brief Construct a new Game object
@@ -74,6 +75,7 @@ private:
     void modifyView(const std::function<sf::View(sf::View)> op);
 
     std::shared_ptr<Entity> createPlayer();
+    std::shared_ptr<Entity> createEnemy();
     std::shared_ptr<Entity> createBall();
 
     GameState _gameState;

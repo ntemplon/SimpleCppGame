@@ -37,13 +37,6 @@ public:
     PlayerComponent();
 };
 
-class EnemyComponent : public Entity::Component
-{
-public:
-    static const std::string ENEMY_ID;
-    EnemyComponent();
-};
-
 class BallComponent : public Entity::Component
 {
 public:
