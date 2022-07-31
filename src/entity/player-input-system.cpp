@@ -10,7 +10,7 @@ PlayerInputSystem::PlayerInputSystem() : IteratingSystem(
 {
 }
 
-const float PlayerInputSystem::PLAYER_PADDLE_SPEED = 200.f;
+const float PlayerInputSystem::PLAYER_PADDLE_SPEED = 225.f;
 void PlayerInputSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
 {
     bool upPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W);
