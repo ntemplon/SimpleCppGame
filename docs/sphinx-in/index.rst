@@ -17,7 +17,7 @@ Welcome to the Simple CPP Game Documentation!
 
 Gameplay Overview
 -------------------
-Simple CPP Game is a simple ggame, written in C++, that shamelessly rips off Atari's classic, *Pong*.
+Simple CPP Game is a simple game, written in C++, that shamelessly rips off Atari's classic, *Pong*.
 
 .. image:: img/gameplay.png
 
