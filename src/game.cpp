@@ -300,6 +300,7 @@ std::shared_ptr<Entity> Game::createBall()
     location->location.top = (Game::WORLD_HEIGHT - location->location.height) / 2.f;
 
     // The ball starts at the starting speed in a random direction
+    // TODO: Filter out annoying starting directions, like straight up or straight sideways
     float ballSpeed = Game::BALL_INITIAL_SPEED;
     float angleRad = (rand() / static_cast<float>(RAND_MAX)) * 6.283185;
     auto velocity = std::make_shared<VelocityComponent>();

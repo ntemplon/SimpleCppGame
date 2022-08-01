@@ -5,7 +5,7 @@ include(${CMAKE_SOURCE_DIR}/cmake/CreatePythonVenv.cmake)
 
 create_python_venv(
     docenv
-    PYTHON_VERSION 3.9
+    PYTHON_VERSION 3
     REQUIREMENTS_TXT ${CMAKE_CURRENT_SOURCE_DIR}/venv_reqs.txt
     OUT_PYTHON_EXE PYTHON_EXE
     OUT_BINARY_DIR VENV_BIN_DIR

@@ -1,7 +1,6 @@
-.. SimpleCppGame documentation master file, created by
-   sphinx-quickstart on Sun Jul 24 22:39:39 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+=================
+Simple CPP Game
+=================
 
 Welcome to the Simple CPP Game Documentation!
 =============================================
@@ -11,19 +10,16 @@ Welcome to the Simple CPP Game Documentation!
    :caption: Contents:
 
    self
-   usage/installation
+   installation
+   extending
+   classdocs
 
 
+Gameplay Overview
+-------------------
+Simple CPP Game is a simple ggame, written in C++, that shamelessly rips off Atari's classic, *Pong*.
 
-Indices and tables
-==================
+.. image:: img/gameplay.png
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-Docs
-====
-
-.. doxygenclass:: Game
-   :members:
+Gameplay is simple: use W/S or Up/Down to steer your paddle to bounce the ball back to your AI opponent. If you miss, the AI wins.
+If the AI misses, you win! Games are played in a best-of-1 format.
