@@ -3,13 +3,13 @@ Extending the Simple CPP Game Engine
 
 Engine Architecture
 --------------------
-Simple CPP Game is implemented with a `Entity Component System <https://en.wikipedia.org/wiki/Entity_component_system>`_ that handles
+Simple CPP Game is implemented with an `Entity Component System <https://en.wikipedia.org/wiki/Entity_component_system>`_ that handles
 complex behavior of the actors in the game world. Rather than traditional inheritance, where game objects have an "is-a" relationship
-to classes that provide game behavior, Entity Component Systems define game objects that have a "has-a" relationship to classes (called
-Systems) that provide game behavior. This creates a much more modular and scalable framework for game behavior (that is supported even
-by languages that disallow multiple inheritance) without sacrificing the performance and ecosystem of a popular language like C++. In
-essence, Entity Component Systems bring the best parts of `Duck Typing <https://en.wikipedia.org/wiki/Duck_typing>`_ to the part of the
-program that needs it without sacrificing the value of static typing elsewhere in the codebase.
+to classes that provide game behavior, Entity Component Systems define game objects that have a "has-a" relationship to components that
+interact with Systems that provide game behavior. This creates a much more modular and scalable framework for game behavior (that is
+supported even by languages that disallow multiple inheritance) without sacrificing the performance and ecosystem of a popular language
+like C++. In essence, Entity Component Systems bring the best parts of `Duck Typing <https://en.wikipedia.org/wiki/Duck_typing>`_ to the
+part of the program that needs it without sacrificing the value of static typing elsewhere in the codebase.
 
 Adding New Behavior
 --------------------
@@ -48,7 +48,7 @@ those that are appropriate for a given system. A custom system should pass this 
 :ref:`EntitySystem<EntitySystem>` or whatever subclass thereof it inherits from (such as 
 `IteratingSystem <./doxygen/html/classIteratingSystem.html>`_). The simplist implementation of `EntityFamily <./doxygen/html/classEntityFamily.html>`_
 (and the only one implemented in Simple Cpp Game at this time) is the `ComponentFamily <./doxygen/html/classComponentFamily.html>`_,
-which allows the system to specify a set of Component each entity it will process must have.
+which allows the system to specify a set of Components each entity it will process must have.
 
 **2. Define the Behavior of those Entities**
 
