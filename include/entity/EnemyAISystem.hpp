@@ -22,6 +22,7 @@ class EnemyComponent : public Entity::Component
 public:
     static const std::string ENEMY_ID;
     static const sf::Time REACTION_TIME;
+    static const float ENEMY_ERROR_SCALE;
 
     enum class AIState
     {
