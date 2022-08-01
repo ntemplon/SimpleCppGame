@@ -80,4 +80,4 @@ Note: If on windows, use cmake-gui.exe instead and refer to the CMake documentat
 
     `cmake --build . --config Release --target all`
 
-This will result in a RunMe executable in the build folder, which you can run to play the game!
+This will result in a RunMe executable in the build folder, which you can run to play the game! It will also create the documentation for the game at `[repository root]/docs/out/sphinx/index.html`.
