@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classBallSystem" kind="class" language="C++" prot="public">
+    <compoundname>BallSystem</compoundname>
+    <basecompoundref refid="classIteratingSystem" prot="public" virt="non-virtual">IteratingSystem</basecompoundref>
+    <includes refid="BallSystem_8hpp" local="no">BallSystem.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classBallSystem_1ab397990feb36a75bb21b29c50b25f1ab" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string BallSystem::PLAYER_SCORE_EVENT</definition>
+        <argsstring></argsstring>
+        <name>PLAYER_SCORE_EVENT</name>
+        <briefdescription>
+<para>The <ref refid="classEvent" kindref="compound">Event</ref> ID indicating the player has scored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="21" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBallSystem_1a556c6791341e849977ce36fd52127f72" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string BallSystem::ENEMY_SCORE_EVENT</definition>
+        <argsstring></argsstring>
+        <name>ENEMY_SCORE_EVENT</name>
+        <briefdescription>
+<para>The <ref refid="classEvent" kindref="compound">Event</ref> ID indicating the enemy AI has scored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="26" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBallSystem_1aaeccc06a0b3717bb36e4cd9a2234ee58" prot="private" static="no" mutable="no">
+        <type><ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; BallSystem::_player</definition>
+        <argsstring></argsstring>
+        <name>_player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="49" column="12" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBallSystem_1ab646de0aa79d9ab85c4713e8fab40a53" prot="private" static="no" mutable="no">
+        <type><ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; BallSystem::_enemy</definition>
+        <argsstring></argsstring>
+        <name>_enemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="50" column="12" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBallSystem_1ac46df7ea852239a9f111712da9ab19cb" prot="private" static="no" mutable="no">
+        <type>sf::FloatRect</type>
+        <definition>sf::FloatRect BallSystem::_top</definition>
+        <argsstring></argsstring>
+        <name>_top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="52" column="19" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBallSystem_1ad75b9d8eceebc6f0d5c82367e4f1b055" prot="private" static="no" mutable="no">
+        <type>sf::FloatRect</type>
+        <definition>sf::FloatRect BallSystem::_bottom</definition>
+        <argsstring></argsstring>
+        <name>_bottom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="53" column="19" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBallSystem_1afb4a57613e12dd520b9d184425013b41" prot="private" static="no" mutable="no">
+        <type>sf::FloatRect</type>
+        <definition>sf::FloatRect BallSystem::_left</definition>
+        <argsstring></argsstring>
+        <name>_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="54" column="19" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBallSystem_1a9bb9cd1d05ceaad56f5296acd032d8d0" prot="private" static="no" mutable="no">
+        <type>sf::FloatRect</type>
+        <definition>sf::FloatRect BallSystem::_right</definition>
+        <argsstring></argsstring>
+        <name>_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="55" column="19" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBallSystem_1ab6fc5b708ad00c2bb1dcef0088f5d7b2" prot="private" static="no" mutable="no">
+        <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
+        <definition>Dispatcher&amp; BallSystem::_dispatcher</definition>
+        <argsstring></argsstring>
+        <name>_dispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="57" column="16" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBallSystem_1ad2bb2420c5dc69443a724dcf08e1907c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BallSystem::BallSystem</definition>
+        <argsstring>(Dispatcher &amp;dispatcher, Entity &amp;player, Entity &amp;enemy)</argsstring>
+        <name>BallSystem</name>
+        <param>
+          <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type><ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>enemy</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a new Ball System. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dispatcher on which the system will post the PLAYER_SCORE_EVENT and ENEMY_SCORE_EVENT. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to the player. Its <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref> is used for collision detection with the paddle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enemy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A referece to the enemy AI. Its <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref> is used for collection detection with the paddle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="35" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classBallSystem_1a16831511402914a2e0de903eb328636c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BallSystem::process</definition>
+        <argsstring>(std::shared_ptr&lt; Entity &gt; &amp;entity, sf::Time deltaTime)</argsstring>
+        <name>process</name>
+        <reimplements refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c">process</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ball. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Processes a ball to see if it needs to bounce off a wall or has scored for either the player or the AI enemy.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current ball to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since the last call to <ref refid="classBallSystem_1a16831511402914a2e0de903eb328636c" kindref="member">process()</ref> for this ball. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="46" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classBallSystem_1a7f162c26cb36cfe960db3895350124e7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BallSystem::slightlyRandomize</definition>
+        <argsstring>(sf::Vector2f &amp;velocity) const</argsstring>
+        <name>slightlyRandomize</name>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="59" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A system that handles the ball physics. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This system handles the unique aspects of ball physics, including bouncing off of walls and detecting successful scores. It acts on Entities with <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref>, <ref refid="classVelocityComponent" kindref="compound">VelocityComponent</ref>, and <ref refid="classBallComponent" kindref="compound">BallComponent</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BallSystem</label>
+        <link refid="classBallSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BallSystem</label>
+        <link refid="classBallSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" line="15" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp" bodystart="16" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classBallSystem_1ad75b9d8eceebc6f0d5c82367e4f1b055" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>_bottom</name></member>
+      <member refid="classBallSystem_1ab6fc5b708ad00c2bb1dcef0088f5d7b2" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>_dispatcher</name></member>
+      <member refid="classBallSystem_1ab646de0aa79d9ab85c4713e8fab40a53" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>_enemy</name></member>
+      <member refid="classBallSystem_1afb4a57613e12dd520b9d184425013b41" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>_left</name></member>
+      <member refid="classBallSystem_1aaeccc06a0b3717bb36e4cd9a2234ee58" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>_player</name></member>
+      <member refid="classBallSystem_1a9bb9cd1d05ceaad56f5296acd032d8d0" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>_right</name></member>
+      <member refid="classBallSystem_1ac46df7ea852239a9f111712da9ab19cb" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>_top</name></member>
+      <member refid="classBallSystem_1ad2bb2420c5dc69443a724dcf08e1907c" prot="public" virt="non-virtual"><scope>BallSystem</scope><name>BallSystem</name></member>
+      <member refid="classBallSystem_1a556c6791341e849977ce36fd52127f72" prot="public" virt="non-virtual"><scope>BallSystem</scope><name>ENEMY_SCORE_EVENT</name></member>
+      <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" virt="virtual"><scope>BallSystem</scope><name>engineEntityAdded</name></member>
+      <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" virt="non-virtual"><scope>BallSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" virt="non-virtual"><scope>BallSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" virt="virtual"><scope>BallSystem</scope><name>getEntities</name></member>
+      <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" prot="public" virt="non-virtual"><scope>BallSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" prot="public" virt="non-virtual"><scope>BallSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classBallSystem_1ab397990feb36a75bb21b29c50b25f1ab" prot="public" virt="non-virtual"><scope>BallSystem</scope><name>PLAYER_SCORE_EVENT</name></member>
+      <member refid="classBallSystem_1a16831511402914a2e0de903eb328636c" prot="protected" virt="virtual"><scope>BallSystem</scope><name>process</name></member>
+      <member refid="classBallSystem_1a7f162c26cb36cfe960db3895350124e7" prot="private" virt="non-virtual"><scope>BallSystem</scope><name>slightlyRandomize</name></member>
+      <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" prot="public" virt="virtual"><scope>BallSystem</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

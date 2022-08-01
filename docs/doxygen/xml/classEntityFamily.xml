@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classEntityFamily" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>EntityFamily</compoundname>
+    <derivedcompoundref refid="classComponentFamily" prot="public" virt="non-virtual">ComponentFamily</derivedcompoundref>
+    <includes refid="EntityFamily_8hpp" local="no">EntityFamily.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEntityFamily_1a2192f7927d9a8cda42f094ced834da78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool EntityFamily::isInFamily</definition>
+        <argsstring>(const Entity &amp;entity) const =0</argsstring>
+        <name>isInFamily</name>
+        <reimplementedby refid="classComponentFamily_1a9dea2702302768c35b94258f4fb79bcb">isInFamily</reimplementedby>
+        <param>
+          <type>const <ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Evaluates if an entity is &quot;in the family&quot; by meeting the criteria of the class the family represents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity to evaluate if it is in the family. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the entity is in the family. </para>
+</simplesect>
+<simplesect kind="return"><para>false if the entity is not in the family. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityFamily.hpp" line="19" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An abstract class that allows for the definition of a class of entity. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EntityFamily</label>
+        <link refid="classEntityFamily"/>
+      </node>
+      <node id="2">
+        <label>ComponentFamily</label>
+        <link refid="classComponentFamily"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityFamily.hpp" line="9" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityFamily.hpp" bodystart="10" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classEntityFamily_1a2192f7927d9a8cda42f094ced834da78" prot="public" virt="pure-virtual"><scope>EntityFamily</scope><name>isInFamily</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

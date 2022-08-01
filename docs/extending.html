@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extending the Simple CPP Game Engine &mdash; SimpleCppGame 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Simple CPP Game Class Documentation" href="classdocs.html" />
+    <link rel="prev" title="Installing and Getting Started" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> SimpleCppGame
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Simple CPP Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installing and Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extending the Simple CPP Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#engine-architecture">Engine Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-new-behavior">Adding New Behavior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entities-and-components">Entities and Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entity-systems">Entity Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classdocs.html">Simple CPP Game Class Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SimpleCppGame</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Extending the Simple CPP Game Engine</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/extending.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="extending-the-simple-cpp-game-engine">
+<h1>Extending the Simple CPP Game Engine<a class="headerlink" href="#extending-the-simple-cpp-game-engine" title="Permalink to this heading"></a></h1>
+<section id="engine-architecture">
+<h2>Engine Architecture<a class="headerlink" href="#engine-architecture" title="Permalink to this heading"></a></h2>
+<p>Simple CPP Game is implemented with a <a class="reference external" href="https://en.wikipedia.org/wiki/Entity_component_system">Entity Component System</a> that handles
+complex behavior of the actors in the game world. Rather than traditional inheritance, where game objects have an “is-a” relationship
+to classes that provide game behavior, Entity Component Systems define game objects that have a “has-a” relationship to classes (called
+Systems) that provide game behavior. This creates a much more modular and scalable framework for game behavior (that is supported even
+by languages that disallow multiple inheritance) without sacrificing the performance and ecosystem of a popular language like C++. In
+essence, Entity Component Systems bring the best parts of <a class="reference external" href="https://en.wikipedia.org/wiki/Duck_typing">Duck Typing</a> to the part of the
+program that needs it without sacrificing the value of static typing elsewhere in the codebase.</p>
+</section>
+<section id="adding-new-behavior">
+<h2>Adding New Behavior<a class="headerlink" href="#adding-new-behavior" title="Permalink to this heading"></a></h2>
+<p>The Entity Component System is managed by the <a class="reference internal" href="classdocs.html#entityengine"><span class="std std-ref">EntityEngine class</span></a>. The game creates and maintains a single instance
+of this class throughout the lifetime of the game. Behavior can be added to the game by defining new <a class="reference internal" href="#entities-and-components"><span class="std std-ref">Components</span></a>
+and <a class="reference internal" href="#entity-systems"><span class="std std-ref">Systems</span></a> that control the desired new behavior and adding them to the engine.</p>
+<section id="entities-and-components">
+<h3>Entities and Components<a class="headerlink" href="#entities-and-components" title="Permalink to this heading"></a></h3>
+<p>The primary objects in an Entity Component System are the <a class="reference internal" href="classdocs.html#entity"><span class="std std-ref">entities</span></a> and <a class="reference internal" href="classdocs.html#component"><span class="std std-ref">components</span></a>.</p>
+<p><a class="reference internal" href="classdocs.html#entity"><span class="std std-ref">Entities</span></a> are little more than “bags” of components - groupings of characteristics that are together treated as a single entity (hence the name). When extending
+the functionality of an Entity Component System, new entity types are not defined; instead, new components are created that entities
+can own.</p>
+<p><a class="reference internal" href="classdocs.html#component"><span class="std std-ref">Components</span></a> serve as components (hence, the name) of entities. They mark which <a class="reference internal" href="#entity-systems"><span class="std std-ref">systems</span></a> should act
+on the entity and store any state data related to the systems they are built for. For example, the
+<a class="reference external" href="./doxygen/html/classRenderComponent.html">RenderComponent</a> stores sprite data and marks an entity as belonging to the
+<a class="reference external" href="./doxygen/html/classRenderSystem.html">RenderSystem</a>. Custom components can be anything from color information to ball spin to
+paddle speed. Once a custom Component has been defined, simply <a class="reference external" href="./doxygen/html/classEntity.html#a72c8542219615793e0610617a7e5f3f4">add</a>
+it to the entities it applies to and define a system to act on it. Speaking of systems…</p>
+</section>
+<section id="entity-systems">
+<h3>Entity Systems<a class="headerlink" href="#entity-systems" title="Permalink to this heading"></a></h3>
+<p>Entity Systems are implementations of the <a class="reference internal" href="classdocs.html#entitysystem"><span class="std std-ref">EntitySystem class</span></a>. Designing an Entity System requires two major
+components:</p>
+<p><strong>1. Define the Entities the System Acts on</strong></p>
+<p>Each Entity System defines some behavior that components that match its criteria and “quack like a duck” will exhibit. In Simple Cpp
+Game’s implementation, an <a class="reference external" href="./doxygen/html/classEntityFamily.html">EntityFamily</a> is used to filter the entities in the engine to
+those that are appropriate for a given system. A custom system should pass this family to the appropriate constructor of
+<a class="reference internal" href="classdocs.html#entitysystem"><span class="std std-ref">EntitySystem</span></a> or whatever subclass thereof it inherits from (such as
+<a class="reference external" href="./doxygen/html/classIteratingSystem.html">IteratingSystem</a>). The simplist implementation of <a class="reference external" href="./doxygen/html/classEntityFamily.html">EntityFamily</a>
+(and the only one implemented in Simple Cpp Game at this time) is the <a class="reference external" href="./doxygen/html/classComponentFamily.html">ComponentFamily</a>,
+which allows the system to specify a set of Component each entity it will process must have.</p>
+<p><strong>2. Define the Behavior of those Entities</strong></p>
+<p>Each Entity System defines one class of behavior for its constituent entities. In the base game, <a class="reference external" href="./doxygen/html/classVelocitySystem.html">VelocitySystem</a>
+defines how position updates from velocity, <a class="reference external" href="./doxygen/html/classPlayerInputSystem.html">PlayerInputSystem</a> defines how the player
+paddle moves given input, etc. Each custom system should implement a similarly narrow scope of functionality - this is what gives
+the Entity Component System its flexibility and modularity. Custom systems might add score counters, terrain, or the next new feature
+that no Pong clone has ever seen before.</p>
+<p>The most common way to implement an Entity System mis to inherit from <a class="reference external" href="./doxygen/html/classIteratingSystem.html">IteratingSystem</a>.
+This allows the developer to just provide a <a class="reference external" href="./doxygen/html/classComponentFamily.html">ComponentFamily</a> and an implementation of
+<a class="reference external" href="./doxygen/html/classIteratingSystem.html#a3fb21f26cc10e9ec82834ee86dc87b6c">the process() method</a> that processes one entity at a time.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading"></a></h2>
+<p>Component Entity Systems are an incredible piece of technology that bring the modularity of dynamically typed languages to the statically
+typed environments needed for performance in game development, allowing for modular systems, efficient code development, and performant
+end solutions. With the steps here, you’ll be extending the Simple Cpp Game engine to be writing custom functionality in no time!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installing and Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classdocs.html" class="btn btn-neutral float-right" title="Simple CPP Game Class Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Nathan Templon.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

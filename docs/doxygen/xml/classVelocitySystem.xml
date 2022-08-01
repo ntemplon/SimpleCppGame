@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classVelocitySystem" kind="class" language="C++" prot="public">
+    <compoundname>VelocitySystem</compoundname>
+    <basecompoundref refid="classIteratingSystem" prot="public" virt="non-virtual">IteratingSystem</basecompoundref>
+    <includes refid="VelocitySystem_8hpp" local="no">VelocitySystem.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classVelocitySystem_1a4b36e8470b4b10305718087de2b0cb75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VelocitySystem::VelocitySystem</definition>
+        <argsstring>()</argsstring>
+        <name>VelocitySystem</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classVelocitySystem" kindref="compound">VelocitySystem</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/VelocitySystem.hpp" line="16" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classVelocitySystem_1adc6a737e5d8e2bdf58caf1b5ccc0ad99" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VelocitySystem::process</definition>
+        <argsstring>(std::shared_ptr&lt; Entity &gt; &amp;entity, sf::Time deltaTime)</argsstring>
+        <name>process</name>
+        <reimplements refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c">process</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Updates position data based on velocity for an <ref refid="classEntity" kindref="compound">Entity</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current entity being processed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since <ref refid="classVelocitySystem_1adc6a737e5d8e2bdf58caf1b5ccc0ad99" kindref="member">process()</ref> was last called on this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/VelocitySystem.hpp" line="25" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A system for updating positions based on velocities. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It acts on entities with <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref> and <ref refid="classVelocityComponent" kindref="compound">VelocityComponent</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>VelocitySystem</label>
+        <link refid="classVelocitySystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>VelocitySystem</label>
+        <link refid="classVelocitySystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/VelocitySystem.hpp" line="10" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/VelocitySystem.hpp" bodystart="11" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" virt="virtual"><scope>VelocitySystem</scope><name>engineEntityAdded</name></member>
+      <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" virt="non-virtual"><scope>VelocitySystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" virt="non-virtual"><scope>VelocitySystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" virt="virtual"><scope>VelocitySystem</scope><name>getEntities</name></member>
+      <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" prot="public" virt="non-virtual"><scope>VelocitySystem</scope><name>IteratingSystem</name></member>
+      <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" prot="public" virt="non-virtual"><scope>VelocitySystem</scope><name>IteratingSystem</name></member>
+      <member refid="classVelocitySystem_1adc6a737e5d8e2bdf58caf1b5ccc0ad99" prot="protected" virt="virtual"><scope>VelocitySystem</scope><name>process</name></member>
+      <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" prot="public" virt="virtual"><scope>VelocitySystem</scope><name>update</name></member>
+      <member refid="classVelocitySystem_1a4b36e8470b4b10305718087de2b0cb75" prot="public" virt="non-virtual"><scope>VelocitySystem</scope><name>VelocitySystem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

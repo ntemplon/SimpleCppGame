@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classDispatcher" kind="class" language="C++" prot="public">
+    <compoundname>Dispatcher</compoundname>
+    <includes refid="Dispatcher_8hpp" local="no">Dispatcher.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDispatcher_1ad2b35decda2e219043c0c30da0a5e49b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt; &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::vector&lt;std::function&lt;void(const Event &amp;)&gt; &gt; &gt; Dispatcher::_observers</definition>
+        <argsstring></argsstring>
+        <name>_observers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="47" column="14" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dispatcher::Dispatcher</definition>
+        <argsstring>()=default</argsstring>
+        <name>Dispatcher</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dispatcher::subscribe</definition>
+        <argsstring>(const std::string type, const std::function&lt; void(const Event &amp;)&gt; &amp;observer)</argsstring>
+        <name>subscribe</name>
+        <param>
+          <type>const std::string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt; &amp;</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe a specific listener to a specific event type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string identifying the type of event. This is idiomatically declared as a static member in the class that produces the event. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>observer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to be invoked when the event is dispatched. It is assumed this function&apos;s lifetime will be at least as long as that of the dispatcher. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dispatcher::dispatch</definition>
+        <argsstring>(const Event &amp;event)</argsstring>
+        <name>dispatch</name>
+        <param>
+          <type>const <ref refid="classEvent" kindref="compound">Event</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Dispatches an event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dispatches the provided event to all subscribed observers. All observer that subscribed to event.getType() will be invoked in the same order that they subscribed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to dispatch </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="44" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class for managing events. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> is the main class of the event system. Publishers use the <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> to post their events and subscribers use the <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> to receive their events. </para>
+    </detaileddescription>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="17" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" bodystart="18" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classDispatcher_1ad2b35decda2e219043c0c30da0a5e49b" prot="private" virt="non-virtual"><scope>Dispatcher</scope><name>_observers</name></member>
+      <member refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>dispatch</name></member>
+      <member refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>Dispatcher</name></member>
+      <member refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>subscribe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

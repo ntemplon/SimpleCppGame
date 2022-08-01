@@ -1,0 +1,4 @@
+<map id="EntityFamily" name="EntityFamily">
+<area shape="rect" id="node1" title="An abstract class that allows for the definition of a class of entity." alt="" coords="24,5,127,32"/>
+<area shape="rect" id="node2" href="$classComponentFamily.html" title="An EntityFamily that defines a class as having a component of each of the specified types." alt="" coords="5,80,145,107"/>
+</map>

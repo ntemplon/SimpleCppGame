@@ -1,0 +1,83 @@
+\hypertarget{classEntityEngine}{}\doxysection{Entity\+Engine Class Reference}
+\label{classEntityEngine}\index{EntityEngine@{EntityEngine}}
+
+
+A engine for handling a component entity system.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+Engine.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEntityEngine_a4b1a151835e6a31360c68e8e8852ced9}{add}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntitySystem}{Entity\+System}} $>$ system)
+\begin{DoxyCompactList}\small\item\em Adds a system to the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntityEngine_a1a905abcc17249f932fda5837c40a563}{add}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ entity)
+\begin{DoxyCompactList}\small\item\em Adds an entity to the engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntityEngine_a3eafb99f52dfe9b79995c533d51d314e}{update}} (const sf\+::\+Time delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates all systems in the engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A engine for handling a component entity system. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntityEngine_a1a905abcc17249f932fda5837c40a563}\label{classEntityEngine_a1a905abcc17249f932fda5837c40a563}} 
+\index{EntityEngine@{EntityEngine}!add@{add}}
+\index{add@{add}!EntityEngine@{EntityEngine}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Entity\+Engine\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Adds an entity to the engine. 
+
+Adds the provided entity to the engine. The call site, the engine, and any systems that choose to will share ownership of the entity through copies of the shared\+\_\+ptr. Systems will only be informed of the addition of an entity if \mbox{\hyperlink{classEntityEngine_a1a905abcc17249f932fda5837c40a563}{Entity\+Engine\+::add(std\+::shared\+\_\+ptr$<$\+Entity$>$ entity)}} is called after \mbox{\hyperlink{classEntityEngine_a4b1a151835e6a31360c68e8e8852ced9}{Entity\+Engine\+::add(std\+::shared\+\_\+ptr$<$\+Entity\+System$>$ system)}}, so take care with ordering calls during initialization
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & the entity to add to the engine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntityEngine_a4b1a151835e6a31360c68e8e8852ced9}\label{classEntityEngine_a4b1a151835e6a31360c68e8e8852ced9}} 
+\index{EntityEngine@{EntityEngine}!add@{add}}
+\index{add@{add}!EntityEngine@{EntityEngine}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Entity\+Engine\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntitySystem}{Entity\+System}} $>$}]{system }\end{DoxyParamCaption})}
+
+
+
+Adds a system to the engine. 
+
+Adds the provided system to the engine. The call site and the engine will share ownership of the system through the shared\+\_\+ptr created by the copy constructor when calling this method. Systems will have \mbox{\hyperlink{classEntityEngine_a3eafb99f52dfe9b79995c533d51d314e}{update()}} called on them each frame in the same order they are added to the engine, so if processing order is important, care should be taken when organizing calls to \mbox{\hyperlink{classEntityEngine_a4b1a151835e6a31360c68e8e8852ced9}{add()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em system} & the system to be added to the engine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntityEngine_a3eafb99f52dfe9b79995c533d51d314e}\label{classEntityEngine_a3eafb99f52dfe9b79995c533d51d314e}} 
+\index{EntityEngine@{EntityEngine}!update@{update}}
+\index{update@{update}!EntityEngine@{EntityEngine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Entity\+Engine\+::update (\begin{DoxyParamCaption}\item[{const sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Updates all systems in the engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The amount of time that has passed since the last update.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}{Entity\+System\+::update}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Entity\+Engine.\+hpp\end{DoxyCompactItemize}

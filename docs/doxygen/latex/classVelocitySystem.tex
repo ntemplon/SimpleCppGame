@@ -1,0 +1,76 @@
+\hypertarget{classVelocitySystem}{}\doxysection{Velocity\+System Class Reference}
+\label{classVelocitySystem}\index{VelocitySystem@{VelocitySystem}}
+
+
+A system for updating positions based on velocities.  
+
+
+
+
+{\ttfamily \#include $<$Velocity\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Velocity\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classVelocitySystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Velocity\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classVelocitySystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVelocitySystem_a4b36e8470b4b10305718087de2b0cb75}\label{classVelocitySystem_a4b36e8470b4b10305718087de2b0cb75}} 
+\mbox{\hyperlink{classVelocitySystem_a4b36e8470b4b10305718087de2b0cb75}{Velocity\+System}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classVelocitySystem}{Velocity\+System}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classVelocitySystem_adc6a737e5d8e2bdf58caf1b5ccc0ad99}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&entity, sf\+::\+Time delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates position data based on velocity for an \mbox{\hyperlink{classEntity}{Entity}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A system for updating positions based on velocities. 
+
+It acts on entities with \mbox{\hyperlink{classLocationComponent}{Location\+Component}} and \mbox{\hyperlink{classVelocityComponent}{Velocity\+Component}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVelocitySystem_adc6a737e5d8e2bdf58caf1b5ccc0ad99}\label{classVelocitySystem_adc6a737e5d8e2bdf58caf1b5ccc0ad99}} 
+\index{VelocitySystem@{VelocitySystem}!process@{process}}
+\index{process@{process}!VelocitySystem@{VelocitySystem}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Velocity\+System\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&}]{entity,  }\item[{sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates position data based on velocity for an \mbox{\hyperlink{classEntity}{Entity}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The current entity being processed \\
+\hline
+{\em delta\+Time} & The amount of time that has passed since \mbox{\hyperlink{classVelocitySystem_adc6a737e5d8e2bdf58caf1b5ccc0ad99}{process()}} was last called on this entity \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{Iterating\+System}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Velocity\+System.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classBallComponent" kind="class"><name>BallComponent</name>
+    <member refid="classBallComponent_1a7d08148e8535efeb6470988ef9978758" kind="variable"><name>BALL_ID</name></member>
+    <member refid="classBallComponent_1a745e88f1840ec826a7a9e2a476e382f6" kind="function"><name>BallComponent</name></member>
+  </compound>
+  <compound refid="classBallSystem" kind="class"><name>BallSystem</name>
+    <member refid="classBallSystem_1ab397990feb36a75bb21b29c50b25f1ab" kind="variable"><name>PLAYER_SCORE_EVENT</name></member>
+    <member refid="classBallSystem_1a556c6791341e849977ce36fd52127f72" kind="variable"><name>ENEMY_SCORE_EVENT</name></member>
+    <member refid="classBallSystem_1aaeccc06a0b3717bb36e4cd9a2234ee58" kind="variable"><name>_player</name></member>
+    <member refid="classBallSystem_1ab646de0aa79d9ab85c4713e8fab40a53" kind="variable"><name>_enemy</name></member>
+    <member refid="classBallSystem_1ac46df7ea852239a9f111712da9ab19cb" kind="variable"><name>_top</name></member>
+    <member refid="classBallSystem_1ad75b9d8eceebc6f0d5c82367e4f1b055" kind="variable"><name>_bottom</name></member>
+    <member refid="classBallSystem_1afb4a57613e12dd520b9d184425013b41" kind="variable"><name>_left</name></member>
+    <member refid="classBallSystem_1a9bb9cd1d05ceaad56f5296acd032d8d0" kind="variable"><name>_right</name></member>
+    <member refid="classBallSystem_1ab6fc5b708ad00c2bb1dcef0088f5d7b2" kind="variable"><name>_dispatcher</name></member>
+    <member refid="classBallSystem_1ad2bb2420c5dc69443a724dcf08e1907c" kind="function"><name>BallSystem</name></member>
+    <member refid="classBallSystem_1a16831511402914a2e0de903eb328636c" kind="function"><name>process</name></member>
+    <member refid="classBallSystem_1a7f162c26cb36cfe960db3895350124e7" kind="function"><name>slightlyRandomize</name></member>
+  </compound>
+  <compound refid="classEntity_1_1Component" kind="class"><name>Entity::Component</name>
+    <member refid="classEntity_1_1Component_1acdef5cbeecdd0c279a5b47dc0cdb197b" kind="variable"><name>_id</name></member>
+    <member refid="classEntity_1_1Component_1aa870551c8ede04e4ed6f538eee376a1a" kind="function"><name>Component</name></member>
+    <member refid="classEntity_1_1Component_1a8e19d41c2a8041556e2cbd5c92e4906e" kind="function"><name>~Component</name></member>
+    <member refid="classEntity_1_1Component_1aa27ad6d78bfc3ff60566ca824b29c1db" kind="function"><name>getId</name></member>
+  </compound>
+  <compound refid="classComponentFamily" kind="class"><name>ComponentFamily</name>
+    <member refid="classComponentFamily_1af2194d69a16e599a5c21b7de1c925db0" kind="variable"><name>_componentIds</name></member>
+    <member refid="classComponentFamily_1a1dd4b742b2e8457a348ccaf9a6af1b40" kind="function"><name>ComponentFamily</name></member>
+    <member refid="classComponentFamily_1a9f20c6a332860d67507db6912dd1cd63" kind="function"><name>ComponentFamily</name></member>
+    <member refid="classComponentFamily_1a9dea2702302768c35b94258f4fb79bcb" kind="function"><name>isInFamily</name></member>
+  </compound>
+  <compound refid="classDispatcher" kind="class"><name>Dispatcher</name>
+    <member refid="classDispatcher_1ad2b35decda2e219043c0c30da0a5e49b" kind="variable"><name>_observers</name></member>
+    <member refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" kind="function"><name>Dispatcher</name></member>
+    <member refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" kind="function"><name>subscribe</name></member>
+    <member refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" kind="function"><name>dispatch</name></member>
+  </compound>
+  <compound refid="classEnemyAISystem" kind="class"><name>EnemyAISystem</name>
+    <member refid="classEnemyAISystem_1af8dd578bbb7e6ff38d0520a61488f126" kind="variable"><name>_ball</name></member>
+    <member refid="classEnemyAISystem_1a6a4d1ae90e3af8ff0b6811edf42e60a2" kind="function"><name>EnemyAISystem</name></member>
+    <member refid="classEnemyAISystem_1a62cfe6ee8471ded89a84b7626eb24d93" kind="function"><name>process</name></member>
+    <member refid="classEnemyAISystem_1ae27040a4cc7962ce70882483a61014d4" kind="function"><name>predictImpactPosition</name></member>
+  </compound>
+  <compound refid="classEnemyComponent" kind="class"><name>EnemyComponent</name>
+    <member refid="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89de" kind="enum"><name>AIState</name></member>
+    <member refid="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89dea68391a825a3d0d60b9eea7c6f783c354" kind="enumvalue"><name>Reacting</name></member>
+    <member refid="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89deaa79782bf8835c8aa74a56fc91982c64d" kind="enumvalue"><name>MovingDown</name></member>
+    <member refid="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89dea2e7d2986477735ae5c23e812c1ccb85d" kind="enumvalue"><name>MovingUp</name></member>
+    <member refid="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89dea18f75ff6694e56aa41305207fdb3c4f1" kind="enumvalue"><name>WaitingForPlayer</name></member>
+    <member refid="classEnemyComponent_1a27798dc2f9ef5d3ca46ce655ec3b2fd3" kind="variable"><name>ENEMY_ID</name></member>
+    <member refid="classEnemyComponent_1ad6bb8e83d3b6692bb21264aefc7edb23" kind="variable"><name>REACTION_TIME</name></member>
+    <member refid="classEnemyComponent_1a7333a092db236a8a88da42df8751eff3" kind="variable"><name>ENEMY_ERROR_SCALE</name></member>
+    <member refid="classEnemyComponent_1a1907ad0eb022fa1ff65b62dcbeeaaaca" kind="variable"><name>reactionElapsedTime</name></member>
+    <member refid="classEnemyComponent_1a16d9bc0c3c8aafd3bcf5bb24bea71dd1" kind="variable"><name>aiState</name></member>
+    <member refid="classEnemyComponent_1af2251583590cdc609ac583ee29cd8d70" kind="variable"><name>predictedBallPosition</name></member>
+    <member refid="classEnemyComponent_1a13240541c0c817f77dd4f1f525ff0558" kind="variable"><name>predictionValid</name></member>
+    <member refid="classEnemyComponent_1aa47ba9ebe8636159dd351b6318ae8a60" kind="function"><name>EnemyComponent</name></member>
+  </compound>
+  <compound refid="classEntity" kind="class"><name>Entity</name>
+    <member refid="classEntity_1a726707b7b7ebb9d12983eee1be7c8e43" kind="variable"><name>_id</name></member>
+    <member refid="classEntity_1ad77ecdec26e473fd1cab015946eb0ce4" kind="variable"><name>_components</name></member>
+    <member refid="classEntity_1a980f368aa07ce358583982821533a54a" kind="function"><name>Entity</name></member>
+    <member refid="classEntity_1ac98bd610e0299cc2aa0538fb2884ab69" kind="function"><name>Entity</name></member>
+    <member refid="classEntity_1a33ce509c7e43ea606ac82b6ce06bc2df" kind="function"><name>getId</name></member>
+    <member refid="classEntity_1a72c8542219615793e0610617a7e5f3f4" kind="function"><name>add</name></member>
+    <member refid="classEntity_1a4470308ca5a3ab893baffd122ae4e9f8" kind="function"><name>hasComponent</name></member>
+    <member refid="classEntity_1a6ea59e929e7fb1b81ed2ed00861c16b2" kind="function"><name>getComponent</name></member>
+  </compound>
+  <compound refid="classEntityEngine" kind="class"><name>EntityEngine</name>
+    <member refid="classEntityEngine_1ab1de7a7cca04e5e29f02f22945db7855" kind="variable"><name>_systems</name></member>
+    <member refid="classEntityEngine_1aad95588ee43e58069b734055ae64bc85" kind="variable"><name>_entities</name></member>
+    <member refid="classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9" kind="function"><name>add</name></member>
+    <member refid="classEntityEngine_1a1a905abcc17249f932fda5837c40a563" kind="function"><name>add</name></member>
+    <member refid="classEntityEngine_1a3eafb99f52dfe9b79995c533d51d314e" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="classEntityFamily" kind="class"><name>EntityFamily</name>
+    <member refid="classEntityFamily_1a2192f7927d9a8cda42f094ced834da78" kind="function"><name>isInFamily</name></member>
+  </compound>
+  <compound refid="classEntitySystem" kind="class"><name>EntitySystem</name>
+    <member refid="classEntitySystem_1ae9470a2f6c8670aa8e06167d660cca43" kind="variable"><name>_family</name></member>
+    <member refid="classEntitySystem_1a4e5330c0efe9bf4b4057fea7d319d079" kind="variable"><name>_entities</name></member>
+    <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" kind="function"><name>EntitySystem</name></member>
+    <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" kind="function"><name>EntitySystem</name></member>
+    <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" kind="function"><name>engineEntityAdded</name></member>
+    <member refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" kind="function"><name>update</name></member>
+    <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" kind="function"><name>getEntities</name></member>
+  </compound>
+  <compound refid="classEvent" kind="class"><name>Event</name>
+    <member refid="classEvent_1ac69a0dd1e044195ca97615f6c9dd47dd" kind="variable"><name>_type</name></member>
+    <member refid="classEvent_1abbf6d6b18eddabca420d63201f3ec1dd" kind="function"><name>Event</name></member>
+    <member refid="classEvent_1aef164554b683656e08da56d5936083da" kind="function"><name>getType</name></member>
+  </compound>
+  <compound refid="classGame" kind="class"><name>Game</name>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04" kind="enum"><name>GameState</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04af704f57ea420275ad51bf55b7dec2c96" kind="enumvalue"><name>Uninitialized</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a710aaf917b477e96ada6772ebaf08608" kind="enumvalue"><name>ShowingSplash</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a748852b4cd4e45d30aa0e006645b1952" kind="enumvalue"><name>ClosingSplash</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a837f449e957d3457ac8e491d541edf03" kind="enumvalue"><name>ShowingMenu</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04aa4a2925f56f04755a721ab2e830c0d36" kind="enumvalue"><name>PlayRequested</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04ac9dbb2b7c84159b632d71e512eba8428" kind="enumvalue"><name>Playing</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a19abd416eb9fe03ae7400a22446956a5" kind="enumvalue"><name>Won</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04ab578b733cbb788fc6ad208314d2c4c2b" kind="enumvalue"><name>Lost</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a801e431ae598eafd6c366afa302a85d2" kind="enumvalue"><name>ExitOnAck</name></member>
+    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a0657d962b72e6f1f37dda8dad3684cb8" kind="enumvalue"><name>Exiting</name></member>
+    <member refid="classGame_1ac688251934c61309cd8bb77074d24592" kind="variable"><name>TIME_PER_FRAME</name></member>
+    <member refid="classGame_1aafc26e7c34368b9265420e7242d743fc" kind="variable"><name>WORLD_WIDTH</name></member>
+    <member refid="classGame_1ad2cf08045935823c7e44c9a92ce4a4e9" kind="variable"><name>WORLD_HEIGHT</name></member>
+    <member refid="classGame_1a29c3289355609a9593a24d5bc1f08bcc" kind="variable"><name>WORLD_BORDER</name></member>
+    <member refid="classGame_1ab7491872b0e12b59443f26c55737e6f1" kind="variable"><name>PADDLE_SPEED</name></member>
+    <member refid="classGame_1a465cd9a559c7d4ebbda1aeba1cf41d84" kind="variable"><name>BALL_INITIAL_SPEED</name></member>
+    <member refid="classGame_1a607ec2cbb693c0e248c6fd1f91aa5802" kind="variable"><name>_gameState</name></member>
+    <member refid="classGame_1a5829c9631ab47dc35c217a3a723d83ec" kind="variable"><name>_mainWindow</name></member>
+    <member refid="classGame_1af90aceb22b316b9b24376b16eb8b9541" kind="variable"><name>_view</name></member>
+    <member refid="classGame_1ac791c608d75190283a410efad3810123" kind="variable"><name>_currentScreen</name></member>
+    <member refid="classGame_1a144eb9d43285b39d026ba82b9c1f390e" kind="variable"><name>_dispatcher</name></member>
+    <member refid="classGame_1a3e18c07c78b4242566baaa9cf7577cc7" kind="variable"><name>_engine</name></member>
+    <member refid="classGame_1a8124911bed5bcf8d15b44ea18d975844" kind="variable"><name>_render</name></member>
+    <member refid="classGame_1afd32fcb975d2005f15b7b1f183ebd032" kind="variable"><name>_velocity</name></member>
+    <member refid="classGame_1aca86f3ee4af51edc40b11aded8f1b0dc" kind="variable"><name>_input</name></member>
+    <member refid="classGame_1a73ceb985408d98ed7ac74c934ec67921" kind="variable"><name>_ballSystem</name></member>
+    <member refid="classGame_1ad59df6562a58a614fda24622d3715b65" kind="function"><name>Game</name></member>
+    <member refid="classGame_1a3d9b98f7c4a96ecf578f75b96c9f0e90" kind="function"><name>start</name></member>
+    <member refid="classGame_1a1dd3a58e38678f68291498125fc97ddb" kind="function"><name>getDispatcher</name></member>
+    <member refid="classGame_1a0f949c784aaaf43debc99ad6fcde7381" kind="function"><name>isExiting</name></member>
+    <member refid="classGame_1a1cd675249f338b0f43d8a120c5e464b4" kind="function"><name>gameLoop</name></member>
+    <member refid="classGame_1aa5abc4e07a1f5abce24e473c5567300b" kind="function"><name>handleInput</name></member>
+    <member refid="classGame_1a3c5cef85bab5e49551c308fa4f55008a" kind="function"><name>update</name></member>
+    <member refid="classGame_1a3cc9ffa19dddb7331862f28a5be4b478" kind="function"><name>shouldRenderInState</name></member>
+    <member refid="classGame_1a1b807309d862ce17b4dbd1d98612cf5f" kind="function"><name>modifyView</name></member>
+    <member refid="classGame_1a35634df4d04d64ed478a3ba30f0828cc" kind="function"><name>createPlayer</name></member>
+    <member refid="classGame_1a896afc2172602e9dd1bb07d4660d5ee6" kind="function"><name>createEnemy</name></member>
+    <member refid="classGame_1ad470e447f5e524c9fda47b141499fc72" kind="function"><name>createBall</name></member>
+  </compound>
+  <compound refid="classGameOverScreen" kind="class"><name>GameOverScreen</name>
+    <member refid="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" kind="variable"><name>GAME_OVER_ACK</name></member>
+    <member refid="classGameOverScreen_1a02f2b88a6cd80fc64fe537ad005bd425" kind="variable"><name>_texture</name></member>
+    <member refid="classGameOverScreen_1ace66ef489ec7eb8131f1909c700b8e9e" kind="variable"><name>_sprite</name></member>
+    <member refid="classGameOverScreen_1a51a9364448a106566e6bc104d2d58ce1" kind="function"><name>GameOverScreen</name></member>
+    <member refid="classGameOverScreen_1a7f015719692c3482de713fd2381f2154" kind="function"><name>render</name></member>
+    <member refid="classGameOverScreen_1a8e5c8ae4f8329274bcc5d932bb1f5526" kind="function"><name>handleClick</name></member>
+  </compound>
+  <compound refid="classGameScreen" kind="class"><name>GameScreen</name>
+    <member refid="classGameScreen_1a6763d9a9cedc3feca42acb6d62db6a39" kind="variable"><name>_renderSystem</name></member>
+    <member refid="classGameScreen_1a3117946c6701ac573cc35d1f742d7d2e" kind="variable"><name>_gameWindow</name></member>
+    <member refid="classGameScreen_1a382461f8a70ac68e92225b1dfa55d10e" kind="function"><name>GameScreen</name></member>
+    <member refid="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f" kind="function"><name>render</name></member>
+    <member refid="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0" kind="function"><name>handleClick</name></member>
+  </compound>
+  <compound refid="classIteratingSystem" kind="class"><name>IteratingSystem</name>
+    <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" kind="function"><name>IteratingSystem</name></member>
+    <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" kind="function"><name>IteratingSystem</name></member>
+    <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" kind="function"><name>update</name></member>
+    <member refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c" kind="function"><name>process</name></member>
+  </compound>
+  <compound refid="classLocationComponent" kind="class"><name>LocationComponent</name>
+    <member refid="classLocationComponent_1ad370ace4f8689f490ae38a95f3c780c3" kind="variable"><name>LOC_COMP_ID</name></member>
+    <member refid="classLocationComponent_1a35bbae77d652cee8b1dc5171bb3133b1" kind="variable"><name>location</name></member>
+    <member refid="classLocationComponent_1a3c5d71e597d6a6bdc35272c32351576a" kind="function"><name>LocationComponent</name></member>
+  </compound>
+  <compound refid="classMainMenuScreen" kind="class"><name>MainMenuScreen</name>
+    <member refid="classMainMenuScreen_1acea791f0f1c295067498a200fa7b8bd5" kind="variable"><name>MAIN_MENU_PLAY</name></member>
+    <member refid="classMainMenuScreen_1a69f87d1081a0c724c3683858573af882" kind="variable"><name>MAIN_MENU_EXIT</name></member>
+    <member refid="classMainMenuScreen_1a3649d2e6723a052643f057399412c047" kind="variable"><name>_menuItems</name></member>
+    <member refid="classMainMenuScreen_1add7f92a3a0e2993989cb651343e53b19" kind="variable"><name>_texture</name></member>
+    <member refid="classMainMenuScreen_1ac51d18b94a68a9b5d7abae3da1af4321" kind="variable"><name>_sprite</name></member>
+    <member refid="classMainMenuScreen_1ad28ef61ddb123852dcd42e54ef432b71" kind="function"><name>MainMenuScreen</name></member>
+    <member refid="classMainMenuScreen_1a5a408ce8d3039f2271acced1a7d81b02" kind="function"><name>render</name></member>
+    <member refid="classMainMenuScreen_1a77223826dcca0f96e6714e2440c835cc" kind="function"><name>handleClick</name></member>
+  </compound>
+  <compound refid="structMainMenuScreen_1_1MenuItem" kind="struct"><name>MainMenuScreen::MenuItem</name>
+    <member refid="structMainMenuScreen_1_1MenuItem_1add9aedb3f8d319e10870ab1e012e1337" kind="variable"><name>rect</name></member>
+    <member refid="structMainMenuScreen_1_1MenuItem_1a4071d2935b7b5084037f544ea9209184" kind="variable"><name>action</name></member>
+  </compound>
+  <compound refid="classPlayerComponent" kind="class"><name>PlayerComponent</name>
+    <member refid="classPlayerComponent_1a3f0ad3532e4f1c9b623946f76e0ee8dd" kind="variable"><name>PLAYER_ID</name></member>
+    <member refid="classPlayerComponent_1adf9bdf600a6cc7d34aa848163c4a9be7" kind="function"><name>PlayerComponent</name></member>
+  </compound>
+  <compound refid="classPlayerInputSystem" kind="class"><name>PlayerInputSystem</name>
+    <member refid="classPlayerInputSystem_1a94141b78de6b111c0893c094ecb3f6b1" kind="function"><name>PlayerInputSystem</name></member>
+    <member refid="classPlayerInputSystem_1a6fad1f27101eab2846fbe03c27655512" kind="function"><name>process</name></member>
+  </compound>
+  <compound refid="classRenderComponent" kind="class"><name>RenderComponent</name>
+    <member refid="classRenderComponent_1acde3389d30dd2664ae4a018acc568949" kind="variable"><name>RENDER_COMP_ID</name></member>
+    <member refid="classRenderComponent_1a0a0b339a3b0cd67d18ea0952eabb1237" kind="variable"><name>texture</name></member>
+    <member refid="classRenderComponent_1a71d2bd50fe986ac4125d978ab660055c" kind="variable"><name>sprite</name></member>
+    <member refid="classRenderComponent_1a1bfbe186278dc7528788aea84f976b6c" kind="function"><name>RenderComponent</name></member>
+  </compound>
+  <compound refid="classRenderSystem" kind="class"><name>RenderSystem</name>
+    <member refid="classRenderSystem_1a20496a8f52c4eb755d4bfcaba2e98e1c" kind="function"><name>RenderSystem</name></member>
+    <member refid="classRenderSystem_1a794921c956b9b36c547e13594bf25481" kind="function"><name>render</name></member>
+    <member refid="classRenderSystem_1a27f2d4ebb7f3169a3620aca0a86dd000" kind="function"><name>process</name></member>
+  </compound>
+  <compound refid="classScreen" kind="class"><name>Screen</name>
+    <member refid="classScreen_1ae4ab32dff8c77123659c89b70c427191" kind="variable"><name>_window</name></member>
+    <member refid="classScreen_1ab6b1f41a14eac6d8982dafb560489c95" kind="variable"><name>_dispatcher</name></member>
+    <member refid="classScreen_1ab44807297a4a513751fb76f138a41ba5" kind="function"><name>Screen</name></member>
+    <member refid="classScreen_1a0bc1a2ceaee4a245e0d31822ea0643bd" kind="function"><name>~Screen</name></member>
+    <member refid="classScreen_1a3cd453c494b2389725b719700283e655" kind="function"><name>render</name></member>
+    <member refid="classScreen_1afafb8c2a2255c4cf8cef807ba4d14400" kind="function"><name>handleClick</name></member>
+    <member refid="classScreen_1ae4ee4d8f366a13f3f296182106503800" kind="function"><name>getWindow</name></member>
+    <member refid="classScreen_1a6335968966aa2d082ba6804c9481d478" kind="function"><name>getDispatcher</name></member>
+  </compound>
+  <compound refid="classSplashScreen" kind="class"><name>SplashScreen</name>
+    <member refid="classSplashScreen_1aa2d46a219a3c6f664ade45f95f182bfb" kind="variable"><name>SPLASH_SCREEN_CLOSE</name></member>
+    <member refid="classSplashScreen_1ab7310f041a700b53faf4e5ca1510ae7f" kind="variable"><name>_texture</name></member>
+    <member refid="classSplashScreen_1a2b8fe3d687c99080149fa493223c883d" kind="variable"><name>_sprite</name></member>
+    <member refid="classSplashScreen_1adf5a0af2fd9cf7353d7e1ae8268d20d8" kind="function"><name>SplashScreen</name></member>
+    <member refid="classSplashScreen_1a97b621dfe67fd172af5b00c9b3b0d747" kind="function"><name>~SplashScreen</name></member>
+    <member refid="classSplashScreen_1aa740429d18d6ae5bd299d3c0e178b94e" kind="function"><name>render</name></member>
+    <member refid="classSplashScreen_1a678197888d19caed6558d81452904158" kind="function"><name>handleClick</name></member>
+  </compound>
+  <compound refid="classVelocityComponent" kind="class"><name>VelocityComponent</name>
+    <member refid="classVelocityComponent_1a79650ba683c4c90348b6b3c969d82e03" kind="variable"><name>VEL_COMP_ID</name></member>
+    <member refid="classVelocityComponent_1ab834951d72d96f1227a9eeb92f63fa0d" kind="variable"><name>velocity</name></member>
+    <member refid="classVelocityComponent_1a6b64cf8cf13322ef5709f2fdc1439cc4" kind="function"><name>VelocityComponent</name></member>
+  </compound>
+  <compound refid="classVelocitySystem" kind="class"><name>VelocitySystem</name>
+    <member refid="classVelocitySystem_1a4b36e8470b4b10305718087de2b0cb75" kind="function"><name>VelocitySystem</name></member>
+    <member refid="classVelocitySystem_1adc6a737e5d8e2bdf58caf1b5ccc0ad99" kind="function"><name>process</name></member>
+  </compound>
+  <compound refid="Dispatcher_8hpp" kind="file"><name>Dispatcher.hpp</name>
+  </compound>
+  <compound refid="BallSystem_8hpp" kind="file"><name>BallSystem.hpp</name>
+  </compound>
+  <compound refid="ComponentFamily_8hpp" kind="file"><name>ComponentFamily.hpp</name>
+  </compound>
+  <compound refid="Components_8hpp" kind="file"><name>Components.hpp</name>
+  </compound>
+  <compound refid="EnemyAISystem_8hpp" kind="file"><name>EnemyAISystem.hpp</name>
+  </compound>
+  <compound refid="Entity_8hpp" kind="file"><name>Entity.hpp</name>
+  </compound>
+  <compound refid="EntityEngine_8hpp" kind="file"><name>EntityEngine.hpp</name>
+  </compound>
+  <compound refid="EntityFamily_8hpp" kind="file"><name>EntityFamily.hpp</name>
+  </compound>
+  <compound refid="EntitySystem_8hpp" kind="file"><name>EntitySystem.hpp</name>
+  </compound>
+  <compound refid="IteratingSystem_8hpp" kind="file"><name>IteratingSystem.hpp</name>
+  </compound>
+  <compound refid="PlayerInputSystem_8hpp" kind="file"><name>PlayerInputSystem.hpp</name>
+  </compound>
+  <compound refid="RenderSystem_8hpp" kind="file"><name>RenderSystem.hpp</name>
+  </compound>
+  <compound refid="VelocitySystem_8hpp" kind="file"><name>VelocitySystem.hpp</name>
+  </compound>
+  <compound refid="Event_8hpp" kind="file"><name>Event.hpp</name>
+  </compound>
+  <compound refid="Game_8hpp" kind="file"><name>Game.hpp</name>
+  </compound>
+  <compound refid="GameOverScreen_8hpp" kind="file"><name>GameOverScreen.hpp</name>
+  </compound>
+  <compound refid="GameScreen_8hpp" kind="file"><name>GameScreen.hpp</name>
+  </compound>
+  <compound refid="MainMenuScreen_8hpp" kind="file"><name>MainMenuScreen.hpp</name>
+  </compound>
+  <compound refid="Screen_8hpp" kind="file"><name>Screen.hpp</name>
+  </compound>
+  <compound refid="SplashScreen_8hpp" kind="file"><name>SplashScreen.hpp</name>
+  </compound>
+  <compound refid="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir"><name>/home/ganymede/Coding/VSCodeHelloWorld/include/entity</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/ganymede/Coding/VSCodeHelloWorld/include</name>
+  </compound>
+</doxygenindex>

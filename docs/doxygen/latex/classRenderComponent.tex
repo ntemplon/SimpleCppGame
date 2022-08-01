@@ -1,0 +1,84 @@
+\hypertarget{classRenderComponent}{}\doxysection{Render\+Component Class Reference}
+\label{classRenderComponent}\index{RenderComponent@{RenderComponent}}
+
+
+A component that stores the information required to render the entity on the screen.  
+
+
+
+
+{\ttfamily \#include $<$Components.\+hpp$>$}
+
+
+
+Inheritance diagram for Render\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classRenderComponent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Render\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classRenderComponent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRenderComponent_a1bfbe186278dc7528788aea84f976b6c}{Render\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classRenderComponent}{Render\+Component}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{classRenderComponent_a0a0b339a3b0cd67d18ea0952eabb1237}{texture}}
+\begin{DoxyCompactList}\small\item\em The texture that the sprite uses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRenderComponent_a71d2bd50fe986ac4125d978ab660055c}\label{classRenderComponent_a71d2bd50fe986ac4125d978ab660055c}} 
+sf\+::\+Sprite \mbox{\hyperlink{classRenderComponent_a71d2bd50fe986ac4125d978ab660055c}{sprite}}
+\begin{DoxyCompactList}\small\item\em The sprite that will be rendered to represent the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRenderComponent_acde3389d30dd2664ae4a018acc568949}\label{classRenderComponent_acde3389d30dd2664ae4a018acc568949}} 
+static const std\+::string \mbox{\hyperlink{classRenderComponent_acde3389d30dd2664ae4a018acc568949}{RENDER\+\_\+\+COMP\+\_\+\+ID}}
+\begin{DoxyCompactList}\small\item\em The ID of \mbox{\hyperlink{classRenderComponent}{Render\+Component}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A component that stores the information required to render the entity on the screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRenderComponent_a1bfbe186278dc7528788aea84f976b6c}\label{classRenderComponent_a1bfbe186278dc7528788aea84f976b6c}} 
+\index{RenderComponent@{RenderComponent}!RenderComponent@{RenderComponent}}
+\index{RenderComponent@{RenderComponent}!RenderComponent@{RenderComponent}}
+\doxysubsubsection{\texorpdfstring{RenderComponent()}{RenderComponent()}}
+{\footnotesize\ttfamily Render\+Component\+::\+Render\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classRenderComponent}{Render\+Component}}. 
+
+Construct a new \mbox{\hyperlink{classRenderComponent}{Render\+Component}} with unitialized variables. After creating a \mbox{\hyperlink{classRenderComponent}{Render\+Component}} this way, you should load the texture (such as with texture.\+load\+From\+File() ) and then set the sprite to a new sprite based on that texture. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRenderComponent_a0a0b339a3b0cd67d18ea0952eabb1237}\label{classRenderComponent_a0a0b339a3b0cd67d18ea0952eabb1237}} 
+\index{RenderComponent@{RenderComponent}!texture@{texture}}
+\index{texture@{texture}!RenderComponent@{RenderComponent}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$ Render\+Component\+::texture}
+
+
+
+The texture that the sprite uses. 
+
+The sprite does not use a pointer that keeps ownership of the texture, so we do so here to ensure it doesn\textquotesingle{}t go out of scope. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Components.\+hpp\end{DoxyCompactItemize}

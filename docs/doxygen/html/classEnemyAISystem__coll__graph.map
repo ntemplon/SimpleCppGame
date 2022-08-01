@@ -1,0 +1,5 @@
+<map id="EnemyAISystem" name="EnemyAISystem">
+<area shape="rect" id="node1" title="A system that performs the AI for the enemy player." alt="" coords="5,155,135,181"/>
+<area shape="rect" id="node2" href="$classIteratingSystem.html" title="An implementation of EntitySystem that iterates through all Entity objects in EntitySystem::getEntiti..." alt="" coords="7,80,133,107"/>
+<area shape="rect" id="node3" href="$classEntitySystem.html" title="A class representing a system that processes groups of Entity in an EntityEngine." alt="" coords="15,5,125,32"/>
+</map>

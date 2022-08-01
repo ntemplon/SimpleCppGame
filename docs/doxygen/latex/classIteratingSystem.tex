@@ -1,0 +1,137 @@
+\hypertarget{classIteratingSystem}{}\doxysection{Iterating\+System Class Reference}
+\label{classIteratingSystem}\index{IteratingSystem@{IteratingSystem}}
+
+
+An implementation of \mbox{\hyperlink{classEntitySystem}{Entity\+System}} that iterates through all \mbox{\hyperlink{classEntity}{Entity}} objects in \mbox{\hyperlink{classEntitySystem_a92bc081730f99f33192affeb23c50702}{Entity\+System\+::get\+Entities()}} each \mbox{\hyperlink{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}{Entity\+System\+::update}}.  
+
+
+
+
+{\ttfamily \#include $<$Iterating\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Iterating\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIteratingSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Iterating\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classIteratingSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIteratingSystem_adabf0b591af165c24fc92ce28483669c}{Iterating\+System}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIteratingSystem}{Iterating\+System}} with the default \mbox{\hyperlink{classEntitySystem}{Entity\+System}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIteratingSystem_afe8eb2893d836ff46c77efdc198bd8db}{Iterating\+System}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} $>$ \&family)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIteratingSystem}{Iterating\+System}} with the \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} \mbox{\hyperlink{classEntitySystem}{Entity\+System}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIteratingSystem_a917c3421fbe2cde7ca85b08517d4dfad}{update}} (const sf\+::\+Time delta\+Time)
+\begin{DoxyCompactList}\small\item\em Iterates through each element in the system to perform updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&entity, sf\+::\+Time delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Processes a specific entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An implementation of \mbox{\hyperlink{classEntitySystem}{Entity\+System}} that iterates through all \mbox{\hyperlink{classEntity}{Entity}} objects in \mbox{\hyperlink{classEntitySystem_a92bc081730f99f33192affeb23c50702}{Entity\+System\+::get\+Entities()}} each \mbox{\hyperlink{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}{Entity\+System\+::update}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIteratingSystem_adabf0b591af165c24fc92ce28483669c}\label{classIteratingSystem_adabf0b591af165c24fc92ce28483669c}} 
+\index{IteratingSystem@{IteratingSystem}!IteratingSystem@{IteratingSystem}}
+\index{IteratingSystem@{IteratingSystem}!IteratingSystem@{IteratingSystem}}
+\doxysubsubsection{\texorpdfstring{IteratingSystem()}{IteratingSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Iterating\+System\+::\+Iterating\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classIteratingSystem}{Iterating\+System}} with the default \mbox{\hyperlink{classEntitySystem}{Entity\+System}} constructor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classEntitySystem_ac6bc28f99a8a4d9f6f43226d1bc4abe8}{Entity\+System\+::\+Entity\+System()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classIteratingSystem_afe8eb2893d836ff46c77efdc198bd8db}\label{classIteratingSystem_afe8eb2893d836ff46c77efdc198bd8db}} 
+\index{IteratingSystem@{IteratingSystem}!IteratingSystem@{IteratingSystem}}
+\index{IteratingSystem@{IteratingSystem}!IteratingSystem@{IteratingSystem}}
+\doxysubsubsection{\texorpdfstring{IteratingSystem()}{IteratingSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Iterating\+System\+::\+Iterating\+System (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} $>$ \&}]{family }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classIteratingSystem}{Iterating\+System}} with the \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} \mbox{\hyperlink{classEntitySystem}{Entity\+System}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em family} & The family to provide to the \mbox{\hyperlink{classEntitySystem}{Entity\+System}} constructor\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classEntitySystem_a951adbd375c4206d9d0115bf17050870}{Entity\+System\+::\+Entity\+System(const std\+::shared\+\_\+ptr$<$\+Entity\+Family$>$ \&family)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}\label{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}} 
+\index{IteratingSystem@{IteratingSystem}!process@{process}}
+\index{process@{process}!IteratingSystem@{IteratingSystem}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily virtual void Iterating\+System\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&}]{entity,  }\item[{sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Processes a specific entity. 
+
+This method is pure virtual in \mbox{\hyperlink{classIteratingSystem}{Iterating\+System}}. It is up to sublcasses to implement their specific needs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The current entity being processed. \\
+\hline
+{\em delta\+Time} & The amount of time that has passed since \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{process()}} was last called for this entity. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classVelocitySystem_adc6a737e5d8e2bdf58caf1b5ccc0ad99}{Velocity\+System}}, \mbox{\hyperlink{classRenderSystem_a27f2d4ebb7f3169a3620aca0a86dd000}{Render\+System}}, \mbox{\hyperlink{classPlayerInputSystem_a6fad1f27101eab2846fbe03c27655512}{Player\+Input\+System}}, \mbox{\hyperlink{classBallSystem_a16831511402914a2e0de903eb328636c}{Ball\+System}}, and \mbox{\hyperlink{classEnemyAISystem_a62cfe6ee8471ded89a84b7626eb24d93}{Enemy\+AISystem}}.
+
+\mbox{\Hypertarget{classIteratingSystem_a917c3421fbe2cde7ca85b08517d4dfad}\label{classIteratingSystem_a917c3421fbe2cde7ca85b08517d4dfad}} 
+\index{IteratingSystem@{IteratingSystem}!update@{update}}
+\index{update@{update}!IteratingSystem@{IteratingSystem}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Iterating\+System\+::update (\begin{DoxyParamCaption}\item[{const sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Iterates through each element in the system to perform updates. 
+
+For each element in \mbox{\hyperlink{classEntitySystem_a92bc081730f99f33192affeb23c50702}{Entity\+System\+::get\+Entities()}}, calls \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{Iterating\+System\+::process}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The amount of time that has passed since this method was last called \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{Iterating\+System\+::process(std\+::shared\+\_\+ptr$<$\+Entity$>$ \&entity, sf\+::\+Time delta\+Time)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}{Entity\+System}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Iterating\+System.\+hpp\end{DoxyCompactItemize}

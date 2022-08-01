@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLocationComponent" kind="class" language="C++" prot="public">
+    <compoundname>LocationComponent</compoundname>
+    <basecompoundref refid="classEntity_1_1Component" prot="public" virt="non-virtual">Entity::Component</basecompoundref>
+    <includes refid="Components_8hpp" local="no">Components.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classLocationComponent_1ad370ace4f8689f490ae38a95f3c780c3" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string LocationComponent::LOC_COMP_ID</definition>
+        <argsstring></argsstring>
+        <name>LOC_COMP_ID</name>
+        <briefdescription>
+<para>The ID of <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="51" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLocationComponent_1a35bbae77d652cee8b1dc5171bb3133b1" prot="public" static="no" mutable="no">
+        <type>sf::FloatRect</type>
+        <definition>sf::FloatRect LocationComponent::location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <briefdescription>
+<para>The location and bounds of the entity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="64" column="19" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLocationComponent_1a3c5d71e597d6a6bdc35272c32351576a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LocationComponent::LocationComponent</definition>
+        <argsstring>()</argsstring>
+        <name>LocationComponent</name>
+        <briefdescription>
+<para>Construct a new Location Component object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The location sf::FloatRect defaults to size (0, 0) at the origin. If other values are desired, the caller must set them after initialization. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="59" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A component that stores the information about where and how large the entity is. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LocationComponent</label>
+        <link refid="classLocationComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LocationComponent</label>
+        <link refid="classLocationComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="45" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="46" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classEntity_1_1Component_1aa870551c8ede04e4ed6f538eee376a1a" prot="public" virt="non-virtual"><scope>LocationComponent</scope><name>Component</name></member>
+      <member refid="classEntity_1_1Component_1aa27ad6d78bfc3ff60566ca824b29c1db" prot="public" virt="non-virtual"><scope>LocationComponent</scope><name>getId</name></member>
+      <member refid="classLocationComponent_1ad370ace4f8689f490ae38a95f3c780c3" prot="public" virt="non-virtual"><scope>LocationComponent</scope><name>LOC_COMP_ID</name></member>
+      <member refid="classLocationComponent_1a35bbae77d652cee8b1dc5171bb3133b1" prot="public" virt="non-virtual"><scope>LocationComponent</scope><name>location</name></member>
+      <member refid="classLocationComponent_1a3c5d71e597d6a6bdc35272c32351576a" prot="public" virt="non-virtual"><scope>LocationComponent</scope><name>LocationComponent</name></member>
+      <member refid="classEntity_1_1Component_1a8e19d41c2a8041556e2cbd5c92e4906e" prot="public" virt="virtual"><scope>LocationComponent</scope><name>~Component</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

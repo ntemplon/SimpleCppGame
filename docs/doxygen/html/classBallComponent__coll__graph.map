@@ -1,0 +1,4 @@
+<map id="BallComponent" name="BallComponent">
+<area shape="rect" id="node1" title="A component for marking an entity as a ball." alt="" coords="15,80,138,107"/>
+<area shape="rect" id="node2" href="$classEntity_1_1Component.html" title="A component of an entity in the game&#39;s component entity system." alt="" coords="5,5,148,32"/>
+</map>

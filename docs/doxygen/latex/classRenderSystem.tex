@@ -1,0 +1,97 @@
+\hypertarget{classRenderSystem}{}\doxysection{Render\+System Class Reference}
+\label{classRenderSystem}\index{RenderSystem@{RenderSystem}}
+
+
+A system that manages \mbox{\hyperlink{classEntity}{Entity}} sprite sizes, positions, and drawing.  
+
+
+
+
+{\ttfamily \#include $<$Render\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Render\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classRenderSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Render\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classRenderSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRenderSystem_a20496a8f52c4eb755d4bfcaba2e98e1c}\label{classRenderSystem_a20496a8f52c4eb755d4bfcaba2e98e1c}} 
+\mbox{\hyperlink{classRenderSystem_a20496a8f52c4eb755d4bfcaba2e98e1c}{Render\+System}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classRenderSystem}{Render\+System}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderSystem_a794921c956b9b36c547e13594bf25481}{render}} (sf\+::\+Render\+Target \&target) const
+\begin{DoxyCompactList}\small\item\em Draws the prepared sprites to the sf\+::\+Render\+Target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRenderSystem_a27f2d4ebb7f3169a3620aca0a86dd000}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&entity, sf\+::\+Time delta\+Time)
+\begin{DoxyCompactList}\small\item\em Processes the \mbox{\hyperlink{classEntity}{Entity}} graphical data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A system that manages \mbox{\hyperlink{classEntity}{Entity}} sprite sizes, positions, and drawing. 
+
+It acts on all elements with a \mbox{\hyperlink{classRenderComponent}{Render\+Component}} and \mbox{\hyperlink{classLocationComponent}{Location\+Component}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRenderSystem_a27f2d4ebb7f3169a3620aca0a86dd000}\label{classRenderSystem_a27f2d4ebb7f3169a3620aca0a86dd000}} 
+\index{RenderSystem@{RenderSystem}!process@{process}}
+\index{process@{process}!RenderSystem@{RenderSystem}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Render\+System\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&}]{entity,  }\item[{sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Processes the \mbox{\hyperlink{classEntity}{Entity}} graphical data. 
+
+Sprites are moved and scaled to align with the \mbox{\hyperlink{classEntity}{Entity}} \mbox{\hyperlink{classLocationComponent}{Location\+Component}} data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The entity being processed \\
+\hline
+{\em delta\+Time} & The amount of time that has passed since \mbox{\hyperlink{classRenderSystem_a27f2d4ebb7f3169a3620aca0a86dd000}{process()}} was last called on this entity \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{Iterating\+System}}.
+
+\mbox{\Hypertarget{classRenderSystem_a794921c956b9b36c547e13594bf25481}\label{classRenderSystem_a794921c956b9b36c547e13594bf25481}} 
+\index{RenderSystem@{RenderSystem}!render@{render}}
+\index{render@{render}!RenderSystem@{RenderSystem}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Render\+System\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Draws the prepared sprites to the sf\+::\+Render\+Target. 
+
+This method assumes that it is part of a larger pipeline and that entities may not be the only thing being rendered. Methods such as sf\+::\+Render\+Window.\+display() need to be called after \mbox{\hyperlink{classRenderSystem_a794921c956b9b36c547e13594bf25481}{Render\+System\+::render()}} to ensure everything is displayed correctly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target to draw the entities on. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Render\+System.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+\hypertarget{classEntity}{}\doxysection{Entity Class Reference}
+\label{classEntity}\index{Entity@{Entity}}
+
+
+An entity in the game\textquotesingle{}s component entity system.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEntity_1_1Component}{Component}}
+\begin{DoxyCompactList}\small\item\em A component of an entity in the game\textquotesingle{}s component entity system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEntity_a980f368aa07ce358583982821533a54a}\label{classEntity_a980f368aa07ce358583982821533a54a}} 
+\mbox{\hyperlink{classEntity_a980f368aa07ce358583982821533a54a}{Entity}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEntity}{Entity}} with a random ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntity_ac98bd610e0299cc2aa0538fb2884ab69}{Entity}} (int id)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEntity}{Entity}} object with a specific ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEntity_a33ce509c7e43ea606ac82b6ce06bc2df}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get the ID of the \mbox{\hyperlink{classEntity}{Entity}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntity_a72c8542219615793e0610617a7e5f3f4}{add}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity_1_1Component}{Component}} $>$ \&component)
+\begin{DoxyCompactList}\small\item\em Adds the provided component to the entity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntity_a4470308ca5a3ab893baffd122ae4e9f8}{has\+Component}} (const std\+::string id) const
+\begin{DoxyCompactList}\small\item\em Check if the \mbox{\hyperlink{classEntity}{Entity}} has a component of the specified type. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity_1_1Component}{Component}} $>$ \mbox{\hyperlink{classEntity_a6ea59e929e7fb1b81ed2ed00861c16b2}{get\+Component}} (const std\+::string id) const
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classEntity_1_1Component}{Component}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An entity in the game\textquotesingle{}s component entity system. 
+
+The \mbox{\hyperlink{classEntity}{Entity}} represents a collection of attributes, called Components, that together are acted upon by \mbox{\hyperlink{classEntitySystem}{Entity\+System}} objects that form a complete game world. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntity_ac98bd610e0299cc2aa0538fb2884ab69}\label{classEntity_ac98bd610e0299cc2aa0538fb2884ab69}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classEntity}{Entity}} object with a specific ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the \mbox{\hyperlink{classEntity}{Entity}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntity_a72c8542219615793e0610617a7e5f3f4}\label{classEntity_a72c8542219615793e0610617a7e5f3f4}} 
+\index{Entity@{Entity}!add@{add}}
+\index{add@{add}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Entity\+::add (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity_1_1Component}{Component}} $>$ \&}]{component }\end{DoxyParamCaption})}
+
+
+
+Adds the provided component to the entity. 
+
+The entity will create a new std\+::shared\+\_\+ptr pointing to the \mbox{\hyperlink{classEntity_1_1Component}{Component}} using the copy constructor that will stay in scope with the entity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The \mbox{\hyperlink{classEntity_1_1Component}{Component}} to add to this \mbox{\hyperlink{classEntity}{Entity}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntity_a6ea59e929e7fb1b81ed2ed00861c16b2}\label{classEntity_a6ea59e929e7fb1b81ed2ed00861c16b2}} 
+\index{Entity@{Entity}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classEntity_1_1Component}{Component}}$>$ Entity\+::get\+Component (\begin{DoxyParamCaption}\item[{const std\+::string}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Get the \mbox{\hyperlink{classEntity_1_1Component}{Component}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_a33ce509c7e43ea606ac82b6ce06bc2df}\label{classEntity_a33ce509c7e43ea606ac82b6ce06bc2df}} 
+\index{Entity@{Entity}!getId@{getId}}
+\index{getId@{getId}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Entity\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the ID of the \mbox{\hyperlink{classEntity}{Entity}}. 
+
+\begin{DoxyReturn}{Returns}
+int the entity\textquotesingle{}s ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_a4470308ca5a3ab893baffd122ae4e9f8}\label{classEntity_a4470308ca5a3ab893baffd122ae4e9f8}} 
+\index{Entity@{Entity}!hasComponent@{hasComponent}}
+\index{hasComponent@{hasComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{hasComponent()}{hasComponent()}}
+{\footnotesize\ttfamily bool Entity\+::has\+Component (\begin{DoxyParamCaption}\item[{const std\+::string}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Check if the \mbox{\hyperlink{classEntity}{Entity}} has a component of the specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the \mbox{\hyperlink{classEntity_1_1Component}{Component}} type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \mbox{\hyperlink{classEntity}{Entity}} has a component of the specified type. 
+
+false if the Entnity doeso not have a component of the specified type. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Entity.\+hpp\end{DoxyCompactItemize}

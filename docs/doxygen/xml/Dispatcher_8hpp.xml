@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Dispatcher_8hpp" kind="file" language="C++">
+    <compoundname>Dispatcher.hpp</compoundname>
+    <includes refid="Event_8hpp" local="no">Event.hpp</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="BallSystem_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp</includedby>
+    <includedby refid="Game_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</includedby>
+    <includedby refid="Screen_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/Screen.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp</label>
+        <link refid="BallSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/SplashScreen.hpp</label>
+        <link refid="SplashScreen_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp</label>
+        <link refid="MainMenuScreen_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Screen.hpp</label>
+        <link refid="Screen_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp</label>
+        <link refid="GameOverScreen_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classDispatcher" prot="public">Dispatcher</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Event.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classDispatcher" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDispatcher" kindref="compound">Dispatcher</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24" refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" kindref="member">Dispatcher</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" kindref="member">subscribe</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;<sp/>&amp;observer);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" kindref="member">dispatch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;event);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::vector&lt;std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;&gt;&gt;<sp/>_observers;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp"/>
+  </compounddef>
+</doxygen>

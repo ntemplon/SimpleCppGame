@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classGameOverScreen" kind="class" language="C++" prot="public">
+    <compoundname>GameOverScreen</compoundname>
+    <basecompoundref refid="classScreen" prot="public" virt="non-virtual">Screen</basecompoundref>
+    <includes refid="GameOverScreen_8hpp" local="no">GameOverScreen.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string GameOverScreen::GAME_OVER_ACK</definition>
+        <argsstring></argsstring>
+        <name>GAME_OVER_ACK</name>
+        <briefdescription>
+<para>The ID for an <ref refid="classEvent" kindref="compound">Event</ref> that signals the player has accepted their inevitable demise. Or are celebrating. But probably the demise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" line="14" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGameOverScreen_1a02f2b88a6cd80fc64fe537ad005bd425" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture GameOverScreen::_texture</definition>
+        <argsstring></argsstring>
+        <name>_texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" line="36" column="17" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGameOverScreen_1ace66ef489ec7eb8131f1909c700b8e9e" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite GameOverScreen::_sprite</definition>
+        <argsstring></argsstring>
+        <name>_sprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" line="37" column="16" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGameOverScreen_1a51a9364448a106566e6bc104d2d58ce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameOverScreen::GameOverScreen</definition>
+        <argsstring>(sf::RenderWindow &amp;window, Dispatcher &amp;dispatcher, std::string imagePath)</argsstring>
+        <name>GameOverScreen</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>imagePath</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classGameOverScreen" kindref="compound">GameOverScreen</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The screen on which to display the game has ended. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> to send <ref refid="classEvent" kindref="compound">Event</ref> signals on, such as <ref refid="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" kindref="member">GameOverScreen::GAME_OVER_ACK</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imagePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the image to show on the screen, relative to the executable working directory. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classGameOverScreen_1a7f015719692c3482de713fd2381f2154" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GameOverScreen::render</definition>
+        <argsstring>() const</argsstring>
+        <name>render</name>
+        <reimplements refid="classScreen_1a3cd453c494b2389725b719700283e655">render</reimplements>
+        <briefdescription>
+<para>Renders the screen with the parameters provided in the constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" line="28" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classGameOverScreen_1a8e5c8ae4f8329274bcc5d932bb1f5526" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GameOverScreen::handleClick</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>handleClick</name>
+        <reimplements refid="classScreen_1afafb8c2a2255c4cf8cef807ba4d14400">handleClick</reimplements>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Handles a click by sending out a <ref refid="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" kindref="member">GameOverScreen::GAME_OVER_ACK</ref> <ref refid="classEvent" kindref="compound">Event</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" line="33" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classScreen" kindref="compound">Screen</ref> that handles informing the user they have won or lost the game. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GameOverScreen</label>
+        <link refid="classGameOverScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GameOverScreen</label>
+        <link refid="classGameOverScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" line="8" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp" bodystart="9" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classGameOverScreen_1ace66ef489ec7eb8131f1909c700b8e9e" prot="private" virt="non-virtual"><scope>GameOverScreen</scope><name>_sprite</name></member>
+      <member refid="classGameOverScreen_1a02f2b88a6cd80fc64fe537ad005bd425" prot="private" virt="non-virtual"><scope>GameOverScreen</scope><name>_texture</name></member>
+      <member refid="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" prot="public" virt="non-virtual"><scope>GameOverScreen</scope><name>GAME_OVER_ACK</name></member>
+      <member refid="classGameOverScreen_1a51a9364448a106566e6bc104d2d58ce1" prot="public" virt="non-virtual"><scope>GameOverScreen</scope><name>GameOverScreen</name></member>
+      <member refid="classScreen_1a6335968966aa2d082ba6804c9481d478" prot="protected" virt="non-virtual"><scope>GameOverScreen</scope><name>getDispatcher</name></member>
+      <member refid="classScreen_1ae4ee4d8f366a13f3f296182106503800" prot="protected" virt="non-virtual"><scope>GameOverScreen</scope><name>getWindow</name></member>
+      <member refid="classGameOverScreen_1a8e5c8ae4f8329274bcc5d932bb1f5526" prot="public" virt="virtual"><scope>GameOverScreen</scope><name>handleClick</name></member>
+      <member refid="classGameOverScreen_1a7f015719692c3482de713fd2381f2154" prot="public" virt="virtual"><scope>GameOverScreen</scope><name>render</name></member>
+      <member refid="classScreen_1ab44807297a4a513751fb76f138a41ba5" prot="public" virt="non-virtual"><scope>GameOverScreen</scope><name>Screen</name></member>
+      <member refid="classScreen_1a0bc1a2ceaee4a245e0d31822ea0643bd" prot="public" virt="virtual"><scope>GameOverScreen</scope><name>~Screen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

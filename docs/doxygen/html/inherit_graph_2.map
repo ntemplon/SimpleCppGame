@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classEntity_1_1Component.html" title="A component of an entity in the game&#39;s component entity system." alt="" coords="5,132,148,159"/>
+<area shape="rect" id="node2" href="$classBallComponent.html" title="A component for marking an entity as a ball." alt="" coords="211,5,333,32"/>
+<area shape="rect" id="node3" href="$classEnemyComponent.html" title="A Component for enemy AI paddles." alt="" coords="201,56,343,83"/>
+<area shape="rect" id="node4" href="$classLocationComponent.html" title="A component that stores the information about where and how large the entity is." alt="" coords="196,107,348,133"/>
+<area shape="rect" id="node5" href="$classPlayerComponent.html" title="A component for marking an entity as a player." alt="" coords="203,157,341,184"/>
+<area shape="rect" id="node6" href="$classRenderComponent.html" title="A component that stores the information required to render the entity on the screen." alt="" coords="201,208,343,235"/>
+<area shape="rect" id="node7" href="$classVelocityComponent.html" title="A component for storing the 2D velocity of an entity." alt="" coords="197,259,347,285"/>
+</map>

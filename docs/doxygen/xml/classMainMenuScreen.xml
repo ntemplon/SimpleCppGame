@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classMainMenuScreen" kind="class" language="C++" prot="public">
+    <compoundname>MainMenuScreen</compoundname>
+    <basecompoundref refid="classScreen" prot="public" virt="non-virtual">Screen</basecompoundref>
+    <includes refid="MainMenuScreen_8hpp" local="no">MainMenuScreen.hpp</includes>
+    <innerclass refid="structMainMenuScreen_1_1MenuItem" prot="public">MainMenuScreen::MenuItem</innerclass>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classMainMenuScreen_1acea791f0f1c295067498a200fa7b8bd5" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string MainMenuScreen::MAIN_MENU_PLAY</definition>
+        <argsstring></argsstring>
+        <name>MAIN_MENU_PLAY</name>
+        <briefdescription>
+<para>A std::string for the event type of events that represent the user choosing to play the game. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="33" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainMenuScreen_1a69f87d1081a0c724c3683858573af882" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string MainMenuScreen::MAIN_MENU_EXIT</definition>
+        <argsstring></argsstring>
+        <name>MAIN_MENU_EXIT</name>
+        <briefdescription>
+<para>A std::string for the event type of events that represent the user choosing to exit the game. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="38" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMainMenuScreen_1a3649d2e6723a052643f057399412c047" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="structMainMenuScreen_1_1MenuItem" kindref="compound">MenuItem</ref> &gt;</type>
+        <definition>std::list&lt;MenuItem&gt; MainMenuScreen::_menuItems</definition>
+        <argsstring></argsstring>
+        <name>_menuItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="63" column="15" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainMenuScreen_1add7f92a3a0e2993989cb651343e53b19" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture MainMenuScreen::_texture</definition>
+        <argsstring></argsstring>
+        <name>_texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="64" column="17" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainMenuScreen_1ac51d18b94a68a9b5d7abae3da1af4321" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite MainMenuScreen::_sprite</definition>
+        <argsstring></argsstring>
+        <name>_sprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="65" column="16" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMainMenuScreen_1ad28ef61ddb123852dcd42e54ef432b71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainMenuScreen::MainMenuScreen</definition>
+        <argsstring>(sf::RenderWindow &amp;window, Dispatcher &amp;dispatcher, std::string backgroundImage)</argsstring>
+        <name>MainMenuScreen</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>backgroundImage</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Main Menu <ref refid="classScreen" kindref="compound">Screen</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sf::RenderWindow to which this menu will be rendered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> on which the events for user selection will be dispatched. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>backgroundImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file path to the image to use as the background of the menu. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="47" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenuScreen_1a5a408ce8d3039f2271acced1a7d81b02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainMenuScreen::render</definition>
+        <argsstring>() const</argsstring>
+        <name>render</name>
+        <reimplements refid="classScreen_1a3cd453c494b2389725b719700283e655">render</reimplements>
+        <briefdescription>
+<para>Renders the <ref refid="classMainMenuScreen" kindref="compound">MainMenuScreen</ref> to the sf::RenderWindow provided during construction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="52" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenuScreen_1a77223826dcca0f96e6714e2440c835cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainMenuScreen::handleClick</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>handleClick</name>
+        <reimplements refid="classScreen_1afafb8c2a2255c4cf8cef807ba4d14400">handleClick</reimplements>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Performs event handling for a user mouse click, dispatching events if appropriate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x position of the click, in screen space coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y position of the click, in screen space coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="60" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A screen representing the main menu of our game. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MainMenuScreen</label>
+        <link refid="classMainMenuScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainMenuScreen</label>
+        <link refid="classMainMenuScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="15" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="16" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classMainMenuScreen_1a3649d2e6723a052643f057399412c047" prot="private" virt="non-virtual"><scope>MainMenuScreen</scope><name>_menuItems</name></member>
+      <member refid="classMainMenuScreen_1ac51d18b94a68a9b5d7abae3da1af4321" prot="private" virt="non-virtual"><scope>MainMenuScreen</scope><name>_sprite</name></member>
+      <member refid="classMainMenuScreen_1add7f92a3a0e2993989cb651343e53b19" prot="private" virt="non-virtual"><scope>MainMenuScreen</scope><name>_texture</name></member>
+      <member refid="classScreen_1a6335968966aa2d082ba6804c9481d478" prot="protected" virt="non-virtual"><scope>MainMenuScreen</scope><name>getDispatcher</name></member>
+      <member refid="classScreen_1ae4ee4d8f366a13f3f296182106503800" prot="protected" virt="non-virtual"><scope>MainMenuScreen</scope><name>getWindow</name></member>
+      <member refid="classMainMenuScreen_1a77223826dcca0f96e6714e2440c835cc" prot="public" virt="virtual"><scope>MainMenuScreen</scope><name>handleClick</name></member>
+      <member refid="classMainMenuScreen_1a69f87d1081a0c724c3683858573af882" prot="public" virt="non-virtual"><scope>MainMenuScreen</scope><name>MAIN_MENU_EXIT</name></member>
+      <member refid="classMainMenuScreen_1acea791f0f1c295067498a200fa7b8bd5" prot="public" virt="non-virtual"><scope>MainMenuScreen</scope><name>MAIN_MENU_PLAY</name></member>
+      <member refid="classMainMenuScreen_1ad28ef61ddb123852dcd42e54ef432b71" prot="public" virt="non-virtual"><scope>MainMenuScreen</scope><name>MainMenuScreen</name></member>
+      <member refid="classMainMenuScreen_1a5a408ce8d3039f2271acced1a7d81b02" prot="public" virt="virtual"><scope>MainMenuScreen</scope><name>render</name></member>
+      <member refid="classScreen_1ab44807297a4a513751fb76f138a41ba5" prot="public" virt="non-virtual"><scope>MainMenuScreen</scope><name>Screen</name></member>
+      <member refid="classScreen_1a0bc1a2ceaee4a245e0d31822ea0643bd" prot="public" virt="virtual"><scope>MainMenuScreen</scope><name>~Screen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

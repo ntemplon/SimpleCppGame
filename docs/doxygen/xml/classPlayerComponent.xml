@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classPlayerComponent" kind="class" language="C++" prot="public">
+    <compoundname>PlayerComponent</compoundname>
+    <basecompoundref refid="classEntity_1_1Component" prot="public" virt="non-virtual">Entity::Component</basecompoundref>
+    <includes refid="Components_8hpp" local="no">Components.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classPlayerComponent_1a3f0ad3532e4f1c9b623946f76e0ee8dd" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string PlayerComponent::PLAYER_ID</definition>
+        <argsstring></argsstring>
+        <name>PLAYER_ID</name>
+        <briefdescription>
+<para>The ID of a <ref refid="classPlayerComponent" kindref="compound">PlayerComponent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="100" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPlayerComponent_1adf9bdf600a6cc7d34aa848163c4a9be7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PlayerComponent::PlayerComponent</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerComponent</name>
+        <briefdescription>
+<para>Construct a new Player Component object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="105" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A component for marking an entity as a player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PlayerComponent</label>
+        <link refid="classPlayerComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PlayerComponent</label>
+        <link refid="classPlayerComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="94" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="95" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classEntity_1_1Component_1aa870551c8ede04e4ed6f538eee376a1a" prot="public" virt="non-virtual"><scope>PlayerComponent</scope><name>Component</name></member>
+      <member refid="classEntity_1_1Component_1aa27ad6d78bfc3ff60566ca824b29c1db" prot="public" virt="non-virtual"><scope>PlayerComponent</scope><name>getId</name></member>
+      <member refid="classPlayerComponent_1a3f0ad3532e4f1c9b623946f76e0ee8dd" prot="public" virt="non-virtual"><scope>PlayerComponent</scope><name>PLAYER_ID</name></member>
+      <member refid="classPlayerComponent_1adf9bdf600a6cc7d34aa848163c4a9be7" prot="public" virt="non-virtual"><scope>PlayerComponent</scope><name>PlayerComponent</name></member>
+      <member refid="classEntity_1_1Component_1a8e19d41c2a8041556e2cbd5c92e4906e" prot="public" virt="virtual"><scope>PlayerComponent</scope><name>~Component</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

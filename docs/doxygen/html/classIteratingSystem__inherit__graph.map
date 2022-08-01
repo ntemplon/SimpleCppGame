@@ -1,0 +1,9 @@
+<map id="IteratingSystem" name="IteratingSystem">
+<area shape="rect" id="node1" title="An implementation of EntitySystem that iterates through all Entity objects in EntitySystem::getEntiti..." alt="" coords="289,80,415,107"/>
+<area shape="rect" id="node3" href="$classBallSystem.html" title="A system that handles the ball physics." alt="" coords="5,155,101,181"/>
+<area shape="rect" id="node4" href="$classEnemyAISystem.html" title="A system that performs the AI for the enemy player." alt="" coords="126,155,255,181"/>
+<area shape="rect" id="node5" href="$classPlayerInputSystem.html" title="A system that uses player input to drive a paddle." alt="" coords="279,155,425,181"/>
+<area shape="rect" id="node6" href="$classRenderSystem.html" title="A system that manages Entity sprite sizes, positions, and drawing." alt="" coords="449,155,567,181"/>
+<area shape="rect" id="node7" href="$classVelocitySystem.html" title="A system for updating positions based on velocities." alt="" coords="591,155,713,181"/>
+<area shape="rect" id="node2" href="$classEntitySystem.html" title="A class representing a system that processes groups of Entity in an EntityEngine." alt="" coords="297,5,407,32"/>
+</map>

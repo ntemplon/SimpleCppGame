@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Components_8hpp" kind="file" language="C++">
+    <compoundname>Components.hpp</compoundname>
+    <includes refid="Entity_8hpp" local="no">Entity.hpp</includes>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="EnemyAISystem_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp</label>
+        <link refid="Components_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp</label>
+        <link refid="Components_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp</label>
+        <link refid="EnemyAISystem_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRenderComponent" prot="public">RenderComponent</innerclass>
+    <innerclass refid="classLocationComponent" prot="public">LocationComponent</innerclass>
+    <innerclass refid="classVelocityComponent" prot="public">VelocityComponent</innerclass>
+    <innerclass refid="classPlayerComponent" prot="public">PlayerComponent</innerclass>
+    <innerclass refid="classBallComponent" prot="public">BallComponent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Entity.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classRenderComponent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRenderComponent" kindref="compound">RenderComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEntity_1_1Component" kindref="compound">Entity::Component</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="classRenderComponent_1acde3389d30dd2664ae4a018acc568949" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classRenderComponent_1acde3389d30dd2664ae4a018acc568949" kindref="member">RENDER_COMP_ID</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classRenderComponent_1a1bfbe186278dc7528788aea84f976b6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderComponent_1a1bfbe186278dc7528788aea84f976b6c" kindref="member">RenderComponent</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classRenderComponent_1a0a0b339a3b0cd67d18ea0952eabb1237" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sf::Texture&gt;<sp/><ref refid="classRenderComponent_1a0a0b339a3b0cd67d18ea0952eabb1237" kindref="member">texture</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classRenderComponent_1a71d2bd50fe986ac4125d978ab660055c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Sprite<sp/><ref refid="classRenderComponent_1a71d2bd50fe986ac4125d978ab660055c" kindref="member">sprite</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classLocationComponent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLocationComponent" kindref="compound">LocationComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEntity_1_1Component" kindref="compound">Entity::Component</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classLocationComponent_1ad370ace4f8689f490ae38a95f3c780c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classLocationComponent_1ad370ace4f8689f490ae38a95f3c780c3" kindref="member">LOC_COMP_ID</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classLocationComponent_1a3c5d71e597d6a6bdc35272c32351576a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLocationComponent_1a3c5d71e597d6a6bdc35272c32351576a" kindref="member">LocationComponent</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classLocationComponent_1a35bbae77d652cee8b1dc5171bb3133b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::FloatRect<sp/><ref refid="classLocationComponent_1a35bbae77d652cee8b1dc5171bb3133b1" kindref="member">location</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classVelocityComponent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classVelocityComponent" kindref="compound">VelocityComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEntity_1_1Component" kindref="compound">Entity::Component</ref></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76" refid="classVelocityComponent_1a79650ba683c4c90348b6b3c969d82e03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classVelocityComponent_1a79650ba683c4c90348b6b3c969d82e03" kindref="member">VEL_COMP_ID</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classVelocityComponent_1a6b64cf8cf13322ef5709f2fdc1439cc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVelocityComponent_1a6b64cf8cf13322ef5709f2fdc1439cc4" kindref="member">VelocityComponent</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classVelocityComponent_1ab834951d72d96f1227a9eeb92f63fa0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Vector2f<sp/><ref refid="classVelocityComponent_1ab834951d72d96f1227a9eeb92f63fa0d" kindref="member">velocity</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classPlayerComponent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPlayerComponent" kindref="compound">PlayerComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEntity_1_1Component" kindref="compound">Entity::Component</ref></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100" refid="classPlayerComponent_1a3f0ad3532e4f1c9b623946f76e0ee8dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classPlayerComponent_1a3f0ad3532e4f1c9b623946f76e0ee8dd" kindref="member">PLAYER_ID</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classPlayerComponent_1adf9bdf600a6cc7d34aa848163c4a9be7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayerComponent_1adf9bdf600a6cc7d34aa848163c4a9be7" kindref="member">PlayerComponent</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classBallComponent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classBallComponent" kindref="compound">BallComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEntity_1_1Component" kindref="compound">Entity::Component</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117" refid="classBallComponent_1a7d08148e8535efeb6470988ef9978758" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classBallComponent_1a7d08148e8535efeb6470988ef9978758" kindref="member">BALL_ID</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classBallComponent_1a745e88f1840ec826a7a9e2a476e382f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBallComponent_1a745e88f1840ec826a7a9e2a476e382f6" kindref="member">BallComponent</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structMainMenuScreen_1_1MenuItem" kind="struct" language="C++" prot="public">
+    <compoundname>MainMenuScreen::MenuItem</compoundname>
+    <includes refid="MainMenuScreen_8hpp" local="no">MainMenuScreen.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMainMenuScreen_1_1MenuItem_1add9aedb3f8d319e10870ab1e012e1337" prot="public" static="no" mutable="no">
+        <type>sf::Rect&lt; int &gt;</type>
+        <definition>sf::Rect&lt;int&gt; MainMenuScreen::MenuItem::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The bounds of the menu item, in screenspace coordinates. Used for determining if the item has been clicked. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="25" column="18" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMainMenuScreen_1_1MenuItem_1a4071d2935b7b5084037f544ea9209184" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; MainMenuScreen::MenuItem::action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The action that will be performed when the item is clicked. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="27" column="23" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A data structure of a menu item. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" line="21" column="5" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp" bodystart="22" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structMainMenuScreen_1_1MenuItem_1a4071d2935b7b5084037f544ea9209184" prot="public" virt="non-virtual"><scope>MainMenuScreen::MenuItem</scope><name>action</name></member>
+      <member refid="structMainMenuScreen_1_1MenuItem_1add9aedb3f8d319e10870ab1e012e1337" prot="public" virt="non-virtual"><scope>MainMenuScreen::MenuItem</scope><name>rect</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

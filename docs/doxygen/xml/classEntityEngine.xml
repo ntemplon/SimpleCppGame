@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classEntityEngine" kind="class" language="C++" prot="public">
+    <compoundname>EntityEngine</compoundname>
+    <includes refid="EntityEngine_8hpp" local="no">EntityEngine.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEntityEngine_1ab1de7a7cca04e5e29f02f22945db7855" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;EntitySystem&gt; &gt; EntityEngine::_systems</definition>
+        <argsstring></argsstring>
+        <name>_systems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" line="50" column="17" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEntityEngine_1aad95588ee43e58069b734055ae64bc85" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &gt;</type>
+        <definition>std::map&lt;int, std::shared_ptr&lt;Entity&gt; &gt; EntityEngine::_entities</definition>
+        <argsstring></argsstring>
+        <name>_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" line="51" column="14" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityEngine::add</definition>
+        <argsstring>(std::shared_ptr&lt; EntitySystem &gt; system)</argsstring>
+        <name>add</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> &gt;</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+<para>Adds a system to the engine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the provided system to the engine. The call site and the engine will share ownership of the system through the shared_ptr created by the copy constructor when calling this method. Systems will have <ref refid="classEntityEngine_1a3eafb99f52dfe9b79995c533d51d314e" kindref="member">update()</ref> called on them each frame in the same order they are added to the engine, so if processing order is important, care should be taken when organizing calls to <ref refid="classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9" kindref="member">add()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>system</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the system to be added to the engine </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntityEngine_1a1a905abcc17249f932fda5837c40a563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityEngine::add</definition>
+        <argsstring>(std::shared_ptr&lt; Entity &gt; entity)</argsstring>
+        <name>add</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Adds an entity to the engine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the provided entity to the engine. The call site, the engine, and any systems that choose to will share ownership of the entity through copies of the shared_ptr. Systems will only be informed of the addition of an entity if <ref refid="classEntityEngine_1a1a905abcc17249f932fda5837c40a563" kindref="member">EntityEngine::add(std::shared_ptr&lt;Entity&gt; entity)</ref> is called after <ref refid="classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9" kindref="member">EntityEngine::add(std::shared_ptr&lt;EntitySystem&gt; system)</ref>, so take care with ordering calls during initialization</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the entity to add to the engine </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntityEngine_1a3eafb99f52dfe9b79995c533d51d314e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityEngine::update</definition>
+        <argsstring>(const sf::Time deltaTime)</argsstring>
+        <name>update</name>
+        <param>
+          <type>const sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Updates all systems in the engine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since the last update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" kindref="member">EntitySystem::update</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" line="47" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A engine for handling a component entity system. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" line="13" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp" bodystart="14" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classEntityEngine_1aad95588ee43e58069b734055ae64bc85" prot="private" virt="non-virtual"><scope>EntityEngine</scope><name>_entities</name></member>
+      <member refid="classEntityEngine_1ab1de7a7cca04e5e29f02f22945db7855" prot="private" virt="non-virtual"><scope>EntityEngine</scope><name>_systems</name></member>
+      <member refid="classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9" prot="public" virt="non-virtual"><scope>EntityEngine</scope><name>add</name></member>
+      <member refid="classEntityEngine_1a1a905abcc17249f932fda5837c40a563" prot="public" virt="non-virtual"><scope>EntityEngine</scope><name>add</name></member>
+      <member refid="classEntityEngine_1a3eafb99f52dfe9b79995c533d51d314e" prot="public" virt="non-virtual"><scope>EntityEngine</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

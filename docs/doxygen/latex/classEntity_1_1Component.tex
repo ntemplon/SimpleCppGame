@@ -1,0 +1,62 @@
+\hypertarget{classEntity_1_1Component}{}\doxysection{Entity\+::Component Class Reference}
+\label{classEntity_1_1Component}\index{Entity::Component@{Entity::Component}}
+
+
+A component of an entity in the game\textquotesingle{}s component entity system.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+hpp$>$}
+
+
+
+Inheritance diagram for Entity\+::Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classEntity_1_1Component__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntity_1_1Component_aa870551c8ede04e4ed6f538eee376a1a}{Component}} (const std\+::string id)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEntity_1_1Component}{Component}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEntity_1_1Component_a8e19d41c2a8041556e2cbd5c92e4906e}\label{classEntity_1_1Component_a8e19d41c2a8041556e2cbd5c92e4906e}} 
+virtual \mbox{\hyperlink{classEntity_1_1Component_a8e19d41c2a8041556e2cbd5c92e4906e}{$\sim$\+Component}} ()
+\begin{DoxyCompactList}\small\item\em This is only declared to make the class polymorphic so that dymaic\+\_\+cast between \mbox{\hyperlink{classEntity_1_1Component}{Component}} types works. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEntity_1_1Component_aa27ad6d78bfc3ff60566ca824b29c1db}\label{classEntity_1_1Component_aa27ad6d78bfc3ff60566ca824b29c1db}} 
+const std\+::string \mbox{\hyperlink{classEntity_1_1Component_aa27ad6d78bfc3ff60566ca824b29c1db}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get the ID of the component. This will return the same value for all instances of a class of \mbox{\hyperlink{classEntity_1_1Component}{Component}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A component of an entity in the game\textquotesingle{}s component entity system. 
+
+Components represent an aspect of an \mbox{\hyperlink{classEntity}{Entity}}. They store state information, such as position and sprite data, as well as mark the \mbox{\hyperlink{classEntity}{Entity}} as belong to a certain class of object, like being the player or an AI opponent.
+
+\mbox{\hyperlink{classEntity_1_1Component}{Component}} types are identified with their ID, which is passed to the constructor. To avoid odd bugs and behavior, all instances of the same \mbox{\hyperlink{classEntity_1_1Component}{Component}} subclass should have the same ID, which is usually declared as a static member of the class or a preprocessor constant in the header file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntity_1_1Component_aa870551c8ede04e4ed6f538eee376a1a}\label{classEntity_1_1Component_aa870551c8ede04e4ed6f538eee376a1a}} 
+\index{Entity::Component@{Entity::Component}!Component@{Component}}
+\index{Component@{Component}!Entity::Component@{Entity::Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily Entity\+::\+Component\+::\+Component (\begin{DoxyParamCaption}\item[{const std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classEntity_1_1Component}{Component}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The \mbox{\hyperlink{classEntity_1_1Component}{Component}}\textquotesingle{}s ID \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Entity.\+hpp\end{DoxyCompactItemize}

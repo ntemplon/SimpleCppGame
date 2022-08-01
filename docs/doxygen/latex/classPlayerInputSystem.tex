@@ -1,0 +1,78 @@
+\hypertarget{classPlayerInputSystem}{}\doxysection{Player\+Input\+System Class Reference}
+\label{classPlayerInputSystem}\index{PlayerInputSystem@{PlayerInputSystem}}
+
+
+A system that uses player input to drive a paddle.  
+
+
+
+
+{\ttfamily \#include $<$Player\+Input\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Player\+Input\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classPlayerInputSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Input\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classPlayerInputSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlayerInputSystem_a94141b78de6b111c0893c094ecb3f6b1}\label{classPlayerInputSystem_a94141b78de6b111c0893c094ecb3f6b1}} 
+\mbox{\hyperlink{classPlayerInputSystem_a94141b78de6b111c0893c094ecb3f6b1}{Player\+Input\+System}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classPlayerInputSystem}{Player\+Input\+System}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPlayerInputSystem_a6fad1f27101eab2846fbe03c27655512}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&entity, sf\+::\+Time delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates the behavior of a player paddle based on the current keyboard inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A system that uses player input to drive a paddle. 
+
+It acts on entities with a \mbox{\hyperlink{classLocationComponent}{Location\+Component}}, \mbox{\hyperlink{classVelocityComponent}{Velocity\+Component}}, and \mbox{\hyperlink{classPlayerComponent}{Player\+Component}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayerInputSystem_a6fad1f27101eab2846fbe03c27655512}\label{classPlayerInputSystem_a6fad1f27101eab2846fbe03c27655512}} 
+\index{PlayerInputSystem@{PlayerInputSystem}!process@{process}}
+\index{process@{process}!PlayerInputSystem@{PlayerInputSystem}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Player\+Input\+System\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&}]{entity,  }\item[{sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates the behavior of a player paddle based on the current keyboard inputs. 
+
+The paddle moves up if W or Up are pressed and down if S or Down are pressed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The current player being processed \\
+\hline
+{\em delta\+Time} & The time that has passed since \mbox{\hyperlink{classPlayerInputSystem_a6fad1f27101eab2846fbe03c27655512}{process()}} was last called on this entity. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{Iterating\+System}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Player\+Input\+System.\+hpp\end{DoxyCompactItemize}

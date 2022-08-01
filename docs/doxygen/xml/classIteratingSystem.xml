@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classIteratingSystem" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IteratingSystem</compoundname>
+    <basecompoundref refid="classEntitySystem" prot="public" virt="non-virtual">EntitySystem</basecompoundref>
+    <derivedcompoundref refid="classBallSystem" prot="public" virt="non-virtual">BallSystem</derivedcompoundref>
+    <derivedcompoundref refid="classEnemyAISystem" prot="public" virt="non-virtual">EnemyAISystem</derivedcompoundref>
+    <derivedcompoundref refid="classPlayerInputSystem" prot="public" virt="non-virtual">PlayerInputSystem</derivedcompoundref>
+    <derivedcompoundref refid="classRenderSystem" prot="public" virt="non-virtual">RenderSystem</derivedcompoundref>
+    <derivedcompoundref refid="classVelocitySystem" prot="public" virt="non-virtual">VelocitySystem</derivedcompoundref>
+    <includes refid="IteratingSystem_8hpp" local="no">IteratingSystem.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IteratingSystem::IteratingSystem</definition>
+        <argsstring>()</argsstring>
+        <name>IteratingSystem</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classIteratingSystem" kindref="compound">IteratingSystem</ref> with the default <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" kindref="member">EntitySystem::EntitySystem()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp" line="16" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IteratingSystem::IteratingSystem</definition>
+        <argsstring>(const std::shared_ptr&lt; EntityFamily &gt; &amp;family)</argsstring>
+        <name>IteratingSystem</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classEntityFamily" kindref="compound">EntityFamily</ref> &gt; &amp;</type>
+          <declname>family</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classIteratingSystem" kindref="compound">IteratingSystem</ref> with the <ref refid="classEntityFamily" kindref="compound">EntityFamily</ref> <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The family to provide to the <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> constructor</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" kindref="member">EntitySystem::EntitySystem(const std::shared_ptr&lt;EntityFamily&gt; &amp;family)</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void IteratingSystem::update</definition>
+        <argsstring>(const sf::Time deltaTime)</argsstring>
+        <name>update</name>
+        <reimplements refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154">update</reimplements>
+        <param>
+          <type>const sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Iterates through each element in the system to perform updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For each element in <ref refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" kindref="member">EntitySystem::getEntities()</ref>, calls <ref refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c" kindref="member">IteratingSystem::process</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since this method was last called </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c" kindref="member">IteratingSystem::process(std::shared_ptr&lt;Entity&gt; &amp;entity, sf::Time deltaTime)</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp" line="35" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IteratingSystem::process</definition>
+        <argsstring>(std::shared_ptr&lt; Entity &gt; &amp;entity, sf::Time deltaTime)=0</argsstring>
+        <name>process</name>
+        <reimplementedby refid="classEnemyAISystem_1a62cfe6ee8471ded89a84b7626eb24d93">process</reimplementedby>
+        <reimplementedby refid="classBallSystem_1a16831511402914a2e0de903eb328636c">process</reimplementedby>
+        <reimplementedby refid="classPlayerInputSystem_1a6fad1f27101eab2846fbe03c27655512">process</reimplementedby>
+        <reimplementedby refid="classRenderSystem_1a27f2d4ebb7f3169a3620aca0a86dd000">process</reimplementedby>
+        <reimplementedby refid="classVelocitySystem_1adc6a737e5d8e2bdf58caf1b5ccc0ad99">process</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Processes a specific entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is pure virtual in <ref refid="classIteratingSystem" kindref="compound">IteratingSystem</ref>. It is up to sublcasses to implement their specific needs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current entity being processed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since <ref refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c" kindref="member">process()</ref> was last called for this entity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp" line="46" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An implementation of <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> that iterates through all <ref refid="classEntity" kindref="compound">Entity</ref> objects in <ref refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" kindref="member">EntitySystem::getEntities()</ref> each <ref refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" kindref="member">EntitySystem::update</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>VelocitySystem</label>
+        <link refid="classVelocitySystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RenderSystem</label>
+        <link refid="classRenderSystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BallSystem</label>
+        <link refid="classBallSystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+      <node id="4">
+        <label>EnemyAISystem</label>
+        <link refid="classEnemyAISystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PlayerInputSystem</label>
+        <link refid="classPlayerInputSystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp" line="9" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp" bodystart="10" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" virt="virtual"><scope>IteratingSystem</scope><name>engineEntityAdded</name></member>
+      <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" virt="non-virtual"><scope>IteratingSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" virt="non-virtual"><scope>IteratingSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" virt="virtual"><scope>IteratingSystem</scope><name>getEntities</name></member>
+      <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" prot="public" virt="non-virtual"><scope>IteratingSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" prot="public" virt="non-virtual"><scope>IteratingSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c" prot="protected" virt="pure-virtual"><scope>IteratingSystem</scope><name>process</name></member>
+      <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" prot="public" virt="virtual"><scope>IteratingSystem</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing and Getting Started &mdash; SimpleCppGame 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Extending the Simple CPP Game Engine" href="extending.html" />
+    <link rel="prev" title="Simple CPP Game" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> SimpleCppGame
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Simple CPP Game</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-dependencies">Installing Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-the-game">Downloading the Game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-game">Building the Game</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending the Simple CPP Game Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classdocs.html">Simple CPP Game Class Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SimpleCppGame</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Installing and Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installing-and-getting-started">
+<h1>Installing and Getting Started<a class="headerlink" href="#installing-and-getting-started" title="Permalink to this heading"></a></h1>
+<p>Simple Cpp Game is designed to work on x86 Linux, Mac, and Windows. ARM is not explicitly supported at this time due to lack of available
+test hardware for the developer.</p>
+<section id="installing-dependencies">
+<h2>Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this heading"></a></h2>
+<p>The Simple Cpp Game (and associated documentation generation) has the following dependencies:</p>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>A C++ Compiler</dt><dd><p>Any C++ Compiler that supports C++14 and <code class="code docutils literal notranslate"><span class="pre">#pragma</span> <span class="pre">once</span></code> will suffice. The game was developed and debugged using g++
+12.2 (Ubuntu 22.04 default).</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>SFML</dt><dd><p>SFML is provided for Windows, Mac, and Linux <a class="reference external" href="https://www.sfml-dev.org/download/sfml/2.5.1/">here</a>.</p>
+<p><strong>Linux</strong> users are recommended to install SFML via their distribution’s package manager, if possible. For example, in Ubuntu:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libsfml-dev</span></code></p>
+<p><strong>Mac</strong> users should install SFML following <a class="reference external" href="https://www.sfml-dev.org/tutorials/2.5/start-osx.php">these instructions</a>.</p>
+<p><strong>Windows</strong> users (or other users that wish to keep SFML separate) can unzip the appropriate package and direct the game build
+files there by setting the <code class="code docutils literal notranslate"><span class="pre">SFML_ROOT</span></code> environment variable to the root SFML directory after unzipping.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic" start="2">
+<li><p>Doxygen (with graphviz)</p>
+<blockquote>
+<div><p><strong>Linux</strong> users should install Doxygen via their distribution’s package manager.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">[apt/dnf/yum]</span> <span class="pre">install</span> <span class="pre">doxygen</span> <span class="pre">graphviz</span></code></p>
+<p><strong>Mac</strong> users should install Doxygen via Homebrew.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">doxygen</span> <span class="pre">graphviz</span></code></p>
+<p><strong>Windows</strong> users should download and run the <a class="reference external" href="https://doxygen.nl/download.html">Doxygen installer</a> and
+<a class="reference external" href="https://graphviz.org/download/">graphviz installer</a>.</p>
+</div></blockquote>
+</li>
+<li><dl>
+<dt>Python3</dt><dd><p>Any version of Python 3 will work with Simple Cpp Game. It is used for the environment in which the documentation is built.</p>
+<p><strong>Linux</strong> users should install a version of Python from their distribution’s repositories. Be sure that this includes the virtual
+environment tools as well. For example, to install Python3.10 on Ubuntu:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3.10</span> <span class="pre">python3.10-venv</span></code></p>
+<p><strong>Mac</strong> users can download Python from <a class="reference external" href="https://www.python.org/downloads/macos/">the official website</a>.</p>
+<p><strong>Windows</strong> users should download and run an installter from <a class="reference external" href="https://www.python.org/downloads/">the Python website</a>. Do NOT
+use the version of Python from the windows store; it is substantially more difficult to work with.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="downloading-the-game">
+<h2>Downloading the Game<a class="headerlink" href="#downloading-the-game" title="Permalink to this heading"></a></h2>
+<p>The code and other resources for the Simple Cpp Game can be found <a class="reference external" href="https://github.com/ntemplon/SimpleCppGame">in the repository</a>.
+You can download the repository from the website or by cloning it with <code class="code docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/ntemplon/SimpleCppGame</span></code>.</p>
+</section>
+<section id="building-the-game">
+<h2>Building the Game<a class="headerlink" href="#building-the-game" title="Permalink to this heading"></a></h2>
+<p>The easiest way to build the game is to open <a class="reference external" href="https://code.visualstudio.com/">VSCode</a> in the respository directory and invoke the
+CMake: Configure and CMake: Built Target RunMe commands with Ctrl + Shift + P or equivalent Mac command.</p>
+<p>To manually build the game, open a terminal in the repository directory and run the following commands. They are provided for Linux;
+use whatever equivalent commands are available on your operating system.</p>
+<ol class="arabic simple">
+<li><p>Make the working directory inside of the repository</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span><span class="p">;</span><span class="n">cd</span> <span class="o">./</span><span class="n">build</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Configure the project to prepare to build</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">warn</span><span class="o">-</span><span class="n">unused</span><span class="o">-</span><span class="n">cli</span> <span class="o">-</span><span class="n">DCMAKE_EXPORT_COMPILE_COMMANDS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">TRUE</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="p">:</span><span class="n">STRING</span><span class="o">=</span><span class="n">Release</span> <span class="o">-</span><span class="n">DCMAKE_C_COMPILER</span><span class="p">:</span><span class="n">FILEPATH</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">c_compiler</span> <span class="o">-</span><span class="n">DCMAKE_CXX_COMPILER</span><span class="p">:</span><span class="n">FILEPATH</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">cxx_compiler</span> <span class="o">-</span><span class="n">S</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">root</span> <span class="o">-</span><span class="n">B</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">build</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Unix Makefiles&quot;</span>
+</pre></div>
+</div>
+<p>Note: The default location for c compilers and cxx compilers on Ubuntu is /usr/bin</p>
+<p>Note: If on windows, use cmake-gui.exe instead and refer to the CMake documentation for assistance.</p>
+<ol class="arabic simple" start="3">
+<li><p>Build the target</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">target</span> <span class="nb">all</span>
+</pre></div>
+</div>
+<p>This will result in a RunMe executable in the build folder, which you can run to play the game!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Simple CPP Game" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="extending.html" class="btn btn-neutral float-right" title="Extending the Simple CPP Game Engine" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Nathan Templon.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

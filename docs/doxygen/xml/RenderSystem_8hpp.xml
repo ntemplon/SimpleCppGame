@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="RenderSystem_8hpp" kind="file" language="C++">
+    <compoundname>RenderSystem.hpp</compoundname>
+    <includes refid="IteratingSystem_8hpp" local="no">IteratingSystem.hpp</includes>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includedby refid="Game_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</includedby>
+    <includedby refid="GameScreen_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>IteratingSystem.hpp</label>
+        <link refid="IteratingSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>EntityFamily.hpp</label>
+        <link refid="EntityFamily_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp</label>
+        <link refid="RenderSystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem.hpp</label>
+        <link refid="EntitySystem_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="7">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp</label>
+        <link refid="RenderSystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRenderSystem" prot="public">RenderSystem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;IteratingSystem.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classRenderSystem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRenderSystem" kindref="compound">RenderSystem</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classIteratingSystem" kindref="compound">IteratingSystem</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="classRenderSystem_1a20496a8f52c4eb755d4bfcaba2e98e1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderSystem_1a20496a8f52c4eb755d4bfcaba2e98e1c" kindref="member">RenderSystem</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classRenderSystem_1a794921c956b9b36c547e13594bf25481" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderSystem_1a794921c956b9b36c547e13594bf25481" kindref="member">render</ref>(sf::RenderTarget<sp/>&amp;target)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40" refid="classRenderSystem_1a27f2d4ebb7f3169a3620aca0a86dd000" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderSystem_1a27f2d4ebb7f3169a3620aca0a86dd000" kindref="member">process</ref>(std::shared_ptr&lt;Entity&gt;<sp/>&amp;entity,<sp/>sf::Time<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp"/>
+  </compounddef>
+</doxygen>

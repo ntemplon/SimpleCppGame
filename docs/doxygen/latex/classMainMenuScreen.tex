@@ -1,0 +1,110 @@
+\hypertarget{classMainMenuScreen}{}\doxysection{Main\+Menu\+Screen Class Reference}
+\label{classMainMenuScreen}\index{MainMenuScreen@{MainMenuScreen}}
+
+
+A screen representing the main menu of our game.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Menu\+Screen.\+hpp$>$}
+
+
+
+Inheritance diagram for Main\+Menu\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classMainMenuScreen__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Menu\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classMainMenuScreen__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMainMenuScreen_1_1MenuItem}{Menu\+Item}}
+\begin{DoxyCompactList}\small\item\em A data structure of a menu item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainMenuScreen_ad28ef61ddb123852dcd42e54ef432b71}{Main\+Menu\+Screen}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classDispatcher}{Dispatcher}} \&dispatcher, std\+::string background\+Image)
+\begin{DoxyCompactList}\small\item\em Construct a new Main Menu \mbox{\hyperlink{classScreen}{Screen}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuScreen_a5a408ce8d3039f2271acced1a7d81b02}\label{classMainMenuScreen_a5a408ce8d3039f2271acced1a7d81b02}} 
+virtual void \mbox{\hyperlink{classMainMenuScreen_a5a408ce8d3039f2271acced1a7d81b02}{render}} () const
+\begin{DoxyCompactList}\small\item\em Renders the \mbox{\hyperlink{classMainMenuScreen}{Main\+Menu\+Screen}} to the sf\+::\+Render\+Window provided during construction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMainMenuScreen_a77223826dcca0f96e6714e2440c835cc}{handle\+Click}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Performs event handling for a user mouse click, dispatching events if appropriate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainMenuScreen_acea791f0f1c295067498a200fa7b8bd5}\label{classMainMenuScreen_acea791f0f1c295067498a200fa7b8bd5}} 
+static const std\+::string \mbox{\hyperlink{classMainMenuScreen_acea791f0f1c295067498a200fa7b8bd5}{MAIN\+\_\+\+MENU\+\_\+\+PLAY}}
+\begin{DoxyCompactList}\small\item\em A std\+::string for the event type of events that represent the user choosing to play the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuScreen_a69f87d1081a0c724c3683858573af882}\label{classMainMenuScreen_a69f87d1081a0c724c3683858573af882}} 
+static const std\+::string \mbox{\hyperlink{classMainMenuScreen_a69f87d1081a0c724c3683858573af882}{MAIN\+\_\+\+MENU\+\_\+\+EXIT}}
+\begin{DoxyCompactList}\small\item\em A std\+::string for the event type of events that represent the user choosing to exit the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A screen representing the main menu of our game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMainMenuScreen_ad28ef61ddb123852dcd42e54ef432b71}\label{classMainMenuScreen_ad28ef61ddb123852dcd42e54ef432b71}} 
+\index{MainMenuScreen@{MainMenuScreen}!MainMenuScreen@{MainMenuScreen}}
+\index{MainMenuScreen@{MainMenuScreen}!MainMenuScreen@{MainMenuScreen}}
+\doxysubsubsection{\texorpdfstring{MainMenuScreen()}{MainMenuScreen()}}
+{\footnotesize\ttfamily Main\+Menu\+Screen\+::\+Main\+Menu\+Screen (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classDispatcher}{Dispatcher}} \&}]{dispatcher,  }\item[{std\+::string}]{background\+Image }\end{DoxyParamCaption})}
+
+
+
+Construct a new Main Menu \mbox{\hyperlink{classScreen}{Screen}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The sf\+::\+Render\+Window to which this menu will be rendered. \\
+\hline
+{\em dispatcher} & The \mbox{\hyperlink{classDispatcher}{Dispatcher}} on which the events for user selection will be dispatched. \\
+\hline
+{\em background\+Image} & The file path to the image to use as the background of the menu. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainMenuScreen_a77223826dcca0f96e6714e2440c835cc}\label{classMainMenuScreen_a77223826dcca0f96e6714e2440c835cc}} 
+\index{MainMenuScreen@{MainMenuScreen}!handleClick@{handleClick}}
+\index{handleClick@{handleClick}!MainMenuScreen@{MainMenuScreen}}
+\doxysubsubsection{\texorpdfstring{handleClick()}{handleClick()}}
+{\footnotesize\ttfamily virtual void Main\+Menu\+Screen\+::handle\+Click (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs event handling for a user mouse click, dispatching events if appropriate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x position of the click, in screen space coordinates. \\
+\hline
+{\em y} & The y position of the click, in screen space coordinates. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classScreen_afafb8c2a2255c4cf8cef807ba4d14400}{Screen}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/Main\+Menu\+Screen.\+hpp\end{DoxyCompactItemize}

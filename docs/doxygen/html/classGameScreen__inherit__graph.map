@@ -1,0 +1,4 @@
+<map id="GameScreen" name="GameScreen">
+<area shape="rect" id="node1" title="The Screen that handles drawing the game during primary gameplay." alt="" coords="5,80,111,107"/>
+<area shape="rect" id="node2" href="$classScreen.html" title="A game screen." alt="" coords="25,5,91,32"/>
+</map>

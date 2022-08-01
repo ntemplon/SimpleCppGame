@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classComponentFamily" kind="class" language="C++" prot="public">
+    <compoundname>ComponentFamily</compoundname>
+    <basecompoundref refid="classEntityFamily" prot="public" virt="non-virtual">EntityFamily</basecompoundref>
+    <includes refid="ComponentFamily_8hpp" local="no">ComponentFamily.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classComponentFamily_1af2194d69a16e599a5c21b7de1c925db0" prot="private" static="no" mutable="no">
+        <type>const std::unordered_set&lt; std::string &gt;</type>
+        <definition>const std::unordered_set&lt;std::string&gt; ComponentFamily::_componentIds</definition>
+        <argsstring></argsstring>
+        <name>_componentIds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/ComponentFamily.hpp" line="41" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/ComponentFamily.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classComponentFamily_1a1dd4b742b2e8457a348ccaf9a6af1b40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComponentFamily::ComponentFamily</definition>
+        <argsstring>()</argsstring>
+        <name>ComponentFamily</name>
+        <briefdescription>
+<para>Construct a default new Component Family object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The default constructor doesn&apos;t require any specific families, so all entities will be considered &apos;in the family&apos;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/ComponentFamily.hpp" line="19" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classComponentFamily_1a9f20c6a332860d67507db6912dd1cd63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComponentFamily::ComponentFamily</definition>
+        <argsstring>(const std::unordered_set&lt; std::string &gt; componentIds)</argsstring>
+        <name>ComponentFamily</name>
+        <param>
+          <type>const std::unordered_set&lt; std::string &gt;</type>
+          <declname>componentIds</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Component Family object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classComponentFamily" kindref="compound">ComponentFamily</ref> that accepts all entities that have a component for each of the provided IDs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>componentIds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IDs of the required component classes. These are idiomatically implemented as const static std::string members of the Component&apos;s class. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/ComponentFamily.hpp" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classComponentFamily_1a9dea2702302768c35b94258f4fb79bcb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ComponentFamily::isInFamily</definition>
+        <argsstring>(const Entity &amp;entity) const</argsstring>
+        <name>isInFamily</name>
+        <reimplements refid="classEntityFamily_1a2192f7927d9a8cda42f094ced834da78">isInFamily</reimplements>
+        <param>
+          <type>const <ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the entity has all of the required componets to fit the family. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity to evaluate if it is has all the components to be in the family. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the entity is in the family. </para>
+</simplesect>
+<simplesect kind="return"><para>false if the entity is not in the family. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/ComponentFamily.hpp" line="38" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An <ref refid="classEntityFamily" kindref="compound">EntityFamily</ref> that defines a class as having a component of each of the specified types. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EntityFamily</label>
+        <link refid="classEntityFamily"/>
+      </node>
+      <node id="1">
+        <label>ComponentFamily</label>
+        <link refid="classComponentFamily"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EntityFamily</label>
+        <link refid="classEntityFamily"/>
+      </node>
+      <node id="1">
+        <label>ComponentFamily</label>
+        <link refid="classComponentFamily"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/ComponentFamily.hpp" line="10" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/ComponentFamily.hpp" bodystart="11" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classComponentFamily_1af2194d69a16e599a5c21b7de1c925db0" prot="private" virt="non-virtual"><scope>ComponentFamily</scope><name>_componentIds</name></member>
+      <member refid="classComponentFamily_1a1dd4b742b2e8457a348ccaf9a6af1b40" prot="public" virt="non-virtual"><scope>ComponentFamily</scope><name>ComponentFamily</name></member>
+      <member refid="classComponentFamily_1a9f20c6a332860d67507db6912dd1cd63" prot="public" virt="non-virtual"><scope>ComponentFamily</scope><name>ComponentFamily</name></member>
+      <member refid="classComponentFamily_1a9dea2702302768c35b94258f4fb79bcb" prot="public" virt="virtual"><scope>ComponentFamily</scope><name>isInFamily</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

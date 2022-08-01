@@ -1,0 +1,79 @@
+\hypertarget{classGameOverScreen}{}\doxysection{Game\+Over\+Screen Class Reference}
+\label{classGameOverScreen}\index{GameOverScreen@{GameOverScreen}}
+
+
+A \mbox{\hyperlink{classScreen}{Screen}} that handles informing the user they have won or lost the game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Over\+Screen.\+hpp$>$}
+
+
+
+Inheritance diagram for Game\+Over\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classGameOverScreen__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Over\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classGameOverScreen__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameOverScreen_a51a9364448a106566e6bc104d2d58ce1}{Game\+Over\+Screen}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classDispatcher}{Dispatcher}} \&dispatcher, std\+::string image\+Path)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classGameOverScreen}{Game\+Over\+Screen}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameOverScreen_a7f015719692c3482de713fd2381f2154}\label{classGameOverScreen_a7f015719692c3482de713fd2381f2154}} 
+void \mbox{\hyperlink{classGameOverScreen_a7f015719692c3482de713fd2381f2154}{render}} () const
+\begin{DoxyCompactList}\small\item\em Renders the screen with the parameters provided in the constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameOverScreen_a8e5c8ae4f8329274bcc5d932bb1f5526}\label{classGameOverScreen_a8e5c8ae4f8329274bcc5d932bb1f5526}} 
+void \mbox{\hyperlink{classGameOverScreen_a8e5c8ae4f8329274bcc5d932bb1f5526}{handle\+Click}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles a click by sending out a \mbox{\hyperlink{classGameOverScreen_a59454e4954937d40d4d98c9cf469d739}{Game\+Over\+Screen\+::\+GAME\+\_\+\+OVER\+\_\+\+ACK}} \mbox{\hyperlink{classEvent}{Event}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameOverScreen_a59454e4954937d40d4d98c9cf469d739}\label{classGameOverScreen_a59454e4954937d40d4d98c9cf469d739}} 
+static const std\+::string \mbox{\hyperlink{classGameOverScreen_a59454e4954937d40d4d98c9cf469d739}{GAME\+\_\+\+OVER\+\_\+\+ACK}}
+\begin{DoxyCompactList}\small\item\em The ID for an \mbox{\hyperlink{classEvent}{Event}} that signals the player has accepted their inevitable demise. Or are celebrating. But probably the demise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classScreen}{Screen}} that handles informing the user they have won or lost the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameOverScreen_a51a9364448a106566e6bc104d2d58ce1}\label{classGameOverScreen_a51a9364448a106566e6bc104d2d58ce1}} 
+\index{GameOverScreen@{GameOverScreen}!GameOverScreen@{GameOverScreen}}
+\index{GameOverScreen@{GameOverScreen}!GameOverScreen@{GameOverScreen}}
+\doxysubsubsection{\texorpdfstring{GameOverScreen()}{GameOverScreen()}}
+{\footnotesize\ttfamily Game\+Over\+Screen\+::\+Game\+Over\+Screen (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classDispatcher}{Dispatcher}} \&}]{dispatcher,  }\item[{std\+::string}]{image\+Path }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classGameOverScreen}{Game\+Over\+Screen}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The screen on which to display the game has ended. \\
+\hline
+{\em dispatcher} & The \mbox{\hyperlink{classDispatcher}{Dispatcher}} to send \mbox{\hyperlink{classEvent}{Event}} signals on, such as \mbox{\hyperlink{classGameOverScreen_a59454e4954937d40d4d98c9cf469d739}{Game\+Over\+Screen\+::\+GAME\+\_\+\+OVER\+\_\+\+ACK}}. \\
+\hline
+{\em image\+Path} & The path to the image to show on the screen, relative to the executable working directory. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/Game\+Over\+Screen.\+hpp\end{DoxyCompactItemize}

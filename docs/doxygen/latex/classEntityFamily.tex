@@ -1,0 +1,61 @@
+\hypertarget{classEntityFamily}{}\doxysection{Entity\+Family Class Reference}
+\label{classEntityFamily}\index{EntityFamily@{EntityFamily}}
+
+
+An abstract class that allows for the definition of a class of entity.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+Family.\+hpp$>$}
+
+
+
+Inheritance diagram for Entity\+Family\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classEntityFamily__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classEntityFamily_a2192f7927d9a8cda42f094ced834da78}{is\+In\+Family}} (const \mbox{\hyperlink{classEntity}{Entity}} \&entity) const =0
+\begin{DoxyCompactList}\small\item\em Evaluates if an entity is \char`\"{}in the family\char`\"{} by meeting the criteria of the class the family represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract class that allows for the definition of a class of entity. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntityFamily_a2192f7927d9a8cda42f094ced834da78}\label{classEntityFamily_a2192f7927d9a8cda42f094ced834da78}} 
+\index{EntityFamily@{EntityFamily}!isInFamily@{isInFamily}}
+\index{isInFamily@{isInFamily}!EntityFamily@{EntityFamily}}
+\doxysubsubsection{\texorpdfstring{isInFamily()}{isInFamily()}}
+{\footnotesize\ttfamily virtual bool Entity\+Family\+::is\+In\+Family (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEntity}{Entity}} \&}]{entity }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Evaluates if an entity is \char`\"{}in the family\char`\"{} by meeting the criteria of the class the family represents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The entity to evaluate if it is in the family. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the entity is in the family. 
+
+false if the entity is not in the family. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classComponentFamily_a9dea2702302768c35b94258f4fb79bcb}{Component\+Family}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Entity\+Family.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classEnemyComponent" kind="class" language="C++" prot="public">
+    <compoundname>EnemyComponent</compoundname>
+    <basecompoundref refid="classEntity_1_1Component" prot="public" virt="non-virtual">Entity::Component</basecompoundref>
+    <includes refid="EnemyAISystem_8hpp" local="no">EnemyAISystem.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89de" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>AIState</name>
+        <enumvalue id="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89dea68391a825a3d0d60b9eea7c6f783c354" prot="public">
+          <name>Reacting</name>
+          <briefdescription>
+<para>The player has hit the ball and the AI is reacting. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89deaa79782bf8835c8aa74a56fc91982c64d" prot="public">
+          <name>MovingDown</name>
+          <briefdescription>
+<para>The AI is moving down to intercept the ball. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89dea2e7d2986477735ae5c23e812c1ccb85d" prot="public">
+          <name>MovingUp</name>
+          <briefdescription>
+<para>The AI is moving up to intercept the ball. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89dea18f75ff6694e56aa41305207fdb3c4f1" prot="public">
+          <name>WaitingForPlayer</name>
+          <briefdescription>
+<para>The AI has hit the ball and is waiting for the player to respond. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumeration of the states of the enemy paddle AI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="58" column="5" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="59" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classEnemyComponent_1a27798dc2f9ef5d3ca46ce655ec3b2fd3" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string EnemyComponent::ENEMY_ID</definition>
+        <argsstring></argsstring>
+        <name>ENEMY_ID</name>
+        <briefdescription>
+<para>The ID for EnemyCompnent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="47" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEnemyComponent_1ad6bb8e83d3b6692bb21264aefc7edb23" prot="public" static="yes" mutable="no">
+        <type>const sf::Time</type>
+        <definition>const sf::Time EnemyComponent::REACTION_TIME</definition>
+        <argsstring></argsstring>
+        <name>REACTION_TIME</name>
+        <briefdescription>
+<para>The reaction time of an enemy AI after the player hits the ball. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="52" column="27" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEnemyComponent_1a7333a092db236a8a88da42df8751eff3" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float EnemyComponent::ENEMY_ERROR_SCALE</definition>
+        <argsstring></argsstring>
+        <name>ENEMY_ERROR_SCALE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="53" column="24" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEnemyComponent_1a1907ad0eb022fa1ff65b62dcbeeaaaca" prot="public" static="no" mutable="no">
+        <type>sf::Time</type>
+        <definition>sf::Time EnemyComponent::reactionElapsedTime</definition>
+        <argsstring></argsstring>
+        <name>reactionElapsedTime</name>
+        <briefdescription>
+<para>The amount of time that the AI has spent waiting after the player took an action to respond. When this is greater than or equal to <ref refid="classEnemyComponent_1ad6bb8e83d3b6692bb21264aefc7edb23" kindref="member">EnemyComponent::REACTION_TIME</ref>, the AI paddle can respond, simulating human reaction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="89" column="14" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEnemyComponent_1a16d9bc0c3c8aafd3bcf5bb24bea71dd1" prot="public" static="no" mutable="no">
+        <type><ref refid="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89de" kindref="member">AIState</ref></type>
+        <definition>AIState EnemyComponent::aiState</definition>
+        <argsstring></argsstring>
+        <name>aiState</name>
+        <briefdescription>
+<para>The current state of the paddle&apos;s AI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="94" column="13" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEnemyComponent_1af2251583590cdc609ac583ee29cd8d70" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float EnemyComponent::predictedBallPosition</definition>
+        <argsstring></argsstring>
+        <name>predictedBallPosition</name>
+        <briefdescription>
+<para>The current predicted impact position of the next ball that the paddle will try to intercept and bounce back. This, combined with <ref refid="classEnemyComponent_1a13240541c0c817f77dd4f1f525ff0558" kindref="member">EnemyComponent::predictionValid</ref>, form a pseudo-Optional&lt;float&gt;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="100" column="11" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEnemyComponent_1a13240541c0c817f77dd4f1f525ff0558" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EnemyComponent::predictionValid</definition>
+        <argsstring></argsstring>
+        <name>predictionValid</name>
+        <briefdescription>
+<para>Whether or not the current prediction is a valid prediction that should be tracked to. This, combined with <ref refid="classEnemyComponent_1af2251583590cdc609ac583ee29cd8d70" kindref="member">EnemyComponent::predictedBallPosition</ref>, form a pseudo-Optional&lt;float&gt;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="106" column="10" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEnemyComponent_1aa47ba9ebe8636159dd351b6318ae8a60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EnemyComponent::EnemyComponent</definition>
+        <argsstring>()</argsstring>
+        <name>EnemyComponent</name>
+        <briefdescription>
+<para>Construct a new Enemy Component object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The state information (e.g. AI) is unitialized and will need to be provided by the caller of the constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="83" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Component for enemy AI paddles. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The component marks an entity as an enemy AI paddle and stores related state, such as AI information. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EnemyComponent</label>
+        <link refid="classEnemyComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EnemyComponent</label>
+        <link refid="classEnemyComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="41" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="42" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classEnemyComponent_1a02486f0a6e25622ace75d6c6a02f89de" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>AIState</name></member>
+      <member refid="classEnemyComponent_1a16d9bc0c3c8aafd3bcf5bb24bea71dd1" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>aiState</name></member>
+      <member refid="classEntity_1_1Component_1aa870551c8ede04e4ed6f538eee376a1a" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>Component</name></member>
+      <member refid="classEnemyComponent_1a7333a092db236a8a88da42df8751eff3" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>ENEMY_ERROR_SCALE</name></member>
+      <member refid="classEnemyComponent_1a27798dc2f9ef5d3ca46ce655ec3b2fd3" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>ENEMY_ID</name></member>
+      <member refid="classEnemyComponent_1aa47ba9ebe8636159dd351b6318ae8a60" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>EnemyComponent</name></member>
+      <member refid="classEntity_1_1Component_1aa27ad6d78bfc3ff60566ca824b29c1db" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>getId</name></member>
+      <member refid="classEnemyComponent_1af2251583590cdc609ac583ee29cd8d70" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>predictedBallPosition</name></member>
+      <member refid="classEnemyComponent_1a13240541c0c817f77dd4f1f525ff0558" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>predictionValid</name></member>
+      <member refid="classEnemyComponent_1ad6bb8e83d3b6692bb21264aefc7edb23" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>REACTION_TIME</name></member>
+      <member refid="classEnemyComponent_1a1907ad0eb022fa1ff65b62dcbeeaaaca" prot="public" virt="non-virtual"><scope>EnemyComponent</scope><name>reactionElapsedTime</name></member>
+      <member refid="classEntity_1_1Component_1a8e19d41c2a8041556e2cbd5c92e4906e" prot="public" virt="virtual"><scope>EnemyComponent</scope><name>~Component</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

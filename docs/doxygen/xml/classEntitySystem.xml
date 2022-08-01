@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classEntitySystem" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>EntitySystem</compoundname>
+    <derivedcompoundref refid="classIteratingSystem" prot="public" virt="non-virtual">IteratingSystem</derivedcompoundref>
+    <includes refid="EntitySystem_8hpp" local="no">EntitySystem.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEntitySystem_1ae9470a2f6c8670aa8e06167d660cca43" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classEntityFamily" kindref="compound">EntityFamily</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;EntityFamily&gt; EntitySystem::_family</definition>
+        <argsstring></argsstring>
+        <name>_family</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="65" column="21" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEntitySystem_1a4e5330c0efe9bf4b4057fea7d319d079" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &gt;</type>
+        <definition>std::map&lt;int, std::shared_ptr&lt;Entity&gt; &gt; EntitySystem::_entities</definition>
+        <argsstring></argsstring>
+        <name>_entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="66" column="14" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EntitySystem::EntitySystem</definition>
+        <argsstring>()</argsstring>
+        <name>EntitySystem</name>
+        <briefdescription>
+<para>Construct a new default <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This creates an <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> that processes all Entities added to the <ref refid="classEntityEngine" kindref="compound">EntityEngine</ref> if EntitySystem::engineEngineEntityAdded is not overridden. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EntitySystem::EntitySystem</definition>
+        <argsstring>(const std::shared_ptr&lt; EntityFamily &gt; &amp;family)</argsstring>
+        <name>EntitySystem</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classEntityFamily" kindref="compound">EntityFamily</ref> &gt; &amp;</type>
+          <declname>family</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> that acts on a specified family. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The family of entities that this system will act on. The <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> implementation of <ref refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" kindref="member">EntitySystem::engineEntityAdded</ref> adds all entities to the system for which this family&apos;s implementation of <ref refid="classEntityFamily_1a2192f7927d9a8cda42f094ced834da78" kindref="member">EntityFamily::isInFamily</ref> returns true. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void EntitySystem::engineEntityAdded</definition>
+        <argsstring>(const std::shared_ptr&lt; Entity &gt; &amp;entity)</argsstring>
+        <name>engineEntityAdded</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Performs any operations required after an entity has been added to an <ref refid="classEntityEngine" kindref="compound">EntityEngine</ref> the system is a part of. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The default implementation adds the <ref refid="classEntity" kindref="compound">Entity</ref> to the Entities property (<ref refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" kindref="member">EntitySystem::getEntities</ref>) if the default constructor was called or the <ref refid="classEntity" kindref="compound">Entity</ref> is in the family provided to the family constructor.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classEntity" kindref="compound">Entity</ref> recently added to the <ref refid="classEntityEngine" kindref="compound">EntityEngine</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="44" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void EntitySystem::update</definition>
+        <argsstring>(const sf::Time deltaTime)=0</argsstring>
+        <name>update</name>
+        <reimplementedby refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad">update</reimplementedby>
+        <param>
+          <type>const sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Performs any operations necessary in routine processing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is pure virtual in <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time that has passed since <ref refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" kindref="member">update()</ref> was last called. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="53" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::map&lt; int, std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &gt;</type>
+        <definition>virtual std::map&lt;int, std::shared_ptr&lt;Entity&gt; &gt; EntitySystem::getEntities</definition>
+        <argsstring>() const</argsstring>
+        <name>getEntities</name>
+        <briefdescription>
+<para>Get the Entities in the system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::map&lt;int, std::shared_ptr&lt;Entity&gt;&gt; A mapping of IDs to the entity that has those IDs for the entities that are part of this system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="62" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class representing a system that processes groups of <ref refid="classEntity" kindref="compound">Entity</ref> in an <ref refid="classEntityEngine" kindref="compound">EntityEngine</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An abstract class to be extended by specific implementations. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>VelocitySystem</label>
+        <link refid="classVelocitySystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RenderSystem</label>
+        <link refid="classRenderSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BallSystem</label>
+        <link refid="classBallSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+      <node id="4">
+        <label>EnemyAISystem</label>
+        <link refid="classEnemyAISystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PlayerInputSystem</label>
+        <link refid="classPlayerInputSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" line="17" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp" bodystart="18" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classEntitySystem_1a4e5330c0efe9bf4b4057fea7d319d079" prot="private" virt="non-virtual"><scope>EntitySystem</scope><name>_entities</name></member>
+      <member refid="classEntitySystem_1ae9470a2f6c8670aa8e06167d660cca43" prot="private" virt="non-virtual"><scope>EntitySystem</scope><name>_family</name></member>
+      <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" virt="virtual"><scope>EntitySystem</scope><name>engineEntityAdded</name></member>
+      <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" virt="non-virtual"><scope>EntitySystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" virt="non-virtual"><scope>EntitySystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" virt="virtual"><scope>EntitySystem</scope><name>getEntities</name></member>
+      <member refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" prot="public" virt="pure-virtual"><scope>EntitySystem</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

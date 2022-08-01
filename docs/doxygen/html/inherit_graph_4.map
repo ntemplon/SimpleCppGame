@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classEntityFamily.html" title="An abstract class that allows for the definition of a class of entity." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$classComponentFamily.html" title="An EntityFamily that defines a class as having a component of each of the specified types." alt="" coords="156,5,296,32"/>
+</map>

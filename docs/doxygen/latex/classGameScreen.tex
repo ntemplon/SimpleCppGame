@@ -1,0 +1,73 @@
+\hypertarget{classGameScreen}{}\doxysection{Game\+Screen Class Reference}
+\label{classGameScreen}\index{GameScreen@{GameScreen}}
+
+
+The \mbox{\hyperlink{classScreen}{Screen}} that handles drawing the game during primary gameplay.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Screen.\+hpp$>$}
+
+
+
+Inheritance diagram for Game\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classGameScreen__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classGameScreen__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameScreen_a382461f8a70ac68e92225b1dfa55d10e}{Game\+Screen}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classDispatcher}{Dispatcher}} \&dispatcher, \mbox{\hyperlink{classRenderSystem}{Render\+System}} \&render\+System)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classGameScreen}{Game\+Screen}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameScreen_a259241cb803c2ffab627c654d75e2d6f}\label{classGameScreen_a259241cb803c2ffab627c654d75e2d6f}} 
+void \mbox{\hyperlink{classGameScreen_a259241cb803c2ffab627c654d75e2d6f}{render}} () const
+\begin{DoxyCompactList}\small\item\em Renders the game with the parameters provided in the constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameScreen_a75b8d862911e1e86f6e4aa067cf198c0}\label{classGameScreen_a75b8d862911e1e86f6e4aa067cf198c0}} 
+void \mbox{\hyperlink{classGameScreen_a75b8d862911e1e86f6e4aa067cf198c0}{handle\+Click}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Override of \mbox{\hyperlink{classScreen}{Screen}} virtual method. No-\/op. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classScreen}{Screen}} that handles drawing the game during primary gameplay. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameScreen_a382461f8a70ac68e92225b1dfa55d10e}\label{classGameScreen_a382461f8a70ac68e92225b1dfa55d10e}} 
+\index{GameScreen@{GameScreen}!GameScreen@{GameScreen}}
+\index{GameScreen@{GameScreen}!GameScreen@{GameScreen}}
+\doxysubsubsection{\texorpdfstring{GameScreen()}{GameScreen()}}
+{\footnotesize\ttfamily Game\+Screen\+::\+Game\+Screen (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classDispatcher}{Dispatcher}} \&}]{dispatcher,  }\item[{\mbox{\hyperlink{classRenderSystem}{Render\+System}} \&}]{render\+System }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classGameScreen}{Game\+Screen}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window to which the \mbox{\hyperlink{classGameScreen}{Game\+Screen}} will draw the game. \\
+\hline
+{\em dispatcher} & The \mbox{\hyperlink{classDispatcher}{Dispatcher}} on which the \mbox{\hyperlink{classGameScreen}{Game\+Screen}} will dispatch and receive events. \\
+\hline
+{\em render\+System} & The \mbox{\hyperlink{classRenderSystem}{Render\+System}} that will handle rendering the \mbox{\hyperlink{classEntity}{Entity}} game objects. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/Game\+Screen.\+hpp\end{DoxyCompactItemize}

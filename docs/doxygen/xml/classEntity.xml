@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classEntity" kind="class" language="C++" prot="public">
+    <compoundname>Entity</compoundname>
+    <includes refid="Entity_8hpp" local="no">Entity.hpp</includes>
+    <innerclass refid="classEntity_1_1Component" prot="public">Entity::Component</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEntity_1a726707b7b7ebb9d12983eee1be7c8e43" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Entity::_id</definition>
+        <argsstring></argsstring>
+        <name>_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="97" column="9" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEntity_1ad77ecdec26e473fd1cab015946eb0ce4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classEntity_1_1Component" kindref="compound">Component</ref> &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::shared_ptr&lt;Component&gt; &gt; Entity::_components</definition>
+        <argsstring></argsstring>
+        <name>_components</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="98" column="14" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEntity_1a980f368aa07ce358583982821533a54a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity::Entity</definition>
+        <argsstring>()</argsstring>
+        <name>Entity</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classEntity" kindref="compound">Entity</ref> with a random ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="53" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntity_1ac98bd610e0299cc2aa0538fb2884ab69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity::Entity</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Entity</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classEntity" kindref="compound">Entity</ref> object with a specific ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the <ref refid="classEntity" kindref="compound">Entity</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="60" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntity_1a33ce509c7e43ea606ac82b6ce06bc2df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Entity::getId</definition>
+        <argsstring>() const</argsstring>
+        <name>getId</name>
+        <briefdescription>
+<para>Get the ID of the <ref refid="classEntity" kindref="compound">Entity</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int the entity&apos;s ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="67" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntity_1a72c8542219615793e0610617a7e5f3f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::add</definition>
+        <argsstring>(const std::shared_ptr&lt; Component &gt; &amp;component)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classEntity_1_1Component" kindref="compound">Component</ref> &gt; &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Adds the provided component to the entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The entity will create a new std::shared_ptr pointing to the <ref refid="classEntity_1_1Component" kindref="compound">Component</ref> using the copy constructor that will stay in scope with the entity.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classEntity_1_1Component" kindref="compound">Component</ref> to add to this <ref refid="classEntity" kindref="compound">Entity</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="77" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntity_1a4470308ca5a3ab893baffd122ae4e9f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Entity::hasComponent</definition>
+        <argsstring>(const std::string id) const</argsstring>
+        <name>hasComponent</name>
+        <param>
+          <type>const std::string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Check if the <ref refid="classEntity" kindref="compound">Entity</ref> has a component of the specified type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the <ref refid="classEntity_1_1Component" kindref="compound">Component</ref> type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the <ref refid="classEntity" kindref="compound">Entity</ref> has a component of the specified type. </para>
+</simplesect>
+<simplesect kind="return"><para>false if the Entnity doeso not have a component of the specified type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="86" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEntity_1a6ea59e929e7fb1b81ed2ed00861c16b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classEntity_1_1Component" kindref="compound">Component</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Component&gt; Entity::getComponent</definition>
+        <argsstring>(const std::string id) const</argsstring>
+        <name>getComponent</name>
+        <param>
+          <type>const std::string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the <ref refid="classEntity_1_1Component" kindref="compound">Component</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::shared_ptr&lt;Component&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="94" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An entity in the game&apos;s component entity system. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classEntity" kindref="compound">Entity</ref> represents a collection of attributes, called Components, that together are acted upon by <ref refid="classEntitySystem" kindref="compound">EntitySystem</ref> objects that form a complete game world. </para>
+    </detaileddescription>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" line="13" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Entity.hpp" bodystart="14" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classEntity_1ad77ecdec26e473fd1cab015946eb0ce4" prot="private" virt="non-virtual"><scope>Entity</scope><name>_components</name></member>
+      <member refid="classEntity_1a726707b7b7ebb9d12983eee1be7c8e43" prot="private" virt="non-virtual"><scope>Entity</scope><name>_id</name></member>
+      <member refid="classEntity_1a72c8542219615793e0610617a7e5f3f4" prot="public" virt="non-virtual"><scope>Entity</scope><name>add</name></member>
+      <member refid="classEntity_1a980f368aa07ce358583982821533a54a" prot="public" virt="non-virtual"><scope>Entity</scope><name>Entity</name></member>
+      <member refid="classEntity_1ac98bd610e0299cc2aa0538fb2884ab69" prot="public" virt="non-virtual"><scope>Entity</scope><name>Entity</name></member>
+      <member refid="classEntity_1a6ea59e929e7fb1b81ed2ed00861c16b2" prot="public" virt="non-virtual"><scope>Entity</scope><name>getComponent</name></member>
+      <member refid="classEntity_1a33ce509c7e43ea606ac82b6ce06bc2df" prot="public" virt="non-virtual"><scope>Entity</scope><name>getId</name></member>
+      <member refid="classEntity_1a4470308ca5a3ab893baffd122ae4e9f8" prot="public" virt="non-virtual"><scope>Entity</scope><name>hasComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

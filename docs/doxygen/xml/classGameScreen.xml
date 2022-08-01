@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classGameScreen" kind="class" language="C++" prot="public">
+    <compoundname>GameScreen</compoundname>
+    <basecompoundref refid="classScreen" prot="public" virt="non-virtual">Screen</basecompoundref>
+    <includes refid="GameScreen_8hpp" local="no">GameScreen.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGameScreen_1a6763d9a9cedc3feca42acb6d62db6a39" prot="private" static="no" mutable="no">
+        <type><ref refid="classRenderSystem" kindref="compound">RenderSystem</ref> &amp;</type>
+        <definition>RenderSystem&amp; GameScreen::_renderSystem</definition>
+        <argsstring></argsstring>
+        <name>_renderSystem</name>
+        <briefdescription>
+<para>The <ref refid="classRenderSystem" kindref="compound">RenderSystem</ref> that will draw the <ref refid="classEntityEngine" kindref="compound">EntityEngine</ref> <ref refid="classEntity" kindref="compound">Entity</ref> objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" line="37" column="18" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGameScreen_1a3117946c6701ac573cc35d1f742d7d2e" prot="private" static="no" mutable="no">
+        <type>sf::RectangleShape</type>
+        <definition>sf::RectangleShape GameScreen::_gameWindow</definition>
+        <argsstring></argsstring>
+        <name>_gameWindow</name>
+        <briefdescription>
+<para>A rectangle to represent the play surface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" line="42" column="24" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGameScreen_1a382461f8a70ac68e92225b1dfa55d10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameScreen::GameScreen</definition>
+        <argsstring>(sf::RenderWindow &amp;window, Dispatcher &amp;dispatcher, RenderSystem &amp;renderSystem)</argsstring>
+        <name>GameScreen</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type><ref refid="classRenderSystem" kindref="compound">RenderSystem</ref> &amp;</type>
+          <declname>renderSystem</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classGameScreen" kindref="compound">GameScreen</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window to which the <ref refid="classGameScreen" kindref="compound">GameScreen</ref> will draw the game. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> on which the <ref refid="classGameScreen" kindref="compound">GameScreen</ref> will dispatch and receive events. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>renderSystem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classRenderSystem" kindref="compound">RenderSystem</ref> that will handle rendering the <ref refid="classEntity" kindref="compound">Entity</ref> game objects. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" line="21" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GameScreen::render</definition>
+        <argsstring>() const</argsstring>
+        <name>render</name>
+        <reimplements refid="classScreen_1a3cd453c494b2389725b719700283e655">render</reimplements>
+        <briefdescription>
+<para>Renders the game with the parameters provided in the constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GameScreen::handleClick</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>handleClick</name>
+        <reimplements refid="classScreen_1afafb8c2a2255c4cf8cef807ba4d14400">handleClick</reimplements>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Override of <ref refid="classScreen" kindref="compound">Screen</ref> virtual method. No-op. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" line="31" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classScreen" kindref="compound">Screen</ref> that handles drawing the game during primary gameplay. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GameScreen</label>
+        <link refid="classGameScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GameScreen</label>
+        <link refid="classGameScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" line="11" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp" bodystart="12" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classGameScreen_1a3117946c6701ac573cc35d1f742d7d2e" prot="private" virt="non-virtual"><scope>GameScreen</scope><name>_gameWindow</name></member>
+      <member refid="classGameScreen_1a6763d9a9cedc3feca42acb6d62db6a39" prot="private" virt="non-virtual"><scope>GameScreen</scope><name>_renderSystem</name></member>
+      <member refid="classGameScreen_1a382461f8a70ac68e92225b1dfa55d10e" prot="public" virt="non-virtual"><scope>GameScreen</scope><name>GameScreen</name></member>
+      <member refid="classScreen_1a6335968966aa2d082ba6804c9481d478" prot="protected" virt="non-virtual"><scope>GameScreen</scope><name>getDispatcher</name></member>
+      <member refid="classScreen_1ae4ee4d8f366a13f3f296182106503800" prot="protected" virt="non-virtual"><scope>GameScreen</scope><name>getWindow</name></member>
+      <member refid="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0" prot="public" virt="virtual"><scope>GameScreen</scope><name>handleClick</name></member>
+      <member refid="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f" prot="public" virt="virtual"><scope>GameScreen</scope><name>render</name></member>
+      <member refid="classScreen_1ab44807297a4a513751fb76f138a41ba5" prot="public" virt="non-virtual"><scope>GameScreen</scope><name>Screen</name></member>
+      <member refid="classScreen_1a0bc1a2ceaee4a245e0d31822ea0643bd" prot="public" virt="virtual"><scope>GameScreen</scope><name>~Screen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

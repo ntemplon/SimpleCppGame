@@ -1,0 +1,129 @@
+\hypertarget{classEntitySystem}{}\doxysection{Entity\+System Class Reference}
+\label{classEntitySystem}\index{EntitySystem@{EntitySystem}}
+
+
+A class representing a system that processes groups of \mbox{\hyperlink{classEntity}{Entity}} in an \mbox{\hyperlink{classEntityEngine}{Entity\+Engine}}.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Entity\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEntitySystem__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntitySystem_ac6bc28f99a8a4d9f6f43226d1bc4abe8}{Entity\+System}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new default \mbox{\hyperlink{classEntitySystem}{Entity\+System}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntitySystem_a951adbd375c4206d9d0115bf17050870}{Entity\+System}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} $>$ \&family)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEntitySystem}{Entity\+System}} that acts on a specified family. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEntitySystem_ad9476307802ce67acbf44b71183568bd}{engine\+Entity\+Added}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&entity)
+\begin{DoxyCompactList}\small\item\em Performs any operations required after an entity has been added to an \mbox{\hyperlink{classEntityEngine}{Entity\+Engine}} the system is a part of. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}{update}} (const sf\+::\+Time delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Performs any operations necessary in routine processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::map$<$ int, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ $>$ \mbox{\hyperlink{classEntitySystem_a92bc081730f99f33192affeb23c50702}{get\+Entities}} () const
+\begin{DoxyCompactList}\small\item\em Get the Entities in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a system that processes groups of \mbox{\hyperlink{classEntity}{Entity}} in an \mbox{\hyperlink{classEntityEngine}{Entity\+Engine}}. 
+
+An abstract class to be extended by specific implementations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntitySystem_ac6bc28f99a8a4d9f6f43226d1bc4abe8}\label{classEntitySystem_ac6bc28f99a8a4d9f6f43226d1bc4abe8}} 
+\index{EntitySystem@{EntitySystem}!EntitySystem@{EntitySystem}}
+\index{EntitySystem@{EntitySystem}!EntitySystem@{EntitySystem}}
+\doxysubsubsection{\texorpdfstring{EntitySystem()}{EntitySystem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Entity\+System\+::\+Entity\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new default \mbox{\hyperlink{classEntitySystem}{Entity\+System}}. 
+
+This creates an \mbox{\hyperlink{classEntitySystem}{Entity\+System}} that processes all Entities added to the \mbox{\hyperlink{classEntityEngine}{Entity\+Engine}} if Entity\+System\+::engine\+Engine\+Entity\+Added is not overridden. \mbox{\Hypertarget{classEntitySystem_a951adbd375c4206d9d0115bf17050870}\label{classEntitySystem_a951adbd375c4206d9d0115bf17050870}} 
+\index{EntitySystem@{EntitySystem}!EntitySystem@{EntitySystem}}
+\index{EntitySystem@{EntitySystem}!EntitySystem@{EntitySystem}}
+\doxysubsubsection{\texorpdfstring{EntitySystem()}{EntitySystem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Entity\+System\+::\+Entity\+System (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} $>$ \&}]{family }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classEntitySystem}{Entity\+System}} that acts on a specified family. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em family} & The family of entities that this system will act on. The \mbox{\hyperlink{classEntitySystem}{Entity\+System}} implementation of \mbox{\hyperlink{classEntitySystem_ad9476307802ce67acbf44b71183568bd}{Entity\+System\+::engine\+Entity\+Added}} adds all entities to the system for which this family\textquotesingle{}s implementation of \mbox{\hyperlink{classEntityFamily_a2192f7927d9a8cda42f094ced834da78}{Entity\+Family\+::is\+In\+Family}} returns true. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntitySystem_ad9476307802ce67acbf44b71183568bd}\label{classEntitySystem_ad9476307802ce67acbf44b71183568bd}} 
+\index{EntitySystem@{EntitySystem}!engineEntityAdded@{engineEntityAdded}}
+\index{engineEntityAdded@{engineEntityAdded}!EntitySystem@{EntitySystem}}
+\doxysubsubsection{\texorpdfstring{engineEntityAdded()}{engineEntityAdded()}}
+{\footnotesize\ttfamily virtual void Entity\+System\+::engine\+Entity\+Added (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs any operations required after an entity has been added to an \mbox{\hyperlink{classEntityEngine}{Entity\+Engine}} the system is a part of. 
+
+The default implementation adds the \mbox{\hyperlink{classEntity}{Entity}} to the Entities property (\mbox{\hyperlink{classEntitySystem_a92bc081730f99f33192affeb23c50702}{Entity\+System\+::get\+Entities}}) if the default constructor was called or the \mbox{\hyperlink{classEntity}{Entity}} is in the family provided to the family constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The \mbox{\hyperlink{classEntity}{Entity}} recently added to the \mbox{\hyperlink{classEntityEngine}{Entity\+Engine}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntitySystem_a92bc081730f99f33192affeb23c50702}\label{classEntitySystem_a92bc081730f99f33192affeb23c50702}} 
+\index{EntitySystem@{EntitySystem}!getEntities@{getEntities}}
+\index{getEntities@{getEntities}!EntitySystem@{EntitySystem}}
+\doxysubsubsection{\texorpdfstring{getEntities()}{getEntities()}}
+{\footnotesize\ttfamily virtual std\+::map$<$int, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classEntity}{Entity}}$>$ $>$ Entity\+System\+::get\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get the Entities in the system. 
+
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, std\+::shared\+\_\+ptr$<$\+Entity$>$$>$ A mapping of IDs to the entity that has those IDs for the entities that are part of this system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}\label{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}} 
+\index{EntitySystem@{EntitySystem}!update@{update}}
+\index{update@{update}!EntitySystem@{EntitySystem}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Entity\+System\+::update (\begin{DoxyParamCaption}\item[{const sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Performs any operations necessary in routine processing. 
+
+This method is pure virtual in \mbox{\hyperlink{classEntitySystem}{Entity\+System}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time that has passed since \mbox{\hyperlink{classEntitySystem_a6cfebcec0f05398db9af09ba37673154}{update()}} was last called. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classIteratingSystem_a917c3421fbe2cde7ca85b08517d4dfad}{Iterating\+System}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Entity\+System.\+hpp\end{DoxyCompactItemize}

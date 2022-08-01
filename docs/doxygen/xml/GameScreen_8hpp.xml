@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="GameScreen_8hpp" kind="file" language="C++">
+    <compoundname>GameScreen.hpp</compoundname>
+    <includes refid="Screen_8hpp" local="no">Screen.hpp</includes>
+    <includes refid="RenderSystem_8hpp" local="no">RenderSystem.hpp</includes>
+    <includes local="no">memory</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>IteratingSystem.hpp</label>
+        <link refid="IteratingSystem_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>EntityFamily.hpp</label>
+        <link refid="EntityFamily_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>RenderSystem.hpp</label>
+        <link refid="RenderSystem_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>EntitySystem.hpp</label>
+        <link refid="EntitySystem_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen.hpp</label>
+        <link refid="Screen_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="13">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="14">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classGameScreen" prot="public">GameScreen</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Screen.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RenderSystem.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classGameScreen" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGameScreen" kindref="compound">GameScreen</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classGameScreen_1a382461f8a70ac68e92225b1dfa55d10e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGameScreen_1a382461f8a70ac68e92225b1dfa55d10e" kindref="member">GameScreen</ref>(sf::RenderWindow<sp/>&amp;window,<sp/><ref refid="classDispatcher" kindref="compound">Dispatcher</ref><sp/>&amp;dispatcher,<sp/><ref refid="classRenderSystem" kindref="compound">RenderSystem</ref><sp/>&amp;renderSystem);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f" kindref="member">render</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0" kindref="member">handleClick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderSystem" kindref="compound">RenderSystem</ref><sp/>&amp;_renderSystem;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::RectangleShape<sp/>_gameWindow;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp"/>
+  </compounddef>
+</doxygen>

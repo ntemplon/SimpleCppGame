@@ -1,0 +1,69 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+A simple C++ game that shamelessly rips off Pong.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_ad59df6562a58a614fda24622d3715b65}\label{classGame_ad59df6562a58a614fda24622d3715b65}} 
+\mbox{\hyperlink{classGame_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classGame}{Game}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a3d9b98f7c4a96ecf578f75b96c9f0e90}\label{classGame_a3d9b98f7c4a96ecf578f75b96c9f0e90}} 
+void \mbox{\hyperlink{classGame_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDispatcher}{Dispatcher}} $\ast$ \mbox{\hyperlink{classGame_a1dd3a58e38678f68291498125fc97ddb}{get\+Dispatcher}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classDispatcher}{Dispatcher}} object that controls event dispatch for the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_ac688251934c61309cd8bb77074d24592}\label{classGame_ac688251934c61309cd8bb77074d24592}} 
+static const sf\+::\+Time \mbox{\hyperlink{classGame_ac688251934c61309cd8bb77074d24592}{TIME\+\_\+\+PER\+\_\+\+FRAME}}
+\begin{DoxyCompactList}\small\item\em The amount of time the game should spend on each frame. This is equal to 1 / framerate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_aafc26e7c34368b9265420e7242d743fc}\label{classGame_aafc26e7c34368b9265420e7242d743fc}} 
+constexpr static int \mbox{\hyperlink{classGame_aafc26e7c34368b9265420e7242d743fc}{WORLD\+\_\+\+WIDTH}} = 1024
+\begin{DoxyCompactList}\small\item\em The width of the world, in game units. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ad2cf08045935823c7e44c9a92ce4a4e9}\label{classGame_ad2cf08045935823c7e44c9a92ce4a4e9}} 
+constexpr static int \mbox{\hyperlink{classGame_ad2cf08045935823c7e44c9a92ce4a4e9}{WORLD\+\_\+\+HEIGHT}} = 768
+\begin{DoxyCompactList}\small\item\em The height of the world, in game units. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a29c3289355609a9593a24d5bc1f08bcc}\label{classGame_a29c3289355609a9593a24d5bc1f08bcc}} 
+constexpr static int \mbox{\hyperlink{classGame_a29c3289355609a9593a24d5bc1f08bcc}{WORLD\+\_\+\+BORDER}} = 20
+\begin{DoxyCompactList}\small\item\em The width of the border in the world, in game units. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ab7491872b0e12b59443f26c55737e6f1}\label{classGame_ab7491872b0e12b59443f26c55737e6f1}} 
+constexpr static float \mbox{\hyperlink{classGame_ab7491872b0e12b59443f26c55737e6f1}{PADDLE\+\_\+\+SPEED}} = 350.f
+\begin{DoxyCompactList}\small\item\em The speed at which paddles move, in game units / second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a465cd9a559c7d4ebbda1aeba1cf41d84}\label{classGame_a465cd9a559c7d4ebbda1aeba1cf41d84}} 
+constexpr static float \mbox{\hyperlink{classGame_a465cd9a559c7d4ebbda1aeba1cf41d84}{BALL\+\_\+\+INITIAL\+\_\+\+SPEED}} = 500.f
+\begin{DoxyCompactList}\small\item\em The initial speed of the ball. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple C++ game that shamelessly rips off Pong. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame_a1dd3a58e38678f68291498125fc97ddb}\label{classGame_a1dd3a58e38678f68291498125fc97ddb}} 
+\index{Game@{Game}!getDispatcher@{getDispatcher}}
+\index{getDispatcher@{getDispatcher}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getDispatcher()}{getDispatcher()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDispatcher}{Dispatcher}}$\ast$ Game\+::get\+Dispatcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classDispatcher}{Dispatcher}} object that controls event dispatch for the game. 
+
+Get the \mbox{\hyperlink{classDispatcher}{Dispatcher}} object that controls event dispatch for the game. The object is owned by the game and its lifetime will be exactly the same as the game\textquotesingle{}s.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the game\textquotesingle{}s event dispatcher bus 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/Game.\+hpp\end{DoxyCompactItemize}

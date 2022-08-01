@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classEnemyAISystem" kind="class" language="C++" prot="public">
+    <compoundname>EnemyAISystem</compoundname>
+    <basecompoundref refid="classIteratingSystem" prot="public" virt="non-virtual">IteratingSystem</basecompoundref>
+    <includes refid="EnemyAISystem_8hpp" local="no">EnemyAISystem.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEnemyAISystem_1af8dd578bbb7e6ff38d0520a61488f126" prot="private" static="no" mutable="no">
+        <type><ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; EnemyAISystem::_ball</definition>
+        <argsstring></argsstring>
+        <name>_ball</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="31" column="12" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEnemyAISystem_1a6a4d1ae90e3af8ff0b6811edf42e60a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EnemyAISystem::EnemyAISystem</definition>
+        <argsstring>(Entity &amp;ball)</argsstring>
+        <name>EnemyAISystem</name>
+        <param>
+          <type><ref refid="classEntity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>ball</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Enemy AI System object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ball</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ball that the AI will track to try to bounce back as part of the game of Pong. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="19" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classEnemyAISystem_1a62cfe6ee8471ded89a84b7626eb24d93" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EnemyAISystem::process</definition>
+        <argsstring>(std::shared_ptr&lt; Entity &gt; &amp;ai, const sf::Time deltaTime)</argsstring>
+        <name>process</name>
+        <reimplements refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c">process</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &amp;</type>
+          <declname>ai</declname>
+        </param>
+        <param>
+          <type>const sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Processes the enemy AI for a single paddle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ai</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AI that is being processed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since the last time the AI was processed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="28" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEnemyAISystem_1ae27040a4cc7962ce70882483a61014d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float EnemyAISystem::predictImpactPosition</definition>
+        <argsstring>(sf::FloatRect &amp;paddlePosition, sf::FloatRect &amp;ballPosition, sf::Vector2f &amp;ballVelocity, float uncertaintyScale)</argsstring>
+        <name>predictImpactPosition</name>
+        <param>
+          <type>sf::FloatRect &amp;</type>
+          <declname>paddlePosition</declname>
+        </param>
+        <param>
+          <type>sf::FloatRect &amp;</type>
+          <declname>ballPosition</declname>
+        </param>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>ballVelocity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>uncertaintyScale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="32" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A system that performs the AI for the enemy player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+      <node id="1">
+        <label>EnemyAISystem</label>
+        <link refid="classEnemyAISystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+      <node id="1">
+        <label>EnemyAISystem</label>
+        <link refid="classEnemyAISystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" line="11" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp" bodystart="12" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classEnemyAISystem_1af8dd578bbb7e6ff38d0520a61488f126" prot="private" virt="non-virtual"><scope>EnemyAISystem</scope><name>_ball</name></member>
+      <member refid="classEnemyAISystem_1a6a4d1ae90e3af8ff0b6811edf42e60a2" prot="public" virt="non-virtual"><scope>EnemyAISystem</scope><name>EnemyAISystem</name></member>
+      <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" virt="virtual"><scope>EnemyAISystem</scope><name>engineEntityAdded</name></member>
+      <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" virt="non-virtual"><scope>EnemyAISystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" virt="non-virtual"><scope>EnemyAISystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" virt="virtual"><scope>EnemyAISystem</scope><name>getEntities</name></member>
+      <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" prot="public" virt="non-virtual"><scope>EnemyAISystem</scope><name>IteratingSystem</name></member>
+      <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" prot="public" virt="non-virtual"><scope>EnemyAISystem</scope><name>IteratingSystem</name></member>
+      <member refid="classEnemyAISystem_1ae27040a4cc7962ce70882483a61014d4" prot="private" virt="non-virtual"><scope>EnemyAISystem</scope><name>predictImpactPosition</name></member>
+      <member refid="classEnemyAISystem_1a62cfe6ee8471ded89a84b7626eb24d93" prot="protected" virt="virtual"><scope>EnemyAISystem</scope><name>process</name></member>
+      <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" prot="public" virt="virtual"><scope>EnemyAISystem</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

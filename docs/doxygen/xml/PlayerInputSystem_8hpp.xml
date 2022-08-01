@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="PlayerInputSystem_8hpp" kind="file" language="C++">
+    <compoundname>PlayerInputSystem.hpp</compoundname>
+    <includes refid="IteratingSystem_8hpp" local="no">IteratingSystem.hpp</includes>
+    <includedby refid="Game_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>IteratingSystem.hpp</label>
+        <link refid="IteratingSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp</label>
+        <link refid="PlayerInputSystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EntityFamily.hpp</label>
+        <link refid="EntityFamily_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem.hpp</label>
+        <link refid="EntitySystem_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="7">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp</label>
+        <link refid="PlayerInputSystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classPlayerInputSystem" prot="public">PlayerInputSystem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;IteratingSystem.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classPlayerInputSystem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPlayerInputSystem" kindref="compound">PlayerInputSystem</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classIteratingSystem" kindref="compound">IteratingSystem</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16" refid="classPlayerInputSystem_1a94141b78de6b111c0893c094ecb3f6b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayerInputSystem_1a94141b78de6b111c0893c094ecb3f6b1" kindref="member">PlayerInputSystem</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="classPlayerInputSystem_1a6fad1f27101eab2846fbe03c27655512" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPlayerInputSystem_1a6fad1f27101eab2846fbe03c27655512" kindref="member">process</ref>(std::shared_ptr&lt;Entity&gt;<sp/>&amp;entity,<sp/>sf::Time<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp"/>
+  </compounddef>
+</doxygen>

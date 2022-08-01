@@ -1,0 +1,118 @@
+\hypertarget{classSplashScreen}{}\doxysection{Splash\+Screen Class Reference}
+\label{classSplashScreen}\index{SplashScreen@{SplashScreen}}
+
+
+A screen that displays an image.  
+
+
+
+
+{\ttfamily \#include $<$Splash\+Screen.\+hpp$>$}
+
+
+
+Inheritance diagram for Splash\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classSplashScreen__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Splash\+Screen\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classSplashScreen__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSplashScreen_adf5a0af2fd9cf7353d7e1ae8268d20d8}{Splash\+Screen}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classDispatcher}{Dispatcher}} \&dispatcher, std\+::string image\+Path)
+\begin{DoxyCompactList}\small\item\em Construct a new Splash \mbox{\hyperlink{classScreen}{Screen}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSplashScreen_a97b621dfe67fd172af5b00c9b3b0d747}\label{classSplashScreen_a97b621dfe67fd172af5b00c9b3b0d747}} 
+virtual \mbox{\hyperlink{classSplashScreen_a97b621dfe67fd172af5b00c9b3b0d747}{$\sim$\+Splash\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Splash \mbox{\hyperlink{classScreen}{Screen}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSplashScreen_aa740429d18d6ae5bd299d3c0e178b94e}{render}} () const
+\begin{DoxyCompactList}\small\item\em Renders the splash screen. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSplashScreen_a678197888d19caed6558d81452904158}{handle\+Click}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles a click on the splash screen, moving the game forward to the main menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSplashScreen_aa2d46a219a3c6f664ade45f95f182bfb}\label{classSplashScreen_aa2d46a219a3c6f664ade45f95f182bfb}} 
+static const std\+::string \mbox{\hyperlink{classSplashScreen_aa2d46a219a3c6f664ade45f95f182bfb}{SPLASH\+\_\+\+SCREEN\+\_\+\+CLOSE}}
+\begin{DoxyCompactList}\small\item\em A std\+::string for the event type of events that represent the user choosing to continue from the splash screen to the main game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A screen that displays an image. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSplashScreen_adf5a0af2fd9cf7353d7e1ae8268d20d8}\label{classSplashScreen_adf5a0af2fd9cf7353d7e1ae8268d20d8}} 
+\index{SplashScreen@{SplashScreen}!SplashScreen@{SplashScreen}}
+\index{SplashScreen@{SplashScreen}!SplashScreen@{SplashScreen}}
+\doxysubsubsection{\texorpdfstring{SplashScreen()}{SplashScreen()}}
+{\footnotesize\ttfamily Splash\+Screen\+::\+Splash\+Screen (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classDispatcher}{Dispatcher}} \&}]{dispatcher,  }\item[{std\+::string}]{image\+Path }\end{DoxyParamCaption})}
+
+
+
+Construct a new Splash \mbox{\hyperlink{classScreen}{Screen}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window on which to render the splash screen. \\
+\hline
+{\em dispatcher} & The \mbox{\hyperlink{classDispatcher}{Dispatcher}} on which the event to progress past the splash screen will be dispatched. \\
+\hline
+{\em image\+Path} & The path to the image to render as part of the splash screen. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSplashScreen_a678197888d19caed6558d81452904158}\label{classSplashScreen_a678197888d19caed6558d81452904158}} 
+\index{SplashScreen@{SplashScreen}!handleClick@{handleClick}}
+\index{handleClick@{handleClick}!SplashScreen@{SplashScreen}}
+\doxysubsubsection{\texorpdfstring{handleClick()}{handleClick()}}
+{\footnotesize\ttfamily virtual void Splash\+Screen\+::handle\+Click (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles a click on the splash screen, moving the game forward to the main menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The screen x position of the click. \\
+\hline
+{\em y} & The screen y position of the click. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classScreen_afafb8c2a2255c4cf8cef807ba4d14400}{Screen}}.
+
+\mbox{\Hypertarget{classSplashScreen_aa740429d18d6ae5bd299d3c0e178b94e}\label{classSplashScreen_aa740429d18d6ae5bd299d3c0e178b94e}} 
+\index{SplashScreen@{SplashScreen}!render@{render}}
+\index{render@{render}!SplashScreen@{SplashScreen}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Splash\+Screen\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the splash screen. 
+
+Renders the splash screen to the window provided during construction. 
+
+Implements \mbox{\hyperlink{classScreen_a3cd453c494b2389725b719700283e655}{Screen}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/Splash\+Screen.\+hpp\end{DoxyCompactItemize}

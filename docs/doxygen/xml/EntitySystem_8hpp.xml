@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="EntitySystem_8hpp" kind="file" language="C++">
+    <compoundname>EntitySystem.hpp</compoundname>
+    <includes refid="Entity_8hpp" local="no">Entity.hpp</includes>
+    <includes refid="EntityFamily_8hpp" local="no">EntityFamily.hpp</includes>
+    <includes local="no">SFML/System.hpp</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">map</includes>
+    <includedby refid="EntityEngine_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp</includedby>
+    <includedby refid="IteratingSystem_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>EntityFamily.hpp</label>
+        <link refid="EntityFamily_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp</label>
+        <link refid="EntitySystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp</label>
+        <link refid="BallSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/IteratingSystem.hpp</label>
+        <link refid="IteratingSystem_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp</label>
+        <link refid="PlayerInputSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp</label>
+        <link refid="RenderSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EnemyAISystem.hpp</label>
+        <link refid="EnemyAISystem_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp</label>
+        <link refid="EntitySystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/VelocitySystem.hpp</label>
+        <link refid="VelocitySystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntityEngine.hpp</label>
+        <link refid="EntityEngine_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEntitySystem" prot="public">EntitySystem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Entity.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EntityFamily.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/System.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>Refactor<sp/>family<sp/>filtering<sp/>logic<sp/>to<sp/>a<sp/>FilteredEntitySystem<sp/>class.</highlight></codeline>
+<codeline lineno="17" refid="classEntitySystem" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEntitySystem" kindref="compound">EntitySystem</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" kindref="member">EntitySystem</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" kindref="member">EntitySystem</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;EntityFamily&gt;<sp/>&amp;family);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" kindref="member">engineEntityAdded</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Entity&gt;<sp/>&amp;entity);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154" kindref="member">update</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Time<sp/>deltaTime)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::map&lt;int,<sp/>std::shared_ptr&lt;Entity&gt;&gt;<sp/><ref refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" kindref="member">getEntities</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;EntityFamily&gt;<sp/>_family;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::shared_ptr&lt;Entity&gt;&gt;<sp/>_entities;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/EntitySystem.hpp"/>
+  </compounddef>
+</doxygen>

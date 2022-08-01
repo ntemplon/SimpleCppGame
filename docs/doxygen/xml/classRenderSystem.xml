@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classRenderSystem" kind="class" language="C++" prot="public">
+    <compoundname>RenderSystem</compoundname>
+    <basecompoundref refid="classIteratingSystem" prot="public" virt="non-virtual">IteratingSystem</basecompoundref>
+    <includes refid="RenderSystem_8hpp" local="no">RenderSystem.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRenderSystem_1a20496a8f52c4eb755d4bfcaba2e98e1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RenderSystem::RenderSystem</definition>
+        <argsstring>()</argsstring>
+        <name>RenderSystem</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classRenderSystem" kindref="compound">RenderSystem</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp" line="18" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classRenderSystem_1a794921c956b9b36c547e13594bf25481" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RenderSystem::render</definition>
+        <argsstring>(sf::RenderTarget &amp;target) const</argsstring>
+        <name>render</name>
+        <param>
+          <type>sf::RenderTarget &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Draws the prepared sprites to the sf::RenderTarget. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method assumes that it is part of a larger pipeline and that entities may not be the only thing being rendered. Methods such as sf::RenderWindow.display() need to be called after <ref refid="classRenderSystem_1a794921c956b9b36c547e13594bf25481" kindref="member">RenderSystem::render()</ref> to ensure everything is displayed correctly.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The target to draw the entities on. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp" line="29" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classRenderSystem_1a27f2d4ebb7f3169a3620aca0a86dd000" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RenderSystem::process</definition>
+        <argsstring>(std::shared_ptr&lt; Entity &gt; &amp;entity, sf::Time deltaTime)</argsstring>
+        <name>process</name>
+        <reimplements refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c">process</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Processes the <ref refid="classEntity" kindref="compound">Entity</ref> graphical data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprites are moved and scaled to align with the <ref refid="classEntity" kindref="compound">Entity</ref> <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref> data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity being processed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of time that has passed since <ref refid="classRenderSystem_1a27f2d4ebb7f3169a3620aca0a86dd000" kindref="member">process()</ref> was last called on this entity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp" line="40" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A system that manages <ref refid="classEntity" kindref="compound">Entity</ref> sprite sizes, positions, and drawing. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It acts on all elements with a <ref refid="classRenderComponent" kindref="compound">RenderComponent</ref> and <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RenderSystem</label>
+        <link refid="classRenderSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RenderSystem</label>
+        <link refid="classRenderSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp" line="12" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/RenderSystem.hpp" bodystart="13" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" virt="virtual"><scope>RenderSystem</scope><name>engineEntityAdded</name></member>
+      <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" virt="non-virtual"><scope>RenderSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" virt="non-virtual"><scope>RenderSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" virt="virtual"><scope>RenderSystem</scope><name>getEntities</name></member>
+      <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" prot="public" virt="non-virtual"><scope>RenderSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" prot="public" virt="non-virtual"><scope>RenderSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classRenderSystem_1a27f2d4ebb7f3169a3620aca0a86dd000" prot="protected" virt="virtual"><scope>RenderSystem</scope><name>process</name></member>
+      <member refid="classRenderSystem_1a794921c956b9b36c547e13594bf25481" prot="public" virt="non-virtual"><scope>RenderSystem</scope><name>render</name></member>
+      <member refid="classRenderSystem_1a20496a8f52c4eb755d4bfcaba2e98e1c" prot="public" virt="non-virtual"><scope>RenderSystem</scope><name>RenderSystem</name></member>
+      <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" prot="public" virt="virtual"><scope>RenderSystem</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

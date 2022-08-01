@@ -1,0 +1,108 @@
+\hypertarget{classBallSystem}{}\doxysection{Ball\+System Class Reference}
+\label{classBallSystem}\index{BallSystem@{BallSystem}}
+
+
+A system that handles the ball physics.  
+
+
+
+
+{\ttfamily \#include $<$Ball\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Ball\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classBallSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ball\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classBallSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBallSystem_ad2bb2420c5dc69443a724dcf08e1907c}{Ball\+System}} (\mbox{\hyperlink{classDispatcher}{Dispatcher}} \&dispatcher, \mbox{\hyperlink{classEntity}{Entity}} \&player, \mbox{\hyperlink{classEntity}{Entity}} \&enemy)
+\begin{DoxyCompactList}\small\item\em Constructs a new Ball System. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBallSystem_ab397990feb36a75bb21b29c50b25f1ab}\label{classBallSystem_ab397990feb36a75bb21b29c50b25f1ab}} 
+static const std\+::string \mbox{\hyperlink{classBallSystem_ab397990feb36a75bb21b29c50b25f1ab}{PLAYER\+\_\+\+SCORE\+\_\+\+EVENT}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classEvent}{Event}} ID indicating the player has scored. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBallSystem_a556c6791341e849977ce36fd52127f72}\label{classBallSystem_a556c6791341e849977ce36fd52127f72}} 
+static const std\+::string \mbox{\hyperlink{classBallSystem_a556c6791341e849977ce36fd52127f72}{ENEMY\+\_\+\+SCORE\+\_\+\+EVENT}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classEvent}{Event}} ID indicating the enemy AI has scored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBallSystem_a16831511402914a2e0de903eb328636c}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&entity, sf\+::\+Time delta\+Time)
+\begin{DoxyCompactList}\small\item\em Processes a ball. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A system that handles the ball physics. 
+
+This system handles the unique aspects of ball physics, including bouncing off of walls and detecting successful scores. It acts on Entities with \mbox{\hyperlink{classLocationComponent}{Location\+Component}}, \mbox{\hyperlink{classVelocityComponent}{Velocity\+Component}}, and \mbox{\hyperlink{classBallComponent}{Ball\+Component}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBallSystem_ad2bb2420c5dc69443a724dcf08e1907c}\label{classBallSystem_ad2bb2420c5dc69443a724dcf08e1907c}} 
+\index{BallSystem@{BallSystem}!BallSystem@{BallSystem}}
+\index{BallSystem@{BallSystem}!BallSystem@{BallSystem}}
+\doxysubsubsection{\texorpdfstring{BallSystem()}{BallSystem()}}
+{\footnotesize\ttfamily Ball\+System\+::\+Ball\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDispatcher}{Dispatcher}} \&}]{dispatcher,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{player,  }\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{enemy }\end{DoxyParamCaption})}
+
+
+
+Constructs a new Ball System. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dispatcher} & The dispatcher on which the system will post the PLAYER\+\_\+\+SCORE\+\_\+\+EVENT and ENEMY\+\_\+\+SCORE\+\_\+\+EVENT. \\
+\hline
+{\em player} & A reference to the player. Its \mbox{\hyperlink{classLocationComponent}{Location\+Component}} is used for collision detection with the paddle. \\
+\hline
+{\em enemy} & A referece to the enemy AI. Its \mbox{\hyperlink{classLocationComponent}{Location\+Component}} is used for collection detection with the paddle. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBallSystem_a16831511402914a2e0de903eb328636c}\label{classBallSystem_a16831511402914a2e0de903eb328636c}} 
+\index{BallSystem@{BallSystem}!process@{process}}
+\index{process@{process}!BallSystem@{BallSystem}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Ball\+System\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&}]{entity,  }\item[{sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Processes a ball. 
+
+Processes a ball to see if it needs to bounce off a wall or has scored for either the player or the AI enemy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The current ball to process. \\
+\hline
+{\em delta\+Time} & The amount of time that has passed since the last call to \mbox{\hyperlink{classBallSystem_a16831511402914a2e0de903eb328636c}{process()}} for this ball. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{Iterating\+System}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Ball\+System.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{classComponentFamily}{}\doxysection{Component\+Family Class Reference}
+\label{classComponentFamily}\index{ComponentFamily@{ComponentFamily}}
+
+
+An \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} that defines a class as having a component of each of the specified types.  
+
+
+
+
+{\ttfamily \#include $<$Component\+Family.\+hpp$>$}
+
+
+
+Inheritance diagram for Component\+Family\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classComponentFamily__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Component\+Family\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classComponentFamily__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classComponentFamily_a1dd4b742b2e8457a348ccaf9a6af1b40}{Component\+Family}} ()
+\begin{DoxyCompactList}\small\item\em Construct a default new Component Family object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classComponentFamily_a9f20c6a332860d67507db6912dd1cd63}{Component\+Family}} (const std\+::unordered\+\_\+set$<$ std\+::string $>$ component\+Ids)
+\begin{DoxyCompactList}\small\item\em Construct a new Component Family object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classComponentFamily_a9dea2702302768c35b94258f4fb79bcb}{is\+In\+Family}} (const \mbox{\hyperlink{classEntity}{Entity}} \&entity) const
+\begin{DoxyCompactList}\small\item\em Checks if the entity has all of the required componets to fit the family. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classEntityFamily}{Entity\+Family}} that defines a class as having a component of each of the specified types. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classComponentFamily_a1dd4b742b2e8457a348ccaf9a6af1b40}\label{classComponentFamily_a1dd4b742b2e8457a348ccaf9a6af1b40}} 
+\index{ComponentFamily@{ComponentFamily}!ComponentFamily@{ComponentFamily}}
+\index{ComponentFamily@{ComponentFamily}!ComponentFamily@{ComponentFamily}}
+\doxysubsubsection{\texorpdfstring{ComponentFamily()}{ComponentFamily()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Component\+Family\+::\+Component\+Family (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a default new Component Family object. 
+
+The default constructor doesn\textquotesingle{}t require any specific families, so all entities will be considered \textquotesingle{}in the family\textquotesingle{}. \mbox{\Hypertarget{classComponentFamily_a9f20c6a332860d67507db6912dd1cd63}\label{classComponentFamily_a9f20c6a332860d67507db6912dd1cd63}} 
+\index{ComponentFamily@{ComponentFamily}!ComponentFamily@{ComponentFamily}}
+\index{ComponentFamily@{ComponentFamily}!ComponentFamily@{ComponentFamily}}
+\doxysubsubsection{\texorpdfstring{ComponentFamily()}{ComponentFamily()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Component\+Family\+::\+Component\+Family (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+set$<$ std\+::string $>$}]{component\+Ids }\end{DoxyParamCaption})}
+
+
+
+Construct a new Component Family object. 
+
+Constructs a \mbox{\hyperlink{classComponentFamily}{Component\+Family}} that accepts all entities that have a component for each of the provided IDs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component\+Ids} & The IDs of the required component classes. These are idiomatically implemented as const static std\+::string members of the Component\textquotesingle{}s class. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classComponentFamily_a9dea2702302768c35b94258f4fb79bcb}\label{classComponentFamily_a9dea2702302768c35b94258f4fb79bcb}} 
+\index{ComponentFamily@{ComponentFamily}!isInFamily@{isInFamily}}
+\index{isInFamily@{isInFamily}!ComponentFamily@{ComponentFamily}}
+\doxysubsubsection{\texorpdfstring{isInFamily()}{isInFamily()}}
+{\footnotesize\ttfamily bool Component\+Family\+::is\+In\+Family (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEntity}{Entity}} \&}]{entity }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the entity has all of the required componets to fit the family. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The entity to evaluate if it is has all the components to be in the family. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the entity is in the family. 
+
+false if the entity is not in the family. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classEntityFamily_a2192f7927d9a8cda42f094ced834da78}{Entity\+Family}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Component\+Family.\+hpp\end{DoxyCompactItemize}

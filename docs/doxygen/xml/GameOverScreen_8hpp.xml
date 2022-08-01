@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="GameOverScreen_8hpp" kind="file" language="C++">
+    <compoundname>GameOverScreen.hpp</compoundname>
+    <includes refid="Screen_8hpp" local="no">Screen.hpp</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen.hpp</label>
+        <link refid="Screen_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp</label>
+        <link refid="GameOverScreen_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classGameOverScreen" prot="public">GameOverScreen</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Screen.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classGameOverScreen" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGameOverScreen" kindref="compound">GameOverScreen</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" kindref="member">GAME_OVER_ACK</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classGameOverScreen_1a51a9364448a106566e6bc104d2d58ce1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGameOverScreen_1a51a9364448a106566e6bc104d2d58ce1" kindref="member">GameOverScreen</ref>(sf::RenderWindow<sp/>&amp;window,<sp/><ref refid="classDispatcher" kindref="compound">Dispatcher</ref><sp/>&amp;dispatcher,<sp/>std::string<sp/>imagePath);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classGameOverScreen_1a7f015719692c3482de713fd2381f2154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGameOverScreen_1a7f015719692c3482de713fd2381f2154" kindref="member">render</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classGameOverScreen_1a8e5c8ae4f8329274bcc5d932bb1f5526" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGameOverScreen_1a8e5c8ae4f8329274bcc5d932bb1f5526" kindref="member">handleClick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Texture<sp/>_texture;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Sprite<sp/>_sprite;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp"/>
+  </compounddef>
+</doxygen>

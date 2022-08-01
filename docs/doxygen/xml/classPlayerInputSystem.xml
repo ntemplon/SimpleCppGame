@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classPlayerInputSystem" kind="class" language="C++" prot="public">
+    <compoundname>PlayerInputSystem</compoundname>
+    <basecompoundref refid="classIteratingSystem" prot="public" virt="non-virtual">IteratingSystem</basecompoundref>
+    <includes refid="PlayerInputSystem_8hpp" local="no">PlayerInputSystem.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPlayerInputSystem_1a94141b78de6b111c0893c094ecb3f6b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PlayerInputSystem::PlayerInputSystem</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerInputSystem</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classPlayerInputSystem" kindref="compound">PlayerInputSystem</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp" line="16" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classPlayerInputSystem_1a6fad1f27101eab2846fbe03c27655512" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PlayerInputSystem::process</definition>
+        <argsstring>(std::shared_ptr&lt; Entity &gt; &amp;entity, sf::Time deltaTime)</argsstring>
+        <name>process</name>
+        <reimplements refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c">process</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt; &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Updates the behavior of a player paddle based on the current keyboard inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The paddle moves up if W or Up are pressed and down if S or Down are pressed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current player being processed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time that has passed since <ref refid="classPlayerInputSystem_1a6fad1f27101eab2846fbe03c27655512" kindref="member">process()</ref> was last called on this entity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp" line="27" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A system that uses player input to drive a paddle. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It acts on entities with a <ref refid="classLocationComponent" kindref="compound">LocationComponent</ref>, <ref refid="classVelocityComponent" kindref="compound">VelocityComponent</ref>, and <ref refid="classPlayerComponent" kindref="compound">PlayerComponent</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+      <node id="1">
+        <label>PlayerInputSystem</label>
+        <link refid="classPlayerInputSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IteratingSystem</label>
+        <link refid="classIteratingSystem"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EntitySystem</label>
+        <link refid="classEntitySystem"/>
+      </node>
+      <node id="1">
+        <label>PlayerInputSystem</label>
+        <link refid="classPlayerInputSystem"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp" line="10" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/PlayerInputSystem.hpp" bodystart="11" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classEntitySystem_1ad9476307802ce67acbf44b71183568bd" prot="public" virt="virtual"><scope>PlayerInputSystem</scope><name>engineEntityAdded</name></member>
+      <member refid="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8" prot="public" virt="non-virtual"><scope>PlayerInputSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a951adbd375c4206d9d0115bf17050870" prot="public" virt="non-virtual"><scope>PlayerInputSystem</scope><name>EntitySystem</name></member>
+      <member refid="classEntitySystem_1a92bc081730f99f33192affeb23c50702" prot="protected" virt="virtual"><scope>PlayerInputSystem</scope><name>getEntities</name></member>
+      <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" prot="public" virt="non-virtual"><scope>PlayerInputSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" prot="public" virt="non-virtual"><scope>PlayerInputSystem</scope><name>IteratingSystem</name></member>
+      <member refid="classPlayerInputSystem_1a94141b78de6b111c0893c094ecb3f6b1" prot="public" virt="non-virtual"><scope>PlayerInputSystem</scope><name>PlayerInputSystem</name></member>
+      <member refid="classPlayerInputSystem_1a6fad1f27101eab2846fbe03c27655512" prot="protected" virt="virtual"><scope>PlayerInputSystem</scope><name>process</name></member>
+      <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" prot="public" virt="virtual"><scope>PlayerInputSystem</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classVelocityComponent" kind="class" language="C++" prot="public">
+    <compoundname>VelocityComponent</compoundname>
+    <basecompoundref refid="classEntity_1_1Component" prot="public" virt="non-virtual">Entity::Component</basecompoundref>
+    <includes refid="Components_8hpp" local="no">Components.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classVelocityComponent_1a79650ba683c4c90348b6b3c969d82e03" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string VelocityComponent::VEL_COMP_ID</definition>
+        <argsstring></argsstring>
+        <name>VEL_COMP_ID</name>
+        <briefdescription>
+<para>The ID of a <ref refid="classVelocityComponent" kindref="compound">VelocityComponent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="76" column="30" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classVelocityComponent_1ab834951d72d96f1227a9eeb92f63fa0d" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f VelocityComponent::velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <briefdescription>
+<para>The entity&apos;s velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="88" column="18" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classVelocityComponent_1a6b64cf8cf13322ef5709f2fdc1439cc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VelocityComponent::VelocityComponent</definition>
+        <argsstring>()</argsstring>
+        <name>VelocityComponent</name>
+        <briefdescription>
+<para>Construct a new Velocity Component object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The velocity defaults to (0, 0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="83" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A component for storing the 2D velocity of an entity. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>VelocityComponent</label>
+        <link refid="classVelocityComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>VelocityComponent</label>
+        <link refid="classVelocityComponent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity::Component</label>
+        <link refid="classEntity_1_1Component"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" line="70" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/entity/Components.hpp" bodystart="71" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classEntity_1_1Component_1aa870551c8ede04e4ed6f538eee376a1a" prot="public" virt="non-virtual"><scope>VelocityComponent</scope><name>Component</name></member>
+      <member refid="classEntity_1_1Component_1aa27ad6d78bfc3ff60566ca824b29c1db" prot="public" virt="non-virtual"><scope>VelocityComponent</scope><name>getId</name></member>
+      <member refid="classVelocityComponent_1a79650ba683c4c90348b6b3c969d82e03" prot="public" virt="non-virtual"><scope>VelocityComponent</scope><name>VEL_COMP_ID</name></member>
+      <member refid="classVelocityComponent_1ab834951d72d96f1227a9eeb92f63fa0d" prot="public" virt="non-virtual"><scope>VelocityComponent</scope><name>velocity</name></member>
+      <member refid="classVelocityComponent_1a6b64cf8cf13322ef5709f2fdc1439cc4" prot="public" virt="non-virtual"><scope>VelocityComponent</scope><name>VelocityComponent</name></member>
+      <member refid="classEntity_1_1Component_1a8e19d41c2a8041556e2cbd5c92e4906e" prot="public" virt="virtual"><scope>VelocityComponent</scope><name>~Component</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

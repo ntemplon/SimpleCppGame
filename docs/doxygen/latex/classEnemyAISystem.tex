@@ -1,0 +1,91 @@
+\hypertarget{classEnemyAISystem}{}\doxysection{Enemy\+AISystem Class Reference}
+\label{classEnemyAISystem}\index{EnemyAISystem@{EnemyAISystem}}
+
+
+A system that performs the AI for the enemy player.  
+
+
+
+
+{\ttfamily \#include $<$Enemy\+AISystem.\+hpp$>$}
+
+
+
+Inheritance diagram for Enemy\+AISystem\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classEnemyAISystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+AISystem\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classEnemyAISystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEnemyAISystem_a6a4d1ae90e3af8ff0b6811edf42e60a2}{Enemy\+AISystem}} (\mbox{\hyperlink{classEntity}{Entity}} \&ball)
+\begin{DoxyCompactList}\small\item\em Construct a new Enemy AI System object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEnemyAISystem_a62cfe6ee8471ded89a84b7626eb24d93}{process}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&ai, const sf\+::\+Time delta\+Time)
+\begin{DoxyCompactList}\small\item\em Processes the enemy AI for a single paddle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A system that performs the AI for the enemy player. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEnemyAISystem_a6a4d1ae90e3af8ff0b6811edf42e60a2}\label{classEnemyAISystem_a6a4d1ae90e3af8ff0b6811edf42e60a2}} 
+\index{EnemyAISystem@{EnemyAISystem}!EnemyAISystem@{EnemyAISystem}}
+\index{EnemyAISystem@{EnemyAISystem}!EnemyAISystem@{EnemyAISystem}}
+\doxysubsubsection{\texorpdfstring{EnemyAISystem()}{EnemyAISystem()}}
+{\footnotesize\ttfamily Enemy\+AISystem\+::\+Enemy\+AISystem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntity}{Entity}} \&}]{ball }\end{DoxyParamCaption})}
+
+
+
+Construct a new Enemy AI System object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & The ball that the AI will track to try to bounce back as part of the game of Pong. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEnemyAISystem_a62cfe6ee8471ded89a84b7626eb24d93}\label{classEnemyAISystem_a62cfe6ee8471ded89a84b7626eb24d93}} 
+\index{EnemyAISystem@{EnemyAISystem}!process@{process}}
+\index{process@{process}!EnemyAISystem@{EnemyAISystem}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Enemy\+AISystem\+::process (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ \&}]{ai,  }\item[{const sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Processes the enemy AI for a single paddle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ai} & The AI that is being processed. \\
+\hline
+{\em delta\+Time} & The amount of time that has passed since the last time the AI was processed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIteratingSystem_a3fb21f26cc10e9ec82834ee86dc87b6c}{Iterating\+System}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Enemy\+AISystem.\+hpp\end{DoxyCompactItemize}

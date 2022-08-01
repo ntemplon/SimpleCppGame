@@ -1,0 +1,126 @@
+\hypertarget{classEnemyComponent}{}\doxysection{Enemy\+Component Class Reference}
+\label{classEnemyComponent}\index{EnemyComponent@{EnemyComponent}}
+
+
+A Component for enemy AI paddles.  
+
+
+
+
+{\ttfamily \#include $<$Enemy\+AISystem.\+hpp$>$}
+
+
+
+Inheritance diagram for Enemy\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classEnemyComponent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classEnemyComponent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89de}{AIState}} \{ \mbox{\hyperlink{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea68391a825a3d0d60b9eea7c6f783c354}{Reacting}}
+, \mbox{\hyperlink{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89deaa79782bf8835c8aa74a56fc91982c64d}{Moving\+Down}}
+, \mbox{\hyperlink{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea2e7d2986477735ae5c23e812c1ccb85d}{Moving\+Up}}
+, \mbox{\hyperlink{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea18f75ff6694e56aa41305207fdb3c4f1}{Waiting\+For\+Player}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of the states of the enemy paddle AI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEnemyComponent_aa47ba9ebe8636159dd351b6318ae8a60}{Enemy\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Enemy Component object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEnemyComponent_a1907ad0eb022fa1ff65b62dcbeeaaaca}\label{classEnemyComponent_a1907ad0eb022fa1ff65b62dcbeeaaaca}} 
+sf\+::\+Time \mbox{\hyperlink{classEnemyComponent_a1907ad0eb022fa1ff65b62dcbeeaaaca}{reaction\+Elapsed\+Time}}
+\begin{DoxyCompactList}\small\item\em The amount of time that the AI has spent waiting after the player took an action to respond. When this is greater than or equal to \mbox{\hyperlink{classEnemyComponent_ad6bb8e83d3b6692bb21264aefc7edb23}{Enemy\+Component\+::\+REACTION\+\_\+\+TIME}}, the AI paddle can respond, simulating human reaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnemyComponent_a16d9bc0c3c8aafd3bcf5bb24bea71dd1}\label{classEnemyComponent_a16d9bc0c3c8aafd3bcf5bb24bea71dd1}} 
+\mbox{\hyperlink{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89de}{AIState}} \mbox{\hyperlink{classEnemyComponent_a16d9bc0c3c8aafd3bcf5bb24bea71dd1}{ai\+State}}
+\begin{DoxyCompactList}\small\item\em The current state of the paddle\textquotesingle{}s AI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnemyComponent_af2251583590cdc609ac583ee29cd8d70}\label{classEnemyComponent_af2251583590cdc609ac583ee29cd8d70}} 
+float \mbox{\hyperlink{classEnemyComponent_af2251583590cdc609ac583ee29cd8d70}{predicted\+Ball\+Position}}
+\begin{DoxyCompactList}\small\item\em The current predicted impact position of the next ball that the paddle will try to intercept and bounce back. This, combined with \mbox{\hyperlink{classEnemyComponent_a13240541c0c817f77dd4f1f525ff0558}{Enemy\+Component\+::prediction\+Valid}}, form a pseudo-\/\+Optional$<$float$>$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnemyComponent_a13240541c0c817f77dd4f1f525ff0558}\label{classEnemyComponent_a13240541c0c817f77dd4f1f525ff0558}} 
+bool \mbox{\hyperlink{classEnemyComponent_a13240541c0c817f77dd4f1f525ff0558}{prediction\+Valid}}
+\begin{DoxyCompactList}\small\item\em Whether or not the current prediction is a valid prediction that should be tracked to. This, combined with \mbox{\hyperlink{classEnemyComponent_af2251583590cdc609ac583ee29cd8d70}{Enemy\+Component\+::predicted\+Ball\+Position}}, form a pseudo-\/\+Optional$<$float$>$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEnemyComponent_a27798dc2f9ef5d3ca46ce655ec3b2fd3}\label{classEnemyComponent_a27798dc2f9ef5d3ca46ce655ec3b2fd3}} 
+static const std\+::string \mbox{\hyperlink{classEnemyComponent_a27798dc2f9ef5d3ca46ce655ec3b2fd3}{ENEMY\+\_\+\+ID}}
+\begin{DoxyCompactList}\small\item\em The ID for Enemy\+Compnent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnemyComponent_ad6bb8e83d3b6692bb21264aefc7edb23}\label{classEnemyComponent_ad6bb8e83d3b6692bb21264aefc7edb23}} 
+static const sf\+::\+Time \mbox{\hyperlink{classEnemyComponent_ad6bb8e83d3b6692bb21264aefc7edb23}{REACTION\+\_\+\+TIME}}
+\begin{DoxyCompactList}\small\item\em The reaction time of an enemy AI after the player hits the ball. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEnemyComponent_a7333a092db236a8a88da42df8751eff3}\label{classEnemyComponent_a7333a092db236a8a88da42df8751eff3}} 
+static const float {\bfseries ENEMY\+\_\+\+ERROR\+\_\+\+SCALE}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Component for enemy AI paddles. 
+
+The component marks an entity as an enemy AI paddle and stores related state, such as AI information. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89de}\label{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89de}} 
+\index{EnemyComponent@{EnemyComponent}!AIState@{AIState}}
+\index{AIState@{AIState}!EnemyComponent@{EnemyComponent}}
+\doxysubsubsection{\texorpdfstring{AIState}{AIState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89de}{Enemy\+Component\+::\+AIState}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+An enumeration of the states of the enemy paddle AI. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Reacting@{Reacting}!EnemyComponent@{EnemyComponent}}\index{EnemyComponent@{EnemyComponent}!Reacting@{Reacting}}}\mbox{\Hypertarget{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea68391a825a3d0d60b9eea7c6f783c354}\label{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea68391a825a3d0d60b9eea7c6f783c354}} 
+Reacting&The player has hit the ball and the AI is reacting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MovingDown@{MovingDown}!EnemyComponent@{EnemyComponent}}\index{EnemyComponent@{EnemyComponent}!MovingDown@{MovingDown}}}\mbox{\Hypertarget{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89deaa79782bf8835c8aa74a56fc91982c64d}\label{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89deaa79782bf8835c8aa74a56fc91982c64d}} 
+Moving\+Down&The AI is moving down to intercept the ball. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MovingUp@{MovingUp}!EnemyComponent@{EnemyComponent}}\index{EnemyComponent@{EnemyComponent}!MovingUp@{MovingUp}}}\mbox{\Hypertarget{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea2e7d2986477735ae5c23e812c1ccb85d}\label{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea2e7d2986477735ae5c23e812c1ccb85d}} 
+Moving\+Up&The AI is moving up to intercept the ball. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WaitingForPlayer@{WaitingForPlayer}!EnemyComponent@{EnemyComponent}}\index{EnemyComponent@{EnemyComponent}!WaitingForPlayer@{WaitingForPlayer}}}\mbox{\Hypertarget{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea18f75ff6694e56aa41305207fdb3c4f1}\label{classEnemyComponent_a02486f0a6e25622ace75d6c6a02f89dea18f75ff6694e56aa41305207fdb3c4f1}} 
+Waiting\+For\+Player&The AI has hit the ball and is waiting for the player to respond. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEnemyComponent_aa47ba9ebe8636159dd351b6318ae8a60}\label{classEnemyComponent_aa47ba9ebe8636159dd351b6318ae8a60}} 
+\index{EnemyComponent@{EnemyComponent}!EnemyComponent@{EnemyComponent}}
+\index{EnemyComponent@{EnemyComponent}!EnemyComponent@{EnemyComponent}}
+\doxysubsubsection{\texorpdfstring{EnemyComponent()}{EnemyComponent()}}
+{\footnotesize\ttfamily Enemy\+Component\+::\+Enemy\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Enemy Component object. 
+
+The state information (e.\+g. AI) is unitialized and will need to be provided by the caller of the constructor. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/entity/Enemy\+AISystem.\+hpp\end{DoxyCompactItemize}

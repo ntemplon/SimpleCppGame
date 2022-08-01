@@ -1,0 +1,4 @@
+<map id="VelocityComponent" name="VelocityComponent">
+<area shape="rect" id="node1" title="A component for storing the 2D velocity of an entity." alt="" coords="5,80,155,107"/>
+<area shape="rect" id="node2" href="$classEntity_1_1Component.html" title="A component of an entity in the game&#39;s component entity system." alt="" coords="9,5,151,32"/>
+</map>
