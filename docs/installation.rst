@@ -20,7 +20,7 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     :code:`sudo apt install libsfml-dev`
 
-    **Mac** users should install SFML following `these instructions <https://www.sfml-dev.org/tutorials/2.5/start-osx.php>_`.
+    **Mac** users should install SFML following `these instructions <https://www.sfml-dev.org/tutorials/2.5/start-osx.php>`_.
 
     **Windows** users (or other users that wish to keep SFML separate) can unzip the appropriate package and direct the game build
     files there by setting the :code:`SFML_ROOT` environment variable to the root SFML directory after unzipping.
@@ -33,7 +33,7 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     **Mac** users should install Doxygen via Homebrew.
 
-    :code:`sudo brew install doxygen graphviz`
+    :code:`brew install doxygen graphviz`
 
     **Windows** users should download and run the `Doxygen installer <https://doxygen.nl/download.html>`_ and
     `graphviz installer <https://graphviz.org/download/>`_.
