@@ -2,6 +2,7 @@
 #include <Components.hpp>
 #include <ComponentFamily.hpp>
 #include <Game.hpp>
+#include <math.h>
 
 const std::string BallSystem::PLAYER_SCORE_EVENT = "PLAYER_SCORE_EVENT";
 const std::string BallSystem::ENEMY_SCORE_EVENT = "ENEMY_SCORE_EVENT";
@@ -63,6 +64,9 @@ void BallSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
         {
             // Bounce off the player's paddle
             velCmp->velocity.x = velCmp->velocity.x * -1.f;
+            this->slightlyRandomize(velCmp->velocity);
+            velCmp->velocity.x = velCmp->velocity.x * 1.02f;
+            velCmp->velocity.y = velCmp->velocity.y * 1.02f;
         }
         else
         {
@@ -72,7 +76,26 @@ void BallSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
             {
                 // Bounce off the enemy's paddle
                 velCmp->velocity.x = velCmp->velocity.x * -1.f;
+                this->slightlyRandomize(velCmp->velocity);
+                velCmp->velocity.x = velCmp->velocity.x * 1.02f;
+                velCmp->velocity.y = velCmp->velocity.y * 1.02f;
             }
         }
     }
+}
+
+void BallSystem::slightlyRandomize(sf::Vector2f &velocity) const
+{
+    float randomRotationAngle = (rand() / static_cast<float>(RAND_MAX)) * 0.087267f; // 5 degrees to radians
+    float x1 = velocity.x;
+    float y1 = velocity.y;
+
+    float sinTheta = sin(randomRotationAngle);
+    float cosTheta = cos(randomRotationAngle);
+
+    float x2 = (cosTheta * x1) - (sinTheta * y1);
+    float y2 = (sinTheta * x1) + (cosTheta * y1);
+
+    velocity.x = x2;
+    velocity.y = y2;
 }

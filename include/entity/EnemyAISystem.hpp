@@ -50,6 +50,7 @@ public:
      * @brief The reaction time of an enemy AI after the player hits the ball.
      */
     static const sf::Time REACTION_TIME;
+    static const float ENEMY_ERROR_SCALE;
 
     /**
      * @brief An enumeration of the states of the enemy paddle AI

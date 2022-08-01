@@ -29,6 +29,19 @@ void EnemyAISystem::process(std::shared_ptr<Entity> &ai, sf::Time deltaTime)
         {
             enemyCmp->aiState = EnemyComponent::AIState::Reacting;
         }
+        else
+        {
+            if (ballLocCmp->location.top > locCmp->location.top + (locCmp->location.height / 2.f))
+            {
+                // Ball is below us
+                velCmp->velocity.y = Game::PADDLE_SPEED;
+            }
+            else
+            {
+                // Ball is above us
+                velCmp->velocity.y = -1.f * Game::PADDLE_SPEED;
+            }
+        }
         break;
     }
     case EnemyComponent::AIState::Reacting:
@@ -36,7 +49,7 @@ void EnemyAISystem::process(std::shared_ptr<Entity> &ai, sf::Time deltaTime)
         // If we don't already have a prediction, make one
         if (!enemyCmp->predictionValid)
         {
-            enemyCmp->predictedBallPosition = predictImpactPosition(locCmp->location, ballLocCmp->location, ballVelCmp->velocity, 90.f);
+            enemyCmp->predictedBallPosition = predictImpactPosition(locCmp->location, ballLocCmp->location, ballVelCmp->velocity, EnemyComponent::ENEMY_ERROR_SCALE);
             enemyCmp->predictionValid = true;
         }
 
@@ -170,7 +183,8 @@ float EnemyAISystem::predictImpactPosition(sf::FloatRect &paddlePosition, sf::Fl
 }
 
 const std::string EnemyComponent::ENEMY_ID = "ENEMY_ID";
-const sf::Time EnemyComponent::REACTION_TIME = sf::seconds(0.4f);
+const sf::Time EnemyComponent::REACTION_TIME = sf::seconds(0.25f);
+const float EnemyComponent::ENEMY_ERROR_SCALE = 85.f;
 EnemyComponent::EnemyComponent() : Component(ENEMY_ID),
                                    reactionElapsedTime(sf::Time::Zero),
                                    aiState(EnemyComponent::AIState::WiatingForPlayer),
