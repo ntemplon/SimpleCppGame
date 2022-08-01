@@ -1,9 +1,4 @@
 
-#include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
-
 #include <Game.hpp>
 #include <SplashScreen.hpp>
 #include <MainMenuScreen.hpp>
@@ -13,7 +8,6 @@
 #include <GameOverScreen.hpp>
 #include <EnemyAISystem.hpp>
 
-#include <iostream>
 #include <random>
 #include <ctime>
 #include <math.h>
