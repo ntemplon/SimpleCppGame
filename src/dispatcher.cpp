@@ -1,9 +1,11 @@
 #include <Dispatcher.hpp>
+
 #include <iostream>
 
 void Dispatcher::subscribe(const std::string type, const std::function<void(const Event &)> &observer)
 {
-    _observers[type].push_back(observer); // Push to back so the call order matches subscriber order
+    // Push to back so the call order matches subscriber order
+    _observers[type].push_back(observer);
 }
 
 void Dispatcher::dispatch(const Event &event)

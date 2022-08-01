@@ -20,6 +20,10 @@ public:
     /**
      * @brief Draws the prepared sprites to the sf::RenderTarget
      *
+     * This method assumes that it is part of a larger pipeline and that entities may not be the only thing being rendered.
+     * Methods such as sf::RenderWindow.display() need to be called after RenderSystem::render() to ensure everything is
+     * displayed correctly.
+     *
      * @param target The target to draw the entities on.
      */
     void render(sf::RenderTarget &target) const;

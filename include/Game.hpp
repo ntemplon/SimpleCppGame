@@ -45,6 +45,11 @@ public:
     constexpr static float PADDLE_SPEED = 350.f;
 
     /**
+     * @brief The initial speed of the ball
+     */
+    constexpr static float BALL_INITIAL_SPEED = 500.f;
+
+    /**
      * @brief Construct a new Game object
      *
      */

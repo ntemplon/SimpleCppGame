@@ -10,6 +10,7 @@ IteratingSystem::IteratingSystem(const std::shared_ptr<EntityFamily> &family) : 
 
 void IteratingSystem::update(const sf::Time deltaTime)
 {
+    // For each element, process it
     for (auto &pair : this->getEntities())
     {
         this->process(pair.second, deltaTime);

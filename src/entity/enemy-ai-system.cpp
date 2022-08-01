@@ -23,7 +23,7 @@ void EnemyAISystem::process(std::shared_ptr<Entity> &ai, sf::Time deltaTime)
 
     switch (enemyCmp->aiState)
     {
-    case EnemyComponent::AIState::WiatingForPlayer:
+    case EnemyComponent::AIState::WaitingForPlayer:
     {
         // If the ball starts moving towards us, react
         if (ballVelCmp->velocity.x > 0)
@@ -88,7 +88,7 @@ void EnemyAISystem::process(std::shared_ptr<Entity> &ai, sf::Time deltaTime)
         if (ballVelCmp->velocity.x < 0)
         {
             enemyCmp->predictionValid = false; // Stop listening to the prediction
-            enemyCmp->aiState = EnemyComponent::AIState::WiatingForPlayer;
+            enemyCmp->aiState = EnemyComponent::AIState::WaitingForPlayer;
         }
         else // The ball is still moving towards us
         {
@@ -110,7 +110,7 @@ void EnemyAISystem::process(std::shared_ptr<Entity> &ai, sf::Time deltaTime)
         if (ballVelCmp->velocity.x < 0)
         {
             enemyCmp->predictionValid = false; // Stop listening to the prediction
-            enemyCmp->aiState = EnemyComponent::AIState::WiatingForPlayer;
+            enemyCmp->aiState = EnemyComponent::AIState::WaitingForPlayer;
         }
         else // The ball is still moving towards us
         {
@@ -152,8 +152,8 @@ float EnemyAISystem::predictImpactPosition(sf::FloatRect &paddlePosition, sf::Fl
     float yTravel = ballVelocity.y * timeToPaddle;
     float virtualImpactPos = ballTopUsableCoords + yTravel;
 
-    bool fromTop; // !fromTop implies fromBottom
-    float prediction;
+    bool fromTop = true; // !fromTop implies fromBottom
+    float prediction = 0.f;
     if (virtualImpactPos > 0) // impact below the top of screen - maybe off the bottom
     {
         // Each iteration through this loop computes a "bounce" the ball will do. 'fromTop' keeps an eye on which surface the last bounce
@@ -229,7 +229,7 @@ const sf::Time EnemyComponent::REACTION_TIME = sf::seconds(0.25f); // This is th
 const float EnemyComponent::ENEMY_ERROR_SCALE = 85.f;              // This is half a paddle + 10px.
 EnemyComponent::EnemyComponent() : Component(ENEMY_ID),
                                    reactionElapsedTime(sf::Time::Zero),
-                                   aiState(EnemyComponent::AIState::WiatingForPlayer),
+                                   aiState(EnemyComponent::AIState::WaitingForPlayer),
                                    predictedBallPosition((float)Game::WORLD_HEIGHT / 2.f),
                                    predictionValid(false)
 {

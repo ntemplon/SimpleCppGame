@@ -1,6 +1,6 @@
-#include <stdlib.h>
-
 #include <Entity.hpp>
+
+#include <memory>
 
 Entity::Component::Component(const std::string id) : _id(id)
 {

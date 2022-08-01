@@ -1,11 +1,10 @@
-#include <SFML/Audio.hpp>
+#include <Game.hpp>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
 #include <iostream>
-
-#include <Game.hpp>
 
 using namespace std;
 

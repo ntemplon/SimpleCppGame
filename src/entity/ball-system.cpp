@@ -2,6 +2,7 @@
 #include <Components.hpp>
 #include <ComponentFamily.hpp>
 #include <Game.hpp>
+
 #include <math.h>
 
 const std::string BallSystem::PLAYER_SCORE_EVENT = "PLAYER_SCORE_EVENT";

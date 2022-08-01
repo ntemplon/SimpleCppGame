@@ -26,6 +26,7 @@ void Game::start()
         return;
     }
 
+    // Seed the random number generator
     srand(time(NULL));
 
     // ============== Block - assign event listeners ==========================
@@ -57,6 +58,7 @@ void Game::start()
     // ================ Block - Component Entity System ========================
     _engine = std::make_unique<EntityEngine>();
 
+    // Declare the entities and systems we need, then stick them in the engine
     auto player = createPlayer();
     auto enemy = createEnemy();
     auto ball = createBall();
@@ -95,8 +97,10 @@ void Game::start()
     while (!isExiting())
     {
         timeSinceLastUpdate += clock.restart();
+        // Only run the game logic at the fixed rate of times per second
         while (timeSinceLastUpdate > TIME_PER_FRAME)
         {
+            // Fixed time steps help with physics issues
             timeSinceLastUpdate -= TIME_PER_FRAME;
             gameLoop(TIME_PER_FRAME);
         }
@@ -123,30 +127,35 @@ void Game::gameLoop(const sf::Time deltaTime)
     {
     case Game::GameState::ClosingSplash:
     {
+        // If the user closed the splash screen, switch to the main menu
         _gameState = Game::GameState::ShowingMenu;
         _currentScreen = std::make_unique<MainMenuScreen>(_mainWindow, *_dispatcher, "./res/mainmenu.png");
         break;
     }
     case Game::GameState::PlayRequested:
     {
+        // If the user clicked play, play the game
         _gameState = Game::GameState::Playing;
         _currentScreen = std::make_unique<GameScreen>(_mainWindow, *_dispatcher, *_render);
         break;
     }
     case Game::GameState::Lost:
     {
+        // If the user lost, scold them and wait for acknowledgement
         _gameState = Game::GameState::ExitOnAck;
         _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/game-over.png");
         break;
     }
     case Game::GameState::Won:
     {
+        // If the user won, acknowledge them and wait for acknowledgement
         _gameState = Game::GameState::ExitOnAck;
         _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/you-win.png");
         break;
     }
     }
 
+    // Call core game loop logic
     this->handleInput();
     this->update(deltaTime);
 
@@ -167,22 +176,29 @@ void Game::handleInput()
         switch (currentEvent.type)
         {
         case sf::Event::Resized:
+        {
+            // React to window resizing
             this->modifyView([&](sf::View view)
                              {
                                 view.setSize(currentEvent.size.width, currentEvent.size.height); 
                                 return view; });
             break;
+        }
         case sf::Event::Closed:
+        {
             // If the window is closed, exit the game
             _gameState = Game::GameState::Exiting;
             break;
+        }
         case sf::Event::MouseButtonPressed:
+        {
             if (_currentScreen)
             {
                 // Pass mouse button events on to the current screen
                 _currentScreen->handleClick(currentEvent.mouseButton.x, currentEvent.mouseButton.y);
             }
             break;
+        }
         }
     }
 }
@@ -191,6 +207,7 @@ void Game::update(const sf::Time deltaTime)
 {
     switch (_gameState)
     {
+    // Only update the engine if we're playing
     case Game::GameState::Playing:
         this->_engine->update(deltaTime);
         break;
@@ -214,10 +231,12 @@ std::shared_ptr<Entity> Game::createPlayer()
 {
     auto player = std::make_shared<Entity>();
 
+    // The player looks like a paddle
     auto render = std::make_shared<RenderComponent>();
     render->texture->loadFromFile("./res/paddle.png");
     render->sprite = sf::Sprite(*(render->texture));
 
+    // The player starts at the left edge in the middle of the screen
     auto location = std::make_shared<LocationComponent>();
     location->location.left = WORLD_BORDER;
     location->location.top = 309; // World middle
@@ -240,10 +259,12 @@ std::shared_ptr<Entity> Game::createEnemy()
 {
     auto enemy = std::make_shared<Entity>();
 
+    // The enemy looks like a paddle
     auto render = std::make_shared<RenderComponent>();
     render->texture->loadFromFile("./res/paddle.png");
     render->sprite = sf::Sprite(*(render->texture));
 
+    // The enemy starts on the right edge at the middle of the screen
     auto location = std::make_shared<LocationComponent>();
     location->location.left = WORLD_WIDTH - WORLD_BORDER - 15;
     location->location.top = 309; // World middle
@@ -266,17 +287,20 @@ std::shared_ptr<Entity> Game::createBall()
 {
     auto ball = std::make_shared<Entity>();
 
+    // The ball looks like a ball
     auto render = std::make_shared<RenderComponent>();
     render->texture->loadFromFile("./res/ball.png");
     render->sprite = sf::Sprite(*(render->texture));
 
+    // The ball starts at the middle of the screen
     auto location = std::make_shared<LocationComponent>();
     location->location.height = 10.f;
     location->location.width = 10.f;
     location->location.left = (Game::WORLD_WIDTH - location->location.width) / 2.f;
     location->location.top = (Game::WORLD_HEIGHT - location->location.height) / 2.f;
 
-    float ballSpeed = 500.f;
+    // The ball starts at the starting speed in a random direction
+    float ballSpeed = Game::BALL_INITIAL_SPEED;
     float angleRad = (rand() / static_cast<float>(RAND_MAX)) * 6.283185;
     auto velocity = std::make_shared<VelocityComponent>();
     velocity->velocity.x = ballSpeed * cos(angleRad);

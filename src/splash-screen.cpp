@@ -14,6 +14,7 @@ SplashScreen::SplashScreen(sf::RenderWindow &window, Dispatcher &dispatcher, std
 
 void SplashScreen::render() const
 {
+    // Draw the splash screen
     this->getWindow().clear(sf::Color(0, 0, 0));
     this->getWindow().draw(_sprite);
     this->getWindow().display();
@@ -21,6 +22,7 @@ void SplashScreen::render() const
 
 void SplashScreen::handleClick(int x, int y)
 {
-    Event event(SPLASH_SCREEN_CLOSE); // Why is this separate declaration needed?
+    // Dispatch an event to move past the splash screen
+    Event event(SPLASH_SCREEN_CLOSE);
     this->getDispatcher().dispatch(event);
 }

@@ -72,7 +72,7 @@ public:
         /**
          * @brief The AI has hit the ball and is waiting for the player to respond.
          */
-        WiatingForPlayer
+        WaitingForPlayer
     };
 
     /**

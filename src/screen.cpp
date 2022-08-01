@@ -1,6 +1,7 @@
-#include <SFML/Graphics.hpp>
 
 #include <Screen.hpp>
+
+#include <SFML/Graphics.hpp>
 
 Screen::Screen(sf::RenderWindow &window, Dispatcher &dispatcher) : _window(window), _dispatcher(dispatcher)
 {

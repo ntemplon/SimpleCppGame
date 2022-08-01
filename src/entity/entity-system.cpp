@@ -11,8 +11,10 @@ EntitySystem::EntitySystem(const std::shared_ptr<EntityFamily> &family) : _famil
 
 void EntitySystem::engineEntityAdded(const std::shared_ptr<Entity> &entity)
 {
+    // If they are in the family, write them down
     if (this->_family->isInFamily(*entity))
     {
+        // Copy the shared pointer for entity into the map
         this->_entities.insert(std::make_pair(entity->getId(), entity));
     }
 }

@@ -31,6 +31,13 @@ public:
     void handleClick(int x, int y);
 
 private:
+    /**
+     * @brief The RenderSystem that will draw the EntityEngine Entity objects
+     */
     RenderSystem &_renderSystem;
+
+    /**
+     * @brief A rectangle to represent the play surface
+     */
     sf::RectangleShape _gameWindow;
 };
