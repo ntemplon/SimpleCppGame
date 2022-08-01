@@ -37,7 +37,7 @@ target_include_directories(RunMe PUBLIC ${PROJECT_SOURCE_DIR}/include/entity/)
 
 # Load SFML. MODULE is used to force usage of the FindSFML.cmake file over the .config file that comes
 #  with the SFML installation from the Ubuntu 22.04 repositories.
-find_package(SFML 2.5 MODULE COMPONENTS system window graphics network audio REQUIRED)
+find_package(SFML 2.5 MODULE COMPONENTS system window graphics audio REQUIRED)
 
 #Specify that what is found by the SFML find above should be linked to the RunMe target as a public dependency
 target_link_libraries(RunMe PUBLIC ${SFML_LIBRARIES})
