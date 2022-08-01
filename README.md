@@ -1,5 +1,5 @@
 # SimpleCppGame
-A simple game written in C++ that shameless rips of Pong.
+A simple game written in C++ that shameless rips of Pong. Simple Cpp Game is designed to work on x86 Linux, Mac, and Windows. ARM is not explicitly supported at this time due to lack of available test hardware for the developer.
 
 Installing and Getting Started
 ================================
