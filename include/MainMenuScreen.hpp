@@ -1,7 +1,9 @@
 #pragma once
 
 #include <Screen.hpp>
+
 #include <SFML/Graphics.hpp>
+
 #include <list>
 #include <string>
 #include <functional>

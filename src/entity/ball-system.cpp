@@ -25,6 +25,7 @@ BallSystem::BallSystem(Dispatcher &dispatcher, Entity &player, Entity &enemy) : 
     }
 }
 
+// TODO: At high speeds, the ball can clip through paddles. Fix the bug!
 void BallSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
 {
     LocationComponent *locCmp = dynamic_cast<LocationComponent *>(entity->getComponent(LocationComponent::LOC_COMP_ID).get());

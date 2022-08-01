@@ -1,9 +1,9 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
-
 #include <IteratingSystem.hpp>
 #include <Dispatcher.hpp>
+
+#include <SFML/Graphics.hpp>
 
 /**
  * @brief A system that handles the ball physics.

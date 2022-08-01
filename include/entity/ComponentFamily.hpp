@@ -1,8 +1,8 @@
 #pragma once
 
-#include <unordered_set>
-
 #include <EntityFamily.hpp>
+
+#include <unordered_set>
 
 /**
  * @brief An EntityFamily that defines a class as having a component of each of the specified types.

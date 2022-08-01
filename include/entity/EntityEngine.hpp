@@ -1,11 +1,11 @@
 #pragma once
 
-#include <vector>
-#include <memory>
+#include <EntitySystem.hpp>
 
 #include <SFML/System.hpp>
 
-#include <EntitySystem.hpp>
+#include <vector>
+#include <memory>
 
 /**
  * @brief A engine for handling a component entity system.

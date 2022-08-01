@@ -1,9 +1,10 @@
 #pragma once
 
-#include <memory>
+#include <Entity.hpp>
 
 #include <SFML/Graphics.hpp>
-#include <Entity.hpp>
+
+#include <memory>
 
 /**
  * @brief A component that stores the information required to render the entity on the screen.

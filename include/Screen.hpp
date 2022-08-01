@@ -1,8 +1,8 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
-
 #include <Dispatcher.hpp>
+
+#include <SFML/Graphics.hpp>
 
 /**
  * @brief A game screen
