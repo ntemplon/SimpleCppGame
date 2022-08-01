@@ -29,6 +29,19 @@ void EnemyAISystem::process(std::shared_ptr<Entity> &ai, sf::Time deltaTime)
         {
             enemyCmp->aiState = EnemyComponent::AIState::Reacting;
         }
+        else
+        {
+            if (ballLocCmp->location.top > locCmp->location.top + (locCmp->location.height / 2.f))
+            {
+                // Ball is below us
+                velCmp->velocity.y = Game::PADDLE_SPEED;
+            }
+            else
+            {
+                // Ball is above us
+                velCmp->velocity.y = -1.f * Game::PADDLE_SPEED;
+            }
+        }
         break;
     }
     case EnemyComponent::AIState::Reacting:
