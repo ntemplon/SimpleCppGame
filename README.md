@@ -74,6 +74,7 @@ use whatever equivalent commands are available on your operating system.
     `cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_C_COMPILER:FILEPATH=/path/to/c_compiler -DCMAKE_CXX_COMPILER:FILEPATH=/path/to/cxx_compiler -S/path/to/repo/root -B/path/to/repo/root/build -G "Unix Makefiles"`
 
 Note: The default location for c compilers and cxx compilers on Ubuntu is /usr/bin
+
 Note: If on windows, use cmake-gui.exe instead and refer to the CMake documentation for assistance.
 
 3. Build the target
