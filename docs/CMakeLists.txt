@@ -35,7 +35,7 @@ add_custom_command(OUTPUT ${DOXYGEN_INDEX_FILE}
                    DEPENDS ${RUN_ME_PUBLIC_HEADERS}
                    DEPENDS ${DOXYFILE_IN}
                    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
-                   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+                   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
                    COMMENT "Generating Doxygen files")
 
 add_custom_target(Doxygen ALL DEPENDS ${DOXYGEN_INDEX_FILE})

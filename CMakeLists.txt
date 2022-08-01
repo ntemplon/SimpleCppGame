@@ -24,6 +24,9 @@ add_executable(RunMe ${SRC_FILES})
 set_property(TARGET RunMe
              PROPERTY C_STANDARD 11
 )
+set_property(TARGET RunMe
+    PROPERTY CXX_STANDARD 11
+)
 
 # Put the Find*.cmake files at ./cmake onto the module path
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
