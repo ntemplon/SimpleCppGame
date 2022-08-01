@@ -13,3 +13,6 @@ src/cmake_install.cmake
 src/Makefile
 src/CMakeFiles/CMakeDirectoryInformation.cmake
 src/CMakeFiles/progress.marks
+docs/Makefile
+docs/make.bat
+docs/Makefile

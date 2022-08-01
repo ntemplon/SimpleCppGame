@@ -22,10 +22,10 @@ file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 add_executable(RunMe ${SRC_FILES})
 # Specify that the RunMe target will use C++11
 set_property(TARGET RunMe
-             PROPERTY C_STANDARD 11
+             PROPERTY C_STANDARD 14
 )
 set_property(TARGET RunMe
-    PROPERTY CXX_STANDARD 11
+    PROPERTY CXX_STANDARD 14
 )
 
 # Put the Find*.cmake files at ./cmake onto the module path
