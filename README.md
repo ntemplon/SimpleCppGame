@@ -33,7 +33,7 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     **Mac** users should install Doxygen via Homebrew.
 
-    `sudo brew install doxygen graphviz`
+    `brew install doxygen graphviz`
 
     **Windows** users should download and run the [Doxygen installer](https://doxygen.nl/download.html) and
     [graphviz installer](https://graphviz.org/download/).
