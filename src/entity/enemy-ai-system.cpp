@@ -170,7 +170,7 @@ float EnemyAISystem::predictImpactPosition(sf::FloatRect &paddlePosition, sf::Fl
 }
 
 const std::string EnemyComponent::ENEMY_ID = "ENEMY_ID";
-const sf::Time EnemyComponent::REACTION_TIME = sf::seconds(0.4f);
+const sf::Time EnemyComponent::REACTION_TIME = sf::seconds(0.6f);
 EnemyComponent::EnemyComponent() : Component(ENEMY_ID),
                                    reactionElapsedTime(sf::Time::Zero),
                                    aiState(EnemyComponent::AIState::WiatingForPlayer),

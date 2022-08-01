@@ -25,4 +25,6 @@ private:
     sf::FloatRect _right;
 
     Dispatcher &_dispatcher;
+
+    void slightlyRandomize(sf::Vector2f &velocity) const;
 };

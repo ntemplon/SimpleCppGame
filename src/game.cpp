@@ -16,7 +16,7 @@ const sf::Time Game::TIME_PER_FRAME = sf::seconds(1.0f / 60.0f);
 const int Game::WORLD_WIDTH = 1024;
 const int Game::WORLD_HEIGHT = 768;
 const int Game::WORLD_BORDER = 20;
-const float Game::PADDLE_SPEED = 225.f;
+const float Game::PADDLE_SPEED = 350.f;
 
 Game::Game() : _gameState(Game::GameState::Uninitialized), _dispatcher(std::make_unique<Dispatcher>())
 {
