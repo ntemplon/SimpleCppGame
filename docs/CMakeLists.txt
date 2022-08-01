@@ -17,7 +17,7 @@ find_package(Doxygen REQUIRED) # Included with the Ubuntu 22.04 repo installatio
 set(SPHINX_EXECUTABLE ${VENV_BIN_DIR}/sphinx-build) # This will be installed off of pip, so we can assume a location
 
 # Get a list of all public header files so that we can generate documentation for them
-get_target_property(RUN_ME_PUBLIC_HEADER_DIR RunMe INTERFACE_INCLUDE_DIRECTORIES)
+# get_target_property(RUN_ME_PUBLIC_HEADER_DIR RunMe INTERFACE_INCLUDE_DIRECTORIES)
 file(GLOB_RECURSE RUN_ME_PUBLIC_HEADERS ${PROJECT_SOURCE_DIR}/include/*.hpp) # ${PROJECT_SOURCE_DIR}/include/*.h
 
 set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/include/) # Root directory with RECURSIVE = TRUE in the Doxyfile

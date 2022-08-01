@@ -3,3 +3,13 @@ build/
 out/
 
 RunMe
+cmake_install.cmake
+CMakeCache.txt
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+Makefile
+docs/Makefile
+src/cmake_install.cmake
+src/Makefile
+src/CMakeFiles/CMakeDirectoryInformation.cmake
+src/CMakeFiles/progress.marks
