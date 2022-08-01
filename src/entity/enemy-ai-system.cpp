@@ -2,7 +2,6 @@
 #include <Game.hpp>
 
 #include <math.h>
-#include <iostream>
 
 EnemyAISystem::EnemyAISystem(Entity &ball) : IteratingSystem(std::make_shared<ComponentFamily>(
                                                  std::unordered_set<std::string>{EnemyComponent::ENEMY_ID,
@@ -138,12 +137,10 @@ float EnemyAISystem::predictImpactPosition(sf::FloatRect &paddlePosition, sf::Fl
 
         if (fromTop)
         {
-            std::cout << "Branch 1\n";
             prediction = virtualImpactPos + Game::WORLD_BORDER - 2.f;
         }
         else
         {
-            std::cout << "Branch 2\n";
             prediction = Game::WORLD_HEIGHT - Game::WORLD_BORDER + 2.f - virtualImpactPos;
         }
     }
@@ -159,12 +156,10 @@ float EnemyAISystem::predictImpactPosition(sf::FloatRect &paddlePosition, sf::Fl
 
         if (fromTop)
         {
-            std::cout << "Branch 3\n";
             prediction = Game::WORLD_BORDER - 2.f - virtualImpactPos;
         }
         else
         {
-            std::cout << "Branch 4\n";
             prediction = Game::WORLD_HEIGHT - Game::WORLD_BORDER + 2.f + virtualImpactPos;
         }
     }
