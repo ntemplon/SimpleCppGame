@@ -20,8 +20,7 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     `sudo apt install libsfml-dev`
 
-    **Mac** users may install the frameworks to `/Library/Frameworks` or `~/Library/Frameworks`. Installation via homebrew is also
-    supported.
+    **Mac** users should install SFML following [these instructions](https://www.sfml-dev.org/tutorials/2.5/start-osx.php).
 
     **Windows** users (or other users that wish to keep SFML separate) can unzip the appropriate package and direct the game build
     files there by setting the `SFML_ROOT` environment variable to the root SFML directory after unzipping.
