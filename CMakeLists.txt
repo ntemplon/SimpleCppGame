@@ -39,7 +39,7 @@ target_include_directories(RunMe PUBLIC ${PROJECT_SOURCE_DIR}/include/entity/)
 #  with the SFML installation from the Ubuntu 22.04 repositories.
 find_package(SFML 2.5 MODULE COMPONENTS system window graphics REQUIRED)
 
-#Specify that what is found by the SFML find above should be linked to the RunMe target as a public dependency
+# Specify that what is found by the SFML find above should be linked to the RunMe target as a public dependency
 target_link_libraries(RunMe PUBLIC ${SFML_LIBRARIES})
 
 # Add the subdirectories. I have learned the hardway that if you do not DO THIS LAST, lots of dependencies will
