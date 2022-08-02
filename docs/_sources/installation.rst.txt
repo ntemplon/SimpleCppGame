@@ -46,7 +46,13 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     :code:`sudo apt install python3.10 python3.10-venv`
 
-    **Mac** users can download Python from `the official website <https://www.python.org/downloads/macos/>`_.
+    **Mac** users should install python3, pip, and the virtualenv tools. There are many ways to do this, such as with homebrew:
+
+    :code:`brew install python3`
+
+    :code:`pip3 install virtualenv`
+
+    Note: The author does not have a Mac to test installation of python on and apologizes if steps are missing.
 
     **Windows** users should download and run an installter from `the Python website <https://www.python.org/downloads/>`_. Do NOT
     use the version of Python from the windows store; it is substantially more difficult to work with.
