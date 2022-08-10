@@ -10,8 +10,10 @@ Installing Dependencies
 The Simple Cpp Game (and associated documentation generation) has the following dependencies:
 
 1. A C++ Compiler
-    Any C++ Compiler that supports C++14 and :code:`#pragma once` will suffice. The game was developed and debugged using g++ 
+    Any C++ Compiler and CMake. A C++ compiler that supports C++14 and :code:`#pragma once` will suffice. The game was developed and debugged using g++ 
     12.2 (Ubuntu 22.04 default).
+
+    On Ubuntu 22.04: :code:`sudo apt install gcc g++ cmake`
 
 2. SFML
     SFML is provided for Windows, Mac, and Linux `here <https://www.sfml-dev.org/download/sfml/2.5.1/>`_.
