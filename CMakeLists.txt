@@ -20,7 +20,7 @@ endforeach()
 file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 # This defines a build target called "Application" that makes an executable out of these source files
 add_executable(RunMe ${SRC_FILES})
-# Specify that the RunMe target will use C++11
+# Specify that the RunMe target will use C++14
 set_property(TARGET RunMe
              PROPERTY C_STANDARD 14
 )
@@ -45,4 +45,4 @@ target_link_libraries(RunMe PUBLIC ${SFML_LIBRARIES})
 # Add the subdirectories. I have learned the hardway that if you do not DO THIS LAST, lots of dependencies will
 #  break, hilarity will ensue, and you will forget to do your laundry while trying to fix them.
 add_subdirectory(src)
-add_subdirectory (docs)
+add_subdirectory(docs)
