@@ -17,8 +17,7 @@ find_package(Doxygen REQUIRED) # Included with the Ubuntu 22.04 repo installatio
 set(SPHINX_EXECUTABLE ${VENV_BIN_DIR}/sphinx-build) # This will be installed off of pip, so we can assume a location
 
 # Get a list of all public header files so that we can generate documentation for them
-# get_target_property(RUN_ME_PUBLIC_HEADER_DIR RunMe INTERFACE_INCLUDE_DIRECTORIES)
-file(GLOB_RECURSE RUN_ME_PUBLIC_HEADERS ${PROJECT_SOURCE_DIR}/include/*.hpp) # ${PROJECT_SOURCE_DIR}/include/*.h
+file(GLOB_RECURSE MAIN_TARGET_PUBLIC_HEADERS ${PROJECT_SOURCE_DIR}/include/*.hpp) # ${PROJECT_SOURCE_DIR}/include/*.h
 
 set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/include/) # Root directory with RECURSIVE = TRUE in the Doxyfile
 set(DOXYGEN_OUTPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/doxygen)
@@ -32,7 +31,7 @@ file(MAKE_DIRECTORY ${DOXYGEN_OUTPUT_DIR}) #Doxygen won't create this for us
 configure_file(${DOXYFILE_IN} ${DOXYFILE_OUT} @ONLY)
 
 add_custom_command(OUTPUT ${DOXYGEN_INDEX_FILE}
-                   DEPENDS ${RUN_ME_PUBLIC_HEADERS}
+                   DEPENDS ${MAIN_TARGET_PUBLIC_HEADERS}
                    DEPENDS ${DOXYFILE_IN}
                    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
@@ -54,7 +53,7 @@ file(GLOB_RECURSE RST_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.rst)
 add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
                    COMMAND ${SPHINX_EXECUTABLE} -b html
                    # Tell Breathe where to find the Doxygen output
-                   -Dbreathe_projects.RunMe=${DOXYGEN_OUTPUT_DIR}/xml
+                   -Dbreathe_projects.simple-cpp-game=${DOXYGEN_OUTPUT_DIR}/xml
                    ${SPHINX_SOURCE} ${SPHINX_BUILD}
                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
                    DEPENDS

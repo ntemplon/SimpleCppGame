@@ -15,23 +15,21 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     On Ubuntu 22.04: :code:`sudo apt install gcc g++ cmake`
 
-2. SFML
-    SFML is provided for Windows, Mac, and Linux `here <https://www.sfml-dev.org/download/sfml/2.5.1/>`_.
+2. SFML Dependencies
+    The Simple Cpp Game is built with the Jupiter engine that is dependent on `SFML <https://www.sfml-dev.org/download/sfml/2.5.1/>`_. The CMake
+    files will build SFML from source, but SFML's dependencies (xrandr, freetype, and udev) need to be installed manually first.
     
-    **Linux** users are recommended to install SFML via their distribution's package manager, if possible. For example, in Ubuntu:
+    **Linux** users are recommended to install these dependencies via their distribution's package manager, if possible. For example, in Ubuntu:
 
-    :code:`sudo apt install libsfml-dev`
+    :code:`sudo apt install libxrander-dev libfreetype-dev libudev-dev`
 
-    **Mac** users should install SFML following `these instructions <https://www.sfml-dev.org/tutorials/2.5/start-osx.php>`_.
-
-    **Windows** users (or other users that wish to keep SFML separate) can unzip the appropriate package and direct the game build
-    files there by setting the :code:`SFML_ROOT` environment variable to the root SFML directory after unzipping.
+    **Mac** and **Windows** users should consult the Oracle of Google for how to best install dependencies.
 
 2. Doxygen (with graphviz)
 
-    **Linux** users should install Doxygen via their distribution's package manager.
+    **Linux** users should install Doxygen via their distribution's package manager. For example, on Ubuntu:
 
-    :code:`sudo [apt/dnf/yum] install doxygen graphviz`
+    :code:`sudo apt install doxygen graphviz`
 
     **Mac** users should install Doxygen via Homebrew.
 
