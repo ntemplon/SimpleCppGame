@@ -91,12 +91,11 @@ test hardware for the developer.</p>
 </dl>
 </li>
 <li><dl>
-<dt>SFML</dt><dd><p>SFML is provided for Windows, Mac, and Linux <a class="reference external" href="https://www.sfml-dev.org/download/sfml/2.5.1/">here</a>.</p>
-<p><strong>Linux</strong> users are recommended to install SFML via their distribution’s package manager, if possible. For example, in Ubuntu:</p>
-<p><code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libsfml-dev</span></code></p>
-<p><strong>Mac</strong> users should install SFML following <a class="reference external" href="https://www.sfml-dev.org/tutorials/2.5/start-osx.php">these instructions</a>.</p>
-<p><strong>Windows</strong> users (or other users that wish to keep SFML separate) can unzip the appropriate package and direct the game build
-files there by setting the <code class="code docutils literal notranslate"><span class="pre">SFML_ROOT</span></code> environment variable to the root SFML directory after unzipping.</p>
+<dt>SFML Dependencies</dt><dd><p>The Simple Cpp Game is built with the Jupiter engine that is dependent on <a class="reference external" href="https://www.sfml-dev.org/download/sfml/2.5.1/">SFML</a>. The CMake
+files will build SFML from source, but SFML’s dependencies (xrandr, freetype, and udev) need to be installed manually first.</p>
+<p><strong>Linux</strong> users are recommended to install these dependencies via their distribution’s package manager, if possible. For example, in Ubuntu:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libxrander-dev</span> <span class="pre">libfreetype-dev</span> <span class="pre">libudev-dev</span></code></p>
+<p><strong>Mac</strong> and <strong>Windows</strong> users should consult the Oracle of Google for how to best install dependencies.</p>
 </dd>
 </dl>
 </li>
@@ -104,8 +103,8 @@ files there by setting the <code class="code docutils literal notranslate"><span
 <ol class="arabic" start="2">
 <li><p>Doxygen (with graphviz)</p>
 <blockquote>
-<div><p><strong>Linux</strong> users should install Doxygen via their distribution’s package manager.</p>
-<p><code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">[apt/dnf/yum]</span> <span class="pre">install</span> <span class="pre">doxygen</span> <span class="pre">graphviz</span></code></p>
+<div><p><strong>Linux</strong> users should install Doxygen via their distribution’s package manager. For example, on Ubuntu:</p>
+<p><code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">doxygen</span> <span class="pre">graphviz</span></code></p>
 <p><strong>Mac</strong> users should install Doxygen via Homebrew.</p>
 <p><code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">doxygen</span> <span class="pre">graphviz</span></code></p>
 <p><strong>Windows</strong> users should download and run the <a class="reference external" href="https://doxygen.nl/download.html">Doxygen installer</a> and
