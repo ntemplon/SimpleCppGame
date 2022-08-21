@@ -24,5 +24,5 @@ void SplashScreen::handleClick(int x, int y)
 {
     // Dispatch an event to move past the splash screen
     Event event(SPLASH_SCREEN_CLOSE);
-    this->getDispatcher().dispatch(event);
+    this->getDispatcher().queue(event);
 }

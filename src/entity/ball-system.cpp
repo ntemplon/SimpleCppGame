@@ -82,13 +82,13 @@ void BallSystem::process(std::shared_ptr<Entity> &entity, sf::Time deltaTime)
     {
         // Enemy scores
         Event score(ENEMY_SCORE_EVENT);
-        this->_dispatcher.dispatch(score);
+        this->_dispatcher.queue(score);
     }
     else if (_right.intersects(location) && velCmp->velocity.x > 0) // Touching the right and moving right.
     {
         // Player scores
         Event score(PLAYER_SCORE_EVENT);
-        this->_dispatcher.dispatch(score);
+        this->_dispatcher.queue(score);
     }
 }
 

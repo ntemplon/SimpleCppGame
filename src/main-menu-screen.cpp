@@ -20,7 +20,7 @@ MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, Dispatcher &dispatcher,
     {
         // If the user clicks play, tell whoever is listening we'd like to play the game
         Event event(MainMenuScreen::MAIN_MENU_PLAY);
-        this->getDispatcher().dispatch(event);
+        this->getDispatcher().queue(event);
     };
 
     // Define the 'Exit' menu item
@@ -33,7 +33,7 @@ MainMenuScreen::MainMenuScreen(sf::RenderWindow &window, Dispatcher &dispatcher,
     {
         // If the user clicks play, tell whoever is listening we'd like to exit the game
         Event event(MainMenuScreen::MAIN_MENU_EXIT);
-        this->getDispatcher().dispatch(event);
+        this->getDispatcher().queue(event);
     };
 
     _menuItems.push_back(playItem);

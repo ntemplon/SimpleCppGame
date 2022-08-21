@@ -21,5 +21,5 @@ void GameOverScreen::handleClick(int x, int y)
 {
     // Acknowlege the user is ready for the game to close
     Event ack(GAME_OVER_ACK);
-    this->getDispatcher().dispatch(ack);
+    this->getDispatcher().queue(ack);
 }
