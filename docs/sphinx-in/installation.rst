@@ -66,7 +66,7 @@ You can download the repository from the website or by cloning it with :code:`gi
 Building the Game
 ------------------
 The easiest way to build the game is to open `VSCode <https://code.visualstudio.com/>`_ in the respository directory and invoke the
-CMake: Configure and CMake: Built Target RunMe commands with Ctrl + Shift + P or equivalent Mac command.
+CMake: Configure and CMake: Built Target simple-cpp-game commands with Ctrl + Shift + P or equivalent Mac command.
 
 To manually build the game, open a terminal in the repository directory and run the following commands. They are provided for Linux;
 use whatever equivalent commands are available on your operating system.
@@ -93,4 +93,4 @@ Note: If on windows, use cmake-gui.exe instead and refer to the CMake documentat
     
     cmake --build . --config Release --target all
 
-This will result in a RunMe executable in the build folder, which you can run to play the game!
+This will result in a simple-cpp-game executable in the build folder, which you can run to play the game!

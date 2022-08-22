@@ -7,6 +7,7 @@
 #include <VelocitySystem.hpp>
 #include <PlayerInputSystem.hpp>
 #include <BallSystem.hpp>
+#include <StateMachine.hpp>
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
@@ -72,53 +73,6 @@ public:
 
 private:
     /**
-     * @brief The various states of the game
-     */
-    enum class GameState
-    {
-        /**
-         * @brief The game is not running yet. No actions can be taken.
-         */
-        Uninitialized,
-        /**
-         * @brief The SplashScreen is being shown.
-         */
-        ShowingSplash,
-        /**
-         * @brief The SplashScreen has been closed, but the MainMenuScreen is not yet rendered.
-         */
-        ClosingSplash,
-        /**
-         * @brief The MainMenuScreen is showing.
-         */
-        ShowingMenu,
-        /**
-         * @brief The user selected Play on the MainMenuScreen, but the GameScreen has not been shown.
-         */
-        PlayRequested,
-        /**
-         * @brief The GameScreen is showing and the user is playing the game.
-         */
-        Playing,
-        /**
-         * @brief The user has won the game, but the GameOverScreen is not yet showing to inform them of this.
-         */
-        Won,
-        /**
-         * @brief The user has lost the game, but the GameOverScreen is not yet showing to inform them of this.
-         */
-        Lost,
-        /**
-         * @brief The user is on the GameOverScreen and the game will exit when they acknowledge this.
-         */
-        ExitOnAck,
-        /**
-         * @brief The game has ended and the application is exiting.
-         */
-        Exiting
-    };
-
-    /**
      * @brief A shortcut for checking if the game is currently executing
      */
     bool isExiting() const;
@@ -147,17 +101,6 @@ private:
     void update(const sf::Time detlaTime);
 
     /**
-     * @brief Evaluates whether or not it is viable to render in the current state.
-     *
-     * States that are not viable to rendering are Game::GameState::Uninitialized, etc.
-     *
-     * @param state The state to evaluate.
-     * @return true if rendering is valid in this state
-     * @return false if rendering is not valid in this state
-     */
-    bool shouldRenderInState(const Game::GameState state) const;
-
-    /**
      * @brief Modifies the current view of the window with the specified operation
      *
      * Call this instead of directly modifying the view to avoid code duplication to handle pass-by-value calls in that process.
@@ -170,15 +113,45 @@ private:
     std::shared_ptr<Entity> createEnemy();
     std::shared_ptr<Entity> createBall();
 
-    GameState _gameState;
+    void render();
+
+    void displaySplashScreen();
+    void displayMainMenu();
+    void startPlaying();
+    void loseGame();
+    void winGame();
+
     sf::RenderWindow _mainWindow;
     sf::View _view;
 
     std::unique_ptr<Screen> _currentScreen;
-    std::unique_ptr<Dispatcher> _dispatcher;
+    std::unique_ptr<Dispatcher> _dispatcher; // It is VERY important this is initialiized before _stm!!! VERY.
     std::unique_ptr<EntityEngine> _engine;
     std::shared_ptr<RenderSystem> _render;
     std::shared_ptr<VelocitySystem> _velocity;
     std::shared_ptr<PlayerInputSystem> _input;
     std::shared_ptr<BallSystem> _ballSystem;
+
+    StateMachine _stm;
+    std::shared_ptr<StateMachine::State> _uninitialized;
+    std::shared_ptr<StateMachine::State> _splash;
+    std::shared_ptr<StateMachine::State> _mainMenu;
+    std::shared_ptr<StateMachine::State> _playing;
+    std::shared_ptr<StateMachine::State> _won;
+    std::shared_ptr<StateMachine::State> _lost;
+    std::shared_ptr<StateMachine::State> _exiting;
+
+    class StartGameEvent : public Event
+    {
+    public:
+        static const std::string START_GAME_EVENT;
+        StartGameEvent();
+    };
+
+    class WindowCloseEvent : public Event
+    {
+    public:
+        static const std::string WINDOW_CLOSE_EVENT;
+        WindowCloseEvent();
+    };
 };

@@ -7,6 +7,7 @@
 #include <Components.hpp>
 #include <GameOverScreen.hpp>
 #include <EnemyAISystem.hpp>
+#include <LambdaStates.hpp>
 
 #include <random>
 #include <ctime>
@@ -14,50 +15,109 @@
 
 const sf::Time Game::TIME_PER_FRAME = sf::seconds(1.0f / 60.0f);
 
-Game::Game() : _gameState(Game::GameState::Uninitialized), _dispatcher(std::make_unique<Dispatcher>())
+Game::Game()
+    : _dispatcher(std::make_unique<Dispatcher>()),
+      _engine(new EntityEngine()),
+      _stm(StateMachine(*_dispatcher)),
+      _uninitialized(
+          std::make_shared<LambdaState>(
+              _stm,
+              /* entry() */ []()
+              { return; },
+              /* exit() */ []()
+              { return; },
+              /* update(deltaT) */ [&](const sf::Time deltaT)
+              { return; })),
+      _splash(
+          std::make_shared<LambdaState>(
+              _stm,
+              /* entry() */ [this]()
+              { this->displaySplashScreen(); },
+              /* exit() */ []()
+              { return; },
+              /* update(deltaT) */ [](const sf::Time deltaT)
+              { return; })),
+      _mainMenu(
+          std::make_shared<LambdaState>(
+              _stm,
+              /* entry() */ [this]()
+              { this->displayMainMenu(); },
+              /* exit() */ []()
+              { return; },
+              /* update(deltaT) */ [&](const sf::Time deltaT)
+              { return; })),
+      _playing(
+          std::make_shared<LambdaState>(
+              _stm,
+              /* entry() */ [this]()
+              { this->startPlaying(); },
+              /* exit() */ [&]()
+              { return; },
+              /* update(deltaT) */ [this](const sf::Time deltaT)
+              { this->_engine->update(deltaT); })),
+      _won(
+          std::make_shared<LambdaState>(
+              _stm,
+              /* entry() */ [this]()
+              { this->winGame(); },
+              /* exit() */ []()
+              { return; },
+              /* update(deltaT) */ [](const sf::Time deltaT)
+              { return; })),
+      _lost(
+          std::make_shared<LambdaState>(
+              _stm,
+              /* entry() */ [this]()
+              { this->loseGame(); },
+              /* exit() */ []()
+              { return; },
+              /* update(deltaT) */ [](const sf::Time deltaT)
+              { return; })),
+      _exiting(
+          std::make_shared<LambdaState>(
+              _stm,
+              /* entry() */ [this]()
+              { this->_mainWindow.close(); },
+              /* exit() */ []()
+              { return; },
+              /* update(deltaT) */ [](const sf::Time deltaT)
+              { return; }))
 {
+
+    _uninitialized->registerTransition(Game::StartGameEvent::START_GAME_EVENT, _splash);
+    _uninitialized->registerTransition(Game::WindowCloseEvent::WINDOW_CLOSE_EVENT, _exiting);
+
+    _splash->registerTransition(SplashScreen::SPLASH_SCREEN_CLOSE, _mainMenu);
+    _splash->registerTransition(Game::WindowCloseEvent::WINDOW_CLOSE_EVENT, _exiting);
+
+    _mainMenu->registerTransition(MainMenuScreen::MAIN_MENU_PLAY, _playing);
+    _mainMenu->registerTransition(MainMenuScreen::MAIN_MENU_EXIT, _exiting);
+    _mainMenu->registerTransition(Game::WindowCloseEvent::WINDOW_CLOSE_EVENT, _exiting);
+
+    _playing->registerTransition(BallSystem::PLAYER_SCORE_EVENT, _won);
+    _playing->registerTransition(BallSystem::ENEMY_SCORE_EVENT, _lost);
+    _playing->registerTransition(Game::WindowCloseEvent::WINDOW_CLOSE_EVENT, _exiting);
+
+    _won->registerTransition(GameOverScreen::GAME_OVER_ACK, _exiting);
+    _won->registerTransition(Game::WindowCloseEvent::WINDOW_CLOSE_EVENT, _exiting);
+
+    _lost->registerTransition(GameOverScreen::GAME_OVER_ACK, _exiting);
+    _lost->registerTransition(Game::WindowCloseEvent::WINDOW_CLOSE_EVENT, _exiting);
 }
 
 void Game::start()
 {
     // We can only start if we haven't already started
-    if (_gameState != Game::GameState::Uninitialized)
+    if (_stm.isStarted())
     {
         return;
     }
+    _stm.start(_uninitialized);
 
     // Seed the random number generator
     srand(time(NULL));
 
-    // ============== Block - assign event listeners ==========================
-    // Close the splash screen when it's clicked
-    _dispatcher->subscribe(SplashScreen::SPLASH_SCREEN_CLOSE, [&](Event event)
-                           { _gameState = Game::GameState::ClosingSplash; });
-
-    // Play the game if "Play" on the main menu screen is selected
-    _dispatcher->subscribe(MainMenuScreen::MAIN_MENU_PLAY, [&](Event event)
-                           { _gameState = Game::GameState::PlayRequested; });
-
-    // Close the game if "Exit" on the main menu screen is selected
-    _dispatcher->subscribe(MainMenuScreen::MAIN_MENU_EXIT, [&](Event event)
-                           { _gameState = Game::GameState::Exiting; });
-
-    // If the AI scores, we lose
-    _dispatcher->subscribe(BallSystem::ENEMY_SCORE_EVENT, [&](Event event)
-                           { _gameState = Game::GameState::Lost; });
-
-    // If we accept our defeat, exit gracefully
-    _dispatcher->subscribe(GameOverScreen::GAME_OVER_ACK, [&](Event event)
-                           { _gameState = Game::GameState::Exiting; });
-
-    // If we score, we win
-    _dispatcher->subscribe(BallSystem::PLAYER_SCORE_EVENT, [&](Event event)
-                           { _gameState = Game::GameState::Won; });
-    // =========================================================================
-
     // ================ Block - Component Entity System ========================
-    _engine = std::make_unique<EntityEngine>();
-
     // Declare the entities and systems we need, then stick them in the engine
     auto player = createPlayer();
     auto enemy = createEnemy();
@@ -86,9 +146,7 @@ void Game::start()
     _mainWindow.create(sf::VideoMode(WORLD_WIDTH, WORLD_HEIGHT), "Simple Cpp Game");
     _view = _mainWindow.getDefaultView();
 
-    // Initialize the game - we are showing the splash screen at the start
-    _gameState = Game::GameState::ShowingSplash;
-    _currentScreen = std::make_unique<SplashScreen>(_mainWindow, *_dispatcher, "./res/splash.png");
+    getDispatcher()->dispatch(StartGameEvent());
 
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
@@ -105,9 +163,6 @@ void Game::start()
             gameLoop(TIME_PER_FRAME);
         }
     }
-
-    // When we're done with the game, close our window and let it all go out of scope
-    _mainWindow.close();
 }
 
 Dispatcher *Game::getDispatcher()
@@ -117,53 +172,18 @@ Dispatcher *Game::getDispatcher()
 
 bool Game::isExiting() const
 {
-    return Game::GameState::Exiting == _gameState;
+    return std::addressof(_stm.getState()) == _exiting.get();
 }
 
 void Game::gameLoop(const sf::Time deltaTime)
 {
-    // Do anything specific to the current state. Right now, this is basic, but more will happen later
-    switch (_gameState)
-    {
-    case Game::GameState::ClosingSplash:
-    {
-        // If the user closed the splash screen, switch to the main menu
-        _gameState = Game::GameState::ShowingMenu;
-        _currentScreen = std::make_unique<MainMenuScreen>(_mainWindow, *_dispatcher, "./res/mainmenu.png");
-        break;
-    }
-    case Game::GameState::PlayRequested:
-    {
-        // If the user clicked play, play the game
-        _gameState = Game::GameState::Playing;
-        _currentScreen = std::make_unique<GameScreen>(_mainWindow, *_dispatcher, *_render);
-        break;
-    }
-    case Game::GameState::Lost:
-    {
-        // If the user lost, scold them and wait for acknowledgement
-        _gameState = Game::GameState::ExitOnAck;
-        _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/game-over.png");
-        break;
-    }
-    case Game::GameState::Won:
-    {
-        // If the user won, acknowledge them and wait for acknowledgement
-        _gameState = Game::GameState::ExitOnAck;
-        _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/you-win.png");
-        break;
-    }
-    }
-
     // Call core game loop logic
     this->handleInput();
     this->update(deltaTime);
+    this->getDispatcher()->flush();
 
     // Lastly, render if we have a valid screen
-    if (_currentScreen)
-    {
-        _currentScreen->render();
-    }
+    this->render();
 }
 
 void Game::handleInput()
@@ -187,7 +207,7 @@ void Game::handleInput()
         case sf::Event::Closed:
         {
             // If the window is closed, exit the game
-            _gameState = Game::GameState::Exiting;
+            getDispatcher()->dispatch(WindowCloseEvent());
             break;
         }
         case sf::Event::MouseButtonPressed:
@@ -205,20 +225,7 @@ void Game::handleInput()
 
 void Game::update(const sf::Time deltaTime)
 {
-    switch (_gameState)
-    {
-    // Only update the engine if we're playing
-    case Game::GameState::Playing:
-        this->_engine->update(deltaTime);
-        break;
-    }
-}
-
-bool Game::shouldRenderInState(const Game::GameState state) const
-{
-    // I'd prefer this to be a property of the GameState type itself, but given enumerations can't have methods in C++, this is what I'm doing until
-    // I figure out how to idiomatically do this.
-    return Game::GameState::Uninitialized != state && Game::GameState::Exiting != state;
+    this->_stm.update(deltaTime);
 }
 
 void Game::modifyView(const std::function<sf::View(sf::View)> op)
@@ -315,4 +322,49 @@ std::shared_ptr<Entity> Game::createBall()
     ball->add(std::move(ballMarker));
 
     return std::move(ball);
+}
+
+void Game::render()
+{
+    if (_currentScreen)
+    {
+        _currentScreen->render();
+    }
+}
+
+void Game::displaySplashScreen()
+{
+    _currentScreen = std::make_unique<SplashScreen>(_mainWindow, *_dispatcher, "./res/splash.png");
+}
+
+void Game::displayMainMenu()
+{
+    _currentScreen = std::make_unique<MainMenuScreen>(_mainWindow, *_dispatcher, "./res/mainmenu.png");
+}
+
+void Game::startPlaying()
+{
+    _currentScreen = std::make_unique<GameScreen>(_mainWindow, *_dispatcher, *_render);
+}
+
+void Game::loseGame()
+{
+    _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/game-over.png");
+}
+
+void Game::winGame()
+{
+    _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/you-win.png");
+}
+
+const std::string Game::StartGameEvent::START_GAME_EVENT = "START_GAME_EVENT";
+
+Game::StartGameEvent::StartGameEvent() : Event(StartGameEvent::START_GAME_EVENT)
+{
+}
+
+const std::string Game::WindowCloseEvent::WINDOW_CLOSE_EVENT = "WINDOW_CLOSE_EVENT";
+
+Game::WindowCloseEvent::WindowCloseEvent() : Event(WindowCloseEvent::WINDOW_CLOSE_EVENT)
+{
 }
