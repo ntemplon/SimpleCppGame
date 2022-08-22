@@ -76,8 +76,8 @@ Game::Game()
       _exiting(
           std::make_shared<LambdaState>(
               _stm,
-              /* entry() */ []()
-              { return; },
+              /* entry() */ [this]()
+              { this->_mainWindow.close(); },
               /* exit() */ []()
               { return; },
               /* update(deltaT) */ [](const sf::Time deltaT)
@@ -163,9 +163,6 @@ void Game::start()
             gameLoop(TIME_PER_FRAME);
         }
     }
-
-    // When we're done with the game, close our window and let it all go out of scope
-    _mainWindow.close();
 }
 
 Dispatcher *Game::getDispatcher()

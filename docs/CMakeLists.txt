@@ -17,9 +17,20 @@ find_package(Doxygen REQUIRED) # Included with the Ubuntu 22.04 repo installatio
 set(SPHINX_EXECUTABLE ${VENV_BIN_DIR}/sphinx-build) # This will be installed off of pip, so we can assume a location
 
 # Get a list of all public header files so that we can generate documentation for them
-file(GLOB_RECURSE MAIN_TARGET_PUBLIC_HEADERS ${PROJECT_SOURCE_DIR}/include/*.hpp) # ${PROJECT_SOURCE_DIR}/include/*.h
+file(GLOB_RECURSE MAIN_TARGET_PUBLIC_HEADERS ${PROJECT_SOURCE_DIR}/include/*.hpp)
 
-set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/include/) # Root directory with RECURSIVE = TRUE in the Doxyfile
+# Get the include directories for jupiter-engine so we can add them in our documentation
+get_target_property(JUPITER_ENGINE_INCLUDE_DIRS libjupiter-engine INCLUDE_DIRECTORIES)
+
+# Built Doxygen Input Directories. They have to be added with spaces delimiting them, so we do this with a loop
+set(DOXYGEN_INPUT_DIR_LIST "\"${PROJECT_SOURCE_DIR}/include/\"")
+foreach(JUPITER_ENGINE_INCLUDE_DIR IN LISTS JUPITER_ENGINE_INCLUDE_DIRS)
+    set(DOXYGEN_INPUT_DIR_LIST "${DOXYGEN_INPUT_DIR_LIST} \"${JUPITER_ENGINE_INCLUDE_DIR}\"")
+endforeach()
+
+message(STATUS "DOXYGEN_INPUT_DIR_LIST=${DOXYGEN_INPUT_DIR_LIST}")
+
+set(DOXYGEN_INPUT_DIR ${DOXYGEN_INPUT_DIR_LIST}) # Root directories with RECURSIVE = TRUE in the Doxyfile
 set(DOXYGEN_OUTPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/out/doxygen)
 set(DOXYGEN_INDEX_FILE ${DOXYGEN_OUTPUT_DIR}/html/index.html)
 set(DOXYFILE_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
@@ -32,7 +43,7 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE_OUT} @ONLY)
 
 add_custom_command(OUTPUT ${DOXYGEN_INDEX_FILE}
                    DEPENDS ${MAIN_TARGET_PUBLIC_HEADERS}
-                   DEPENDS ${DOXYFILE_IN}
+                   DEPENDS ${DOXYFILE_OUT} # We depend on the output file so that if configuration changes it, documentation is rebuilt.
                    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
                    COMMENT "Generating Doxygen files")
