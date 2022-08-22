@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classGame_1_1WindowCloseEvent" kind="class" language="C++" prot="private">
+    <compoundname>Game::WindowCloseEvent</compoundname>
+    <basecompoundref refid="classEvent" prot="public" virt="non-virtual">Event</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classGame_1_1WindowCloseEvent_1a67f12483098b16fb926916c275fe8b86" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Game::WindowCloseEvent::WINDOW_CLOSE_EVENT</definition>
+        <argsstring></argsstring>
+        <name>WINDOW_CLOSE_EVENT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="154" column="34" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGame_1_1WindowCloseEvent_1a61b2b4a95e82794056414029e8c036fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game::WindowCloseEvent::WindowCloseEvent</definition>
+        <argsstring>()</argsstring>
+        <name>WindowCloseEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="155" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Event</label>
+        <link refid="classEvent"/>
+      </node>
+      <node id="1">
+        <label>Game::WindowCloseEvent</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Event</label>
+        <link refid="classEvent"/>
+      </node>
+      <node id="1">
+        <label>Game::WindowCloseEvent</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="151" column="5" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="152" bodyend="156"/>
+    <listofallmembers>
+      <member refid="classEvent_1abbf6d6b18eddabca420d63201f3ec1dd" prot="public" virt="non-virtual"><scope>Game::WindowCloseEvent</scope><name>Event</name></member>
+      <member refid="classEvent_1aef164554b683656e08da56d5936083da" prot="public" virt="non-virtual"><scope>Game::WindowCloseEvent</scope><name>getType</name></member>
+      <member refid="classGame_1_1WindowCloseEvent_1a67f12483098b16fb926916c275fe8b86" prot="public" virt="non-virtual"><scope>Game::WindowCloseEvent</scope><name>WINDOW_CLOSE_EVENT</name></member>
+      <member refid="classGame_1_1WindowCloseEvent_1a61b2b4a95e82794056414029e8c036fa" prot="public" virt="non-virtual"><scope>Game::WindowCloseEvent</scope><name>WindowCloseEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

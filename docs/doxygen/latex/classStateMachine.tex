@@ -1,0 +1,38 @@
+\hypertarget{classStateMachine}{}\doxysection{State\+Machine Class Reference}
+\label{classStateMachine}\index{StateMachine@{StateMachine}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classStateMachine_1_1State}{State}}
+\item 
+class \mbox{\hyperlink{classStateMachine_1_1StateTransition}{State\+Transition}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStateMachine_a37919894b89f2f6610314ce938d7e1eb}\label{classStateMachine_a37919894b89f2f6610314ce938d7e1eb}} 
+{\bfseries State\+Machine} (\mbox{\hyperlink{classDispatcher}{Dispatcher}} \&dispatcher)
+\item 
+\mbox{\Hypertarget{classStateMachine_aa129bb2783f259f99924742862282f3f}\label{classStateMachine_aa129bb2783f259f99924742862282f3f}} 
+void {\bfseries start} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStateMachine_1_1State}{State}} $>$ \&initial\+State)
+\item 
+\mbox{\Hypertarget{classStateMachine_a3c1345313fafba21fb65fee67e7e70c8}\label{classStateMachine_a3c1345313fafba21fb65fee67e7e70c8}} 
+bool {\bfseries is\+Started} () const
+\item 
+\mbox{\Hypertarget{classStateMachine_a7b947ca5f9ccb82c0ce5625055db1fc3}\label{classStateMachine_a7b947ca5f9ccb82c0ce5625055db1fc3}} 
+void {\bfseries update} (const sf\+::\+Time deltaT)
+\item 
+\mbox{\Hypertarget{classStateMachine_a674f62dc822b19636c0b29d4df02dd4c}\label{classStateMachine_a674f62dc822b19636c0b29d4df02dd4c}} 
+void {\bfseries execute\+Transition} (const \mbox{\hyperlink{classStateMachine_1_1StateTransition}{State\+Transition}} \&transition)
+\item 
+\mbox{\Hypertarget{classStateMachine_a97ef6aa0c801590cb447ca9033e60b84}\label{classStateMachine_a97ef6aa0c801590cb447ca9033e60b84}} 
+\mbox{\hyperlink{classDispatcher}{Dispatcher}} \& {\bfseries get\+Dispatcher} () const
+\item 
+\mbox{\Hypertarget{classStateMachine_a36823745cff272d5c5a1d5614c3be148}\label{classStateMachine_a36823745cff272d5c5a1d5614c3be148}} 
+\mbox{\hyperlink{classStateMachine_1_1State}{State}} \& {\bfseries get\+State} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nathan/\+Coding/\+Simple\+Cpp\+Game/build/\+\_\+deps/jupiter-\/engine-\/src/include/State\+Machine.\+hpp\end{DoxyCompactItemize}

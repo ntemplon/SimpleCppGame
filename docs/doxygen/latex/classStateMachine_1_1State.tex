@@ -1,0 +1,44 @@
+\hypertarget{classStateMachine_1_1State}{}\doxysection{State\+Machine\+::State Class Reference}
+\label{classStateMachine_1_1State}\index{StateMachine::State@{StateMachine::State}}
+
+
+Inheritance diagram for State\+Machine\+::State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classStateMachine_1_1State__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_aeaaa8fd47f864fa85475b9c8867ab38d}\label{classStateMachine_1_1State_aeaaa8fd47f864fa85475b9c8867ab38d}} 
+{\bfseries State} (\mbox{\hyperlink{classStateMachine}{State\+Machine}} \&owner)
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_a888b63a1c5b2bfdde27acc395eb9c470}\label{classStateMachine_1_1State_a888b63a1c5b2bfdde27acc395eb9c470}} 
+virtual void {\bfseries entry} ()
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_ad233c01c4dc94d798a562ce5d47d6969}\label{classStateMachine_1_1State_ad233c01c4dc94d798a562ce5d47d6969}} 
+virtual void {\bfseries exit} ()
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_a3b6bdecfe3fb79851490b37b0a8eb12c}\label{classStateMachine_1_1State_a3b6bdecfe3fb79851490b37b0a8eb12c}} 
+virtual void {\bfseries update} (const sf\+::\+Time deltaT)
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_a57196f1588ba66c2275a9f846e09013a}\label{classStateMachine_1_1State_a57196f1588ba66c2275a9f846e09013a}} 
+void {\bfseries handle\+Event} (const \mbox{\hyperlink{classEvent}{Event}} \&event)
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_a7e9ab92517a09b0adc1e753191df690c}\label{classStateMachine_1_1State_a7e9ab92517a09b0adc1e753191df690c}} 
+void {\bfseries register\+Event\+Response} (const std\+::string event\+Id, const std\+::function$<$ void(const \mbox{\hyperlink{classEvent}{Event}} \&)$>$ response)
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_a7a4193cac0f68ff6dcd41f5dc39c60f8}\label{classStateMachine_1_1State_a7a4193cac0f68ff6dcd41f5dc39c60f8}} 
+void {\bfseries register\+Transition} (const std\+::string event\+Id, const \mbox{\hyperlink{classStateMachine_1_1StateTransition}{State\+Transition}} \&transition)
+\item 
+\mbox{\Hypertarget{classStateMachine_1_1State_a89e21c98d4fbd7c04b93fca1864aa5ec}\label{classStateMachine_1_1State_a89e21c98d4fbd7c04b93fca1864aa5ec}} 
+void {\bfseries register\+Transition} (const std\+::string event\+Id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classStateMachine_1_1State}{State}} $>$ \&target)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nathan/\+Coding/\+Simple\+Cpp\+Game/build/\+\_\+deps/jupiter-\/engine-\/src/include/State\+Machine.\+hpp\end{DoxyCompactItemize}

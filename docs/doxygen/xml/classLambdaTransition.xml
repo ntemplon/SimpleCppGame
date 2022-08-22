@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLambdaTransition" kind="class" language="C++" prot="public">
+    <compoundname>LambdaTransition</compoundname>
+    <basecompoundref refid="classStateMachine_1_1StateTransition" prot="public" virt="non-virtual">StateMachine::StateTransition</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLambdaTransition_1a8b00f2359cad328cb75f29702fb61794" prot="private" static="no" mutable="no">
+        <type>std::function&lt; bool(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt;</type>
+        <definition>std::function&lt;bool(const Event &amp;)&gt; LambdaTransition::_guard</definition>
+        <argsstring></argsstring>
+        <name>_guard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="12" column="19" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLambdaTransition_1ad2801b0bc8fcb3a8e05311ded51c8c12" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; LambdaTransition::_effect</definition>
+        <argsstring></argsstring>
+        <name>_effect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="13" column="19" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLambdaTransition_1a9de1992f6000ae8868e81b724d0db361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LambdaTransition::LambdaTransition</definition>
+        <argsstring>(std::shared_ptr&lt; StateMachine::State &gt; &amp;target, std::function&lt; bool(const Event &amp;)&gt; guard, std::function&lt; void()&gt; effect)</argsstring>
+        <name>LambdaTransition</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt; &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>std::function&lt; bool(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt;</type>
+          <declname>guard</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>effect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="6" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classLambdaTransition_1a92ea4711d7140482e8346e01c12c507e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LambdaTransition::guard</definition>
+        <argsstring>(const Event &amp;trigger) const</argsstring>
+        <name>guard</name>
+        <reimplements refid="classStateMachine_1_1StateTransition_1a3f37e967a900f242edd6c4504670519b">guard</reimplements>
+        <param>
+          <type>const <ref refid="classEvent" kindref="compound">Event</ref> &amp;</type>
+          <declname>trigger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="8" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLambdaTransition_1a636b49ae16f2577d7ed78db56e9620aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LambdaTransition::effect</definition>
+        <argsstring>() const</argsstring>
+        <name>effect</name>
+        <reimplements refid="classStateMachine_1_1StateTransition_1ab391da4319185a90c085b8848810dee5">effect</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="9" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>StateMachine::StateTransition</label>
+        <link refid="classStateMachine_1_1StateTransition"/>
+      </node>
+      <node id="1">
+        <label>LambdaTransition</label>
+        <link refid="classLambdaTransition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>StateMachine::StateTransition</label>
+        <link refid="classStateMachine_1_1StateTransition"/>
+      </node>
+      <node id="1">
+        <label>LambdaTransition</label>
+        <link refid="classLambdaTransition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="3" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" bodystart="4" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classLambdaTransition_1ad2801b0bc8fcb3a8e05311ded51c8c12" prot="private" virt="non-virtual"><scope>LambdaTransition</scope><name>_effect</name></member>
+      <member refid="classLambdaTransition_1a8b00f2359cad328cb75f29702fb61794" prot="private" virt="non-virtual"><scope>LambdaTransition</scope><name>_guard</name></member>
+      <member refid="classLambdaTransition_1a636b49ae16f2577d7ed78db56e9620aa" prot="public" virt="virtual"><scope>LambdaTransition</scope><name>effect</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1af9bffe8abaf769a22f64d0ad97608694" prot="public" virt="non-virtual"><scope>LambdaTransition</scope><name>getTargetState</name></member>
+      <member refid="classLambdaTransition_1a92ea4711d7140482e8346e01c12c507e" prot="public" virt="virtual"><scope>LambdaTransition</scope><name>guard</name></member>
+      <member refid="classLambdaTransition_1a9de1992f6000ae8868e81b724d0db361" prot="public" virt="non-virtual"><scope>LambdaTransition</scope><name>LambdaTransition</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1a751b371f688f92974f52c64a9d3b0d49" prot="public" virt="non-virtual"><scope>LambdaTransition</scope><name>StateTransition</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1a8c6fb87fd1f1d6cdda1a1aef31070f90" prot="public" virt="virtual"><scope>LambdaTransition</scope><name>~StateTransition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

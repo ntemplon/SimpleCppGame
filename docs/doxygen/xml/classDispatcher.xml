@@ -15,7 +15,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="47" column="14" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" bodystart="47" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="78" column="14" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDispatcher_1a561898157630b4922c3b5ba5f064e0ab" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt; &gt;</type>
+        <definition>std::vector&lt;std::function&lt;void(const Event &amp;)&gt; &gt; Dispatcher::_globalObservers</definition>
+        <argsstring></argsstring>
+        <name>_globalObservers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="79" column="17" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDispatcher_1a639e510bdf45de4df612e38ab993ee66" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classEvent" kindref="compound">Event</ref> &gt;</type>
+        <definition>std::vector&lt;Event&gt; Dispatcher::_queue</definition>
+        <argsstring></argsstring>
+        <name>_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="80" column="17" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="80" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,19 +57,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="24" column="5"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="24" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classDispatcher_1a9a1840c066927e95e69d102441bb7fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Dispatcher::subscribe</definition>
-        <argsstring>(const std::string type, const std::function&lt; void(const Event &amp;)&gt; &amp;observer)</argsstring>
+        <argsstring>(const std::string type, const std::function&lt; void(const Event &amp;)&gt; observer)</argsstring>
         <name>subscribe</name>
         <param>
           <type>const std::string</type>
           <declname>type</declname>
         </param>
         <param>
-          <type>const std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt; &amp;</type>
+          <type>const std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt;</type>
           <declname>observer</declname>
         </param>
         <briefdescription>
@@ -63,7 +89,7 @@
 <parametername>observer</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The function to be invoked when the event is dispatched. It is assumed this function&apos;s lifetime will be at least as long as that of the dispatcher. </para>
+<para>The function to be invoked when the event is dispatched. It is assumed any references used by the function will be valid for at least as long as the dispatcher exists. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -71,7 +97,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="34" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDispatcher_1acb1dc22ea4f96bafdb9f81782c890dd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dispatcher::subscribeGlobal</definition>
+        <argsstring>(const std::function&lt; void(const Event &amp;)&gt; observer)</argsstring>
+        <name>subscribeGlobal</name>
+        <param>
+          <type>const std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt;</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe a specific listener to all event types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>observer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to be invoked when the event is dispatched. It is assumed any references used by the function will be valid for at least as long as the dispatcher exists. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="42" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +140,8 @@
 <para>Dispatches an event. </para>
         </briefdescription>
         <detaileddescription>
-<para>Dispatches the provided event to all subscribed observers. All observer that subscribed to event.getType() will be invoked in the same order that they subscribed.</para>
+<para>Dispatches the provided event to all subscribed observers. All observer that subscribed to event.getType() will be invoked in the same order that they subscribed. Global subscribers are called after specific subscribers.</para>
+<para><ref refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" kindref="member">dispatch()</ref> should be used over <ref refid="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" kindref="member">queue()</ref> / <ref refid="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" kindref="member">flush()</ref> when the event should be handled immediately, before execution in the current method resumes. This is useful for in-frame communcation or small status updates that should be conveyed to other entities as soon as possible.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>event</parametername>
@@ -100,7 +155,52 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="44" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dispatcher::queue</definition>
+        <argsstring>(const Event &amp;event)</argsstring>
+        <name>queue</name>
+        <param>
+          <type>const <ref refid="classEvent" kindref="compound">Event</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Queues an event to be dispatched later. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Queues the provided event. It will be dispatched to all subscribed observers the next time <ref refid="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" kindref="member">flush()</ref> is called. All observer that subscribed to event.getType() will be invoked in the same order that they subscribed. Global subscribers are called after specific subscribers.</para>
+<para><ref refid="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" kindref="member">queue()</ref> / <ref refid="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" kindref="member">flush()</ref> should be used over <ref refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" kindref="member">dispatch()</ref> when the event should be handled later, such as if the event is likely to trigger significant effects, like screen transitions that might require destroying the object creating the event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to dispatch </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dispatcher::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <briefdescription>
+<para>Dispatches all queued events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Events are dispatched in the order they were queued </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="75" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -109,12 +209,17 @@
     <detaileddescription>
 <para>The <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> is the main class of the event system. Publishers use the <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> to post their events and subscribers use the <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> to receive their events. </para>
     </detaileddescription>
-    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" line="17" column="1" bodyfile="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp" bodystart="18" bodyend="48"/>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="17" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="18" bodyend="81"/>
     <listofallmembers>
+      <member refid="classDispatcher_1a561898157630b4922c3b5ba5f064e0ab" prot="private" virt="non-virtual"><scope>Dispatcher</scope><name>_globalObservers</name></member>
       <member refid="classDispatcher_1ad2b35decda2e219043c0c30da0a5e49b" prot="private" virt="non-virtual"><scope>Dispatcher</scope><name>_observers</name></member>
+      <member refid="classDispatcher_1a639e510bdf45de4df612e38ab993ee66" prot="private" virt="non-virtual"><scope>Dispatcher</scope><name>_queue</name></member>
       <member refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>dispatch</name></member>
       <member refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>Dispatcher</name></member>
-      <member refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>subscribe</name></member>
+      <member refid="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>flush</name></member>
+      <member refid="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>queue</name></member>
+      <member refid="classDispatcher_1a9a1840c066927e95e69d102441bb7fbf" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>subscribe</name></member>
+      <member refid="classDispatcher_1acb1dc22ea4f96bafdb9f81782c890dd8" prot="public" virt="non-virtual"><scope>Dispatcher</scope><name>subscribeGlobal</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

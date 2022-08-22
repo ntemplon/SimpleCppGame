@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classStateMachine_1_1StateTransition" kind="class" language="C++" prot="public">
+    <compoundname>StateMachine::StateTransition</compoundname>
+    <derivedcompoundref refid="classLambdaTransition" prot="public" virt="non-virtual">LambdaTransition</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classStateMachine_1_1StateTransition_1a21587b53650ce3b8fcd0f351664f063e" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">State</ref> &gt; &amp;</type>
+        <definition>std::shared_ptr&lt;State&gt;&amp; StateMachine::StateTransition::_target</definition>
+        <argsstring></argsstring>
+        <name>_target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="50" column="25" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStateMachine_1_1StateTransition_1a751b371f688f92974f52c64a9d3b0d49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StateMachine::StateTransition::StateTransition</definition>
+        <argsstring>(std::shared_ptr&lt; State &gt; &amp;target)</argsstring>
+        <name>StateTransition</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">State</ref> &gt; &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="42" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1StateTransition_1a8c6fb87fd1f1d6cdda1a1aef31070f90" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual StateMachine::StateTransition::~StateTransition</definition>
+        <argsstring>()=default</argsstring>
+        <name>~StateTransition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="43" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1StateTransition_1af9bffe8abaf769a22f64d0ad97608694" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">State</ref> &gt; &amp;</type>
+        <definition>std::shared_ptr&lt;State&gt;&amp; StateMachine::StateTransition::getTargetState</definition>
+        <argsstring>() const</argsstring>
+        <name>getTargetState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="45" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1StateTransition_1a3f37e967a900f242edd6c4504670519b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool StateMachine::StateTransition::guard</definition>
+        <argsstring>(const Event &amp;trigger) const</argsstring>
+        <name>guard</name>
+        <reimplementedby refid="classLambdaTransition_1a92ea4711d7140482e8346e01c12c507e">guard</reimplementedby>
+        <param>
+          <type>const <ref refid="classEvent" kindref="compound">Event</ref> &amp;</type>
+          <declname>trigger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="46" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1StateTransition_1ab391da4319185a90c085b8848810dee5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void StateMachine::StateTransition::effect</definition>
+        <argsstring>() const</argsstring>
+        <name>effect</name>
+        <reimplementedby refid="classLambdaTransition_1a636b49ae16f2577d7ed78db56e9620aa">effect</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="47" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>StateMachine::StateTransition</label>
+        <link refid="classStateMachine_1_1StateTransition"/>
+      </node>
+      <node id="2">
+        <label>LambdaTransition</label>
+        <link refid="classLambdaTransition"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="39" column="5" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="40" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classStateMachine_1_1StateTransition_1a21587b53650ce3b8fcd0f351664f063e" prot="private" virt="non-virtual"><scope>StateMachine::StateTransition</scope><name>_target</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1ab391da4319185a90c085b8848810dee5" prot="public" virt="virtual"><scope>StateMachine::StateTransition</scope><name>effect</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1af9bffe8abaf769a22f64d0ad97608694" prot="public" virt="non-virtual"><scope>StateMachine::StateTransition</scope><name>getTargetState</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1a3f37e967a900f242edd6c4504670519b" prot="public" virt="virtual"><scope>StateMachine::StateTransition</scope><name>guard</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1a751b371f688f92974f52c64a9d3b0d49" prot="public" virt="non-virtual"><scope>StateMachine::StateTransition</scope><name>StateTransition</name></member>
+      <member refid="classStateMachine_1_1StateTransition_1a8c6fb87fd1f1d6cdda1a1aef31070f90" prot="public" virt="virtual"><scope>StateMachine::StateTransition</scope><name>~StateTransition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

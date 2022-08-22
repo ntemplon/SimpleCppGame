@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLambdaState" kind="class" language="C++" prot="public">
+    <compoundname>LambdaState</compoundname>
+    <basecompoundref refid="classStateMachine_1_1State" prot="public" virt="non-virtual">StateMachine::State</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLambdaState_1a4aceef9794a231f39824674bffc62778" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; LambdaState::_entry</definition>
+        <argsstring></argsstring>
+        <name>_entry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="26" column="19" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLambdaState_1a386925518458c987686b456327dffdac" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; LambdaState::_exit</definition>
+        <argsstring></argsstring>
+        <name>_exit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="27" column="19" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLambdaState_1a902fb452256c6829394515e89499e230" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void(const sf::Time deltaT)&gt;</type>
+        <definition>std::function&lt;void(const sf::Time deltaT)&gt; LambdaState::_update</definition>
+        <argsstring></argsstring>
+        <name>_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="28" column="19" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLambdaState_1a202f431b9af2d95822067824e67e90a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LambdaState::LambdaState</definition>
+        <argsstring>(StateMachine &amp;owner, std::function&lt; void()&gt; entry, std::function&lt; void()&gt; exit, std::function&lt; void(const sf::Time deltaT)&gt; update)</argsstring>
+        <name>LambdaState</name>
+        <param>
+          <type><ref refid="classStateMachine" kindref="compound">StateMachine</ref> &amp;</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>exit</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(const sf::Time deltaT)&gt;</type>
+          <declname>update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="19" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classLambdaState_1af18e4e057ba4568e59e9c6d7e82a11ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LambdaState::entry</definition>
+        <argsstring>()</argsstring>
+        <name>entry</name>
+        <reimplements refid="classStateMachine_1_1State_1a888b63a1c5b2bfdde27acc395eb9c470">entry</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="21" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLambdaState_1a24c555a8565e45ddaa9b1b53dcdcc0d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LambdaState::exit</definition>
+        <argsstring>()</argsstring>
+        <name>exit</name>
+        <reimplements refid="classStateMachine_1_1State_1ad233c01c4dc94d798a562ce5d47d6969">exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classLambdaState_1ae689bc64eb5d115de4839c347e52693d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LambdaState::update</definition>
+        <argsstring>(const sf::Time deltaT)</argsstring>
+        <name>update</name>
+        <reimplements refid="classStateMachine_1_1State_1a3b6bdecfe3fb79851490b37b0a8eb12c">update</reimplements>
+        <param>
+          <type>const sf::Time</type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="23" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>StateMachine::State</label>
+        <link refid="classStateMachine_1_1State"/>
+      </node>
+      <node id="1">
+        <label>LambdaState</label>
+        <link refid="classLambdaState"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>StateMachine::State</label>
+        <link refid="classStateMachine_1_1State"/>
+      </node>
+      <node id="1">
+        <label>LambdaState</label>
+        <link refid="classLambdaState"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" line="16" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classLambdaState_1a4aceef9794a231f39824674bffc62778" prot="private" virt="non-virtual"><scope>LambdaState</scope><name>_entry</name></member>
+      <member refid="classLambdaState_1a386925518458c987686b456327dffdac" prot="private" virt="non-virtual"><scope>LambdaState</scope><name>_exit</name></member>
+      <member refid="classLambdaState_1a902fb452256c6829394515e89499e230" prot="private" virt="non-virtual"><scope>LambdaState</scope><name>_update</name></member>
+      <member refid="classLambdaState_1af18e4e057ba4568e59e9c6d7e82a11ed" prot="public" virt="virtual"><scope>LambdaState</scope><name>entry</name></member>
+      <member refid="classLambdaState_1a24c555a8565e45ddaa9b1b53dcdcc0d7" prot="public" virt="virtual"><scope>LambdaState</scope><name>exit</name></member>
+      <member refid="classStateMachine_1_1State_1a57196f1588ba66c2275a9f846e09013a" prot="public" virt="non-virtual"><scope>LambdaState</scope><name>handleEvent</name></member>
+      <member refid="classLambdaState_1a202f431b9af2d95822067824e67e90a8" prot="public" virt="non-virtual"><scope>LambdaState</scope><name>LambdaState</name></member>
+      <member refid="classStateMachine_1_1State_1a7e9ab92517a09b0adc1e753191df690c" prot="public" virt="non-virtual"><scope>LambdaState</scope><name>registerEventResponse</name></member>
+      <member refid="classStateMachine_1_1State_1a7a4193cac0f68ff6dcd41f5dc39c60f8" prot="public" virt="non-virtual"><scope>LambdaState</scope><name>registerTransition</name></member>
+      <member refid="classStateMachine_1_1State_1a89e21c98d4fbd7c04b93fca1864aa5ec" prot="public" virt="non-virtual"><scope>LambdaState</scope><name>registerTransition</name></member>
+      <member refid="classStateMachine_1_1State_1aeaaa8fd47f864fa85475b9c8867ab38d" prot="public" virt="non-virtual"><scope>LambdaState</scope><name>State</name></member>
+      <member refid="classLambdaState_1ae689bc64eb5d115de4839c347e52693d" prot="public" virt="virtual"><scope>LambdaState</scope><name>update</name></member>
+      <member refid="classStateMachine_1_1State_1af810960b2940d0cb605a586993af5ebd" prot="public" virt="virtual"><scope>LambdaState</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

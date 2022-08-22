@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['render_139',['render',['../classRenderSystem.html#a794921c956b9b36c547e13594bf25481',1,'RenderSystem::render()'],['../classGameOverScreen.html#a7f015719692c3482de713fd2381f2154',1,'GameOverScreen::render()'],['../classGameScreen.html#a259241cb803c2ffab627c654d75e2d6f',1,'GameScreen::render()'],['../classMainMenuScreen.html#a5a408ce8d3039f2271acced1a7d81b02',1,'MainMenuScreen::render()'],['../classScreen.html#a3cd453c494b2389725b719700283e655',1,'Screen::render()'],['../classSplashScreen.html#aa740429d18d6ae5bd299d3c0e178b94e',1,'SplashScreen::render()']]],
-  ['rendercomponent_140',['RenderComponent',['../classRenderComponent.html#a1bfbe186278dc7528788aea84f976b6c',1,'RenderComponent']]],
-  ['rendersystem_141',['RenderSystem',['../classRenderSystem.html#a20496a8f52c4eb755d4bfcaba2e98e1c',1,'RenderSystem']]]
+  ['playercomponent_150',['PlayerComponent',['../classPlayerComponent.html#adf9bdf600a6cc7d34aa848163c4a9be7',1,'PlayerComponent']]],
+  ['playerinputsystem_151',['PlayerInputSystem',['../classPlayerInputSystem.html#a94141b78de6b111c0893c094ecb3f6b1',1,'PlayerInputSystem']]],
+  ['process_152',['process',['../classBallSystem.html#a16831511402914a2e0de903eb328636c',1,'BallSystem::process()'],['../classEnemyAISystem.html#a62cfe6ee8471ded89a84b7626eb24d93',1,'EnemyAISystem::process()'],['../classPlayerInputSystem.html#a6fad1f27101eab2846fbe03c27655512',1,'PlayerInputSystem::process()'],['../classRenderSystem.html#a27f2d4ebb7f3169a3620aca0a86dd000',1,'RenderSystem::process()'],['../classVelocitySystem.html#adc6a737e5d8e2bdf58caf1b5ccc0ad99',1,'VelocitySystem::process()'],['../classIteratingSystem.html#a3fb21f26cc10e9ec82834ee86dc87b6c',1,'IteratingSystem::process()']]]
 ];

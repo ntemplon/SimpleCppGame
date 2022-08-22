@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classStateMachine_1_1State" kind="class" language="C++" prot="public">
+    <compoundname>StateMachine::State</compoundname>
+    <derivedcompoundref refid="classLambdaState" prot="public" virt="non-virtual">LambdaState</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classStateMachine_1_1State_1a3bb0b74984f932dba45d1efd815ca91f" prot="private" static="no" mutable="no">
+        <type><ref refid="classStateMachine" kindref="compound">StateMachine</ref> &amp;</type>
+        <definition>StateMachine&amp; StateMachine::State::_owner</definition>
+        <argsstring></argsstring>
+        <name>_owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="35" column="22" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStateMachine_1_1State_1a41e71f36326f8b00c9ed995c9ed507e2" prot="private" static="no" mutable="no">
+        <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref></type>
+        <definition>Dispatcher StateMachine::State::_eventResponse</definition>
+        <argsstring></argsstring>
+        <name>_eventResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="36" column="20" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStateMachine_1_1State_1aeaaa8fd47f864fa85475b9c8867ab38d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StateMachine::State::State</definition>
+        <argsstring>(StateMachine &amp;owner)</argsstring>
+        <name>State</name>
+        <param>
+          <type><ref refid="classStateMachine" kindref="compound">StateMachine</ref> &amp;</type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="21" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1af810960b2940d0cb605a586993af5ebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual StateMachine::State::~State</definition>
+        <argsstring>()=default</argsstring>
+        <name>~State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="22" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1a888b63a1c5b2bfdde27acc395eb9c470" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void StateMachine::State::entry</definition>
+        <argsstring>()</argsstring>
+        <name>entry</name>
+        <reimplementedby refid="classLambdaState_1af18e4e057ba4568e59e9c6d7e82a11ed">entry</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="24" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1ad233c01c4dc94d798a562ce5d47d6969" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void StateMachine::State::exit</definition>
+        <argsstring>()</argsstring>
+        <name>exit</name>
+        <reimplementedby refid="classLambdaState_1a24c555a8565e45ddaa9b1b53dcdcc0d7">exit</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="25" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1a3b6bdecfe3fb79851490b37b0a8eb12c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void StateMachine::State::update</definition>
+        <argsstring>(const sf::Time deltaT)</argsstring>
+        <name>update</name>
+        <reimplementedby refid="classLambdaState_1ae689bc64eb5d115de4839c347e52693d">update</reimplementedby>
+        <param>
+          <type>const sf::Time</type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="26" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1a57196f1588ba66c2275a9f846e09013a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StateMachine::State::handleEvent</definition>
+        <argsstring>(const Event &amp;event)</argsstring>
+        <name>handleEvent</name>
+        <param>
+          <type>const <ref refid="classEvent" kindref="compound">Event</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="28" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1a7e9ab92517a09b0adc1e753191df690c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StateMachine::State::registerEventResponse</definition>
+        <argsstring>(const std::string eventId, const std::function&lt; void(const Event &amp;)&gt; response)</argsstring>
+        <name>registerEventResponse</name>
+        <param>
+          <type>const std::string</type>
+          <declname>eventId</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="30" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1a7a4193cac0f68ff6dcd41f5dc39c60f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StateMachine::State::registerTransition</definition>
+        <argsstring>(const std::string eventId, const StateTransition &amp;transition)</argsstring>
+        <name>registerTransition</name>
+        <param>
+          <type>const std::string</type>
+          <declname>eventId</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStateMachine_1_1StateTransition" kindref="compound">StateTransition</ref> &amp;</type>
+          <declname>transition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="31" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classStateMachine_1_1State_1a89e21c98d4fbd7c04b93fca1864aa5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StateMachine::State::registerTransition</definition>
+        <argsstring>(const std::string eventId, std::shared_ptr&lt; State &gt; &amp;target)</argsstring>
+        <name>registerTransition</name>
+        <param>
+          <type>const std::string</type>
+          <declname>eventId</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">State</ref> &gt; &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="32" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>StateMachine::State</label>
+        <link refid="classStateMachine_1_1State"/>
+      </node>
+      <node id="2">
+        <label>LambdaState</label>
+        <link refid="classLambdaState"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="18" column="5" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="19" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classStateMachine_1_1State_1a41e71f36326f8b00c9ed995c9ed507e2" prot="private" virt="non-virtual"><scope>StateMachine::State</scope><name>_eventResponse</name></member>
+      <member refid="classStateMachine_1_1State_1a3bb0b74984f932dba45d1efd815ca91f" prot="private" virt="non-virtual"><scope>StateMachine::State</scope><name>_owner</name></member>
+      <member refid="classStateMachine_1_1State_1a888b63a1c5b2bfdde27acc395eb9c470" prot="public" virt="virtual"><scope>StateMachine::State</scope><name>entry</name></member>
+      <member refid="classStateMachine_1_1State_1ad233c01c4dc94d798a562ce5d47d6969" prot="public" virt="virtual"><scope>StateMachine::State</scope><name>exit</name></member>
+      <member refid="classStateMachine_1_1State_1a57196f1588ba66c2275a9f846e09013a" prot="public" virt="non-virtual"><scope>StateMachine::State</scope><name>handleEvent</name></member>
+      <member refid="classStateMachine_1_1State_1a7e9ab92517a09b0adc1e753191df690c" prot="public" virt="non-virtual"><scope>StateMachine::State</scope><name>registerEventResponse</name></member>
+      <member refid="classStateMachine_1_1State_1a7a4193cac0f68ff6dcd41f5dc39c60f8" prot="public" virt="non-virtual"><scope>StateMachine::State</scope><name>registerTransition</name></member>
+      <member refid="classStateMachine_1_1State_1a89e21c98d4fbd7c04b93fca1864aa5ec" prot="public" virt="non-virtual"><scope>StateMachine::State</scope><name>registerTransition</name></member>
+      <member refid="classStateMachine_1_1State_1aeaaa8fd47f864fa85475b9c8867ab38d" prot="public" virt="non-virtual"><scope>StateMachine::State</scope><name>State</name></member>
+      <member refid="classStateMachine_1_1State_1a3b6bdecfe3fb79851490b37b0a8eb12c" prot="public" virt="virtual"><scope>StateMachine::State</scope><name>update</name></member>
+      <member refid="classStateMachine_1_1State_1af810960b2940d0cb605a586993af5ebd" prot="public" virt="virtual"><scope>StateMachine::State</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

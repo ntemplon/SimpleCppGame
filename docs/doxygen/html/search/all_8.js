@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['loc_5fcomp_5fid_36',['LOC_COMP_ID',['../classLocationComponent.html#ad370ace4f8689f490ae38a95f3c780c3',1,'LocationComponent']]],
-  ['location_37',['location',['../classLocationComponent.html#a35bbae77d652cee8b1dc5171bb3133b1',1,'LocationComponent']]],
-  ['locationcomponent_38',['LocationComponent',['../classLocationComponent.html',1,'LocationComponent'],['../classLocationComponent.html#a3c5d71e597d6a6bdc35272c32351576a',1,'LocationComponent::LocationComponent()']]]
+  ['isinfamily_35',['isInFamily',['../classComponentFamily.html#a9dea2702302768c35b94258f4fb79bcb',1,'ComponentFamily::isInFamily()'],['../classEntityFamily.html#a2192f7927d9a8cda42f094ced834da78',1,'EntityFamily::isInFamily()']]],
+  ['iteratingsystem_36',['IteratingSystem',['../classIteratingSystem.html',1,'IteratingSystem'],['../classIteratingSystem.html#adabf0b591af165c24fc92ce28483669c',1,'IteratingSystem::IteratingSystem()'],['../classIteratingSystem.html#afe8eb2893d836ff46c77efdc198bd8db',1,'IteratingSystem::IteratingSystem(const std::shared_ptr&lt; EntityFamily &gt; &amp;family)']]]
 ];

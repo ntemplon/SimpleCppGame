@@ -32,9 +32,14 @@
   </compound>
   <compound refid="classDispatcher" kind="class"><name>Dispatcher</name>
     <member refid="classDispatcher_1ad2b35decda2e219043c0c30da0a5e49b" kind="variable"><name>_observers</name></member>
+    <member refid="classDispatcher_1a561898157630b4922c3b5ba5f064e0ab" kind="variable"><name>_globalObservers</name></member>
+    <member refid="classDispatcher_1a639e510bdf45de4df612e38ab993ee66" kind="variable"><name>_queue</name></member>
     <member refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" kind="function"><name>Dispatcher</name></member>
-    <member refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" kind="function"><name>subscribe</name></member>
+    <member refid="classDispatcher_1a9a1840c066927e95e69d102441bb7fbf" kind="function"><name>subscribe</name></member>
+    <member refid="classDispatcher_1acb1dc22ea4f96bafdb9f81782c890dd8" kind="function"><name>subscribeGlobal</name></member>
     <member refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" kind="function"><name>dispatch</name></member>
+    <member refid="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" kind="function"><name>queue</name></member>
+    <member refid="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" kind="function"><name>flush</name></member>
   </compound>
   <compound refid="classEnemyAISystem" kind="class"><name>EnemyAISystem</name>
     <member refid="classEnemyAISystem_1af8dd578bbb7e6ff38d0520a61488f126" kind="variable"><name>_ball</name></member>
@@ -92,24 +97,12 @@
     <member refid="classEvent_1aef164554b683656e08da56d5936083da" kind="function"><name>getType</name></member>
   </compound>
   <compound refid="classGame" kind="class"><name>Game</name>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04" kind="enum"><name>GameState</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04af704f57ea420275ad51bf55b7dec2c96" kind="enumvalue"><name>Uninitialized</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a710aaf917b477e96ada6772ebaf08608" kind="enumvalue"><name>ShowingSplash</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a748852b4cd4e45d30aa0e006645b1952" kind="enumvalue"><name>ClosingSplash</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a837f449e957d3457ac8e491d541edf03" kind="enumvalue"><name>ShowingMenu</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04aa4a2925f56f04755a721ab2e830c0d36" kind="enumvalue"><name>PlayRequested</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04ac9dbb2b7c84159b632d71e512eba8428" kind="enumvalue"><name>Playing</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a19abd416eb9fe03ae7400a22446956a5" kind="enumvalue"><name>Won</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04ab578b733cbb788fc6ad208314d2c4c2b" kind="enumvalue"><name>Lost</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a801e431ae598eafd6c366afa302a85d2" kind="enumvalue"><name>ExitOnAck</name></member>
-    <member refid="classGame_1a7f57a7a8408e554d0a72882c287e1d04a0657d962b72e6f1f37dda8dad3684cb8" kind="enumvalue"><name>Exiting</name></member>
     <member refid="classGame_1ac688251934c61309cd8bb77074d24592" kind="variable"><name>TIME_PER_FRAME</name></member>
     <member refid="classGame_1aafc26e7c34368b9265420e7242d743fc" kind="variable"><name>WORLD_WIDTH</name></member>
     <member refid="classGame_1ad2cf08045935823c7e44c9a92ce4a4e9" kind="variable"><name>WORLD_HEIGHT</name></member>
     <member refid="classGame_1a29c3289355609a9593a24d5bc1f08bcc" kind="variable"><name>WORLD_BORDER</name></member>
     <member refid="classGame_1ab7491872b0e12b59443f26c55737e6f1" kind="variable"><name>PADDLE_SPEED</name></member>
     <member refid="classGame_1a465cd9a559c7d4ebbda1aeba1cf41d84" kind="variable"><name>BALL_INITIAL_SPEED</name></member>
-    <member refid="classGame_1a607ec2cbb693c0e248c6fd1f91aa5802" kind="variable"><name>_gameState</name></member>
     <member refid="classGame_1a5829c9631ab47dc35c217a3a723d83ec" kind="variable"><name>_mainWindow</name></member>
     <member refid="classGame_1af90aceb22b316b9b24376b16eb8b9541" kind="variable"><name>_view</name></member>
     <member refid="classGame_1ac791c608d75190283a410efad3810123" kind="variable"><name>_currentScreen</name></member>
@@ -119,6 +112,14 @@
     <member refid="classGame_1afd32fcb975d2005f15b7b1f183ebd032" kind="variable"><name>_velocity</name></member>
     <member refid="classGame_1aca86f3ee4af51edc40b11aded8f1b0dc" kind="variable"><name>_input</name></member>
     <member refid="classGame_1a73ceb985408d98ed7ac74c934ec67921" kind="variable"><name>_ballSystem</name></member>
+    <member refid="classGame_1a75581be2b1e57a66b6e4f47162130589" kind="variable"><name>_stm</name></member>
+    <member refid="classGame_1a8b759b196d95e223fce9d2a561d0811e" kind="variable"><name>_uninitialized</name></member>
+    <member refid="classGame_1ad5db2f10208a77e7702042c4699651d6" kind="variable"><name>_splash</name></member>
+    <member refid="classGame_1aa28fd01b9e4ddd2776c80ac20b16e029" kind="variable"><name>_mainMenu</name></member>
+    <member refid="classGame_1afc5a10b8bccd7cfdc30bf05487eb406a" kind="variable"><name>_playing</name></member>
+    <member refid="classGame_1a58775c31fc345953be7e3970697c7ca2" kind="variable"><name>_won</name></member>
+    <member refid="classGame_1a2f31a31038154291b365ba915801a961" kind="variable"><name>_lost</name></member>
+    <member refid="classGame_1a8d977ba98cb45348910be34a1d45b34f" kind="variable"><name>_exiting</name></member>
     <member refid="classGame_1ad59df6562a58a614fda24622d3715b65" kind="function"><name>Game</name></member>
     <member refid="classGame_1a3d9b98f7c4a96ecf578f75b96c9f0e90" kind="function"><name>start</name></member>
     <member refid="classGame_1a1dd3a58e38678f68291498125fc97ddb" kind="function"><name>getDispatcher</name></member>
@@ -126,11 +127,16 @@
     <member refid="classGame_1a1cd675249f338b0f43d8a120c5e464b4" kind="function"><name>gameLoop</name></member>
     <member refid="classGame_1aa5abc4e07a1f5abce24e473c5567300b" kind="function"><name>handleInput</name></member>
     <member refid="classGame_1a3c5cef85bab5e49551c308fa4f55008a" kind="function"><name>update</name></member>
-    <member refid="classGame_1a3cc9ffa19dddb7331862f28a5be4b478" kind="function"><name>shouldRenderInState</name></member>
     <member refid="classGame_1a1b807309d862ce17b4dbd1d98612cf5f" kind="function"><name>modifyView</name></member>
     <member refid="classGame_1a35634df4d04d64ed478a3ba30f0828cc" kind="function"><name>createPlayer</name></member>
     <member refid="classGame_1a896afc2172602e9dd1bb07d4660d5ee6" kind="function"><name>createEnemy</name></member>
     <member refid="classGame_1ad470e447f5e524c9fda47b141499fc72" kind="function"><name>createBall</name></member>
+    <member refid="classGame_1a15ddd769261d923827a3cdf41499c843" kind="function"><name>render</name></member>
+    <member refid="classGame_1a7ed332e93df3bef8de4ddaea2de12e23" kind="function"><name>displaySplashScreen</name></member>
+    <member refid="classGame_1af74fd203e3b31917ca9d4769fa608c48" kind="function"><name>displayMainMenu</name></member>
+    <member refid="classGame_1a3b303855128e52c27946779f60f24fee" kind="function"><name>startPlaying</name></member>
+    <member refid="classGame_1afc1c16ab41b972b74288dcc5ca9ff87a" kind="function"><name>loseGame</name></member>
+    <member refid="classGame_1a953b4199b652f3951eaeee50f5b9f7a5" kind="function"><name>winGame</name></member>
   </compound>
   <compound refid="classGameOverScreen" kind="class"><name>GameOverScreen</name>
     <member refid="classGameOverScreen_1a59454e4954937d40d4d98c9cf469d739" kind="variable"><name>GAME_OVER_ACK</name></member>
@@ -152,6 +158,22 @@
     <member refid="classIteratingSystem_1afe8eb2893d836ff46c77efdc198bd8db" kind="function"><name>IteratingSystem</name></member>
     <member refid="classIteratingSystem_1a917c3421fbe2cde7ca85b08517d4dfad" kind="function"><name>update</name></member>
     <member refid="classIteratingSystem_1a3fb21f26cc10e9ec82834ee86dc87b6c" kind="function"><name>process</name></member>
+  </compound>
+  <compound refid="classLambdaState" kind="class"><name>LambdaState</name>
+    <member refid="classLambdaState_1a4aceef9794a231f39824674bffc62778" kind="variable"><name>_entry</name></member>
+    <member refid="classLambdaState_1a386925518458c987686b456327dffdac" kind="variable"><name>_exit</name></member>
+    <member refid="classLambdaState_1a902fb452256c6829394515e89499e230" kind="variable"><name>_update</name></member>
+    <member refid="classLambdaState_1a202f431b9af2d95822067824e67e90a8" kind="function"><name>LambdaState</name></member>
+    <member refid="classLambdaState_1af18e4e057ba4568e59e9c6d7e82a11ed" kind="function"><name>entry</name></member>
+    <member refid="classLambdaState_1a24c555a8565e45ddaa9b1b53dcdcc0d7" kind="function"><name>exit</name></member>
+    <member refid="classLambdaState_1ae689bc64eb5d115de4839c347e52693d" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="classLambdaTransition" kind="class"><name>LambdaTransition</name>
+    <member refid="classLambdaTransition_1a8b00f2359cad328cb75f29702fb61794" kind="variable"><name>_guard</name></member>
+    <member refid="classLambdaTransition_1ad2801b0bc8fcb3a8e05311ded51c8c12" kind="variable"><name>_effect</name></member>
+    <member refid="classLambdaTransition_1a9de1992f6000ae8868e81b724d0db361" kind="function"><name>LambdaTransition</name></member>
+    <member refid="classLambdaTransition_1a92ea4711d7140482e8346e01c12c507e" kind="function"><name>guard</name></member>
+    <member refid="classLambdaTransition_1a636b49ae16f2577d7ed78db56e9620aa" kind="function"><name>effect</name></member>
   </compound>
   <compound refid="classLocationComponent" kind="class"><name>LocationComponent</name>
     <member refid="classLocationComponent_1ad370ace4f8689f490ae38a95f3c780c3" kind="variable"><name>LOC_COMP_ID</name></member>
@@ -210,6 +232,44 @@
     <member refid="classSplashScreen_1aa740429d18d6ae5bd299d3c0e178b94e" kind="function"><name>render</name></member>
     <member refid="classSplashScreen_1a678197888d19caed6558d81452904158" kind="function"><name>handleClick</name></member>
   </compound>
+  <compound refid="classGame_1_1StartGameEvent" kind="class"><name>Game::StartGameEvent</name>
+    <member refid="classGame_1_1StartGameEvent_1a36b368f6f26c8be773f9e3f28359c34f" kind="variable"><name>START_GAME_EVENT</name></member>
+    <member refid="classGame_1_1StartGameEvent_1a4428ac4c64af3dd6e8701548b1a1fb76" kind="function"><name>StartGameEvent</name></member>
+  </compound>
+  <compound refid="classStateMachine_1_1State" kind="class"><name>StateMachine::State</name>
+    <member refid="classStateMachine_1_1State_1a3bb0b74984f932dba45d1efd815ca91f" kind="variable"><name>_owner</name></member>
+    <member refid="classStateMachine_1_1State_1a41e71f36326f8b00c9ed995c9ed507e2" kind="variable"><name>_eventResponse</name></member>
+    <member refid="classStateMachine_1_1State_1aeaaa8fd47f864fa85475b9c8867ab38d" kind="function"><name>State</name></member>
+    <member refid="classStateMachine_1_1State_1af810960b2940d0cb605a586993af5ebd" kind="function"><name>~State</name></member>
+    <member refid="classStateMachine_1_1State_1a888b63a1c5b2bfdde27acc395eb9c470" kind="function"><name>entry</name></member>
+    <member refid="classStateMachine_1_1State_1ad233c01c4dc94d798a562ce5d47d6969" kind="function"><name>exit</name></member>
+    <member refid="classStateMachine_1_1State_1a3b6bdecfe3fb79851490b37b0a8eb12c" kind="function"><name>update</name></member>
+    <member refid="classStateMachine_1_1State_1a57196f1588ba66c2275a9f846e09013a" kind="function"><name>handleEvent</name></member>
+    <member refid="classStateMachine_1_1State_1a7e9ab92517a09b0adc1e753191df690c" kind="function"><name>registerEventResponse</name></member>
+    <member refid="classStateMachine_1_1State_1a7a4193cac0f68ff6dcd41f5dc39c60f8" kind="function"><name>registerTransition</name></member>
+    <member refid="classStateMachine_1_1State_1a89e21c98d4fbd7c04b93fca1864aa5ec" kind="function"><name>registerTransition</name></member>
+  </compound>
+  <compound refid="classStateMachine" kind="class"><name>StateMachine</name>
+    <member refid="classStateMachine_1a267474e7cf13747d5ac1aceabc0426c1" kind="variable"><name>_dispatcher</name></member>
+    <member refid="classStateMachine_1a38cbdb3cb0ac47656d5bacd5ec3118b3" kind="variable"><name>_currentState</name></member>
+    <member refid="classStateMachine_1a37919894b89f2f6610314ce938d7e1eb" kind="function"><name>StateMachine</name></member>
+    <member refid="classStateMachine_1aa129bb2783f259f99924742862282f3f" kind="function"><name>start</name></member>
+    <member refid="classStateMachine_1a3c1345313fafba21fb65fee67e7e70c8" kind="function"><name>isStarted</name></member>
+    <member refid="classStateMachine_1a7b947ca5f9ccb82c0ce5625055db1fc3" kind="function"><name>update</name></member>
+    <member refid="classStateMachine_1a674f62dc822b19636c0b29d4df02dd4c" kind="function"><name>executeTransition</name></member>
+    <member refid="classStateMachine_1a97ef6aa0c801590cb447ca9033e60b84" kind="function"><name>getDispatcher</name></member>
+    <member refid="classStateMachine_1a36823745cff272d5c5a1d5614c3be148" kind="function"><name>getState</name></member>
+    <member refid="classStateMachine_1aea71f53aacb20e293cb76b2860854b7d" kind="function"><name>setState</name></member>
+    <member refid="classStateMachine_1a2cefff95fed41933a217df00ad4c97c4" kind="function"><name>passEventToCurrentState</name></member>
+  </compound>
+  <compound refid="classStateMachine_1_1StateTransition" kind="class"><name>StateMachine::StateTransition</name>
+    <member refid="classStateMachine_1_1StateTransition_1a21587b53650ce3b8fcd0f351664f063e" kind="variable"><name>_target</name></member>
+    <member refid="classStateMachine_1_1StateTransition_1a751b371f688f92974f52c64a9d3b0d49" kind="function"><name>StateTransition</name></member>
+    <member refid="classStateMachine_1_1StateTransition_1a8c6fb87fd1f1d6cdda1a1aef31070f90" kind="function"><name>~StateTransition</name></member>
+    <member refid="classStateMachine_1_1StateTransition_1af9bffe8abaf769a22f64d0ad97608694" kind="function"><name>getTargetState</name></member>
+    <member refid="classStateMachine_1_1StateTransition_1a3f37e967a900f242edd6c4504670519b" kind="function"><name>guard</name></member>
+    <member refid="classStateMachine_1_1StateTransition_1ab391da4319185a90c085b8848810dee5" kind="function"><name>effect</name></member>
+  </compound>
   <compound refid="classVelocityComponent" kind="class"><name>VelocityComponent</name>
     <member refid="classVelocityComponent_1a79650ba683c4c90348b6b3c969d82e03" kind="variable"><name>VEL_COMP_ID</name></member>
     <member refid="classVelocityComponent_1ab834951d72d96f1227a9eeb92f63fa0d" kind="variable"><name>velocity</name></member>
@@ -219,15 +279,11 @@
     <member refid="classVelocitySystem_1a4b36e8470b4b10305718087de2b0cb75" kind="function"><name>VelocitySystem</name></member>
     <member refid="classVelocitySystem_1adc6a737e5d8e2bdf58caf1b5ccc0ad99" kind="function"><name>process</name></member>
   </compound>
-  <compound refid="Dispatcher_8hpp" kind="file"><name>Dispatcher.hpp</name>
-  </compound>
-  <compound refid="BallSystem_8hpp" kind="file"><name>BallSystem.hpp</name>
+  <compound refid="classGame_1_1WindowCloseEvent" kind="class"><name>Game::WindowCloseEvent</name>
+    <member refid="classGame_1_1WindowCloseEvent_1a67f12483098b16fb926916c275fe8b86" kind="variable"><name>WINDOW_CLOSE_EVENT</name></member>
+    <member refid="classGame_1_1WindowCloseEvent_1a61b2b4a95e82794056414029e8c036fa" kind="function"><name>WindowCloseEvent</name></member>
   </compound>
   <compound refid="ComponentFamily_8hpp" kind="file"><name>ComponentFamily.hpp</name>
-  </compound>
-  <compound refid="Components_8hpp" kind="file"><name>Components.hpp</name>
-  </compound>
-  <compound refid="EnemyAISystem_8hpp" kind="file"><name>EnemyAISystem.hpp</name>
   </compound>
   <compound refid="Entity_8hpp" kind="file"><name>Entity.hpp</name>
   </compound>
@@ -239,13 +295,27 @@
   </compound>
   <compound refid="IteratingSystem_8hpp" kind="file"><name>IteratingSystem.hpp</name>
   </compound>
+  <compound refid="Dispatcher_8hpp" kind="file"><name>Dispatcher.hpp</name>
+  </compound>
+  <compound refid="Event_8hpp" kind="file"><name>Event.hpp</name>
+  </compound>
+  <compound refid="LambdaStates_8hpp" kind="file"><name>LambdaStates.hpp</name>
+  </compound>
+  <compound refid="Screen_8hpp" kind="file"><name>Screen.hpp</name>
+  </compound>
+  <compound refid="StateMachine_8hpp" kind="file"><name>StateMachine.hpp</name>
+  </compound>
+  <compound refid="BallSystem_8hpp" kind="file"><name>BallSystem.hpp</name>
+  </compound>
+  <compound refid="Components_8hpp" kind="file"><name>Components.hpp</name>
+  </compound>
+  <compound refid="EnemyAISystem_8hpp" kind="file"><name>EnemyAISystem.hpp</name>
+  </compound>
   <compound refid="PlayerInputSystem_8hpp" kind="file"><name>PlayerInputSystem.hpp</name>
   </compound>
   <compound refid="RenderSystem_8hpp" kind="file"><name>RenderSystem.hpp</name>
   </compound>
   <compound refid="VelocitySystem_8hpp" kind="file"><name>VelocitySystem.hpp</name>
-  </compound>
-  <compound refid="Event_8hpp" kind="file"><name>Event.hpp</name>
   </compound>
   <compound refid="Game_8hpp" kind="file"><name>Game.hpp</name>
   </compound>
@@ -255,12 +325,20 @@
   </compound>
   <compound refid="MainMenuScreen_8hpp" kind="file"><name>MainMenuScreen.hpp</name>
   </compound>
-  <compound refid="Screen_8hpp" kind="file"><name>Screen.hpp</name>
-  </compound>
   <compound refid="SplashScreen_8hpp" kind="file"><name>SplashScreen.hpp</name>
   </compound>
-  <compound refid="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir"><name>/home/ganymede/Coding/VSCodeHelloWorld/include/entity</name>
+  <compound refid="dir_a57a94e38c03835eed49274b75b0176d" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps</name>
   </compound>
-  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/ganymede/Coding/VSCodeHelloWorld/include</name>
+  <compound refid="dir_b840dd5bfae50914956b2a4ac2dfaab3" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</name>
+  </compound>
+  <compound refid="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/include/entity</name>
+  </compound>
+  <compound refid="dir_6da4eac6429660075497d817c95f0540" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</name>
+  </compound>
+  <compound refid="dir_e630c752658eecf3443b80c46e9b5063" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/include</name>
+  </compound>
+  <compound refid="dir_171855666a1e8a3e4d50289c205cc403" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src</name>
   </compound>
 </doxygenindex>

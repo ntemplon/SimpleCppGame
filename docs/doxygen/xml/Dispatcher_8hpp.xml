@@ -7,24 +7,11 @@
     <includes local="no">map</includes>
     <includes local="no">string</includes>
     <includes local="no">vector</includes>
-    <includedby refid="BallSystem_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp</includedby>
-    <includedby refid="Game_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</includedby>
-    <includedby refid="Screen_8hpp" local="no">/home/ganymede/Coding/VSCodeHelloWorld/include/Screen.hpp</includedby>
+    <includedby refid="BallSystem_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp</includedby>
+    <includedby refid="Game_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/Game.hpp</includedby>
+    <includedby refid="Screen_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</includedby>
+    <includedby refid="StateMachine_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp</includedby>
     <incdepgraph>
-      <node id="1">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp</label>
-        <link refid="Dispatcher_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
       <node id="4">
         <label>functional</label>
       </node>
@@ -40,45 +27,37 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
       <node id="6">
         <label>vector</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="5">
+        <label>/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp</label>
+        <link refid="GameOverScreen_8hpp_source"/>
+      </node>
       <node id="2">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/entity/BallSystem.hpp</label>
+        <label>/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp</label>
         <link refid="BallSystem_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp</label>
-        <link refid="Dispatcher_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/SplashScreen.hpp</label>
-        <link refid="SplashScreen_8hpp_source"/>
-      </node>
-      <node id="3">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Game.hpp</label>
-        <link refid="Game_8hpp_source"/>
-      </node>
-      <node id="6">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameScreen.hpp</label>
-        <link refid="GameScreen_8hpp_source"/>
-      </node>
-      <node id="7">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/MainMenuScreen.hpp</label>
-        <link refid="MainMenuScreen_8hpp_source"/>
-      </node>
       <node id="4">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/Screen.hpp</label>
+        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</label>
         <link refid="Screen_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -91,9 +70,45 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>/home/ganymede/Coding/VSCodeHelloWorld/include/GameOverScreen.hpp</label>
-        <link refid="GameOverScreen_8hpp_source"/>
+      <node id="10">
+        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp</label>
+        <link refid="LambdaStates_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp</label>
+        <link refid="StateMachine_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/nathan/Coding/SimpleCppGame/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp</label>
+        <link refid="SplashScreen_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp</label>
+        <link refid="MainMenuScreen_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classDispatcher" prot="public">Dispatcher</innerclass>
@@ -116,14 +131,22 @@
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="24" refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDispatcher_1ab7dabf79371e1372d16d2c979c35d27d" kindref="member">Dispatcher</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1a77c18383035cd9d935a0188ef5ee311e" kindref="member">subscribe</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;<sp/>&amp;observer);</highlight></codeline>
+<codeline lineno="34" refid="classDispatcher_1a9a1840c066927e95e69d102441bb7fbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1a9a1840c066927e95e69d102441bb7fbf" kindref="member">subscribe</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;<sp/>observer);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" kindref="member">dispatch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;event);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::vector&lt;std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;&gt;&gt;<sp/>_observers;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42" refid="classDispatcher_1acb1dc22ea4f96bafdb9f81782c890dd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1acb1dc22ea4f96bafdb9f81782c890dd8" kindref="member">subscribeGlobal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;<sp/>observer);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" kindref="member">dispatch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;event);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" kindref="member">queue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;event);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" kindref="member">flush</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::vector&lt;std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;&gt;&gt;<sp/>_observers;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEvent" kindref="compound">Event</ref><sp/>&amp;)&gt;&gt;<sp/>_globalObservers;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Event&gt;<sp/>_queue;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/ganymede/Coding/VSCodeHelloWorld/include/Dispatcher.hpp"/>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp"/>
   </compounddef>
 </doxygen>

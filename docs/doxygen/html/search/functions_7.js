@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['isinfamily_132',['isInFamily',['../classComponentFamily.html#a9dea2702302768c35b94258f4fb79bcb',1,'ComponentFamily::isInFamily()'],['../classEntityFamily.html#a2192f7927d9a8cda42f094ced834da78',1,'EntityFamily::isInFamily()']]],
-  ['iteratingsystem_133',['IteratingSystem',['../classIteratingSystem.html#adabf0b591af165c24fc92ce28483669c',1,'IteratingSystem::IteratingSystem()'],['../classIteratingSystem.html#afe8eb2893d836ff46c77efdc198bd8db',1,'IteratingSystem::IteratingSystem(const std::shared_ptr&lt; EntityFamily &gt; &amp;family)']]]
+  ['handleclick_144',['handleClick',['../classGameOverScreen.html#a8e5c8ae4f8329274bcc5d932bb1f5526',1,'GameOverScreen::handleClick()'],['../classGameScreen.html#a75b8d862911e1e86f6e4aa067cf198c0',1,'GameScreen::handleClick()'],['../classMainMenuScreen.html#a77223826dcca0f96e6714e2440c835cc',1,'MainMenuScreen::handleClick()'],['../classSplashScreen.html#a678197888d19caed6558d81452904158',1,'SplashScreen::handleClick()'],['../classScreen.html#afafb8c2a2255c4cf8cef807ba4d14400',1,'Screen::handleClick()']]],
+  ['hascomponent_145',['hasComponent',['../classEntity.html#a4470308ca5a3ab893baffd122ae4e9f8',1,'Entity']]]
 ];

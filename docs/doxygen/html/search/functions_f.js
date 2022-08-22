@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7ecomponent_149',['~Component',['../classEntity_1_1Component.html#a8e19d41c2a8041556e2cbd5c92e4906e',1,'Entity::Component']]],
-  ['_7escreen_150',['~Screen',['../classScreen.html#a0bc1a2ceaee4a245e0d31822ea0643bd',1,'Screen']]],
-  ['_7esplashscreen_151',['~SplashScreen',['../classSplashScreen.html#a97b621dfe67fd172af5b00c9b3b0d747',1,'SplashScreen']]]
+  ['update_162',['update',['../classEntityEngine.html#a3eafb99f52dfe9b79995c533d51d314e',1,'EntityEngine::update()'],['../classEntitySystem.html#a6cfebcec0f05398db9af09ba37673154',1,'EntitySystem::update()'],['../classIteratingSystem.html#a917c3421fbe2cde7ca85b08517d4dfad',1,'IteratingSystem::update()']]]
 ];

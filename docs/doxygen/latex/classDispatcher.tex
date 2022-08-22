@@ -15,10 +15,16 @@ A class for managing events.
 \mbox{\Hypertarget{classDispatcher_ab7dabf79371e1372d16d2c979c35d27d}\label{classDispatcher_ab7dabf79371e1372d16d2c979c35d27d}} 
 \mbox{\hyperlink{classDispatcher_ab7dabf79371e1372d16d2c979c35d27d}{Dispatcher}} ()=default
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classDispatcher}{Dispatcher}} object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classDispatcher_a77c18383035cd9d935a0188ef5ee311e}{subscribe}} (const std\+::string type, const std\+::function$<$ void(const \mbox{\hyperlink{classEvent}{Event}} \&)$>$ \&observer)
+void \mbox{\hyperlink{classDispatcher_a9a1840c066927e95e69d102441bb7fbf}{subscribe}} (const std\+::string type, const std\+::function$<$ void(const \mbox{\hyperlink{classEvent}{Event}} \&)$>$ observer)
 \begin{DoxyCompactList}\small\item\em Subscribe a specific listener to a specific event type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDispatcher_acb1dc22ea4f96bafdb9f81782c890dd8}{subscribe\+Global}} (const std\+::function$<$ void(const \mbox{\hyperlink{classEvent}{Event}} \&)$>$ observer)
+\begin{DoxyCompactList}\small\item\em Subscribe a specific listener to all event types. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDispatcher_ab1d9931ec607d3c975474e9f65dd267f}{dispatch}} (const \mbox{\hyperlink{classEvent}{Event}} \&event)
-\begin{DoxyCompactList}\small\item\em Dispatches an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Dispatches an event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDispatcher_ad75f304262f738f7f6a79023b65e368c}{queue}} (const \mbox{\hyperlink{classEvent}{Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Queues an event to be dispatched later. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDispatcher_af6e86ffbab611c2bf4d0cb7079ffe2e0}{flush}} ()
+\begin{DoxyCompactList}\small\item\em Dispatches all queued events. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -37,18 +43,49 @@ The \mbox{\hyperlink{classDispatcher}{Dispatcher}} is the main class of the even
 
 Dispatches an event. 
 
-Dispatches the provided event to all subscribed observers. All observer that subscribed to event.\+get\+Type() will be invoked in the same order that they subscribed.
+Dispatches the provided event to all subscribed observers. All observer that subscribed to event.\+get\+Type() will be invoked in the same order that they subscribed. Global subscribers are called after specific subscribers.
+
+\mbox{\hyperlink{classDispatcher_ab1d9931ec607d3c975474e9f65dd267f}{dispatch()}} should be used over \mbox{\hyperlink{classDispatcher_ad75f304262f738f7f6a79023b65e368c}{queue()}} / \mbox{\hyperlink{classDispatcher_af6e86ffbab611c2bf4d0cb7079ffe2e0}{flush()}} when the event should be handled immediately, before execution in the current method resumes. This is useful for in-\/frame communcation or small status updates that should be conveyed to other entities as soon as possible.
 
 
 \begin{DoxyParams}{Parameters}
 {\em event} & The event to dispatch \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classDispatcher_a77c18383035cd9d935a0188ef5ee311e}\label{classDispatcher_a77c18383035cd9d935a0188ef5ee311e}} 
+\mbox{\Hypertarget{classDispatcher_af6e86ffbab611c2bf4d0cb7079ffe2e0}\label{classDispatcher_af6e86ffbab611c2bf4d0cb7079ffe2e0}} 
+\index{Dispatcher@{Dispatcher}!flush@{flush}}
+\index{flush@{flush}!Dispatcher@{Dispatcher}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void Dispatcher\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dispatches all queued events. 
+
+Events are dispatched in the order they were queued \mbox{\Hypertarget{classDispatcher_ad75f304262f738f7f6a79023b65e368c}\label{classDispatcher_ad75f304262f738f7f6a79023b65e368c}} 
+\index{Dispatcher@{Dispatcher}!queue@{queue}}
+\index{queue@{queue}!Dispatcher@{Dispatcher}}
+\doxysubsubsection{\texorpdfstring{queue()}{queue()}}
+{\footnotesize\ttfamily void Dispatcher\+::queue (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEvent}{Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Queues an event to be dispatched later. 
+
+Queues the provided event. It will be dispatched to all subscribed observers the next time \mbox{\hyperlink{classDispatcher_af6e86ffbab611c2bf4d0cb7079ffe2e0}{flush()}} is called. All observer that subscribed to event.\+get\+Type() will be invoked in the same order that they subscribed. Global subscribers are called after specific subscribers.
+
+\mbox{\hyperlink{classDispatcher_ad75f304262f738f7f6a79023b65e368c}{queue()}} / \mbox{\hyperlink{classDispatcher_af6e86ffbab611c2bf4d0cb7079ffe2e0}{flush()}} should be used over \mbox{\hyperlink{classDispatcher_ab1d9931ec607d3c975474e9f65dd267f}{dispatch()}} when the event should be handled later, such as if the event is likely to trigger significant effects, like screen transitions that might require destroying the object creating the event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to dispatch \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDispatcher_a9a1840c066927e95e69d102441bb7fbf}\label{classDispatcher_a9a1840c066927e95e69d102441bb7fbf}} 
 \index{Dispatcher@{Dispatcher}!subscribe@{subscribe}}
 \index{subscribe@{subscribe}!Dispatcher@{Dispatcher}}
 \doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
-{\footnotesize\ttfamily void Dispatcher\+::subscribe (\begin{DoxyParamCaption}\item[{const std\+::string}]{type,  }\item[{const std\+::function$<$ void(const \mbox{\hyperlink{classEvent}{Event}} \&)$>$ \&}]{observer }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Dispatcher\+::subscribe (\begin{DoxyParamCaption}\item[{const std\+::string}]{type,  }\item[{const std\+::function$<$ void(const \mbox{\hyperlink{classEvent}{Event}} \&)$>$}]{observer }\end{DoxyParamCaption})}
 
 
 
@@ -58,11 +95,26 @@ Subscribe a specific listener to a specific event type.
 \begin{DoxyParams}{Parameters}
 {\em type} & The string identifying the type of event. This is idiomatically declared as a static member in the class that produces the event. \\
 \hline
-{\em observer} & The function to be invoked when the event is dispatched. It is assumed this function\textquotesingle{}s lifetime will be at least as long as that of the dispatcher. \\
+{\em observer} & The function to be invoked when the event is dispatched. It is assumed any references used by the function will be valid for at least as long as the dispatcher exists. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDispatcher_acb1dc22ea4f96bafdb9f81782c890dd8}\label{classDispatcher_acb1dc22ea4f96bafdb9f81782c890dd8}} 
+\index{Dispatcher@{Dispatcher}!subscribeGlobal@{subscribeGlobal}}
+\index{subscribeGlobal@{subscribeGlobal}!Dispatcher@{Dispatcher}}
+\doxysubsubsection{\texorpdfstring{subscribeGlobal()}{subscribeGlobal()}}
+{\footnotesize\ttfamily void Dispatcher\+::subscribe\+Global (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void(const \mbox{\hyperlink{classEvent}{Event}} \&)$>$}]{observer }\end{DoxyParamCaption})}
+
+
+
+Subscribe a specific listener to all event types. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The function to be invoked when the event is dispatched. It is assumed any references used by the function will be valid for at least as long as the dispatcher exists. \\
 \hline
 \end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ganymede/\+Coding/\+VSCode\+Hello\+World/include/Dispatcher.\+hpp\end{DoxyCompactItemize}
+/home/nathan/\+Coding/\+Simple\+Cpp\+Game/build/\+\_\+deps/jupiter-\/engine-\/src/include/event/Dispatcher.\+hpp\end{DoxyCompactItemize}

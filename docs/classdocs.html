@@ -80,31 +80,268 @@
 <p>For the full class documentation, see <a class="reference external" href="./doxygen/html/index.html">the full Doxygen output</a>.</p>
 <section id="entityengine">
 <h2>EntityEngine<a class="headerlink" href="#entityengine" title="Permalink to this heading"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: breathe_default_project value ‘RunMe’ does not seem to be a valid key for the breathe_projects dictionary</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv412EntityEngine">
+<span id="_CPPv312EntityEngine"></span><span id="_CPPv212EntityEngine"></span><span id="EntityEngine"></span><span class="target" id="classEntityEngine"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EntityEngine</span></span></span><a class="headerlink" href="#_CPPv412EntityEngine" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A engine for handling a component entity system. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EntityEngine3addENSt10shared_ptrI12EntitySystemEE">
+<span id="_CPPv3N12EntityEngine3addENSt10shared_ptrI12EntitySystemEE"></span><span id="_CPPv2N12EntityEngine3addENSt10shared_ptrI12EntitySystemEE"></span><span id="EntityEngine::add__std::shared_ptr:EntitySystem:"></span><span class="target" id="classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv412EntitySystem" title="EntitySystem"><span class="n"><span class="pre">EntitySystem</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">system</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EntityEngine3addENSt10shared_ptrI12EntitySystemEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds a system to the engine. </p>
+<p>Adds the provided system to the engine. The call site and the engine will share ownership of the system through the shared_ptr created by the copy constructor when calling this method. Systems will have <a class="reference internal" href="#classEntityEngine_1a3eafb99f52dfe9b79995c533d51d314e"><span class="std std-ref">update()</span></a> called on them each frame in the same order they are added to the engine, so if processing order is important, care should be taken when organizing calls to <a class="reference internal" href="#classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9"><span class="std std-ref">add()</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>system</strong> – the system to be added to the engine </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EntityEngine3addENSt10shared_ptrI6EntityEE">
+<span id="_CPPv3N12EntityEngine3addENSt10shared_ptrI6EntityEE"></span><span id="_CPPv2N12EntityEngine3addENSt10shared_ptrI6EntityEE"></span><span id="EntityEngine::add__std::shared_ptr:Entity:"></span><span class="target" id="classEntityEngine_1a1a905abcc17249f932fda5837c40a563"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv46Entity" title="Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">entity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EntityEngine3addENSt10shared_ptrI6EntityEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds an entity to the engine. </p>
+<p>Adds the provided entity to the engine. The call site, the engine, and any systems that choose to will share ownership of the entity through copies of the shared_ptr. Systems will only be informed of the addition of an entity if <a class="reference internal" href="#classEntityEngine_1a1a905abcc17249f932fda5837c40a563"><span class="std std-ref">EntityEngine::add(std::shared_ptr&lt;Entity&gt; entity)</span></a> is called after <a class="reference internal" href="#classEntityEngine_1a4b1a151835e6a31360c68e8e8852ced9"><span class="std std-ref">EntityEngine::add(std::shared_ptr&lt;EntitySystem&gt; system)</span></a>, so take care with ordering calls during initialization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> – the entity to add to the engine </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EntityEngine6updateEKN2sf4TimeE">
+<span id="_CPPv3N12EntityEngine6updateEKN2sf4TimeE"></span><span id="_CPPv2N12EntityEngine6updateEKN2sf4TimeE"></span><span id="EntityEngine::update__sf::TimeC"></span><span class="target" id="classEntityEngine_1a3eafb99f52dfe9b79995c533d51d314e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">sf</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">deltaTime</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EntityEngine6updateEKN2sf4TimeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Updates all systems in the engine. </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classEntitySystem_1a6cfebcec0f05398db9af09ba37673154"><span class="std std-ref">EntitySystem::update</span></a> </p>
 </div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deltaTime</strong> – The amount of time that has passed since the last update.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 <section id="entitysystem">
 <h2>EntitySystem<a class="headerlink" href="#entitysystem" title="Permalink to this heading"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: breathe_default_project value ‘RunMe’ does not seem to be a valid key for the breathe_projects dictionary</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv412EntitySystem">
+<span id="_CPPv312EntitySystem"></span><span id="_CPPv212EntitySystem"></span><span id="EntitySystem"></span><span class="target" id="classEntitySystem"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EntitySystem</span></span></span><a class="headerlink" href="#_CPPv412EntitySystem" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A class representing a system that processes groups of <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> in an <a class="reference internal" href="#classEntityEngine"><span class="std std-ref">EntityEngine</span></a>. </p>
+<p>An abstract class to be extended by specific implementations. </p>
+<p>Subclassed by IteratingSystem</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EntitySystem12EntitySystemEv">
+<span id="_CPPv3N12EntitySystem12EntitySystemEv"></span><span id="_CPPv2N12EntitySystem12EntitySystemEv"></span><span id="EntitySystem::EntitySystem"></span><span class="target" id="classEntitySystem_1ac6bc28f99a8a4d9f6f43226d1bc4abe8"></span><span class="sig-name descname"><span class="n"><span class="pre">EntitySystem</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EntitySystem12EntitySystemEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new default <a class="reference internal" href="#classEntitySystem"><span class="std std-ref">EntitySystem</span></a>. </p>
+<p>This creates an <a class="reference internal" href="#classEntitySystem"><span class="std std-ref">EntitySystem</span></a> that processes all Entities added to the <a class="reference internal" href="#classEntityEngine"><span class="std std-ref">EntityEngine</span></a> if EntitySystem::engineEngineEntityAdded is not overridden. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EntitySystem12EntitySystemERKNSt10shared_ptrI12EntityFamilyEE">
+<span id="_CPPv3N12EntitySystem12EntitySystemERKNSt10shared_ptrI12EntityFamilyEE"></span><span id="_CPPv2N12EntitySystem12EntitySystemERKNSt10shared_ptrI12EntityFamilyEE"></span><span id="EntitySystem::EntitySystem__std::shared_ptr:EntityFamily:CR"></span><span class="target" id="classEntitySystem_1a951adbd375c4206d9d0115bf17050870"></span><span class="sig-name descname"><span class="n"><span class="pre">EntitySystem</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">EntityFamily</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">family</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EntitySystem12EntitySystemERKNSt10shared_ptrI12EntityFamilyEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classEntitySystem"><span class="std std-ref">EntitySystem</span></a> that acts on a specified family. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>family</strong> – The family of entities that this system will act on. The <a class="reference internal" href="#classEntitySystem"><span class="std std-ref">EntitySystem</span></a> implementation of <a class="reference internal" href="#classEntitySystem_1ad9476307802ce67acbf44b71183568bd"><span class="std std-ref">EntitySystem::engineEntityAdded</span></a> adds all entities to the system for which this family’s implementation of EntityFamily::isInFamily returns true. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EntitySystem17engineEntityAddedERKNSt10shared_ptrI6EntityEE">
+<span id="_CPPv3N12EntitySystem17engineEntityAddedERKNSt10shared_ptrI6EntityEE"></span><span id="_CPPv2N12EntitySystem17engineEntityAddedERKNSt10shared_ptrI6EntityEE"></span><span id="EntitySystem::engineEntityAdded__std::shared_ptr:Entity:CR"></span><span class="target" id="classEntitySystem_1ad9476307802ce67acbf44b71183568bd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">engineEntityAdded</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv46Entity" title="Entity"><span class="n"><span class="pre">Entity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">entity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12EntitySystem17engineEntityAddedERKNSt10shared_ptrI6EntityEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Performs any operations required after an entity has been added to an <a class="reference internal" href="#classEntityEngine"><span class="std std-ref">EntityEngine</span></a> the system is a part of. </p>
+<p>The default implementation adds the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> to the Entities property (EntitySystem::getEntities) if the default constructor was called or the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> is in the family provided to the family constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> – The <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> recently added to the <a class="reference internal" href="#classEntityEngine"><span class="std std-ref">EntityEngine</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12EntitySystem6updateEKN2sf4TimeE">
+<span id="_CPPv3N12EntitySystem6updateEKN2sf4TimeE"></span><span id="_CPPv2N12EntitySystem6updateEKN2sf4TimeE"></span><span id="EntitySystem::update__sf::TimeC"></span><span class="target" id="classEntitySystem_1a6cfebcec0f05398db9af09ba37673154"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">sf</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">deltaTime</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N12EntitySystem6updateEKN2sf4TimeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Performs any operations necessary in routine processing. </p>
+<p>This method is pure virtual in <a class="reference internal" href="#classEntitySystem"><span class="std std-ref">EntitySystem</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deltaTime</strong> – The time that has passed since <a class="reference internal" href="#classEntitySystem_1a6cfebcec0f05398db9af09ba37673154"><span class="std std-ref">update()</span></a> was last called. </p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
+</dd></dl>
+
 </section>
 <section id="entity">
 <h2>Entity<a class="headerlink" href="#entity" title="Permalink to this heading"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: breathe_default_project value ‘RunMe’ does not seem to be a valid key for the breathe_projects dictionary</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv46Entity">
+<span id="_CPPv36Entity"></span><span id="_CPPv26Entity"></span><span id="Entity"></span><span class="target" id="classEntity"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Entity</span></span></span><a class="headerlink" href="#_CPPv46Entity" title="Permalink to this definition"></a><br /></dt>
+<dd><p>An entity in the game’s component entity system. </p>
+<p>The <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> represents a collection of attributes, called Components, that together are acted upon by <a class="reference internal" href="#classEntitySystem"><span class="std std-ref">EntitySystem</span></a> objects that form a complete game world. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Entity6EntityEv">
+<span id="_CPPv3N6Entity6EntityEv"></span><span id="_CPPv2N6Entity6EntityEv"></span><span id="Entity::Entity"></span><span class="target" id="classEntity_1a980f368aa07ce358583982821533a54a"></span><span class="sig-name descname"><span class="n"><span class="pre">Entity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Entity6EntityEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> with a random ID. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Entity6EntityEi">
+<span id="_CPPv3N6Entity6EntityEi"></span><span id="_CPPv2N6Entity6EntityEi"></span><span id="Entity::Entity__i"></span><span class="target" id="classEntity_1ac98bd610e0299cc2aa0538fb2884ab69"></span><span class="sig-name descname"><span class="n"><span class="pre">Entity</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Entity6EntityEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> object with a specific ID. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – The ID of the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Entity5getIdEv">
+<span id="_CPPv3NK6Entity5getIdEv"></span><span id="_CPPv2NK6Entity5getIdEv"></span><span id="Entity::getIdC"></span><span class="target" id="classEntity_1a33ce509c7e43ea606ac82b6ce06bc2df"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getId</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Entity5getIdEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the ID of the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>int the entity’s ID </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Entity3addERKNSt10shared_ptrI9ComponentEE">
+<span id="_CPPv3N6Entity3addERKNSt10shared_ptrI9ComponentEE"></span><span id="_CPPv2N6Entity3addERKNSt10shared_ptrI9ComponentEE"></span><span id="Entity::add__std::shared_ptr:Component:CR"></span><span class="target" id="classEntity_1a72c8542219615793e0610617a7e5f3f4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6Entity9ComponentE" title="Entity::Component"><span class="n"><span class="pre">Component</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">component</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Entity3addERKNSt10shared_ptrI9ComponentEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds the provided component to the entity. </p>
+<p>The entity will create a new std::shared_ptr pointing to the Component using the copy constructor that will stay in scope with the entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>component</strong> – The Component to add to this <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Entity12hasComponentEKNSt6stringE">
+<span id="_CPPv3NK6Entity12hasComponentEKNSt6stringE"></span><span id="_CPPv2NK6Entity12hasComponentEKNSt6stringE"></span><span id="Entity::hasComponent__ssCC"></span><span class="target" id="classEntity_1a4470308ca5a3ab893baffd122ae4e9f8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasComponent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Entity12hasComponentEKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Check if the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> has a component of the specified type. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – The ID of the Component type. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> has a component of the specified type. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>false if the Entnity doeso not have a component of the specified type. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Entity12getComponentEKNSt6stringE">
+<span id="_CPPv3NK6Entity12getComponentEKNSt6stringE"></span><span id="_CPPv2NK6Entity12getComponentEKNSt6stringE"></span><span id="Entity::getComponent__ssCC"></span><span class="target" id="classEntity_1a6ea59e929e7fb1b81ed2ed00861c16b2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6Entity9ComponentE" title="Entity::Component"><span class="n"><span class="pre">Component</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getComponent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Entity12getComponentEKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the Component object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>std::shared_ptr&lt;Component&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6Entity9ComponentE">
+<span id="_CPPv3N6Entity9ComponentE"></span><span id="_CPPv2N6Entity9ComponentE"></span><span id="Entity::Component"></span><span class="target" id="classEntity_1_1Component"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Component</span></span></span><a class="headerlink" href="#_CPPv4N6Entity9ComponentE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A component of an entity in the game’s component entity system. </p>
+<p>Components represent an aspect of an <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a>. They store state information, such as position and sprite data, as well as mark the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> as belong to a certain class of object, like being the player or an AI opponent.</p>
+<p>Component types are identified with their ID, which is passed to the constructor. To avoid odd bugs and behavior, all instances of the same Component subclass should have the same ID, which is usually declared as a static member of the class or a preprocessor constant in the header file. </p>
+<p>Subclassed by BallComponent, EnemyComponent, LocationComponent, PlayerComponent, RenderComponent, VelocityComponent</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Entity9Component9ComponentEKNSt6stringE">
+<span id="_CPPv3N6Entity9Component9ComponentEKNSt6stringE"></span><span id="_CPPv2N6Entity9Component9ComponentEKNSt6stringE"></span><span id="Entity::Component::Component__ssC"></span><span class="target" id="classEntity_1_1Component_1aa870551c8ede04e4ed6f538eee376a1a"></span><span class="sig-name descname"><span class="n"><span class="pre">Component</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Entity9Component9ComponentEKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new Component object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – The Component’s ID </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Entity9ComponentD0Ev">
+<span id="_CPPv3N6Entity9ComponentD0Ev"></span><span id="_CPPv2N6Entity9ComponentD0Ev"></span><span id="Entity::Component::~Component"></span><span class="target" id="classEntity_1_1Component_1a8e19d41c2a8041556e2cbd5c92e4906e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Component</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Entity9ComponentD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>This is only declared to make the class polymorphic so that dymaic_cast between Component types works. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Entity9Component5getIdEv">
+<span id="_CPPv3NK6Entity9Component5getIdEv"></span><span id="_CPPv2NK6Entity9Component5getIdEv"></span><span id="Entity::Component::getIdC"></span><span class="target" id="classEntity_1_1Component_1aa27ad6d78bfc3ff60566ca824b29c1db"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getId</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Entity9Component5getIdEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the ID of the component. This will return the same value for all instances of a class of Component. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="component">
 <h2>Component<a class="headerlink" href="#component" title="Permalink to this heading"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: breathe_default_project value ‘RunMe’ does not seem to be a valid key for the breathe_projects dictionary</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp">
+<span class="target" id="classEntity_1_1Component"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Component</span></span></span><br /></dt>
+<dd><p>A component of an entity in the game’s component entity system. </p>
+<p>Components represent an aspect of an <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a>. They store state information, such as position and sprite data, as well as mark the <a class="reference internal" href="#classEntity"><span class="std std-ref">Entity</span></a> as belong to a certain class of object, like being the player or an AI opponent.</p>
+<p>Component types are identified with their ID, which is passed to the constructor. To avoid odd bugs and behavior, all instances of the same Component subclass should have the same ID, which is usually declared as a static member of the class or a preprocessor constant in the header file. </p>
+<p>Subclassed by BallComponent, EnemyComponent, LocationComponent, PlayerComponent, RenderComponent, VelocityComponent</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classEntity_1_1Component_1aa870551c8ede04e4ed6f538eee376a1a"></span><span class="sig-name descname"><span class="n"><span class="pre">Component</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Construct a new Component object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – The Component’s ID </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classEntity_1_1Component_1a8e19d41c2a8041556e2cbd5c92e4906e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Component</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>This is only declared to make the class polymorphic so that dymaic_cast between Component types works. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classEntity_1_1Component_1aa27ad6d78bfc3ff60566ca824b29c1db"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getId</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
+<dd><p>Get the ID of the component. This will return the same value for all instances of a class of Component. </p>
+</dd></dl>
+
 </div>
+</dd></dl>
+
 </section>
 </section>
 
