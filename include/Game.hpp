@@ -115,6 +115,7 @@ private:
 
     void render();
 
+    void initialize();
     void displaySplashScreen();
     void displayMainMenu();
     void startPlaying();
@@ -141,11 +142,11 @@ private:
     std::shared_ptr<StateMachine::State> _lost;
     std::shared_ptr<StateMachine::State> _exiting;
 
-    class StartGameEvent : public Event
+    class InitializationCompleteEvent : public Event
     {
     public:
-        static const std::string START_GAME_EVENT;
-        StartGameEvent();
+        static const std::string INITIALIZATION_COMPLETE;
+        InitializationCompleteEvent();
     };
 
     class WindowCloseEvent : public Event

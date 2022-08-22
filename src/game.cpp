@@ -22,8 +22,8 @@ Game::Game()
       _uninitialized(
           std::make_shared<LambdaState>(
               _stm,
-              /* entry() */ []()
-              { return; },
+              /* entry() */ [this]()
+              { this->initialize(); },
               /* exit() */ []()
               { return; },
               /* update(deltaT) */ [&](const sf::Time deltaT)
@@ -84,7 +84,7 @@ Game::Game()
               { return; }))
 {
 
-    _uninitialized->registerTransition(Game::StartGameEvent::START_GAME_EVENT, _splash);
+    _uninitialized->registerTransition(Game::InitializationCompleteEvent::INITIALIZATION_COMPLETE, _splash);
     _uninitialized->registerTransition(Game::WindowCloseEvent::WINDOW_CLOSE_EVENT, _exiting);
 
     _splash->registerTransition(SplashScreen::SPLASH_SCREEN_CLOSE, _mainMenu);
@@ -114,39 +114,7 @@ void Game::start()
     }
     _stm.start(_uninitialized);
 
-    // Seed the random number generator
-    srand(time(NULL));
-
-    // ================ Block - Component Entity System ========================
-    // Declare the entities and systems we need, then stick them in the engine
-    auto player = createPlayer();
-    auto enemy = createEnemy();
-    auto ball = createBall();
-
-    _input = std::make_shared<PlayerInputSystem>();
-    _engine->add(this->_input);
-
-    _ballSystem = std::make_shared<BallSystem>(*_dispatcher, *player, *enemy);
-    _engine->add(this->_ballSystem);
-
-    _velocity = std::make_shared<VelocitySystem>();
-    _engine->add(this->_velocity);
-
-    _render = std::make_shared<RenderSystem>();
-    _engine->add(this->_render);
-
-    _engine->add(std::make_shared<EnemyAISystem>(*ball));
-
-    _engine->add(player);
-    _engine->add(enemy);
-    _engine->add(ball);
-    // =========================================================================
-
-    // For simplicity and learning's sake, make a fixed-size game
-    _mainWindow.create(sf::VideoMode(WORLD_WIDTH, WORLD_HEIGHT), "Simple Cpp Game");
-    _view = _mainWindow.getDefaultView();
-
-    getDispatcher()->dispatch(StartGameEvent());
+    getDispatcher()->dispatch(InitializationCompleteEvent());
 
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
@@ -232,6 +200,41 @@ void Game::modifyView(const std::function<sf::View(sf::View)> op)
 {
     this->_view = op(this->_view);
     this->_mainWindow.setView(this->_view);
+}
+
+void Game::initialize()
+{
+    // Seed the random number generator
+    srand(time(NULL));
+
+    // ================ Block - Component Entity System ========================
+    // Declare the entities and systems we need, then stick them in the engine
+    auto player = createPlayer();
+    auto enemy = createEnemy();
+    auto ball = createBall();
+
+    _input = std::make_shared<PlayerInputSystem>();
+    _engine->add(this->_input);
+
+    _ballSystem = std::make_shared<BallSystem>(*_dispatcher, *player, *enemy);
+    _engine->add(this->_ballSystem);
+
+    _velocity = std::make_shared<VelocitySystem>();
+    _engine->add(this->_velocity);
+
+    _render = std::make_shared<RenderSystem>();
+    _engine->add(this->_render);
+
+    _engine->add(std::make_shared<EnemyAISystem>(*ball));
+
+    _engine->add(player);
+    _engine->add(enemy);
+    _engine->add(ball);
+    // =========================================================================
+
+    // For simplicity and learning's sake, make a fixed-size game
+    _mainWindow.create(sf::VideoMode(WORLD_WIDTH, WORLD_HEIGHT), "Simple Cpp Game");
+    _view = _mainWindow.getDefaultView();
 }
 
 std::shared_ptr<Entity> Game::createPlayer()
@@ -357,9 +360,9 @@ void Game::winGame()
     _currentScreen = std::make_unique<GameOverScreen>(_mainWindow, *_dispatcher, "./res/you-win.png");
 }
 
-const std::string Game::StartGameEvent::START_GAME_EVENT = "START_GAME_EVENT";
+const std::string Game::InitializationCompleteEvent::INITIALIZATION_COMPLETE = "INITIALIZATION_COMPLETE";
 
-Game::StartGameEvent::StartGameEvent() : Event(StartGameEvent::START_GAME_EVENT)
+Game::InitializationCompleteEvent::InitializationCompleteEvent() : Event(InitializationCompleteEvent::INITIALIZATION_COMPLETE)
 {
 }
 
