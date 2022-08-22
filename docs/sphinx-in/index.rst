@@ -11,6 +11,7 @@ Welcome to the Simple CPP Game Documentation!
 
    self
    installation
+   lifecycle
    extending
    classdocs
 
