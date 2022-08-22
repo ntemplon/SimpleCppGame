@@ -132,6 +132,7 @@
     <member refid="classGame_1a896afc2172602e9dd1bb07d4660d5ee6" kind="function"><name>createEnemy</name></member>
     <member refid="classGame_1ad470e447f5e524c9fda47b141499fc72" kind="function"><name>createBall</name></member>
     <member refid="classGame_1a15ddd769261d923827a3cdf41499c843" kind="function"><name>render</name></member>
+    <member refid="classGame_1a14073b7ee15e3a60b72112519be85453" kind="function"><name>initialize</name></member>
     <member refid="classGame_1a7ed332e93df3bef8de4ddaea2de12e23" kind="function"><name>displaySplashScreen</name></member>
     <member refid="classGame_1af74fd203e3b31917ca9d4769fa608c48" kind="function"><name>displayMainMenu</name></member>
     <member refid="classGame_1a3b303855128e52c27946779f60f24fee" kind="function"><name>startPlaying</name></member>
@@ -152,6 +153,10 @@
     <member refid="classGameScreen_1a382461f8a70ac68e92225b1dfa55d10e" kind="function"><name>GameScreen</name></member>
     <member refid="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f" kind="function"><name>render</name></member>
     <member refid="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0" kind="function"><name>handleClick</name></member>
+  </compound>
+  <compound refid="classGame_1_1InitializationCompleteEvent" kind="class"><name>Game::InitializationCompleteEvent</name>
+    <member refid="classGame_1_1InitializationCompleteEvent_1a2da11d25c824dd2d9e4de640917d70f5" kind="variable"><name>INITIALIZATION_COMPLETE</name></member>
+    <member refid="classGame_1_1InitializationCompleteEvent_1a3121c4433aa518cc868f1247d1bba594" kind="function"><name>InitializationCompleteEvent</name></member>
   </compound>
   <compound refid="classIteratingSystem" kind="class"><name>IteratingSystem</name>
     <member refid="classIteratingSystem_1adabf0b591af165c24fc92ce28483669c" kind="function"><name>IteratingSystem</name></member>
@@ -231,10 +236,6 @@
     <member refid="classSplashScreen_1a97b621dfe67fd172af5b00c9b3b0d747" kind="function"><name>~SplashScreen</name></member>
     <member refid="classSplashScreen_1aa740429d18d6ae5bd299d3c0e178b94e" kind="function"><name>render</name></member>
     <member refid="classSplashScreen_1a678197888d19caed6558d81452904158" kind="function"><name>handleClick</name></member>
-  </compound>
-  <compound refid="classGame_1_1StartGameEvent" kind="class"><name>Game::StartGameEvent</name>
-    <member refid="classGame_1_1StartGameEvent_1a36b368f6f26c8be773f9e3f28359c34f" kind="variable"><name>START_GAME_EVENT</name></member>
-    <member refid="classGame_1_1StartGameEvent_1a4428ac4c64af3dd6e8701548b1a1fb76" kind="function"><name>StartGameEvent</name></member>
   </compound>
   <compound refid="classStateMachine_1_1State" kind="class"><name>StateMachine::State</name>
     <member refid="classStateMachine_1_1State_1a3bb0b74984f932dba45d1efd815ca91f" kind="variable"><name>_owner</name></member>

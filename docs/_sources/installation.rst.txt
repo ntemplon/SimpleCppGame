@@ -23,7 +23,9 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     :code:`sudo apt install libxrander-dev libfreetype-dev libudev-dev`
 
-    **Mac** and **Windows** users should consult the Oracle of Google for how to best install dependencies.
+    **Mac** users do not need any additional dependencies to build SFML.
+    
+    **Windows** users should consult the Oracle of Google for how to best install dependencies.
 
 2. Doxygen (with graphviz)
 
