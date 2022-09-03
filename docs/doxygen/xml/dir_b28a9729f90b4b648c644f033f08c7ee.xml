@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir">
-    <compoundname>/home/nathan/Coding/SimpleCppGame/include/entity</compoundname>
+    <compoundname>/home/ganymede/Coding/SimpleCppGame/include/entity</compoundname>
     <innerfile refid="BallSystem_8hpp">BallSystem.hpp</innerfile>
     <innerfile refid="Components_8hpp">Components.hpp</innerfile>
     <innerfile refid="EnemyAISystem_8hpp">EnemyAISystem.hpp</innerfile>
@@ -12,6 +12,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/entity/"/>
+    <location file="/home/ganymede/Coding/SimpleCppGame/include/entity/"/>
   </compounddef>
 </doxygen>

@@ -195,9 +195,22 @@
     <member refid="classMainMenuScreen_1a5a408ce8d3039f2271acced1a7d81b02" kind="function"><name>render</name></member>
     <member refid="classMainMenuScreen_1a77223826dcca0f96e6714e2440c835cc" kind="function"><name>handleClick</name></member>
   </compound>
+  <compound refid="classMenu" kind="class"><name>Menu</name>
+    <member refid="classMenu_1aa8d1f574a46e4a5004c443083b535355" kind="variable"><name>_menuItems</name></member>
+    <member refid="classMenu_1ae7f35bde48a659f1ba6a2cf57ba5dde7" kind="function"><name>Menu</name></member>
+    <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" kind="function"><name>Menu</name></member>
+    <member refid="classMenu_1a64f9cb281aaad266bcb9bd26502262ad" kind="function"><name>getMenuItems</name></member>
+  </compound>
   <compound refid="structMainMenuScreen_1_1MenuItem" kind="struct"><name>MainMenuScreen::MenuItem</name>
     <member refid="structMainMenuScreen_1_1MenuItem_1add9aedb3f8d319e10870ab1e012e1337" kind="variable"><name>rect</name></member>
     <member refid="structMainMenuScreen_1_1MenuItem_1a4071d2935b7b5084037f544ea9209184" kind="variable"><name>action</name></member>
+  </compound>
+  <compound refid="classMenuScreen" kind="class"><name>MenuScreen</name>
+    <member refid="classMenuScreen_1ae9959b9475a4a42c747f57c39450b3c0" kind="variable"><name>_menu</name></member>
+    <member refid="classMenuScreen_1a5f7cd41a80a5cb29909ce6b62b67de86" kind="function"><name>MenuScreen</name></member>
+    <member refid="classMenuScreen_1a8704e53aec44b99c271ad7e4047f4ba6" kind="function"><name>render</name></member>
+    <member refid="classMenuScreen_1aa9768b31a959e2e8d0313b2a3bfd7dc4" kind="function"><name>handleClick</name></member>
+    <member refid="classMenuScreen_1ad45aec8a0c9c06e64798de44e3e934d7" kind="function"><name>getMenu</name></member>
   </compound>
   <compound refid="classPlayerComponent" kind="class"><name>PlayerComponent</name>
     <member refid="classPlayerComponent_1a3f0ad3532e4f1c9b623946f76e0ee8dd" kind="variable"><name>PLAYER_ID</name></member>
@@ -326,20 +339,24 @@
   </compound>
   <compound refid="MainMenuScreen_8hpp" kind="file"><name>MainMenuScreen.hpp</name>
   </compound>
+  <compound refid="Menu_8hpp" kind="file"><name>Menu.hpp</name>
+  </compound>
+  <compound refid="MenuScreen_8hpp" kind="file"><name>MenuScreen.hpp</name>
+  </compound>
   <compound refid="SplashScreen_8hpp" kind="file"><name>SplashScreen.hpp</name>
   </compound>
-  <compound refid="dir_a57a94e38c03835eed49274b75b0176d" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps</name>
+  <compound refid="dir_a57a94e38c03835eed49274b75b0176d" kind="dir"><name>/home/ganymede/Coding/SimpleCppGame/build/_deps</name>
   </compound>
-  <compound refid="dir_b840dd5bfae50914956b2a4ac2dfaab3" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</name>
+  <compound refid="dir_b840dd5bfae50914956b2a4ac2dfaab3" kind="dir"><name>/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</name>
   </compound>
-  <compound refid="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/include/entity</name>
+  <compound refid="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir"><name>/home/ganymede/Coding/SimpleCppGame/include/entity</name>
   </compound>
-  <compound refid="dir_6da4eac6429660075497d817c95f0540" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</name>
+  <compound refid="dir_6da4eac6429660075497d817c95f0540" kind="dir"><name>/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</name>
   </compound>
-  <compound refid="dir_e630c752658eecf3443b80c46e9b5063" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include</name>
+  <compound refid="dir_e630c752658eecf3443b80c46e9b5063" kind="dir"><name>/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include</name>
   </compound>
-  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/include</name>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/ganymede/Coding/SimpleCppGame/include</name>
   </compound>
-  <compound refid="dir_171855666a1e8a3e4d50289c205cc403" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src</name>
+  <compound refid="dir_171855666a1e8a3e4d50289c205cc403" kind="dir"><name>/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src</name>
   </compound>
 </doxygenindex>

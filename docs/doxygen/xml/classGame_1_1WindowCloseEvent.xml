@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="155" column="34" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="155" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="155" column="34" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="155" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="156" column="9"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="156" column="9"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="152" column="5" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="153" bodyend="157"/>
+    <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="152" column="5" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="153" bodyend="157"/>
     <listofallmembers>
       <member refid="classEvent_1abbf6d6b18eddabca420d63201f3ec1dd" prot="public" virt="non-virtual"><scope>Game::WindowCloseEvent</scope><name>Event</name></member>
       <member refid="classEvent_1aef164554b683656e08da56d5936083da" prot="public" virt="non-virtual"><scope>Game::WindowCloseEvent</scope><name>getType</name></member>

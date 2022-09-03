@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classMenu" kind="class" language="C++" prot="public">
+    <compoundname>Menu</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMenu_1aa8d1f574a46e4a5004c443083b535355" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>const std::vector&lt;std::string&gt; Menu::_menuItems</definition>
+        <argsstring></argsstring>
+        <name>_menuItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/Menu.hpp" line="15" column="23" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Menu.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMenu_1ae7f35bde48a659f1ba6a2cf57ba5dde7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Menu::Menu</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; menuItems)</argsstring>
+        <name>Menu</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt;</type>
+          <declname>menuItems</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/Menu.hpp" line="9" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Menu::Menu</definition>
+        <argsstring>()</argsstring>
+        <name>Menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/Menu.hpp" line="10" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a64f9cb281aaad266bcb9bd26502262ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; std::string &gt; &amp;</type>
+        <definition>const std::vector&lt;std::string&gt;&amp; Menu::getMenuItems</definition>
+        <argsstring>() const</argsstring>
+        <name>getMenuItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/Menu.hpp" line="12" column="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ganymede/Coding/SimpleCppGame/include/Menu.hpp" line="6" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Menu.hpp" bodystart="7" bodyend="16"/>
+    <listofallmembers>
+      <member refid="classMenu_1aa8d1f574a46e4a5004c443083b535355" prot="private" virt="non-virtual"><scope>Menu</scope><name>_menuItems</name></member>
+      <member refid="classMenu_1a64f9cb281aaad266bcb9bd26502262ad" prot="public" virt="non-virtual"><scope>Menu</scope><name>getMenuItems</name></member>
+      <member refid="classMenu_1ae7f35bde48a659f1ba6a2cf57ba5dde7" prot="public" virt="non-virtual"><scope>Menu</scope><name>Menu</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>Menu</scope><name>Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -88,6 +88,7 @@ test hardware for the developer.</p>
 <dt>A C++ Compiler</dt><dd><p>Any C++ Compiler and CMake. A C++ compiler that supports C++14 and <code class="code docutils literal notranslate"><span class="pre">#pragma</span> <span class="pre">once</span></code> will suffice. The game was developed and debugged using g++
 12.2 (Ubuntu 22.04 default).</p>
 <p>On Ubuntu 22.04: <code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">gcc</span> <span class="pre">g++</span> <span class="pre">cmake</span></code></p>
+<p><strong>Mac</strong> users can install the clang/clang++ compilers and cmake via homebrew: <code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">llvm</span> <span class="pre">cmake</span></code></p>
 </dd>
 </dl>
 </li>
@@ -121,7 +122,6 @@ environment tools as well. For example, to install Python3.10 on Ubuntu:</p>
 <p><strong>Mac</strong> users should install python3, pip, and the virtualenv tools. There are many ways to do this, such as with homebrew:</p>
 <p><code class="code docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">python3</span></code></p>
 <p><code class="code docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
-<p>Note: The author does not have a Mac to test installation of python on and apologizes if steps are missing.</p>
 <p><strong>Windows</strong> users should download and run an installter from <a class="reference external" href="https://www.python.org/downloads/">the Python website</a>. Do NOT
 use the version of Python from the windows store; it is substantially more difficult to work with.</p>
 </dd>
@@ -137,7 +137,7 @@ You can download the repository from the website or by cloning it with <code cla
 <section id="building-the-game">
 <h2>Building the Game<a class="headerlink" href="#building-the-game" title="Permalink to this heading"></a></h2>
 <p>The easiest way to build the game is to open <a class="reference external" href="https://code.visualstudio.com/">VSCode</a> in the respository directory and invoke the
-CMake: Configure and CMake: Built Target simple-cpp-game commands with Ctrl + Shift + P or equivalent Mac command.</p>
+CMake: Configure and CMake: Built Target simple-cpp-game commands with Ctrl + Shift + P or Cmd + Shift + P on Mac.</p>
 <p>To manually build the game, open a terminal in the repository directory and run the following commands. They are provided for Linux;
 use whatever equivalent commands are available on your operating system.</p>
 <ol class="arabic simple">

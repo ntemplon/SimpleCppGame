@@ -5,6 +5,7 @@
     <derivedcompoundref refid="classGameOverScreen" prot="public" virt="non-virtual">GameOverScreen</derivedcompoundref>
     <derivedcompoundref refid="classGameScreen" prot="public" virt="non-virtual">GameScreen</derivedcompoundref>
     <derivedcompoundref refid="classMainMenuScreen" prot="public" virt="non-virtual">MainMenuScreen</derivedcompoundref>
+    <derivedcompoundref refid="classMenuScreen" prot="public" virt="non-virtual">MenuScreen</derivedcompoundref>
     <derivedcompoundref refid="classSplashScreen" prot="public" virt="non-virtual">SplashScreen</derivedcompoundref>
     <includes refid="Screen_8hpp" local="no">Screen.hpp</includes>
       <sectiondef kind="private-attrib">
@@ -19,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="56" column="22" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="56" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="56" column="22" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classScreen_1ab6b1f41a14eac6d8982dafb560489c95" prot="private" static="no" mutable="no">
         <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
@@ -32,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="57" column="16" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="57" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="57" column="16" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -74,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="20" column="5"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="20" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classScreen_1a0bc1a2ceaee4a245e0d31822ea0643bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -88,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="26" column="13" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="26" bodyend="26"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="26" column="13" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="26" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="classScreen_1a3cd453c494b2389725b719700283e655" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -98,6 +99,7 @@
         <reimplementedby refid="classGameOverScreen_1a7f015719692c3482de713fd2381f2154">render</reimplementedby>
         <reimplementedby refid="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f">render</reimplementedby>
         <reimplementedby refid="classMainMenuScreen_1a5a408ce8d3039f2271acced1a7d81b02">render</reimplementedby>
+        <reimplementedby refid="classMenuScreen_1a8704e53aec44b99c271ad7e4047f4ba6">render</reimplementedby>
         <reimplementedby refid="classSplashScreen_1aa740429d18d6ae5bd299d3c0e178b94e">render</reimplementedby>
         <briefdescription>
 <para>Renders the screen. </para>
@@ -107,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="34" column="18"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="34" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classScreen_1afafb8c2a2255c4cf8cef807ba4d14400" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -117,6 +119,7 @@
         <reimplementedby refid="classGameOverScreen_1a8e5c8ae4f8329274bcc5d932bb1f5526">handleClick</reimplementedby>
         <reimplementedby refid="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0">handleClick</reimplementedby>
         <reimplementedby refid="classMainMenuScreen_1a77223826dcca0f96e6714e2440c835cc">handleClick</reimplementedby>
+        <reimplementedby refid="classMenuScreen_1aa9768b31a959e2e8d0313b2a3bfd7dc4">handleClick</reimplementedby>
         <reimplementedby refid="classSplashScreen_1a678197888d19caed6558d81452904158">handleClick</reimplementedby>
         <param>
           <type>int</type>
@@ -151,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="42" column="18"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="42" column="18"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -167,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="48" column="22"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="48" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classScreen_1a6335968966aa2d082ba6804c9481d478" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
@@ -181,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="53" column="16"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="53" column="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -208,18 +211,24 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="5">
+        <label>MenuScreen</label>
+        <link refid="classMenuScreen"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="1">
         <label>Screen</label>
         <link refid="classScreen"/>
       </node>
-      <node id="5">
+      <node id="6">
         <label>SplashScreen</label>
         <link refid="classSplashScreen"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="11" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="12" bodyend="58"/>
+    <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" line="11" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp" bodystart="12" bodyend="58"/>
     <listofallmembers>
       <member refid="classScreen_1ab6b1f41a14eac6d8982dafb560489c95" prot="private" virt="non-virtual"><scope>Screen</scope><name>_dispatcher</name></member>
       <member refid="classScreen_1ae4ab32dff8c77123659c89b70c427191" prot="private" virt="non-virtual"><scope>Screen</scope><name>_window</name></member>

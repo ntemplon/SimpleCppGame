@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="78" column="14" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="78" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="78" column="14" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDispatcher_1a561898157630b4922c3b5ba5f064e0ab" prot="private" static="no" mutable="no">
         <type>std::vector&lt; std::function&lt; void(const <ref refid="classEvent" kindref="compound">Event</ref> &amp;)&gt; &gt;</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="79" column="17" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="79" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="79" column="17" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classDispatcher_1a639e510bdf45de4df612e38ab993ee66" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="classEvent" kindref="compound">Event</ref> &gt;</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="80" column="17" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="80" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="80" column="17" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="80" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="24" column="5"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="24" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classDispatcher_1a9a1840c066927e95e69d102441bb7fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="34" column="10"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="34" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classDispatcher_1acb1dc22ea4f96bafdb9f81782c890dd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="42" column="10"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="42" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classDispatcher_1ab1d9931ec607d3c975474e9f65dd267f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="55" column="10"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="55" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classDispatcher_1ad75f304262f738f7f6a79023b65e368c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="68" column="10"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="68" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classDispatcher_1af6e86ffbab611c2bf4d0cb7079ffe2e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="75" column="10"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="75" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -209,7 +209,7 @@
     <detaileddescription>
 <para>The <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> is the main class of the event system. Publishers use the <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> to post their events and subscribers use the <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> to receive their events. </para>
     </detaileddescription>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="17" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="18" bodyend="81"/>
+    <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" line="17" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp" bodystart="18" bodyend="81"/>
     <listofallmembers>
       <member refid="classDispatcher_1a561898157630b4922c3b5ba5f064e0ab" prot="private" virt="non-virtual"><scope>Dispatcher</scope><name>_globalObservers</name></member>
       <member refid="classDispatcher_1ad2b35decda2e219043c0c30da0a5e49b" prot="private" virt="non-virtual"><scope>Dispatcher</scope><name>_observers</name></member>

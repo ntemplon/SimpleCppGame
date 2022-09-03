@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="33" column="30" bodyfile="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="33" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="33" column="30" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classMainMenuScreen_1a69f87d1081a0c724c3683858573af882" prot="public" static="yes" mutable="no">
         <type>const std::string</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="38" column="30" bodyfile="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="38" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="38" column="30" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="63" column="15" bodyfile="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="63" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="63" column="15" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classMainMenuScreen_1add7f92a3a0e2993989cb651343e53b19" prot="private" static="no" mutable="no">
         <type>sf::Texture</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="64" column="17" bodyfile="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="64" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="64" column="17" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classMainMenuScreen_1ac51d18b94a68a9b5d7abae3da1af4321" prot="private" static="no" mutable="no">
         <type>sf::Sprite</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="65" column="16" bodyfile="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="65" bodyend="-1"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="65" column="16" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="65" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
           <declname>backgroundImage</declname>
         </param>
         <briefdescription>
-<para>Construct a new Main Menu <ref refid="classScreen" kindref="compound">Screen</ref> object. </para>
+<para>Construct a new Main <ref refid="classMenu" kindref="compound">Menu</ref> <ref refid="classScreen" kindref="compound">Screen</ref> object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="47" column="5"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="47" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classMainMenuScreen_1a5a408ce8d3039f2271acced1a7d81b02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="52" column="18"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="52" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classMainMenuScreen_1a77223826dcca0f96e6714e2440c835cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="60" column="18"/>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="60" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -215,7 +215,7 @@
         <link refid="classScreen"/>
       </node>
     </collaborationgraph>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="15" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="16" bodyend="66"/>
+    <location file="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" line="15" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp" bodystart="16" bodyend="66"/>
     <listofallmembers>
       <member refid="classMainMenuScreen_1a3649d2e6723a052643f057399412c047" prot="private" virt="non-virtual"><scope>MainMenuScreen</scope><name>_menuItems</name></member>
       <member refid="classMainMenuScreen_1ac51d18b94a68a9b5d7abae3da1af4321" prot="private" virt="non-virtual"><scope>MainMenuScreen</scope><name>_sprite</name></member>

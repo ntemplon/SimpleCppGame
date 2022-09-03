@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classMenuScreen" kind="class" language="C++" prot="public">
+    <compoundname>MenuScreen</compoundname>
+    <basecompoundref refid="classScreen" prot="public" virt="non-virtual">Screen</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMenuScreen_1ae9959b9475a4a42c747f57c39450b3c0" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classMenu" kindref="compound">Menu</ref></type>
+        <definition>const Menu MenuScreen::_menu</definition>
+        <argsstring></argsstring>
+        <name>_menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" line="14" column="16" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMenuScreen_1a5f7cd41a80a5cb29909ce6b62b67de86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MenuScreen::MenuScreen</definition>
+        <argsstring>(sf::RenderWindow &amp;window, Dispatcher &amp;dispatcher, Menu menu)</argsstring>
+        <name>MenuScreen</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type><ref refid="classMenu" kindref="compound">Menu</ref></type>
+          <declname>menu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" line="7" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenuScreen_1a8704e53aec44b99c271ad7e4047f4ba6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MenuScreen::render</definition>
+        <argsstring>() const</argsstring>
+        <name>render</name>
+        <reimplements refid="classScreen_1a3cd453c494b2389725b719700283e655">render</reimplements>
+        <briefdescription>
+<para>Renders the screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Renders the screen to the window provided at construction </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" line="9" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenuScreen_1aa9768b31a959e2e8d0313b2a3bfd7dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MenuScreen::handleClick</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>handleClick</name>
+        <reimplements refid="classScreen_1afafb8c2a2255c4cf8cef807ba4d14400">handleClick</reimplements>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Handle a click event at the specified screen coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The screen x coordinate of the click. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The screen y coordinate of the click </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" line="10" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenuScreen_1ad45aec8a0c9c06e64798de44e3e934d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classMenu" kindref="compound">Menu</ref> &amp;</type>
+        <definition>const Menu&amp; MenuScreen::getMenu</definition>
+        <argsstring>() const</argsstring>
+        <name>getMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" line="11" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MenuScreen</label>
+        <link refid="classMenuScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MenuScreen</label>
+        <link refid="classMenuScreen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" line="4" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp" bodystart="5" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classMenuScreen_1ae9959b9475a4a42c747f57c39450b3c0" prot="private" virt="non-virtual"><scope>MenuScreen</scope><name>_menu</name></member>
+      <member refid="classScreen_1a6335968966aa2d082ba6804c9481d478" prot="protected" virt="non-virtual"><scope>MenuScreen</scope><name>getDispatcher</name></member>
+      <member refid="classMenuScreen_1ad45aec8a0c9c06e64798de44e3e934d7" prot="public" virt="non-virtual"><scope>MenuScreen</scope><name>getMenu</name></member>
+      <member refid="classScreen_1ae4ee4d8f366a13f3f296182106503800" prot="protected" virt="non-virtual"><scope>MenuScreen</scope><name>getWindow</name></member>
+      <member refid="classMenuScreen_1aa9768b31a959e2e8d0313b2a3bfd7dc4" prot="public" virt="virtual"><scope>MenuScreen</scope><name>handleClick</name></member>
+      <member refid="classMenuScreen_1a5f7cd41a80a5cb29909ce6b62b67de86" prot="public" virt="non-virtual"><scope>MenuScreen</scope><name>MenuScreen</name></member>
+      <member refid="classMenuScreen_1a8704e53aec44b99c271ad7e4047f4ba6" prot="public" virt="virtual"><scope>MenuScreen</scope><name>render</name></member>
+      <member refid="classScreen_1ab44807297a4a513751fb76f138a41ba5" prot="public" virt="non-virtual"><scope>MenuScreen</scope><name>Screen</name></member>
+      <member refid="classScreen_1a0bc1a2ceaee4a245e0d31822ea0643bd" prot="public" virt="virtual"><scope>MenuScreen</scope><name>~Screen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
