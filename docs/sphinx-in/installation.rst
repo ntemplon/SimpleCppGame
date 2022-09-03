@@ -15,6 +15,8 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     On Ubuntu 22.04: :code:`sudo apt install gcc g++ cmake`
 
+    **Mac** users can install the clang/clang++ compilers and cmake via homebrew: :code:`brew install llvm cmake`
+
 2. SFML Dependencies
     The Simple Cpp Game is built with the Jupiter engine that is dependent on `SFML <https://www.sfml-dev.org/download/sfml/2.5.1/>`_. The CMake
     files will build SFML from source, but SFML's dependencies (xrandr, freetype, and udev) need to be installed manually first.
@@ -54,8 +56,6 @@ The Simple Cpp Game (and associated documentation generation) has the following 
 
     :code:`pip3 install virtualenv`
 
-    Note: The author does not have a Mac to test installation of python on and apologizes if steps are missing.
-
     **Windows** users should download and run an installter from `the Python website <https://www.python.org/downloads/>`_. Do NOT
     use the version of Python from the windows store; it is substantially more difficult to work with.
 
@@ -68,7 +68,7 @@ You can download the repository from the website or by cloning it with :code:`gi
 Building the Game
 ------------------
 The easiest way to build the game is to open `VSCode <https://code.visualstudio.com/>`_ in the respository directory and invoke the
-CMake: Configure and CMake: Built Target simple-cpp-game commands with Ctrl + Shift + P or equivalent Mac command.
+CMake: Configure and CMake: Built Target simple-cpp-game commands with Ctrl + Shift + P or Cmd + Shift + P on Mac.
 
 To manually build the game, open a terminal in the repository directory and run the following commands. They are provided for Linux;
 use whatever equivalent commands are available on your operating system.
