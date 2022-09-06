@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="26" column="27" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="26" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="26" column="27" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1aafc26e7c34368b9265420e7242d743fc" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr static int</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="31" column="26" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="31" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="31" column="26" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1ad2cf08045935823c7e44c9a92ce4a4e9" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr static int</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="36" column="26" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="36" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="36" column="26" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a29c3289355609a9593a24d5bc1f08bcc" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr static int</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="41" column="26" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="41" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="41" column="26" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1ab7491872b0e12b59443f26c55737e6f1" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr static float</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="46" column="28" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="46" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="46" column="28" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a465cd9a559c7d4ebbda1aeba1cf41d84" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr static float</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="51" column="28" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="51" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="51" column="28" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="125" column="22" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="125" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="125" column="22" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1af90aceb22b316b9b24376b16eb8b9541" prot="private" static="no" mutable="no">
         <type>sf::View</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="126" column="14" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="126" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="126" column="14" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1ac791c608d75190283a410efad3810123" prot="private" static="no" mutable="no">
         <type>std::unique_ptr&lt; <ref refid="classScreen" kindref="compound">Screen</ref> &gt;</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="128" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="128" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="128" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a144eb9d43285b39d026ba82b9c1f390e" prot="private" static="no" mutable="no">
         <type>std::unique_ptr&lt; <ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &gt;</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="129" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="129" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="129" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a3e18c07c78b4242566baaa9cf7577cc7" prot="private" static="no" mutable="no">
         <type>std::unique_ptr&lt; <ref refid="classEntityEngine" kindref="compound">EntityEngine</ref> &gt;</type>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="130" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="130" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="130" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a8124911bed5bcf8d15b44ea18d975844" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classRenderSystem" kindref="compound">RenderSystem</ref> &gt;</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="131" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="131" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="131" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1afd32fcb975d2005f15b7b1f183ebd032" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classVelocitySystem" kindref="compound">VelocitySystem</ref> &gt;</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="132" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="132" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="132" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="132" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1aca86f3ee4af51edc40b11aded8f1b0dc" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classPlayerInputSystem" kindref="compound">PlayerInputSystem</ref> &gt;</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="133" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="133" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="133" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a73ceb985408d98ed7ac74c934ec67921" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classBallSystem" kindref="compound">BallSystem</ref> &gt;</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="134" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="134" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="134" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="134" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a75581be2b1e57a66b6e4f47162130589" prot="private" static="no" mutable="no">
         <type><ref refid="classStateMachine" kindref="compound">StateMachine</ref></type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="136" column="18" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="136" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="136" column="18" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="136" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a8b759b196d95e223fce9d2a561d0811e" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt;</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="137" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="137" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="137" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1ad5db2f10208a77e7702042c4699651d6" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt;</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="138" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="138" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="138" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1aa28fd01b9e4ddd2776c80ac20b16e029" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt;</type>
@@ -264,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="139" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="139" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="139" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1afc5a10b8bccd7cfdc30bf05487eb406a" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt;</type>
@@ -277,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="140" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="140" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="140" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="140" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a58775c31fc345953be7e3970697c7ca2" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt;</type>
@@ -290,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="141" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="141" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="141" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="141" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a2f31a31038154291b365ba915801a961" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt;</type>
@@ -303,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="142" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="142" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="142" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="142" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGame_1a8d977ba98cb45348910be34a1d45b34f" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">StateMachine::State</ref> &gt;</type>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="143" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="143" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="143" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="143" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -332,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="57" column="5"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="57" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a3d9b98f7c4a96ecf578f75b96c9f0e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -346,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="62" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="62" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a1dd3a58e38678f68291498125fc97ddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> *</type>
@@ -364,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="72" column="16"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="72" column="16"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="78" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="78" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a1cd675249f338b0f43d8a120c5e464b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -409,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="87" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="87" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1aa5abc4e07a1f5abce24e473c5567300b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -424,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="94" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="94" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a3c5cef85bab5e49551c308fa4f55008a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -452,7 +452,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="101" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="101" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a1b807309d862ce17b4dbd1d98612cf5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -481,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="110" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="110" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a35634df4d04d64ed478a3ba30f0828cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt;</type>
@@ -494,7 +494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="112" column="21"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="112" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a896afc2172602e9dd1bb07d4660d5ee6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt;</type>
@@ -507,7 +507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="113" column="21"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="113" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1ad470e447f5e524c9fda47b141499fc72" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classEntity" kindref="compound">Entity</ref> &gt;</type>
@@ -520,7 +520,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="114" column="21"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="114" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a15ddd769261d923827a3cdf41499c843" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -533,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="116" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="116" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a14073b7ee15e3a60b72112519be85453" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -546,7 +546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="118" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="118" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a7ed332e93df3bef8de4ddaea2de12e23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -559,7 +559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="119" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="119" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1af74fd203e3b31917ca9d4769fa608c48" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -572,7 +572,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="120" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="120" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a3b303855128e52c27946779f60f24fee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -585,7 +585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="121" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="121" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1afc1c16ab41b972b74288dcc5ca9ff87a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -598,7 +598,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="122" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="122" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGame_1a953b4199b652f3951eaeee50f5b9f7a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -611,7 +611,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="123" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="123" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -619,7 +619,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" line="20" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/Game.hpp" bodystart="21" bodyend="158"/>
+    <location file="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" line="20" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/include/Game.hpp" bodystart="21" bodyend="158"/>
     <listofallmembers>
       <member refid="classGame_1a73ceb985408d98ed7ac74c934ec67921" prot="private" virt="non-virtual"><scope>Game</scope><name>_ballSystem</name></member>
       <member refid="classGame_1ac791c608d75190283a410efad3810123" prot="private" virt="non-virtual"><scope>Game</scope><name>_currentScreen</name></member>

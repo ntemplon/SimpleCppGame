@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="63" column="16" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="63" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="63" column="16" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classStateMachine_1a38cbdb3cb0ac47656d5bacd5ec3118b3" prot="private" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="classStateMachine_1_1State" kindref="compound">State</ref> &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="64" column="21" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="64" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="64" column="21" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="53" column="5"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="53" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classStateMachine_1aa129bb2783f259f99924742862282f3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="55" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="55" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classStateMachine_1a3c1345313fafba21fb65fee67e7e70c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="56" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="56" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classStateMachine_1a7b947ca5f9ccb82c0ce5625055db1fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="57" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="57" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classStateMachine_1a674f62dc822b19636c0b29d4df02dd4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="58" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="58" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classStateMachine_1a97ef6aa0c801590cb447ca9033e60b84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classDispatcher" kindref="compound">Dispatcher</ref> &amp;</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="59" column="16"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="59" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classStateMachine_1a36823745cff272d5c5a1d5614c3be148" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classStateMachine_1_1State" kindref="compound">State</ref> &amp;</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="60" column="11"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="60" column="11"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="66" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="66" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classStateMachine_1a2cefff95fed41933a217df00ad4c97c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -174,14 +174,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="67" column="10"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="67" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="12" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="13" bodyend="68"/>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" line="12" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp" bodystart="13" bodyend="68"/>
     <listofallmembers>
       <member refid="classStateMachine_1a38cbdb3cb0ac47656d5bacd5ec3118b3" prot="private" virt="non-virtual"><scope>StateMachine</scope><name>_currentState</name></member>
       <member refid="classStateMachine_1a267474e7cf13747d5ac1aceabc0426c1" prot="private" virt="non-virtual"><scope>StateMachine</scope><name>_dispatcher</name></member>

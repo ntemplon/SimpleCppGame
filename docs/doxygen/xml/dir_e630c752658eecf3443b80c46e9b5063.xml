@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_e630c752658eecf3443b80c46e9b5063" kind="dir">
-    <compoundname>/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include</compoundname>
-    <innerdir refid="dir_b840dd5bfae50914956b2a4ac2dfaab3">/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</innerdir>
-    <innerdir refid="dir_6da4eac6429660075497d817c95f0540">/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</innerdir>
+    <compoundname>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include</compoundname>
+    <innerdir refid="dir_b840dd5bfae50914956b2a4ac2dfaab3">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</innerdir>
+    <innerdir refid="dir_6da4eac6429660075497d817c95f0540">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</innerdir>
     <innerfile refid="LambdaStates_8hpp">LambdaStates.hpp</innerfile>
     <innerfile refid="Screen_8hpp">Screen.hpp</innerfile>
     <innerfile refid="StateMachine_8hpp">StateMachine.hpp</innerfile>
@@ -11,6 +11,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/"/>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/"/>
   </compounddef>
 </doxygen>

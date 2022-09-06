@@ -4,12 +4,12 @@
     <compoundname>Screen.hpp</compoundname>
     <includes refid="Dispatcher_8hpp" local="no">Dispatcher.hpp</includes>
     <includes local="no">SFML/Graphics.hpp</includes>
-    <includedby refid="Game_8hpp" local="no">/home/ganymede/Coding/SimpleCppGame/include/Game.hpp</includedby>
-    <includedby refid="GameOverScreen_8hpp" local="no">/home/ganymede/Coding/SimpleCppGame/include/GameOverScreen.hpp</includedby>
-    <includedby refid="GameScreen_8hpp" local="no">/home/ganymede/Coding/SimpleCppGame/include/GameScreen.hpp</includedby>
-    <includedby refid="MainMenuScreen_8hpp" local="no">/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp</includedby>
-    <includedby refid="MenuScreen_8hpp" local="no">/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp</includedby>
-    <includedby refid="SplashScreen_8hpp" local="no">/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp</includedby>
+    <includedby refid="Game_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/Game.hpp</includedby>
+    <includedby refid="GameOverScreen_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp</includedby>
+    <includedby refid="GameScreen_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp</includedby>
+    <includedby refid="MainMenuScreen_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp</includedby>
+    <includedby refid="MenuScreen_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/MenuScreen.hpp</includedby>
+    <includedby refid="SplashScreen_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp</includedby>
     <incdepgraph>
       <node id="8">
         <label>SFML/Graphics.hpp</label>
@@ -17,14 +17,25 @@
       <node id="5">
         <label>functional</label>
       </node>
+      <node id="1">
+        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</label>
+        <link refid="Screen_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>string</label>
       </node>
       <node id="6">
         <label>map</label>
       </node>
-      <node id="7">
-        <label>vector</label>
+      <node id="3">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>Dispatcher.hpp</label>
@@ -40,44 +51,17 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</label>
-        <link refid="Screen_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>Event.hpp</label>
-        <link refid="Event_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="7">
+        <label>vector</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="7">
-        <label>/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp</label>
-        <link refid="SplashScreen_8hpp_source"/>
-      </node>
-      <node id="6">
-        <label>/home/ganymede/Coding/SimpleCppGame/include/MenuScreen.hpp</label>
-        <link refid="MenuScreen_8hpp_source"/>
-      </node>
       <node id="3">
-        <label>/home/ganymede/Coding/SimpleCppGame/include/GameOverScreen.hpp</label>
+        <label>/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp</label>
         <link refid="GameOverScreen_8hpp_source"/>
       </node>
-      <node id="2">
-        <label>/home/ganymede/Coding/SimpleCppGame/include/Game.hpp</label>
-        <link refid="Game_8hpp_source"/>
-      </node>
-      <node id="4">
-        <label>/home/ganymede/Coding/SimpleCppGame/include/GameScreen.hpp</label>
-        <link refid="GameScreen_8hpp_source"/>
-      </node>
       <node id="1">
-        <label>/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</label>
+        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</label>
         <link refid="Screen_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -92,8 +76,24 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>/home/nathan/Coding/SimpleCppGame/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp</label>
+        <link refid="SplashScreen_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/nathan/Coding/SimpleCppGame/include/MenuScreen.hpp</label>
+        <link refid="MenuScreen_8hpp_source"/>
+      </node>
       <node id="5">
-        <label>/home/ganymede/Coding/SimpleCppGame/include/MainMenuScreen.hpp</label>
+        <label>/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp</label>
         <link refid="MainMenuScreen_8hpp_source"/>
       </node>
     </invincdepgraph>
@@ -130,6 +130,6 @@
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDispatcher" kindref="compound">Dispatcher</ref><sp/>&amp;_dispatcher;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/ganymede/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp"/>
+    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp"/>
   </compounddef>
 </doxygen>

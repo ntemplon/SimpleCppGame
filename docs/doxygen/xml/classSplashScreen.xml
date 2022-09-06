@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="15" column="30" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="15" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="15" column="30" bodyfile="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="15" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="49" column="17" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="49" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="49" column="17" bodyfile="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classSplashScreen_1a2b8fe3d687c99080149fa493223c883d" prot="private" static="no" mutable="no">
         <type>sf::Sprite</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="50" column="16" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="50" bodyend="-1"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="50" column="16" bodyfile="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="50" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="24" column="5"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="24" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classSplashScreen_1a97b621dfe67fd172af5b00c9b3b0d747" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="30" column="13" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="30" bodyend="30"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="30" column="13" bodyfile="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classSplashScreen_1aa740429d18d6ae5bd299d3c0e178b94e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="38" column="18"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="38" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classSplashScreen_1a678197888d19caed6558d81452904158" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="46" column="18"/>
+        <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="46" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -202,7 +202,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" line="9" column="1" bodyfile="/home/ganymede/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="10" bodyend="51"/>
+    <location file="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" line="9" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp" bodystart="10" bodyend="51"/>
     <listofallmembers>
       <member refid="classSplashScreen_1a2b8fe3d687c99080149fa493223c883d" prot="private" virt="non-virtual"><scope>SplashScreen</scope><name>_sprite</name></member>
       <member refid="classSplashScreen_1ab7310f041a700b53faf4e5ca1510ae7f" prot="private" virt="non-virtual"><scope>SplashScreen</scope><name>_texture</name></member>
