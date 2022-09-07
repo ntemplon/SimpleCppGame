@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" line="14" column="30" bodyfile="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" bodystart="14" bodyend="-1"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" line="14" column="30" bodyfile="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" bodystart="14" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" line="36" column="17" bodyfile="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" bodystart="36" bodyend="-1"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" line="36" column="17" bodyfile="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGameOverScreen_1ace66ef489ec7eb8131f1909c700b8e9e" prot="private" static="no" mutable="no">
         <type>sf::Sprite</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" line="37" column="16" bodyfile="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" bodystart="37" bodyend="-1"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" line="37" column="16" bodyfile="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" line="23" column="5"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" line="23" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classGameOverScreen_1a7f015719692c3482de713fd2381f2154" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" line="28" column="10"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" line="28" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGameOverScreen_1a8e5c8ae4f8329274bcc5d932bb1f5526" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" line="33" column="10"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" line="33" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -169,7 +169,7 @@
         <link refid="classScreen"/>
       </node>
     </collaborationgraph>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" line="8" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp" bodystart="9" bodyend="38"/>
+    <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" line="8" column="1" bodyfile="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp" bodystart="9" bodyend="38"/>
     <listofallmembers>
       <member refid="classGameOverScreen_1ace66ef489ec7eb8131f1909c700b8e9e" prot="private" virt="non-virtual"><scope>GameOverScreen</scope><name>_sprite</name></member>
       <member refid="classGameOverScreen_1a02f2b88a6cd80fc64fe537ad005bd425" prot="private" virt="non-virtual"><scope>GameOverScreen</scope><name>_texture</name></member>

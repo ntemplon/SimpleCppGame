@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" line="37" column="18" bodyfile="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" bodystart="37" bodyend="-1"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" line="37" column="18" bodyfile="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classGameScreen_1a3117946c6701ac573cc35d1f742d7d2e" prot="private" static="no" mutable="no">
         <type>sf::RectangleShape</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" line="42" column="24" bodyfile="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" bodystart="42" bodyend="-1"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" line="42" column="24" bodyfile="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" line="21" column="5"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" line="21" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classGameScreen_1a259241cb803c2ffab627c654d75e2d6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" line="26" column="10"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" line="26" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classGameScreen_1a75b8d862911e1e86f6e4aa067cf198c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" line="31" column="10"/>
+        <location file="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" line="31" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -155,7 +155,7 @@
         <link refid="classScreen"/>
       </node>
     </collaborationgraph>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" line="11" column="1" bodyfile="/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp" bodystart="12" bodyend="43"/>
+    <location file="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" line="11" column="1" bodyfile="/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp" bodystart="12" bodyend="43"/>
     <listofallmembers>
       <member refid="classGameScreen_1a3117946c6701ac573cc35d1f742d7d2e" prot="private" virt="non-virtual"><scope>GameScreen</scope><name>_gameWindow</name></member>
       <member refid="classGameScreen_1a6763d9a9cedc3feca42acb6d62db6a39" prot="private" virt="non-virtual"><scope>GameScreen</scope><name>_renderSystem</name></member>

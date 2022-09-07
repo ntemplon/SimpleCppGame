@@ -7,27 +7,23 @@
     <includes local="no">SFML/System.hpp</includes>
     <includes local="no">memory</includes>
     <includes local="no">map</includes>
-    <includedby refid="EntityEngine_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntityEngine.hpp</includedby>
-    <includedby refid="IteratingSystem_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/IteratingSystem.hpp</includedby>
+    <includedby refid="EntityEngine_8hpp" local="no">/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntityEngine.hpp</includedby>
+    <includedby refid="IteratingSystem_8hpp" local="no">/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/IteratingSystem.hpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>Entity.hpp</label>
-        <link refid="Entity_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>string</label>
       </node>
       <node id="4">
         <label>map</label>
       </node>
+      <node id="6">
+        <label>EntityFamily.hpp</label>
+        <link refid="EntityFamily_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntitySystem.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntitySystem.hpp</label>
         <link refid="EntitySystem_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -40,10 +36,14 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>EntityFamily.hpp</label>
-        <link refid="EntityFamily_8hpp_source"/>
-        <childnode refid="2" relation="include">
+      <node id="2">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -54,46 +54,18 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="7">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/PlayerInputSystem.hpp</label>
-        <link refid="PlayerInputSystem_8hpp_source"/>
+      <node id="2">
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntityEngine.hpp</label>
+        <link refid="EntityEngine_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp</label>
-        <link refid="BallSystem_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/VelocitySystem.hpp</label>
-        <link refid="VelocitySystem_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp</label>
-        <link refid="GameScreen_8hpp_source"/>
-      </node>
-      <node id="8">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/RenderSystem.hpp</label>
-        <link refid="RenderSystem_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntitySystem.hpp</label>
-        <link refid="EntitySystem_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="3">
+        <label>/home/nathan/Code/SimpleCppGame/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
       </node>
       <node id="4">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/IteratingSystem.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/IteratingSystem.hpp</label>
         <link refid="IteratingSystem_8hpp_source"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -106,17 +78,45 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>/home/nathan/Coding/SimpleCppGame/include/Game.hpp</label>
-        <link refid="Game_8hpp_source"/>
+      <node id="9">
+        <label>/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp_source"/>
       </node>
       <node id="6">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/EnemyAISystem.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/EnemyAISystem.hpp</label>
         <link refid="EnemyAISystem_8hpp_source"/>
       </node>
-      <node id="2">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntityEngine.hpp</label>
-        <link refid="EntityEngine_8hpp_source"/>
+      <node id="8">
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/RenderSystem.hpp</label>
+        <link refid="RenderSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntitySystem.hpp</label>
+        <link refid="EntitySystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/PlayerInputSystem.hpp</label>
+        <link refid="PlayerInputSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/VelocitySystem.hpp</label>
+        <link refid="VelocitySystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/BallSystem.hpp</label>
+        <link refid="BallSystem_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
@@ -157,6 +157,6 @@
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::shared_ptr&lt;Entity&gt;&gt;<sp/>_entities;</highlight></codeline>
 <codeline lineno="67"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntitySystem.hpp"/>
+    <location file="/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/EntitySystem.hpp"/>
   </compounddef>
 </doxygen>

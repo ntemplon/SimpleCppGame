@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_6da4eac6429660075497d817c95f0540" kind="dir">
-    <compoundname>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</compoundname>
+    <compoundname>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</compoundname>
     <innerfile refid="Dispatcher_8hpp">Dispatcher.hpp</innerfile>
     <innerfile refid="Event_8hpp">Event.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/"/>
+    <location file="/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/"/>
   </compounddef>
 </doxygen>

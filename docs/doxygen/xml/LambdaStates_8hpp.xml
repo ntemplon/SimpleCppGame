@@ -4,27 +4,6 @@
     <compoundname>LambdaStates.hpp</compoundname>
     <includes refid="StateMachine_8hpp" local="no">StateMachine.hpp</includes>
     <incdepgraph>
-      <node id="6">
-        <label>functional</label>
-      </node>
-      <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp</label>
-        <link refid="LambdaStates_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>string</label>
-      </node>
-      <node id="7">
-        <label>map</label>
-      </node>
-      <node id="4">
-        <label>Event.hpp</label>
-        <link refid="Event_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>Dispatcher.hpp</label>
         <link refid="Dispatcher_8hpp_source"/>
@@ -39,8 +18,17 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>vector</label>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="1">
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp</label>
+        <link refid="LambdaStates_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
       </node>
       <node id="2">
         <label>StateMachine.hpp</label>
@@ -58,11 +46,23 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
       <node id="9">
         <label>SFML/System.hpp</label>
       </node>
       <node id="10">
         <label>memory</label>
+      </node>
+      <node id="4">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="classLambdaTransition" prot="public">LambdaTransition</innerclass>
@@ -102,6 +102,6 @@
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Time<sp/>deltaT)&gt;<sp/>_update;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp"/>
+    <location file="/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp"/>
   </compounddef>
 </doxygen>

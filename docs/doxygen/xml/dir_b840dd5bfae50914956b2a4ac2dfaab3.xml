@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_b840dd5bfae50914956b2a4ac2dfaab3" kind="dir">
-    <compoundname>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</compoundname>
+    <compoundname>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</compoundname>
     <innerfile refid="ComponentFamily_8hpp">ComponentFamily.hpp</innerfile>
     <innerfile refid="Entity_8hpp">Entity.hpp</innerfile>
     <innerfile refid="EntityEngine_8hpp">EntityEngine.hpp</innerfile>
@@ -12,6 +12,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/"/>
+    <location file="/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity/"/>
   </compounddef>
 </doxygen>

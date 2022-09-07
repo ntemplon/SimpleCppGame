@@ -23,7 +23,7 @@ The Simple Cpp Game (and associated documentation generation) has the following 
     
     **Linux** users are recommended to install these dependencies via their distribution's package manager, if possible. For example, in Ubuntu:
 
-    :code:`sudo apt install libxrander-dev libfreetype-dev libudev-dev`
+    :code:`sudo apt install libxrandr-dev libfreetype-dev libudev-dev mesa-common-dev`
 
     **Mac** users do not need any additional dependencies to build SFML.
     

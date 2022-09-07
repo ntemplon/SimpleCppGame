@@ -5,46 +5,8 @@
     <includes refid="IteratingSystem_8hpp" local="no">IteratingSystem.hpp</includes>
     <includes refid="Dispatcher_8hpp" local="no">Dispatcher.hpp</includes>
     <includes local="no">SFML/Graphics.hpp</includes>
-    <includedby refid="Game_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/Game.hpp</includedby>
+    <includedby refid="Game_8hpp" local="no">/home/nathan/Code/SimpleCppGame/include/Game.hpp</includedby>
     <incdepgraph>
-      <node id="14">
-        <label>SFML/Graphics.hpp</label>
-      </node>
-      <node id="12">
-        <label>functional</label>
-      </node>
-      <node id="4">
-        <label>Entity.hpp</label>
-        <link refid="Entity_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp</label>
-        <link refid="BallSystem_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>string</label>
-      </node>
-      <node id="6">
-        <label>map</label>
-      </node>
-      <node id="11">
-        <label>Event.hpp</label>
-        <link refid="Event_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
       <node id="10">
         <label>Dispatcher.hpp</label>
         <link refid="Dispatcher_8hpp_source"/>
@@ -57,6 +19,30 @@
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="12">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>IteratingSystem.hpp</label>
+        <link refid="IteratingSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EntityFamily.hpp</label>
+        <link refid="EntityFamily_8hpp_source"/>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="13">
@@ -76,16 +62,24 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>IteratingSystem.hpp</label>
-        <link refid="IteratingSystem_8hpp_source"/>
-        <childnode refid="3" relation="include">
+      <node id="4">
+        <label>Entity.hpp</label>
+        <link refid="Entity_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>EntityFamily.hpp</label>
-        <link refid="EntityFamily_8hpp_source"/>
-        <childnode refid="4" relation="include">
+      <node id="1">
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/BallSystem.hpp</label>
+        <link refid="BallSystem_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -94,17 +88,23 @@
       <node id="7">
         <label>memory</label>
       </node>
+      <node id="11">
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="2">
+        <label>/home/nathan/Code/SimpleCppGame/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
       <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/BallSystem.hpp</label>
         <link refid="BallSystem_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>/home/nathan/Coding/SimpleCppGame/include/Game.hpp</label>
-        <link refid="Game_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classBallSystem" prot="public">BallSystem</innerclass>
@@ -146,6 +146,6 @@
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>slightlyRandomize(sf::Vector2f<sp/>&amp;velocity)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp"/>
+    <location file="/home/nathan/Code/SimpleCppGame/include/entity/BallSystem.hpp"/>
   </compounddef>
 </doxygen>

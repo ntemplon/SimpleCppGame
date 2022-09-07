@@ -345,18 +345,18 @@
   </compound>
   <compound refid="SplashScreen_8hpp" kind="file"><name>SplashScreen.hpp</name>
   </compound>
-  <compound refid="dir_a57a94e38c03835eed49274b75b0176d" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps</name>
+  <compound refid="dir_a57a94e38c03835eed49274b75b0176d" kind="dir"><name>/home/nathan/Code/SimpleCppGame/build/_deps</name>
   </compound>
-  <compound refid="dir_b840dd5bfae50914956b2a4ac2dfaab3" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</name>
+  <compound refid="dir_b840dd5bfae50914956b2a4ac2dfaab3" kind="dir"><name>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/entity</name>
   </compound>
-  <compound refid="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/include/entity</name>
+  <compound refid="dir_b28a9729f90b4b648c644f033f08c7ee" kind="dir"><name>/home/nathan/Code/SimpleCppGame/include/entity</name>
   </compound>
-  <compound refid="dir_6da4eac6429660075497d817c95f0540" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</name>
+  <compound refid="dir_6da4eac6429660075497d817c95f0540" kind="dir"><name>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/event</name>
   </compound>
-  <compound refid="dir_e630c752658eecf3443b80c46e9b5063" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include</name>
+  <compound refid="dir_e630c752658eecf3443b80c46e9b5063" kind="dir"><name>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include</name>
   </compound>
-  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/include</name>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/nathan/Code/SimpleCppGame/include</name>
   </compound>
-  <compound refid="dir_171855666a1e8a3e4d50289c205cc403" kind="dir"><name>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src</name>
+  <compound refid="dir_171855666a1e8a3e4d50289c205cc403" kind="dir"><name>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src</name>
   </compound>
 </doxygenindex>

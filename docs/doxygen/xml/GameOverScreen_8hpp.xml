@@ -4,17 +4,25 @@
     <compoundname>GameOverScreen.hpp</compoundname>
     <includes refid="Screen_8hpp" local="no">Screen.hpp</includes>
     <incdepgraph>
+      <node id="3">
+        <label>Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="9">
         <label>SFML/Graphics.hpp</label>
       </node>
       <node id="6">
         <label>functional</label>
-      </node>
-      <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp</label>
-        <link refid="GameOverScreen_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>Screen.hpp</label>
@@ -30,28 +38,20 @@
       <node id="7">
         <label>map</label>
       </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp</label>
+        <link refid="GameOverScreen_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>Event.hpp</label>
         <link refid="Event_8hpp_source"/>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>Dispatcher.hpp</label>
-        <link refid="Dispatcher_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <innerclass refid="classGameOverScreen" prot="public">GameOverScreen</innerclass>
@@ -80,6 +80,6 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Sprite<sp/>_sprite;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp"/>
+    <location file="/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp"/>
   </compounddef>
 </doxygen>

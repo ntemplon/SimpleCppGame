@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_a57a94e38c03835eed49274b75b0176d" kind="dir">
-    <compoundname>/home/nathan/Coding/SimpleCppGame/build/_deps</compoundname>
-    <innerdir refid="dir_171855666a1e8a3e4d50289c205cc403">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src</innerdir>
+    <compoundname>/home/nathan/Code/SimpleCppGame/build/_deps</compoundname>
+    <innerdir refid="dir_171855666a1e8a3e4d50289c205cc403">/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/"/>
+    <location file="/home/nathan/Code/SimpleCppGame/build/_deps/"/>
   </compounddef>
 </doxygen>

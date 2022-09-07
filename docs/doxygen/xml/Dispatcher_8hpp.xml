@@ -7,28 +7,13 @@
     <includes local="no">map</includes>
     <includes local="no">string</includes>
     <includes local="no">vector</includes>
-    <includedby refid="BallSystem_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp</includedby>
-    <includedby refid="Game_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/include/Game.hpp</includedby>
-    <includedby refid="Screen_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</includedby>
-    <includedby refid="StateMachine_8hpp" local="no">/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp</includedby>
+    <includedby refid="BallSystem_8hpp" local="no">/home/nathan/Code/SimpleCppGame/include/entity/BallSystem.hpp</includedby>
+    <includedby refid="Game_8hpp" local="no">/home/nathan/Code/SimpleCppGame/include/Game.hpp</includedby>
+    <includedby refid="Screen_8hpp" local="no">/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</includedby>
+    <includedby refid="StateMachine_8hpp" local="no">/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>functional</label>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="5">
-        <label>map</label>
-      </node>
-      <node id="2">
-        <label>Event.hpp</label>
-        <link refid="Event_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp</label>
         <link refid="Dispatcher_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -41,23 +26,44 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
       <node id="6">
         <label>vector</label>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="5">
-        <label>/home/nathan/Coding/SimpleCppGame/include/GameOverScreen.hpp</label>
-        <link refid="GameOverScreen_8hpp_source"/>
-      </node>
       <node id="2">
-        <label>/home/nathan/Coding/SimpleCppGame/include/entity/BallSystem.hpp</label>
-        <link refid="BallSystem_8hpp_source"/>
+        <label>Event.hpp</label>
+        <link refid="Event_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>/home/nathan/Code/SimpleCppGame/include/MainMenuScreen.hpp</label>
+        <link refid="MainMenuScreen_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp</label>
+        <link refid="Dispatcher_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
       <node id="4">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/Screen.hpp</label>
         <link refid="Screen_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -72,49 +78,43 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>/home/nathan/Code/SimpleCppGame/include/Game.hpp</label>
+        <link refid="Game_8hpp_source"/>
+      </node>
       <node id="11">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/LambdaStates.hpp</label>
         <link refid="LambdaStates_8hpp_source"/>
       </node>
-      <node id="6">
-        <label>/home/nathan/Coding/SimpleCppGame/include/GameScreen.hpp</label>
-        <link refid="GameScreen_8hpp_source"/>
-      </node>
-      <node id="1">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp</label>
-        <link refid="Dispatcher_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
       <node id="10">
-        <label>/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/StateMachine.hpp</label>
         <link refid="StateMachine_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>/home/nathan/Coding/SimpleCppGame/include/Game.hpp</label>
-        <link refid="Game_8hpp_source"/>
-      </node>
-      <node id="9">
-        <label>/home/nathan/Coding/SimpleCppGame/include/SplashScreen.hpp</label>
-        <link refid="SplashScreen_8hpp_source"/>
-      </node>
       <node id="8">
-        <label>/home/nathan/Coding/SimpleCppGame/include/MenuScreen.hpp</label>
+        <label>/home/nathan/Code/SimpleCppGame/include/MenuScreen.hpp</label>
         <link refid="MenuScreen_8hpp_source"/>
       </node>
-      <node id="7">
-        <label>/home/nathan/Coding/SimpleCppGame/include/MainMenuScreen.hpp</label>
-        <link refid="MainMenuScreen_8hpp_source"/>
+      <node id="6">
+        <label>/home/nathan/Code/SimpleCppGame/include/GameScreen.hpp</label>
+        <link refid="GameScreen_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>/home/nathan/Code/SimpleCppGame/include/SplashScreen.hpp</label>
+        <link refid="SplashScreen_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>/home/nathan/Code/SimpleCppGame/include/GameOverScreen.hpp</label>
+        <link refid="GameOverScreen_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>/home/nathan/Code/SimpleCppGame/include/entity/BallSystem.hpp</label>
+        <link refid="BallSystem_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classDispatcher" prot="public">Dispatcher</innerclass>
@@ -153,6 +153,6 @@
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Event&gt;<sp/>_queue;</highlight></codeline>
 <codeline lineno="81"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/nathan/Coding/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp"/>
+    <location file="/home/nathan/Code/SimpleCppGame/build/_deps/jupiter-engine-src/include/event/Dispatcher.hpp"/>
   </compounddef>
 </doxygen>

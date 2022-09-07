@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
-    <compoundname>/home/nathan/Coding/SimpleCppGame/include</compoundname>
-    <innerdir refid="dir_b28a9729f90b4b648c644f033f08c7ee">/home/nathan/Coding/SimpleCppGame/include/entity</innerdir>
+    <compoundname>/home/nathan/Code/SimpleCppGame/include</compoundname>
+    <innerdir refid="dir_b28a9729f90b4b648c644f033f08c7ee">/home/nathan/Code/SimpleCppGame/include/entity</innerdir>
     <innerfile refid="Game_8hpp">Game.hpp</innerfile>
     <innerfile refid="GameOverScreen_8hpp">GameOverScreen.hpp</innerfile>
     <innerfile refid="GameScreen_8hpp">GameScreen.hpp</innerfile>
@@ -14,6 +14,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/nathan/Coding/SimpleCppGame/include/"/>
+    <location file="/home/nathan/Code/SimpleCppGame/include/"/>
   </compounddef>
 </doxygen>
